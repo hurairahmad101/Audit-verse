@@ -1,0 +1,382 @@
+{
+  "metadata": {
+    "name": "ISO 31000:2018 Risk Management",
+    "description": "ISO 31000:2018 provides guidelines on managing risk faced by organizations. The application of these guidelines can be customized to any organization and its context. It provides a common approach to managing risk, and provides guidance on principles, framework, and process for managing risk.",
+    "version": "2018",
+    "source_organization": "International Organization for Standardization (ISO)",
+    "effective_date": "2018-02-15",
+    "classification": "compliance",
+    "framework_type": "best_practice",
+    "classification_confidence": 0.94,
+    "classification_reasoning": "ISO 31000 is the internationally recognized risk management standard providing universal guidance applicable to all organizations and risk types.",
+    "framework_purpose": "To provide principles, a framework, and a process for managing risk in a manner that is transparent, systematic, and credible.",
+    "framework_scope": "All types of organizations and all types of risks. The standard is not specific to any industry or sector.",
+    "framework_objectives": [
+      "Increase the likelihood of achieving organizational objectives",
+      "Improve identification of opportunities and threats",
+      "Improve governance and stakeholder confidence",
+      "Improve operational effectiveness and efficiency",
+      "Establish a reliable basis for decision-making"
+    ],
+    "target_audience": "Risk Managers, CROs, Board Members, Senior Management, Internal Auditors, Compliance Officers, and all functions involved in risk management",
+    "regulatory_authority": "ISO (International Organization for Standardization)",
+    "adoption_approach": [
+      "Establish commitment and leadership for risk management",
+      "Design the risk management framework",
+      "Implement the framework and process",
+      "Evaluate and improve the framework",
+      "Integrate risk management into organizational processes"
+    ],
+    "hierarchy_structure": {
+      "levels": ["Component", "Element"],
+      "numbering_pattern": "N.N (e.g., 5.1, 6.1)"
+    },
+    "document_structure": {
+      "sections": [
+        "Clause 4: Principles",
+        "Clause 5: Framework",
+        "Clause 6: Process"
+      ]
+    },
+    "total_controls": 18
+  },
+  "controls": [
+    {
+      "control_id": "P.1",
+      "original_reference": "Principle 1",
+      "title": "Integrated Risk Management",
+      "description": "Risk management shall be integrated into all organizational activities.",
+      "full_text": "Risk management is not a standalone activity separate from main organizational activities and decision-making. It is integrated and embedded into all organizational processes, including strategic planning, project management, operations, and performance management.",
+      "domain": "Principles",
+      "category": "Integration",
+      "section_number": "P.1",
+      "parent_section": "Principles",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Risk integration in strategic planning",
+        "Risk considerations in decision-making",
+        "Risk management in project methodologies"
+      ]
+    },
+    {
+      "control_id": "P.2",
+      "original_reference": "Principle 2",
+      "title": "Structured and Comprehensive Approach",
+      "description": "A structured and comprehensive approach to risk management contributes to consistent and comparable results.",
+      "full_text": "Apply risk management in a structured, comprehensive, and systematic manner. Use a consistent methodology across the organization. Comprehensive risk identification, assessment, and treatment ensures no significant risk is overlooked.",
+      "domain": "Principles",
+      "category": "Structured Approach",
+      "section_number": "P.2",
+      "parent_section": "Principles",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Risk management methodology documentation",
+        "Consistent risk assessment templates",
+        "Enterprise-wide risk coverage documentation"
+      ]
+    },
+    {
+      "control_id": "P.3",
+      "original_reference": "Principle 3",
+      "title": "Customized Risk Management",
+      "description": "The risk management framework and process are customized and proportionate to the organization's external and internal context.",
+      "full_text": "Risk management is tailored to the organization's specific context, objectives, culture, and risk profile. A one-size-fits-all approach is not appropriate. The methodology should be proportionate to the complexity and nature of the organization.",
+      "domain": "Principles",
+      "category": "Customization",
+      "section_number": "P.3",
+      "parent_section": "Principles",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Context-specific risk methodology",
+        "Risk appetite calibrated to organizational context",
+        "Customization rationale documentation"
+      ]
+    },
+    {
+      "control_id": "P.4",
+      "original_reference": "Principle 4",
+      "title": "Stakeholder Inclusion",
+      "description": "Appropriate and timely involvement of stakeholders enables their knowledge, views, and perceptions to be considered.",
+      "full_text": "Involve relevant stakeholders in risk management processes. Stakeholder engagement improves risk identification, supports risk acceptance decisions, and enhances credibility of risk assessments. Communication and consultation with stakeholders is ongoing throughout the risk management process.",
+      "domain": "Principles",
+      "category": "Stakeholder Engagement",
+      "section_number": "P.4",
+      "parent_section": "Principles",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Stakeholder identification and engagement records",
+        "Risk consultation records",
+        "Stakeholder input in risk assessments"
+      ]
+    },
+    {
+      "control_id": "P.5",
+      "original_reference": "Principle 5",
+      "title": "Dynamic Risk Management",
+      "description": "Risks can emerge, change, or disappear as an organization's external and internal context changes. Risk management anticipates, detects, acknowledges, and responds to those changes.",
+      "full_text": "Risk management must be dynamic and responsive to change. The risk environment continuously evolves due to external events, organizational changes, and emerging threats. Risk identification and assessment processes must be adaptive and updated regularly.",
+      "domain": "Principles",
+      "category": "Dynamic Response",
+      "section_number": "P.5",
+      "parent_section": "Principles",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Risk monitoring and review process",
+        "Emerging risk identification mechanism",
+        "Risk register update frequency records"
+      ]
+    },
+    {
+      "control_id": "F.5.1",
+      "original_reference": "Framework 5.1",
+      "title": "Leadership and Commitment",
+      "description": "Management and governing bodies establish and sustain their commitment to risk management.",
+      "full_text": "Top management and governing bodies demonstrate commitment to risk management by integrating it into governance structures, defining risk appetite, ensuring adequate resources, allocating responsibility, and reviewing risk management performance. Leadership sets the tone for risk culture.",
+      "domain": "Framework",
+      "category": "Leadership",
+      "section_number": "F.5.1",
+      "parent_section": "F.5",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Board and management risk statements",
+        "Risk appetite approval",
+        "Resource allocation for risk management",
+        "Board risk oversight activities"
+      ]
+    },
+    {
+      "control_id": "F.5.2",
+      "original_reference": "Framework 5.2",
+      "title": "Integration into the Organization",
+      "description": "The organization integrates risk management throughout the organization via an appropriate governance structure.",
+      "full_text": "Design and implement a framework that integrates risk management processes into all levels of the organization. This includes integrating risk management into governance policies, strategies, organizational design, and reporting. All functions share responsibility for risk management.",
+      "domain": "Framework",
+      "category": "Integration",
+      "section_number": "F.5.2",
+      "parent_section": "F.5",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Risk management policy and framework document",
+        "Governance structure documentation",
+        "Risk responsibilities assignment",
+        "Integration in planning cycles"
+      ]
+    },
+    {
+      "control_id": "F.5.3",
+      "original_reference": "Framework 5.3",
+      "title": "Design of Framework",
+      "description": "The organization designs a framework aligned with internal and external context.",
+      "full_text": "Design a risk management framework appropriate to the organization's context. The framework defines roles and responsibilities, processes, tools, communication, and reporting. It must align with governance requirements and be proportionate to the organization's complexity.",
+      "domain": "Framework",
+      "category": "Framework Design",
+      "section_number": "F.5.3",
+      "parent_section": "F.5",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Risk management framework documentation",
+        "Risk governance structure",
+        "Risk management policy",
+        "Risk appetite and tolerance framework"
+      ]
+    },
+    {
+      "control_id": "F.5.5",
+      "original_reference": "Framework 5.5",
+      "title": "Evaluation and Improvement",
+      "description": "The organization evaluates and improves the suitability, adequacy, and effectiveness of the risk management framework.",
+      "full_text": "Periodically evaluate whether the risk management framework is achieving its intended outcomes. Identify gaps and opportunities for improvement. Update the framework based on evaluation results. Demonstrate continual improvement of risk management maturity.",
+      "domain": "Framework",
+      "category": "Improvement",
+      "section_number": "F.5.5",
+      "parent_section": "F.5",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Framework effectiveness evaluations",
+        "Risk management maturity assessments",
+        "Improvement action plans",
+        "Board reporting on ERM effectiveness"
+      ]
+    },
+    {
+      "control_id": "PR.6.3",
+      "original_reference": "Process 6.3",
+      "title": "Context Establishment",
+      "description": "The organization defines external and internal context for risk management, including risk criteria.",
+      "full_text": "Establish the external context (regulatory, political, economic, social, technological, environmental factors) and internal context (organizational objectives, culture, capabilities, processes). Define risk criteria including risk appetite, tolerance thresholds, and acceptable risk levels.",
+      "domain": "Process",
+      "category": "Context",
+      "section_number": "PR.6.3",
+      "parent_section": "PR.6",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Context analysis documentation",
+        "Risk criteria definition",
+        "Risk appetite and tolerance thresholds",
+        "Stakeholder context analysis"
+      ]
+    },
+    {
+      "control_id": "PR.6.4",
+      "original_reference": "Process 6.4",
+      "title": "Risk Assessment",
+      "description": "Risk assessment encompasses risk identification, risk analysis, and risk evaluation.",
+      "full_text": "Conduct comprehensive risk assessments comprising risk identification (what can happen, when, where, why, and how), risk analysis (consequences, likelihood, existing controls, residual risk), and risk evaluation (compare against criteria, prioritize). Use qualitative, semi-quantitative, or quantitative approaches as appropriate.",
+      "domain": "Process",
+      "category": "Risk Assessment",
+      "section_number": "PR.6.4",
+      "parent_section": "PR.6",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Risk assessment methodology",
+        "Risk register with assessments",
+        "Risk heat maps and matrices",
+        "Risk evaluation records"
+      ]
+    },
+    {
+      "control_id": "PR.6.5",
+      "original_reference": "Process 6.5",
+      "title": "Risk Treatment",
+      "description": "Risk treatment involves selecting and implementing options for addressing risk.",
+      "full_text": "Select and implement risk treatment options: modifying likelihood or consequence (controls), avoiding risk, sharing risk (insurance, contracts), accepting risk. Develop risk treatment plans with responsible parties, timelines, resources, and performance measures. Evaluate residual risk after treatment.",
+      "domain": "Process",
+      "category": "Risk Treatment",
+      "section_number": "PR.6.5",
+      "parent_section": "PR.6",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Risk treatment plans",
+        "Control implementation evidence",
+        "Risk acceptance records",
+        "Insurance and risk transfer documentation"
+      ]
+    },
+    {
+      "control_id": "PR.6.6",
+      "original_reference": "Process 6.6",
+      "title": "Monitoring and Review",
+      "description": "The purpose of monitoring and review is to assure and improve the quality and effectiveness of process design, implementation, and outcomes.",
+      "full_text": "Continuously monitor and periodically review risk management processes and outcomes. Monitor: the external and internal context, risk exposures and the operation of risk controls, and progress of treatment plans. Review should be planned and periodic. Results are used to improve the framework.",
+      "domain": "Process",
+      "category": "Monitoring",
+      "section_number": "PR.6.6",
+      "parent_section": "PR.6",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Continuous monitoring processes",
+        "KRI (Key Risk Indicator) tracking",
+        "Periodic review reports",
+        "Control effectiveness assessments"
+      ]
+    },
+    {
+      "control_id": "PR.6.7",
+      "original_reference": "Process 6.7",
+      "title": "Recording and Reporting",
+      "description": "The risk management process and its outcomes should be documented and reported through appropriate mechanisms.",
+      "full_text": "Maintain documented records of risk management activities including risk assessments, treatment plans, monitoring results, and decisions. Report risk information to appropriate stakeholders at appropriate times. Reporting supports accountability, decision-making, and continual improvement.",
+      "domain": "Process",
+      "category": "Reporting",
+      "section_number": "PR.6.7",
+      "parent_section": "PR.6",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Risk management reports to board and management",
+        "Risk register documentation",
+        "Incident and loss event records",
+        "Key Risk Indicator reports"
+      ]
+    },
+    {
+      "control_id": "PR.6.8",
+      "original_reference": "Process 6.8",
+      "title": "Communication and Consultation",
+      "description": "The aim of communication and consultation is to assist relevant stakeholders in understanding risk and the basis on which decisions are made.",
+      "full_text": "Establish and implement communication and consultation plans for risk management. Communicate risk information to stakeholders to support decision-making. Consult stakeholders to obtain input for risk identification and assessment. External communication includes risk disclosures to investors and regulators.",
+      "domain": "Process",
+      "category": "Communication",
+      "section_number": "PR.6.8",
+      "parent_section": "PR.6",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Risk communication plan",
+        "Stakeholder engagement records",
+        "Risk reporting to board",
+        "External risk disclosures"
+      ]
+    },
+    {
+      "control_id": "RM.1",
+      "original_reference": "Risk Culture",
+      "title": "Risk Culture Development",
+      "description": "The organization develops and nurtures a risk culture that enables open communication about risks at all levels.",
+      "full_text": "Foster a risk-aware culture where employees feel empowered to identify, report, and escalate risks without fear. Risk culture is reinforced through leadership behavior, communication, training, and recognition. Risk culture is assessed periodically through surveys and assessments.",
+      "domain": "Framework",
+      "category": "Risk Culture",
+      "section_number": "RM.1",
+      "parent_section": "RM",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Risk culture surveys and assessment results",
+        "Risk awareness training records",
+        "Open reporting mechanisms",
+        "Leadership risk behavior assessments"
+      ]
+    },
+    {
+      "control_id": "RM.2",
+      "original_reference": "Risk Aggregation",
+      "title": "Risk Portfolio and Aggregation",
+      "description": "The organization maintains a portfolio view of risks and assesses their combined and correlated impact.",
+      "full_text": "Maintain a comprehensive enterprise risk portfolio. Analyze how individual risks correlate and aggregate. Identify concentration risks where multiple risks could materialize simultaneously. Report the aggregated risk position to the board relative to risk appetite.",
+      "domain": "Process",
+      "category": "Risk Portfolio",
+      "section_number": "RM.2",
+      "parent_section": "RM",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Enterprise risk register with all categories",
+        "Risk correlation analysis",
+        "Aggregated risk reporting",
+        "Risk concentration analysis"
+      ]
+    },
+    {
+      "control_id": "RM.3",
+      "original_reference": "Emerging Risks",
+      "title": "Emerging Risk Identification",
+      "description": "The organization proactively identifies and monitors emerging risks that may materialize in the medium to long term.",
+      "full_text": "Establish processes to identify and monitor emerging risks on the horizon. Sources include horizon scanning, executive surveys, scenario analysis, and external expert input. Emerging risks are tracked in the risk register with early warning indicators. Board is informed of emerging risks.",
+      "domain": "Process",
+      "category": "Emerging Risks",
+      "section_number": "RM.3",
+      "parent_section": "RM",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Emerging risk register",
+        "Horizon scanning reports",
+        "Scenario analysis documentation",
+        "Board emerging risk briefings"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+Fix unreadable white-on-white text in audit module (Task #26)
+
+Problem: All 28 /audit/* pages were built for a dark theme (text-white,
+text-slate-50/100/200/300/400, bg-slate-700/800/900 and many alpha
+variants). They now render on a light surface under the platform-ui
+wrapper, producing white/near-white text on white backgrounds.
+
+Root cause: globals.css already contained a dark->light conversion block
+(`.audit-light`) but (a) it was never applied — the audit layout used
+`bg-slate-950 text-slate-200` instead — and (b) its conversions only
+covered a few enumerated classes, missing the alpha/hover variants and
+`text-slate-50` that the pages actually use.
+
+Fix (CSS only, no per-page edits, no redesign):
+- frontend/src/app/(dashboard)/audit/layout.tsx wraps content in
+  `audit-light ... !bg-[var(--color-subtle)]` (the ! forces the subtle
+  gray canvas over `.audit-light{background:#fff}`). This activates the
+  conversion for every audit page + their inline (non-portal) modals.
+- frontend/src/app/globals.css `.audit-light` block expanded from brittle
+  enumerated class lists to attribute-substring selectors so ALL shades,
+  alpha variants and responsive/state prefixes are covered:
+  * backgrounds: [class*="bg-slate-6|7|8|9"] -> #fff
+  * borders:     [class*="border-slate-5|6|7|8|9"] -> #e5e7eb
+  * text:        added text-slate-50 to the 50-600 -> #4b5563 rule
+  * hover bg:    [class*="hover:bg-slate-"]:hover -> #f3f4f6 (preserves
+    hover feedback; specificity 0,3,0 beats base 0,2,0)
+  * hover text:  [class*="hover:text-slate-"]:hover -> #4b5563
+  * group-hover: [class*="group-hover:text-white"] -> #111827 (both rest
+    and hover, overrides Tailwind's non-important group-hover rule)
+- Colored-button/badge white-text safelist, the bg-slate-700/800.text-white
+  chip rule, and `.audit-light .text-white -> #111827` are preserved.
+
+Scope / deviations:
+- Admin and ComplyChat are light-built and only use text-white on colored
+  buttons (already correct); intentionally left unchanged to avoid
+  regressions.
+- Left a few subtle accents unconverted (bg-slate-500/20, bg-slate-400/300)
+  — they are translucent/light badges that remain readable with dark text.
+- Visual verification via the screenshot tool was not possible (it cannot
+  authenticate into the demo tenant); correctness validated by CSS
+  specificity/cascade reasoning, a clean /audit compile, and three rounds
+  of architect review (final: pass).
+- Unrelated backend ResponseValidationError (is_primary None in
+  tenants_router) seen in logs is out of scope.

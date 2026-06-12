@@ -1,0 +1,351 @@
+{
+  "metadata": {
+    "name": "TCFD (Task Force on Climate-related Financial Disclosures)",
+    "description": "The Task Force on Climate-related Financial Disclosures (TCFD) developed recommendations for more effective climate-related disclosures that could promote more informed investment, credit, and insurance underwriting decisions. The TCFD recommendations are now embedded in regulations globally including ISSB IFRS S2, SEC climate rules, and CSRD.",
+    "version": "2017 / 2021 Updated Guidance",
+    "source_organization": "Financial Stability Board (FSB) / Task Force on Climate-related Financial Disclosures",
+    "effective_date": "2017-06-29",
+    "classification": "compliance",
+    "framework_type": "reporting_standard",
+    "classification_confidence": 0.96,
+    "classification_reasoning": "TCFD recommendations have been adopted by regulators globally and are the foundation for ISSB IFRS S2, SEC climate disclosure rules, and mandatory climate reporting in many jurisdictions.",
+    "framework_purpose": "To develop voluntary, consistent climate-related financial risk disclosures for use by companies in providing information to investors, lenders, insurers, and other stakeholders.",
+    "framework_scope": "All organizations, with particular focus on financial institutions, asset managers, insurance companies, and companies in sectors most vulnerable to climate risk.",
+    "framework_objectives": [
+      "Enable consistent climate-related financial risk disclosure",
+      "Enable investors to assess climate risks in portfolios",
+      "Support pricing of climate risks in financial markets",
+      "Drive climate resilience in business strategies",
+      "Enable comparison of climate disclosures across organizations"
+    ],
+    "target_audience": "CFOs, CROs, Sustainability Officers, Investor Relations, Boards of Directors, and all organizations with material climate-related financial risks",
+    "regulatory_authority": "Financial Stability Board (FSB) — Recommendations now embedded in IFRS S2, SEC Climate Rules, CSRD, and UK Climate Disclosure Requirements",
+    "adoption_approach": [
+      "Assess climate-related risks and opportunities using TCFD framework",
+      "Integrate climate into governance structures",
+      "Conduct climate scenario analysis",
+      "Develop climate risk management processes",
+      "Set climate targets and metrics",
+      "Disclose using TCFD four pillars"
+    ],
+    "hierarchy_structure": {
+      "levels": ["Pillar", "Recommendation"],
+      "numbering_pattern": "Pillar.Recommendation"
+    },
+    "document_structure": {
+      "sections": [
+        "Governance",
+        "Strategy",
+        "Risk Management",
+        "Metrics and Targets"
+      ]
+    },
+    "total_controls": 16
+  },
+  "controls": [
+    {
+      "control_id": "GOV.1",
+      "original_reference": "Governance a)",
+      "title": "Board Oversight of Climate Risks",
+      "description": "Disclose the board's oversight of climate-related risks and opportunities.",
+      "full_text": "Describe the board's oversight of climate-related risks and opportunities, including: processes and frequency by which the board or board committees are informed about climate-related issues, whether climate-related issues are considered in strategic planning, major plans of action, risk management policies, annual budgets, and business plans, and board performance metrics and targets relating to climate.",
+      "domain": "Governance",
+      "category": "Board Oversight",
+      "section_number": "GOV.1",
+      "parent_section": "Governance",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Board climate governance documentation",
+        "Board/committee meeting minutes discussing climate",
+        "Board-level climate education records",
+        "Board oversight metrics for climate"
+      ]
+    },
+    {
+      "control_id": "GOV.2",
+      "original_reference": "Governance b)",
+      "title": "Management's Role in Climate Risk Management",
+      "description": "Disclose management's role in assessing and managing climate-related risks and opportunities.",
+      "full_text": "Describe management's role in assessing and managing climate-related risks and opportunities, including: whether the organization has assigned climate-related responsibilities to management-level positions or committees, how those positions or committees are informed about climate-related issues, and how management monitors climate-related issues.",
+      "domain": "Governance",
+      "category": "Management Accountability",
+      "section_number": "GOV.2",
+      "parent_section": "Governance",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Climate management structure",
+        "Climate-related responsibilities assignment",
+        "Management climate reporting process",
+        "Climate KPIs for management"
+      ]
+    },
+    {
+      "control_id": "STR.1",
+      "original_reference": "Strategy a)",
+      "title": "Climate Risks and Opportunities Identified",
+      "description": "Disclose the climate-related risks and opportunities identified over the short, medium, and long term.",
+      "full_text": "Describe the specific climate-related risks and opportunities identified over the short (0-3 years), medium (3-10 years), and long term (10+ years). Cover both physical risks (acute: extreme weather events; chronic: rising sea levels, temperature changes) and transition risks (policy, technology, legal, market, reputation). Identify opportunities in resource efficiency, energy sources, products/services, and markets.",
+      "domain": "Strategy",
+      "category": "Risk and Opportunity Identification",
+      "section_number": "STR.1",
+      "parent_section": "Strategy",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Climate risk inventory by category and time horizon",
+        "Physical risk mapping (facilities, operations)",
+        "Transition risk assessments",
+        "Climate opportunity analysis"
+      ]
+    },
+    {
+      "control_id": "STR.2",
+      "original_reference": "Strategy b)",
+      "title": "Climate Impact on Business Strategy",
+      "description": "Disclose the impact of climate-related risks and opportunities on the organization's businesses, strategy, and financial planning.",
+      "full_text": "Describe the impact of identified climate-related risks and opportunities on the organization's: products and services, supply chain and value chain, adaptation and mitigation activities, investment in research and development, operations. Include the impact on financial planning, strategy, and business plan.",
+      "domain": "Strategy",
+      "category": "Strategic Impact",
+      "section_number": "STR.2",
+      "parent_section": "Strategy",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Climate integration in strategic plan",
+        "Climate impact on business model analysis",
+        "Financial planning with climate scenarios",
+        "CapEx allocation for climate adaptation"
+      ]
+    },
+    {
+      "control_id": "STR.3",
+      "original_reference": "Strategy c)",
+      "title": "Climate Scenario Analysis",
+      "description": "Describe the resilience of the organization's strategy, taking into consideration different climate-related scenarios, including a 2°C or lower scenario.",
+      "full_text": "Conduct and disclose climate scenario analysis using recognized scenarios (IEA, IPCC, NZE). Assess the resilience of the organization's strategy under different scenarios including 1.5°C or 2°C aligned (transition scenario) and 3°C+ (physical risk scenario). Describe the business implications under each scenario.",
+      "domain": "Strategy",
+      "category": "Scenario Analysis",
+      "section_number": "STR.3",
+      "parent_section": "Strategy",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Climate scenario analysis documentation",
+        "Scenario selection rationale (IEA NZE, NGFS, etc.)",
+        "Business impact under each scenario",
+        "Strategic response to scenario outcomes"
+      ]
+    },
+    {
+      "control_id": "RM.1",
+      "original_reference": "Risk Management a)",
+      "title": "Climate Risk Identification and Assessment Process",
+      "description": "Disclose the processes for identifying and assessing climate-related risks.",
+      "full_text": "Describe the organization's processes for identifying and assessing climate-related risks over the short, medium, and long term. Include how climate-related risks compare to other risks, how risks are assessed (qualitative, quantitative, or scenario-based), and the tools, data, and methodologies used.",
+      "domain": "Risk Management",
+      "category": "Risk Identification",
+      "section_number": "RM.1",
+      "parent_section": "Risk Management",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Climate risk assessment methodology",
+        "Climate risk register",
+        "Risk quantification tools",
+        "Time horizon definitions for climate risk"
+      ]
+    },
+    {
+      "control_id": "RM.2",
+      "original_reference": "Risk Management b)",
+      "title": "Climate Risk Management Processes",
+      "description": "Disclose the processes for managing climate-related risks.",
+      "full_text": "Describe the organization's processes for managing climate-related risks, including: actions taken to mitigate or adapt to identified risks, how the organization determines the relative significance of climate-related risks in relation to other risks, and how management decisions on risk treatment are made.",
+      "domain": "Risk Management",
+      "category": "Risk Management",
+      "section_number": "RM.2",
+      "parent_section": "Risk Management",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Climate risk treatment plans",
+        "Climate adaptation investments",
+        "Mitigation measures for climate risks",
+        "Climate risk in enterprise risk management"
+      ]
+    },
+    {
+      "control_id": "RM.3",
+      "original_reference": "Risk Management c)",
+      "title": "Integration of Climate into Overall Risk Management",
+      "description": "Disclose how processes for identifying, assessing, and managing climate-related risks are integrated into the organization's overall risk management.",
+      "full_text": "Describe how climate-related risk management processes are integrated into the organization's overall risk management framework. This includes how climate risks are identified in the ERM process, how they are included in the risk register, how they are reported to the board, and how they are linked to business decisions.",
+      "domain": "Risk Management",
+      "category": "ERM Integration",
+      "section_number": "RM.3",
+      "parent_section": "Risk Management",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Climate in enterprise risk register",
+        "ERM framework climate integration",
+        "Climate risk reporting to board",
+        "Climate in risk appetite statement"
+      ]
+    },
+    {
+      "control_id": "MT.1",
+      "original_reference": "Metrics and Targets a)",
+      "title": "Climate-Related Metrics",
+      "description": "Disclose the metrics used by the organization to assess climate-related risks and opportunities in line with its strategy and risk management process.",
+      "full_text": "Disclose metrics used to assess and manage climate-related risks and opportunities, including: GHG emissions metrics (Scope 1, 2, 3), climate-related physical risk exposure metrics (% assets in flood zones), climate-related transition risk metrics (carbon price exposure, fossil fuel exposure), and climate opportunity metrics (green revenue, renewable energy %).",
+      "domain": "Metrics and Targets",
+      "category": "Climate Metrics",
+      "section_number": "MT.1",
+      "parent_section": "Metrics and Targets",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Climate metrics dashboard",
+        "GHG emissions by scope",
+        "Physical risk exposure data",
+        "Climate opportunity metrics"
+      ]
+    },
+    {
+      "control_id": "MT.2",
+      "original_reference": "Metrics and Targets b)",
+      "title": "Scope 1, 2, and 3 GHG Emissions",
+      "description": "Disclose Scope 1, Scope 2, and, if appropriate, Scope 3 greenhouse gas emissions in metric tons of CO2 equivalent.",
+      "full_text": "Disclose Scope 1 (direct) and Scope 2 (indirect — purchased energy) GHG emissions, and where relevant Scope 3 (all other indirect emissions from value chain) in metric tons of CO2 equivalent. Report the base year, GHG protocol used, and methodology. Report emissions intensity where relevant.",
+      "domain": "Metrics and Targets",
+      "category": "GHG Emissions",
+      "section_number": "MT.2",
+      "parent_section": "Metrics and Targets",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Scope 1, 2, 3 GHG inventory",
+        "GHG calculation methodology",
+        "Base year emissions data",
+        "Emissions intensity metrics"
+      ]
+    },
+    {
+      "control_id": "MT.3",
+      "original_reference": "Metrics and Targets c)",
+      "title": "Climate-Related Targets",
+      "description": "Describe the targets used by the organization to manage climate-related risks and opportunities and performance against those targets.",
+      "full_text": "Disclose climate-related targets used by the organization, including: GHG reduction targets (absolute and intensity), renewable energy targets, energy efficiency targets, and net zero commitments. Report performance against targets and whether targets are aligned with SBTi or other recognized frameworks.",
+      "domain": "Metrics and Targets",
+      "category": "Climate Targets",
+      "section_number": "MT.3",
+      "parent_section": "Metrics and Targets",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "GHG reduction targets",
+        "Net zero commitment documentation",
+        "SBTi or equivalent alignment",
+        "Performance against targets data"
+      ]
+    },
+    {
+      "control_id": "TCFD-PA",
+      "original_reference": "Physical Risk Assessment",
+      "title": "Physical Climate Risk Assessment",
+      "description": "Assess and disclose exposure to acute and chronic physical climate risks across the organization's asset base and operations.",
+      "full_text": "Conduct physical climate risk assessments for key facilities, supply chain nodes, and operations. Assess both acute risks (flooding, storms, wildfires, heatwaves) and chronic risks (sea level rise, temperature increases, precipitation changes). Quantify potential financial impacts. Develop adaptation strategies for high-risk assets.",
+      "domain": "Strategy",
+      "category": "Physical Risk",
+      "section_number": "PA.1",
+      "parent_section": "Physical Risk",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Physical climate risk mapping",
+        "Asset-level risk exposure data",
+        "Financial impact quantification",
+        "Adaptation strategy documentation"
+      ]
+    },
+    {
+      "control_id": "TCFD-TR",
+      "original_reference": "Transition Risk Assessment",
+      "title": "Transition Climate Risk Assessment",
+      "description": "Assess and disclose exposure to transition risks associated with the shift to a low-carbon economy.",
+      "full_text": "Assess transition risks across four categories: policy and legal risks (carbon pricing, emissions regulations), technology risks (clean technology adoption, stranded assets), market risks (changing customer preferences, commodity prices), and reputation risks. Quantify financial impacts under climate scenarios.",
+      "domain": "Strategy",
+      "category": "Transition Risk",
+      "section_number": "TR.1",
+      "parent_section": "Transition Risk",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Transition risk assessment",
+        "Regulatory carbon price sensitivity analysis",
+        "Stranded asset analysis",
+        "Market and reputation risk assessment"
+      ]
+    },
+    {
+      "control_id": "TCFD-NET",
+      "original_reference": "Net Zero Planning",
+      "title": "Net Zero Strategy and Transition Plan",
+      "description": "Disclose the organization's net zero or climate transition plan, including interim targets and key actions.",
+      "full_text": "Describe the organization's climate transition plan and pathway to net zero or stated climate targets. Include: near-term actions (2025), medium-term milestones (2030), and long-term goal (2050 or earlier). Address decarbonization of operations, supply chain, and sold products. Include carbon removal/offset strategy if applicable.",
+      "domain": "Strategy",
+      "category": "Net Zero Planning",
+      "section_number": "NET.1",
+      "parent_section": "Strategy",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Climate transition plan",
+        "Net zero roadmap with interim milestones",
+        "Decarbonization investment plans",
+        "Carbon removal or offset strategy"
+      ]
+    },
+    {
+      "control_id": "TCFD-FIN",
+      "original_reference": "Financial Impact Quantification",
+      "title": "Climate Financial Impact Quantification",
+      "description": "Quantify the potential financial impact of material climate risks and opportunities on the organization's financial statements.",
+      "full_text": "Quantify the potential financial impacts of material climate risks and opportunities on revenues, operating costs, CapEx, and asset values. Use scenario analysis to assess ranges of outcomes. Disclose the financial impact of physical damage, stranded assets, carbon costs, energy transition costs, and revenue opportunities from climate solutions.",
+      "domain": "Strategy",
+      "category": "Financial Quantification",
+      "section_number": "FIN.1",
+      "parent_section": "Financial",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Climate financial impact models",
+        "Scenario analysis with financial outcomes",
+        "Asset impairment assessments for climate",
+        "Revenue opportunity quantification"
+      ]
+    },
+    {
+      "control_id": "TCFD-REP",
+      "original_reference": "Reporting Alignment",
+      "title": "TCFD Alignment and Regulatory Reporting",
+      "description": "Ensure TCFD disclosures are aligned with regulatory requirements and embedded in mainstream financial reporting.",
+      "full_text": "Align TCFD disclosures with applicable regulatory requirements (IFRS S2, SEC Climate Rules, CSRD, UK TCFD requirements). Include climate disclosures in mainstream financial reporting (annual report, 10-K, integrated report). Obtain external assurance for GHG emissions and climate disclosures. Report against TCFD index showing location of each recommended disclosure.",
+      "domain": "Reporting",
+      "category": "Regulatory Alignment",
+      "section_number": "REP.1",
+      "parent_section": "Reporting",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "TCFD index / mapping document",
+        "Climate disclosures in annual report",
+        "External assurance for climate data",
+        "Regulatory climate reporting submissions"
+      ]
+    }
+  ]
+}

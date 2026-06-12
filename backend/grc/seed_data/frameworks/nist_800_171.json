@@ -1,0 +1,433 @@
+{
+  "metadata": {
+    "name": "NIST SP 800-171 Rev 3 (Protecting Controlled Unclassified Information)",
+    "description": "NIST Special Publication 800-171 provides requirements for protecting the confidentiality of Controlled Unclassified Information (CUI) in nonfederal systems and organizations. It is required for US federal contractors handling CUI and forms the basis for CMMC (Cybersecurity Maturity Model Certification) compliance.",
+    "version": "Rev 3 (2024)",
+    "source_organization": "National Institute of Standards and Technology (NIST)",
+    "effective_date": "2024-05-14",
+    "classification": "regulatory",
+    "framework_type": "regulatory",
+    "classification_confidence": 0.97,
+    "classification_reasoning": "NIST SP 800-171 is mandatory for organizations handling US government CUI, forming the basis for DFARS and CMMC requirements for federal contractors.",
+    "framework_purpose": "To protect the confidentiality of Controlled Unclassified Information (CUI) in non-federal systems and organizations that process, store, or transmit CUI on behalf of the federal government.",
+    "framework_scope": "Non-federal organizations (contractors, universities, research institutions) that process, store, or transmit CUI under contract with federal agencies.",
+    "framework_objectives": [
+      "Protect the confidentiality of CUI",
+      "Implement adequate security safeguards",
+      "Report CUI incidents to federal agencies",
+      "Demonstrate security posture through CMMC assessment",
+      "Support supply chain security for federal government"
+    ],
+    "target_audience": "US Federal Contractors, Defense Industrial Base (DIB) companies, Research Universities, Government Contractors, Managed Service Providers serving federal clients",
+    "regulatory_authority": "NIST / US Department of Defense (for CMMC)",
+    "adoption_approach": [
+      "Identify CUI in your systems and organization",
+      "Conduct a system security plan (SSP) assessment",
+      "Implement all 110 security requirements",
+      "Document Plan of Action & Milestones (POA&M) for gaps",
+      "Obtain C3PAO assessment for CMMC Level 2",
+      "Maintain continuous compliance and monitoring"
+    ],
+    "hierarchy_structure": {
+      "levels": ["Family", "Requirement"],
+      "numbering_pattern": "N.N.N (e.g., 3.1.1)"
+    },
+    "document_structure": {
+      "sections": [
+        "3.1 Access Control",
+        "3.2 Awareness and Training",
+        "3.3 Audit and Accountability",
+        "3.4 Configuration Management",
+        "3.5 Identification and Authentication",
+        "3.6 Incident Response",
+        "3.7 Maintenance",
+        "3.8 Media Protection",
+        "3.9 Personnel Security",
+        "3.10 Physical Protection",
+        "3.11 Risk Assessment",
+        "3.12 Security Assessment",
+        "3.13 System and Communications Protection",
+        "3.14 System and Information Integrity"
+      ]
+    },
+    "total_controls": 20
+  },
+  "controls": [
+    {
+      "control_id": "3.1.1",
+      "original_reference": "3.1.1",
+      "title": "Authorized System Access",
+      "description": "Limit system access to authorized users, processes acting on behalf of authorized users, and devices (including other systems).",
+      "full_text": "Limit information system access to authorized users, processes acting on behalf of authorized users, and devices (including other information systems) and to the types of transactions and functions that authorized users are permitted to exercise.",
+      "domain": "Access Control",
+      "category": "Access Control",
+      "section_number": "3.1.1",
+      "parent_section": "3.1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "User account management procedures",
+        "Access control policy",
+        "User authorization records",
+        "System access matrices"
+      ]
+    },
+    {
+      "control_id": "3.1.2",
+      "original_reference": "3.1.2",
+      "title": "Transaction and Function Limitation",
+      "description": "Limit system access to the types of transactions and functions that authorized users are permitted to execute.",
+      "full_text": "Access to system functions and data should be restricted based on user roles and need-to-know. Implement role-based access control to enforce least privilege. Transaction-level controls prevent unauthorized operations.",
+      "domain": "Access Control",
+      "category": "Least Privilege",
+      "section_number": "3.1.2",
+      "parent_section": "3.1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Role-based access control configuration",
+        "Function-level authorization matrices",
+        "Privileged access management records"
+      ]
+    },
+    {
+      "control_id": "3.1.3",
+      "original_reference": "3.1.3",
+      "title": "CUI Flow Control",
+      "description": "Control the flow of CUI in accordance with approved authorizations.",
+      "full_text": "Control the flow of CUI in accordance with approved authorizations. Implement information flow control policies that restrict the movement of CUI between system components and external systems based on approved rules.",
+      "domain": "Access Control",
+      "category": "Information Flow",
+      "section_number": "3.1.3",
+      "parent_section": "3.1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "CUI data flow diagrams",
+        "Information flow control configuration",
+        "CUI handling procedures"
+      ]
+    },
+    {
+      "control_id": "3.3.1",
+      "original_reference": "3.3.1",
+      "title": "Audit Logging",
+      "description": "Create and retain system audit logs and records to the extent needed to enable the monitoring, analysis, investigation, and reporting of unlawful or unauthorized system activity.",
+      "full_text": "Create and retain audit logs to support monitoring and analysis. Audit logs must include user access, configuration changes, authentication attempts, and file access for CUI. Logs are retained for a defined period and protected from unauthorized modification.",
+      "domain": "Audit and Accountability",
+      "category": "Audit Logging",
+      "section_number": "3.3.1",
+      "parent_section": "3.3",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Audit log configuration",
+        "Log retention policy",
+        "Log protection controls",
+        "Sample audit log reviews"
+      ]
+    },
+    {
+      "control_id": "3.4.1",
+      "original_reference": "3.4.1",
+      "title": "Baseline Configuration",
+      "description": "Establish and maintain baseline configurations and inventories of organizational systems throughout the respective system development life cycles.",
+      "full_text": "Establish and maintain baseline configurations and inventories of organizational systems. Baseline configurations document the hardware, software, and firmware components including version numbers and patch levels. Baselines are updated when components change.",
+      "domain": "Configuration Management",
+      "category": "Configuration Baseline",
+      "section_number": "3.4.1",
+      "parent_section": "3.4",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "System baseline configuration documentation",
+        "Hardware and software inventory",
+        "Baseline update records",
+        "CMDB or asset management system"
+      ]
+    },
+    {
+      "control_id": "3.4.2",
+      "original_reference": "3.4.2",
+      "title": "Security Configuration Settings",
+      "description": "Establish and enforce security configuration settings for information technology products employed in organizational systems.",
+      "full_text": "Establish security configuration settings based on industry best practices and implement them on all systems. Configuration settings must reflect the organization's security risk profile. Deviations from standard configurations are documented and approved.",
+      "domain": "Configuration Management",
+      "category": "Security Configuration",
+      "section_number": "3.4.2",
+      "parent_section": "3.4",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Security configuration standards (based on DISA STIGs or CIS Benchmarks)",
+        "Configuration compliance scan results",
+        "Deviation approvals"
+      ]
+    },
+    {
+      "control_id": "3.5.1",
+      "original_reference": "3.5.1",
+      "title": "User Identification",
+      "description": "Identify system users, processes acting on behalf of users, and devices.",
+      "full_text": "All users must be uniquely identified. Shared accounts are prohibited except where technically necessary and with compensating controls. Processes acting on behalf of users must also be identified. Device identity must be managed.",
+      "domain": "Identification and Authentication",
+      "category": "Identity Management",
+      "section_number": "3.5.1",
+      "parent_section": "3.5",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "User identity management records",
+        "No shared accounts policy",
+        "Service account inventory",
+        "Device identity management"
+      ]
+    },
+    {
+      "control_id": "3.5.3",
+      "original_reference": "3.5.3",
+      "title": "Multifactor Authentication",
+      "description": "Use multifactor authentication for local and network access to privileged accounts and for network access to non-privileged accounts.",
+      "full_text": "Implement multifactor authentication (MFA) for all privileged account access and network access. MFA must use at least two of: something you know, something you have, or something you are. FIPS-validated cryptographic modules must be used for CUI systems.",
+      "domain": "Identification and Authentication",
+      "category": "Authentication",
+      "section_number": "3.5.3",
+      "parent_section": "3.5",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "MFA implementation documentation",
+        "Privileged account MFA enforcement",
+        "MFA coverage reporting"
+      ]
+    },
+    {
+      "control_id": "3.6.1",
+      "original_reference": "3.6.1",
+      "title": "Incident Response Capability",
+      "description": "Establish an operational incident-handling capability for organizational systems that includes preparation, detection, analysis, containment, recovery, and user response activities.",
+      "full_text": "Establish and maintain an incident response capability that enables effective handling of security incidents involving CUI systems. The capability must include incident detection, containment, eradication, recovery, and post-incident review. CUI incidents must be reported to the appropriate federal agency.",
+      "domain": "Incident Response",
+      "category": "Incident Handling",
+      "section_number": "3.6.1",
+      "parent_section": "3.6",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Incident response plan",
+        "Incident response team structure",
+        "CUI incident reporting procedures",
+        "Incident handling exercises"
+      ]
+    },
+    {
+      "control_id": "3.11.1",
+      "original_reference": "3.11.1",
+      "title": "Risk Assessment",
+      "description": "Periodically assess the risk to organizational operations, assets, and individuals resulting from the operation of organizational systems and the associated processing, storage, or transmission of CUI.",
+      "full_text": "Conduct regular risk assessments of systems that process, store, or transmit CUI. Risk assessments must identify threats, vulnerabilities, likelihood, and potential impact. Results must be documented and used to prioritize security investments and system security plans.",
+      "domain": "Risk Assessment",
+      "category": "Risk Assessment",
+      "section_number": "3.11.1",
+      "parent_section": "3.11",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "System risk assessment reports",
+        "Threat and vulnerability analysis",
+        "Risk register",
+        "Risk treatment documentation"
+      ]
+    },
+    {
+      "control_id": "3.11.2",
+      "original_reference": "3.11.2",
+      "title": "Vulnerability Scanning",
+      "description": "Scan for vulnerabilities in organizational systems and applications periodically and when new vulnerabilities affecting those systems are identified.",
+      "full_text": "Conduct vulnerability scanning of systems and applications on a regular schedule and when significant changes occur. High and critical vulnerabilities must be remediated within defined timeframes. Vulnerability data informs risk assessments and system security plans.",
+      "domain": "Risk Assessment",
+      "category": "Vulnerability Management",
+      "section_number": "3.11.2",
+      "parent_section": "3.11",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Vulnerability scan reports and schedules",
+        "Remediation tracking",
+        "CVSS scoring and prioritization",
+        "Patch management records"
+      ]
+    },
+    {
+      "control_id": "3.12.1",
+      "original_reference": "3.12.1",
+      "title": "Security Control Assessment",
+      "description": "Periodically assess the security controls in organizational systems to determine if the controls are effective in their application.",
+      "full_text": "Conduct periodic security control assessments to evaluate whether security controls are properly implemented and producing desired outcomes. Assessments include control testing, analysis, and documentation. Results are used to update the system security plan and POA&M.",
+      "domain": "Security Assessment",
+      "category": "Control Assessment",
+      "section_number": "3.12.1",
+      "parent_section": "3.12",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Security control assessment reports",
+        "System Security Plan (SSP)",
+        "Assessment methodology documentation",
+        "Assessor independence documentation"
+      ]
+    },
+    {
+      "control_id": "3.12.2",
+      "original_reference": "3.12.2",
+      "title": "Plan of Action",
+      "description": "Develop and implement plans of action designed to correct deficiencies and reduce or eliminate vulnerabilities in organizational systems.",
+      "full_text": "Develop and maintain a Plan of Action and Milestones (POA&M) documenting all identified security control deficiencies. Each POA&M item includes the deficiency description, responsible party, milestone dates, and remediation status. The POA&M is reviewed and updated regularly.",
+      "domain": "Security Assessment",
+      "category": "Remediation Planning",
+      "section_number": "3.12.2",
+      "parent_section": "3.12",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Plan of Action and Milestones (POA&M)",
+        "POA&M update records",
+        "Remediation completion evidence",
+        "Federal agency submission records"
+      ]
+    },
+    {
+      "control_id": "3.13.1",
+      "original_reference": "3.13.1",
+      "title": "Communications Boundary Protection",
+      "description": "Monitor, control, and protect communications at the external boundaries and key internal boundaries of organizational systems.",
+      "full_text": "Implement boundary protection mechanisms at external network boundaries and key internal boundaries. Controls include firewalls, intrusion detection/prevention systems, and network access controls. CUI must not traverse unprotected boundaries.",
+      "domain": "System and Communications Protection",
+      "category": "Boundary Protection",
+      "section_number": "3.13.1",
+      "parent_section": "3.13",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Network architecture with boundary controls",
+        "Firewall rule reviews",
+        "IDS/IPS implementation records",
+        "Boundary monitoring logs"
+      ]
+    },
+    {
+      "control_id": "3.13.5",
+      "original_reference": "3.13.5",
+      "title": "Public-Facing System Protection",
+      "description": "Implement subnetworks for publicly accessible system components that are physically or logically separated from internal networks.",
+      "full_text": "Separate public-facing systems (web servers, email gateways) from internal network segments containing CUI. Use DMZ architecture with appropriate firewall rules. This limits the blast radius of external attacks from reaching CUI systems.",
+      "domain": "System and Communications Protection",
+      "category": "Network Architecture",
+      "section_number": "3.13.5",
+      "parent_section": "3.13",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Network segmentation documentation",
+        "DMZ architecture diagram",
+        "Firewall rules between zones",
+        "CUI isolation verification"
+      ]
+    },
+    {
+      "control_id": "3.13.8",
+      "original_reference": "3.13.8",
+      "title": "Data in Transit Encryption",
+      "description": "Implement cryptographic mechanisms to prevent unauthorized disclosure of CUI during transmission unless otherwise protected by alternative physical safeguards.",
+      "full_text": "Encrypt all CUI transmitted over networks using FIPS-validated cryptographic standards (AES-256, TLS 1.2+). Encryption must cover all transmission vectors including email, file transfer, and API communications. Encryption of CUI at rest is also required.",
+      "domain": "System and Communications Protection",
+      "category": "Cryptography",
+      "section_number": "3.13.8",
+      "parent_section": "3.13",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Encryption standards documentation",
+        "TLS/encryption configuration",
+        "FIPS-validated module verification",
+        "CUI transit encryption audit"
+      ]
+    },
+    {
+      "control_id": "3.14.1",
+      "original_reference": "3.14.1",
+      "title": "Malicious Code Protection",
+      "description": "Identify, report, and correct information system flaws; test software and firmware updates related to flaw remediation for effectiveness.",
+      "full_text": "Deploy and maintain malware protection on all systems that process, store, or transmit CUI. Anti-malware signatures are updated regularly. Malware detection alerts are investigated and remediated. Endpoint detection and response (EDR) capabilities provide advanced protection.",
+      "domain": "System and Information Integrity",
+      "category": "Malware Protection",
+      "section_number": "3.14.1",
+      "parent_section": "3.14",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Anti-malware deployment records",
+        "Signature update logs",
+        "Malware alert response records",
+        "EDR coverage reports"
+      ]
+    },
+    {
+      "control_id": "3.14.2",
+      "original_reference": "3.14.2",
+      "title": "Security Alerts and Advisories",
+      "description": "Provide protection from malicious code at appropriate locations within organizational systems.",
+      "full_text": "Monitor security advisories and alerts from US-CERT, software vendors, and threat intelligence sources. Subscribe to vulnerability notification services. Apply patches and mitigations based on risk to CUI systems. Document response actions for each significant advisory.",
+      "domain": "System and Information Integrity",
+      "category": "Security Monitoring",
+      "section_number": "3.14.2",
+      "parent_section": "3.14",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Security advisory subscriptions",
+        "Patch response records",
+        "Vulnerability management program",
+        "Threat intelligence integration"
+      ]
+    },
+    {
+      "control_id": "3.14.6",
+      "original_reference": "3.14.6",
+      "title": "Security Monitoring",
+      "description": "Monitor organizational systems, including inbound and outbound communications traffic, to detect attacks and indicators of potential attacks.",
+      "full_text": "Implement security monitoring to detect attacks and indicators of compromise on systems handling CUI. Monitoring covers network traffic, user behavior, file integrity, and system events. Alerts are analyzed and responded to according to the incident response plan.",
+      "domain": "System and Information Integrity",
+      "category": "Security Monitoring",
+      "section_number": "3.14.6",
+      "parent_section": "3.14",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "SIEM configuration and coverage",
+        "Network monitoring tools",
+        "File integrity monitoring",
+        "Alert response records"
+      ]
+    },
+    {
+      "control_id": "SSP.1",
+      "original_reference": "System Security Plan",
+      "title": "System Security Plan",
+      "description": "Develop, document, and periodically update system security plans that describe system boundaries, system environments, how security requirements are implemented, and relationships with other systems.",
+      "full_text": "Maintain a current System Security Plan (SSP) for all systems handling CUI. The SSP documents the system boundary, all CUI data flows, implementation status of each 800-171 requirement, and interconnections with other systems. The SSP is reviewed and updated at least annually.",
+      "domain": "Security Assessment",
+      "category": "Security Planning",
+      "section_number": "SSP.1",
+      "parent_section": "SSP",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Current System Security Plan",
+        "SSP update records",
+        "CMMC assessment preparation",
+        "CUI system boundary documentation"
+      ]
+    }
+  ]
+}

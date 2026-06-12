@@ -1,0 +1,350 @@
+{
+  "metadata": {
+    "name": "SASB Standards (Sustainability Accounting Standards Board)",
+    "description": "SASB Standards guide the disclosure of financially material sustainability information by companies to their investors. SASB Standards identify the subset of environmental, social, and governance (ESG) issues most relevant to financial performance in 77 industry-specific standards. SASB is now part of the IFRS Foundation under the ISSB.",
+    "version": "2023 (IFRS Foundation / ISSB)",
+    "source_organization": "SASB / IFRS Foundation (International Sustainability Standards Board)",
+    "effective_date": "2017-10-01",
+    "classification": "compliance",
+    "framework_type": "reporting_standard",
+    "classification_confidence": 0.94,
+    "classification_reasoning": "SASB Standards are the globally recognized industry-specific sustainability reporting framework, now embedded in IFRS S1 and widely referenced by investors and reporting frameworks.",
+    "framework_purpose": "To establish industry-specific disclosure topics and accounting metrics to enable companies to report sustainability information that is useful to investors and other providers of financial capital.",
+    "framework_scope": "All public companies and their investors across 77 industry-specific standards organized in 11 SICS sectors. Private companies also use SASB for investor-grade sustainability disclosure.",
+    "framework_objectives": [
+      "Enable investor-relevant sustainability disclosure",
+      "Provide industry-specific sustainability metrics",
+      "Improve comparability of sustainability data within industries",
+      "Support integration of sustainability into financial analysis",
+      "Align with financial materiality principles"
+    ],
+    "target_audience": "Corporate Sustainability Officers, Investor Relations, CFOs, ESG Analysts, Asset Managers, and Investment Research Teams",
+    "regulatory_authority": "IFRS Foundation / International Sustainability Standards Board (ISSB)",
+    "adoption_approach": [
+      "Identify the applicable SASB industry standard(s)",
+      "Review required disclosure topics and accounting metrics",
+      "Collect quantitative and qualitative data for metrics",
+      "Assess materiality of each topic for the organization",
+      "Prepare SASB-aligned sustainability disclosure",
+      "Map SASB disclosures to IFRS S1 requirements"
+    ],
+    "hierarchy_structure": {
+      "levels": ["Industry", "Disclosure Topic", "Accounting Metric"],
+      "numbering_pattern": "Industry Code-Category (e.g., IF-TE-330a.1)"
+    },
+    "document_structure": {
+      "sections": [
+        "Environment",
+        "Social Capital",
+        "Human Capital",
+        "Business Model & Innovation",
+        "Leadership & Governance"
+      ]
+    },
+    "total_controls": 16
+  },
+  "controls": [
+    {
+      "control_id": "SASB-ENV-1",
+      "original_reference": "Environment - GHG Emissions",
+      "title": "Greenhouse Gas Emissions",
+      "description": "Report Scope 1 and Scope 2 greenhouse gas emissions and associated metrics relevant to the industry.",
+      "full_text": "Disclose gross global Scope 1 GHG emissions, percentage covered under emissions-limiting regulations, and total energy consumed. Industry-specific metrics may include emissions intensity per unit of production, transportation emissions, or process emissions. Align with GHG Protocol standards.",
+      "domain": "Environment",
+      "category": "GHG Emissions",
+      "section_number": "ENV.1",
+      "parent_section": "Environment",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Scope 1 and 2 GHG data",
+        "GHG intensity metrics",
+        "Emissions regulation coverage",
+        "Energy consumption data"
+      ]
+    },
+    {
+      "control_id": "SASB-ENV-2",
+      "original_reference": "Environment - Air Quality",
+      "title": "Air Quality",
+      "description": "Report on air emissions of pollutants beyond GHG that are material to industry operations.",
+      "full_text": "Disclose air emissions of NOx, SOx, volatile organic compounds (VOCs), particulate matter, and other regulated pollutants relevant to the industry. Provide context on regulatory compliance. Report initiatives to reduce air quality impacts.",
+      "domain": "Environment",
+      "category": "Air Quality",
+      "section_number": "ENV.2",
+      "parent_section": "Environment",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Air pollutant emission data",
+        "Regulatory permit compliance",
+        "Emission reduction initiatives"
+      ]
+    },
+    {
+      "control_id": "SASB-ENV-3",
+      "original_reference": "Environment - Water Management",
+      "title": "Water Management",
+      "description": "Report on water withdrawal, consumption, and quality impacts relevant to industry operations.",
+      "full_text": "Disclose total water withdrawn, total water consumed, percentage in water-stressed regions, and water quality metrics (incidents of non-compliance with water quality permits). Report initiatives for water efficiency and water stewardship.",
+      "domain": "Environment",
+      "category": "Water Management",
+      "section_number": "ENV.3",
+      "parent_section": "Environment",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Water consumption and withdrawal data",
+        "Water stress area operations",
+        "Water quality compliance records",
+        "Water efficiency targets"
+      ]
+    },
+    {
+      "control_id": "SASB-ENV-4",
+      "original_reference": "Environment - Waste & Hazardous Materials",
+      "title": "Waste and Hazardous Materials Management",
+      "description": "Report on waste generation, hazardous materials, and environmental incidents material to industry.",
+      "full_text": "Disclose total waste generated, percentage recycled or recovered, hazardous waste disposed, environmental permits and compliance status, and number of reportable environmental incidents. Report on materials stewardship and circular economy initiatives.",
+      "domain": "Environment",
+      "category": "Waste Management",
+      "section_number": "ENV.4",
+      "parent_section": "Environment",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Waste generation and diversion data",
+        "Hazardous materials handling records",
+        "Environmental incidents and fines",
+        "Environmental compliance status"
+      ]
+    },
+    {
+      "control_id": "SASB-SC-1",
+      "original_reference": "Social Capital - Human Rights",
+      "title": "Human Rights and Community Relations",
+      "description": "Report on human rights policies, supply chain due diligence, and community impacts relevant to the industry.",
+      "full_text": "Disclose human rights policies, percentage of suppliers audited for human rights, community investment activities, and incidents of violations. For extractive industries, disclose community conflicts and resolution processes. Report on FPIC (Free, Prior, and Informed Consent) for indigenous communities.",
+      "domain": "Social Capital",
+      "category": "Human Rights",
+      "section_number": "SC.1",
+      "parent_section": "Social Capital",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Human rights policy",
+        "Supply chain human rights audits",
+        "Community investment data",
+        "FPIC documentation"
+      ]
+    },
+    {
+      "control_id": "SASB-SC-2",
+      "original_reference": "Social Capital - Customer Privacy",
+      "title": "Customer Privacy and Data Security",
+      "description": "Report on customer data privacy practices, data security measures, and incidents of data breaches.",
+      "full_text": "Disclose number of data breach incidents, number of customers affected, and percentage of customers whose data is used for secondary purposes. Describe the approach to data privacy and security. Report on compliance with privacy regulations.",
+      "domain": "Social Capital",
+      "category": "Customer Privacy",
+      "section_number": "SC.2",
+      "parent_section": "Social Capital",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Data breach incident data",
+        "Privacy program documentation",
+        "Customer data use policies",
+        "Regulatory compliance for privacy"
+      ]
+    },
+    {
+      "control_id": "SASB-SC-3",
+      "original_reference": "Social Capital - Access and Affordability",
+      "title": "Access and Affordability",
+      "description": "Report on the availability, affordability, and access to products and services relevant to industry social impact.",
+      "full_text": "For industries with significant access and affordability materiality (financial services, healthcare, utilities, telecom), disclose access metrics such as products serving underserved populations, geographic coverage, pricing policies, and financial inclusion programs.",
+      "domain": "Social Capital",
+      "category": "Access and Affordability",
+      "section_number": "SC.3",
+      "parent_section": "Social Capital",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Access metrics by geography or segment",
+        "Affordability programs",
+        "Financial inclusion data",
+        "Universal access policies"
+      ]
+    },
+    {
+      "control_id": "SASB-HC-1",
+      "original_reference": "Human Capital - Employee Diversity",
+      "title": "Employee Engagement, Diversity, and Inclusion",
+      "description": "Report on workforce diversity, pay equity, employee engagement, and workplace inclusion metrics.",
+      "full_text": "Disclose workforce demographic data by gender, race/ethnicity, and other diversity categories. Report gender and minority representation in management. Disclose pay equity data. Report employee engagement scores. Describe diversity, equity, and inclusion (DEI) programs and initiatives.",
+      "domain": "Human Capital",
+      "category": "Diversity and Inclusion",
+      "section_number": "HC.1",
+      "parent_section": "Human Capital",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Workforce diversity data",
+        "Management diversity metrics",
+        "Pay equity analysis",
+        "Employee engagement survey results"
+      ]
+    },
+    {
+      "control_id": "SASB-HC-2",
+      "original_reference": "Human Capital - Employee Health and Safety",
+      "title": "Employee Health, Safety, and Wellbeing",
+      "description": "Report on occupational health and safety performance metrics and employee wellbeing programs.",
+      "full_text": "Disclose: total recordable incident rate (TRIR), lost time incident rate (LTIR), occupational disease incidents, fatalities, near misses, and employee health program participation. Report on safety certifications and management systems. Describe wellbeing programs.",
+      "domain": "Human Capital",
+      "category": "Health and Safety",
+      "section_number": "HC.2",
+      "parent_section": "Human Capital",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "TRIR and LTIR data",
+        "Fatality and incident records",
+        "OH&S certification (ISO 45001)",
+        "Wellbeing program participation data"
+      ]
+    },
+    {
+      "control_id": "SASB-BMI-1",
+      "original_reference": "Business Model - Product Design",
+      "title": "Product Design and Lifecycle Management",
+      "description": "Report on the sustainability impacts of product design, end-of-life management, and circular economy practices.",
+      "full_text": "Disclose product design for sustainability metrics including percentage recyclable content, take-back program participation, products with sustainability certifications, and revenue from sustainable products and services. Describe lifecycle management approach.",
+      "domain": "Business Model and Innovation",
+      "category": "Product Sustainability",
+      "section_number": "BMI.1",
+      "parent_section": "Business Model",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Sustainable product portfolio data",
+        "Product certification records",
+        "Take-back and recycling program data",
+        "Circular design initiatives"
+      ]
+    },
+    {
+      "control_id": "SASB-BMI-2",
+      "original_reference": "Business Model - Supply Chain",
+      "title": "Supply Chain Management",
+      "description": "Report on supply chain sustainability practices, sourcing of critical materials, and supplier engagement.",
+      "full_text": "Disclose supply chain risk management practices for environmental and social issues. Report on responsible sourcing of conflict minerals. Describe supplier codes of conduct and engagement. Disclose supply chain audits and corrective action rates. Report on critical material sourcing risks.",
+      "domain": "Business Model and Innovation",
+      "category": "Supply Chain",
+      "section_number": "BMI.2",
+      "parent_section": "Business Model",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Supplier code of conduct",
+        "Supply chain audit results",
+        "Conflict minerals reporting (if applicable)",
+        "Critical material sourcing risk assessment"
+      ]
+    },
+    {
+      "control_id": "SASB-LG-1",
+      "original_reference": "Leadership - Business Ethics",
+      "title": "Business Ethics and Transparency",
+      "description": "Report on anti-corruption, anti-bribery, and business conduct practices.",
+      "full_text": "Disclose: total amount of monetary losses from legal proceedings related to corruption, bribery, or anti-competitive behavior; description of code of ethics and standards of conduct; whistleblower policies; and management-level oversight of business ethics. Report number of ethics violations and disciplinary actions.",
+      "domain": "Leadership and Governance",
+      "category": "Business Ethics",
+      "section_number": "LG.1",
+      "parent_section": "Leadership",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Monetary losses from legal proceedings",
+        "Code of ethics documentation",
+        "Whistleblower cases and outcomes",
+        "Ethics training completion data"
+      ]
+    },
+    {
+      "control_id": "SASB-LG-2",
+      "original_reference": "Leadership - Systemic Risk",
+      "title": "Systemic Risk Management",
+      "description": "Report on management of systemic risks relevant to the industry, including financial sector systemic risk or sector-specific risks.",
+      "full_text": "For industries with systemic risk materiality (financial services, energy), disclose risk management approaches for systemic risks. Include exposure to highly volatile commodities, capital adequacy, stress testing results, and climate systemic risk. Describe policy positions on systemic risk regulation.",
+      "domain": "Leadership and Governance",
+      "category": "Systemic Risk",
+      "section_number": "LG.2",
+      "parent_section": "Leadership",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Systemic risk exposure data",
+        "Stress test results (where applicable)",
+        "Regulatory capital adequacy data",
+        "Systemic risk management framework"
+      ]
+    },
+    {
+      "control_id": "SASB-ALIGN",
+      "original_reference": "SASB-IFRS Alignment",
+      "title": "Alignment with IFRS S1/S2 and ISSB",
+      "description": "Ensure SASB disclosures align with IFRS S1 (General Sustainability Disclosures) and IFRS S2 (Climate) as issued by the ISSB.",
+      "full_text": "Align SASB industry-specific disclosures with IFRS S1 (general sustainability information) and IFRS S2 (climate-related information). SASB Standards are incorporated by reference into IFRS S1 for industry-specific metrics. Map SASB disclosures to IFRS S1/S2 requirements. Report industry-based metrics as required by IFRS S1 Appendix B.",
+      "domain": "Reporting",
+      "category": "Regulatory Alignment",
+      "section_number": "ALIGN.1",
+      "parent_section": "Reporting",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "SASB to IFRS S1/S2 mapping",
+        "Industry-based metrics per IFRS S1 Appendix B",
+        "ISSB disclosure compliance assessment"
+      ]
+    },
+    {
+      "control_id": "SASB-MATERIAL",
+      "original_reference": "Financial Materiality Assessment",
+      "title": "SASB Financial Materiality Assessment",
+      "description": "Assess and disclose which SASB topics are financially material to the organization's industry.",
+      "full_text": "Conduct a SASB materiality assessment to determine which of the industry-standard disclosure topics are financially material to the organization. Consider SASB's evidence of materiality by industry. Explain any departures from the SASB standard for the industry. Disclose omissions and reasons for non-disclosure of standard metrics.",
+      "domain": "Materiality",
+      "category": "Materiality Assessment",
+      "section_number": "MAT.1",
+      "parent_section": "Materiality",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "SASB materiality assessment documentation",
+        "Industry standard selection rationale",
+        "Omission disclosures with justification",
+        "Materiality determination process"
+      ]
+    },
+    {
+      "control_id": "SASB-DATA",
+      "original_reference": "Data Quality",
+      "title": "Data Quality and Assurance for SASB Metrics",
+      "description": "Ensure SASB quantitative metrics are collected with appropriate data quality controls and external assurance.",
+      "full_text": "Implement robust data collection and quality assurance processes for SASB quantitative metrics. Obtain external assurance for key SASB metrics (GHG emissions, safety metrics, financial metrics). Disclose the boundary, methodology, and assurance status for reported metrics. Maintain data governance for sustainability data.",
+      "domain": "Reporting",
+      "category": "Data Quality",
+      "section_number": "DATA.1",
+      "parent_section": "Reporting",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Data collection methodology",
+        "External assurance for SASB metrics",
+        "Data quality control procedures",
+        "Reporting boundary documentation"
+      ]
+    }
+  ]
+}

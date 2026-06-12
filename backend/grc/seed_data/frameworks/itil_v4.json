@@ -1,0 +1,406 @@
+{
+  "metadata": {
+    "name": "ITIL v4 (IT Infrastructure Library)",
+    "description": "ITIL v4 is the world's most widely adopted IT service management framework. It provides practical guidance for organizations seeking to establish an effective IT service management system (SMS). ITIL v4 introduces the Service Value System (SVS) and the Four Dimensions Model, modernizing IT service management for the digital age.",
+    "version": "v4 (2019)",
+    "source_organization": "AXELOS (PeopleCert)",
+    "effective_date": "2019-02-18",
+    "classification": "compliance",
+    "framework_type": "best_practice",
+    "classification_confidence": 0.93,
+    "classification_reasoning": "ITIL v4 is the globally recognized IT service management framework with millions of certified practitioners and adoption by most major organizations for IT service delivery.",
+    "framework_purpose": "To provide a practical and flexible framework for organizations to support their digital transformation and align IT services with business strategy and customer needs.",
+    "framework_scope": "IT service management functions, IT departments, and any organization delivering IT services to internal or external customers.",
+    "framework_objectives": [
+      "Align IT services with business needs",
+      "Improve IT service quality and efficiency",
+      "Create value for customers and stakeholders",
+      "Enable digital transformation",
+      "Establish continual improvement culture"
+    ],
+    "target_audience": "IT Service Managers, CIOs, Service Desk Managers, IT Operations Staff, ITIL-certified practitioners, and organizations seeking IT service management improvement",
+    "regulatory_authority": "AXELOS / PeopleCert",
+    "adoption_approach": [
+      "Assess current ITSM maturity",
+      "Adopt ITIL practices aligned with business needs",
+      "Implement Service Value System",
+      "Develop ITIL capabilities through certification",
+      "Monitor and improve service delivery continuously"
+    ],
+    "hierarchy_structure": {
+      "levels": ["Component", "Practice"],
+      "numbering_pattern": "SVS/Practice name"
+    },
+    "document_structure": {
+      "sections": [
+        "Service Value System (SVS)",
+        "General Management Practices",
+        "Service Management Practices",
+        "Technical Management Practices"
+      ]
+    },
+    "total_controls": 18
+  },
+  "controls": [
+    {
+      "control_id": "SVS.1",
+      "original_reference": "Service Value Chain",
+      "title": "Service Value Chain",
+      "description": "The service value chain is an operating model for the creation, delivery, and continual improvement of services.",
+      "full_text": "The ITIL service value chain defines six activities: Plan, Improve, Engage, Design & Transition, Obtain/Build, and Deliver & Support. These activities represent the steps taken to create value through IT services. All service management practices support one or more value chain activities.",
+      "domain": "Service Value System",
+      "category": "Value Chain",
+      "section_number": "SVS.1",
+      "parent_section": "SVS",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Service value chain documentation",
+        "Value stream mapping",
+        "Service delivery process documentation"
+      ]
+    },
+    {
+      "control_id": "P.1",
+      "original_reference": "Incident Management",
+      "title": "Incident Management",
+      "description": "The purpose of incident management is to minimize the negative impact of incidents by restoring normal service operation as quickly as possible.",
+      "full_text": "Establish and implement an incident management process to classify, prioritize, investigate, and resolve incidents. Incidents are distinguished from service requests. SLAs define target resolution times by priority. Escalation processes ensure timely resolution. Incident records include root cause for analysis.",
+      "domain": "Service Management Practices",
+      "category": "Incident Management",
+      "section_number": "P.1",
+      "parent_section": "Practices",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Incident management process documentation",
+        "Incident ticketing system records",
+        "SLA compliance reports",
+        "Escalation procedure documentation"
+      ]
+    },
+    {
+      "control_id": "P.2",
+      "original_reference": "Problem Management",
+      "title": "Problem Management",
+      "description": "The purpose of problem management is to reduce the likelihood and impact of incidents by identifying actual and potential causes of incidents.",
+      "full_text": "Implement problem management to identify root causes of incidents and implement workarounds and permanent fixes. Problem management includes reactive analysis of incident patterns and proactive identification of potential problems. Known errors are documented and workarounds provided to support incident resolution.",
+      "domain": "Service Management Practices",
+      "category": "Problem Management",
+      "section_number": "P.2",
+      "parent_section": "Practices",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Problem management process",
+        "Problem records and RCA reports",
+        "Known error database",
+        "Trend analysis of incidents"
+      ]
+    },
+    {
+      "control_id": "P.3",
+      "original_reference": "Change Enablement",
+      "title": "Change Enablement",
+      "description": "The purpose of change enablement is to maximize the number of successful IT changes by ensuring that risks have been properly assessed.",
+      "full_text": "Establish change management processes for standard, normal, and emergency changes. Changes are assessed for risk and impact before implementation. Change advisory board (CAB) reviews significant changes. Post-implementation reviews verify change success. Emergency changes follow expedited processes.",
+      "domain": "Service Management Practices",
+      "category": "Change Management",
+      "section_number": "P.3",
+      "parent_section": "Practices",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Change management process documentation",
+        "CAB meeting minutes",
+        "Change records with approvals",
+        "Post-implementation review reports"
+      ]
+    },
+    {
+      "control_id": "P.4",
+      "original_reference": "Service Desk",
+      "title": "Service Desk",
+      "description": "The purpose of the service desk is to capture demand for incident resolution and service requests and act as the entry point for the service provider.",
+      "full_text": "Establish a service desk as the single point of contact between the service provider and users. The service desk handles incidents, service requests, and communication to users. Service desk metrics include first contact resolution rate, customer satisfaction, and ticket volumes.",
+      "domain": "Service Management Practices",
+      "category": "Service Desk",
+      "section_number": "P.4",
+      "parent_section": "Practices",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Service desk operating procedures",
+        "Service catalog documentation",
+        "Customer satisfaction survey results",
+        "Service desk performance metrics"
+      ]
+    },
+    {
+      "control_id": "P.5",
+      "original_reference": "Service Level Management",
+      "title": "Service Level Management",
+      "description": "The purpose of service level management is to set clear business-based targets for service performance, ensuring the delivery of IT services meets business expectations.",
+      "full_text": "Define and agree service level agreements (SLAs) with customers and operational level agreements (OLAs) with internal teams. Monitor and report SLA performance. Review SLAs periodically and when business needs change. Address SLA breaches through improvement plans.",
+      "domain": "Service Management Practices",
+      "category": "Service Levels",
+      "section_number": "P.5",
+      "parent_section": "Practices",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Service Level Agreements (SLAs)",
+        "OLA documentation",
+        "SLA performance reports",
+        "SLA breach investigations"
+      ]
+    },
+    {
+      "control_id": "P.6",
+      "original_reference": "Configuration Management",
+      "title": "Configuration Management",
+      "description": "The purpose of configuration management is to ensure that accurate and reliable information about the configuration of services is available when and where it is needed.",
+      "full_text": "Maintain a configuration management database (CMDB) with records of all configuration items (CIs) and their relationships. CIs include hardware, software, documentation, and services. CMDB is used to assess the impact of changes, incidents, and problems. Accuracy is maintained through discovery tools and regular audits.",
+      "domain": "Technical Management Practices",
+      "category": "Configuration Management",
+      "section_number": "P.6",
+      "parent_section": "Practices",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "CMDB or asset management system",
+        "Configuration item records",
+        "CI discovery and audit results",
+        "CMDB accuracy metrics"
+      ]
+    },
+    {
+      "control_id": "P.7",
+      "original_reference": "Availability Management",
+      "title": "Availability Management",
+      "description": "The purpose of availability management is to ensure that services deliver agreed levels of availability to meet the needs of customers and users.",
+      "full_text": "Plan, analyze, and improve IT service availability. Define availability requirements in SLAs. Monitor availability against targets. Analyze availability failures and implement improvements. Conduct availability risk assessments. Test availability controls and failover capabilities.",
+      "domain": "Service Management Practices",
+      "category": "Availability",
+      "section_number": "P.7",
+      "parent_section": "Practices",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Availability management plan",
+        "Availability monitoring reports",
+        "SLA availability performance",
+        "Failure analysis reports"
+      ]
+    },
+    {
+      "control_id": "P.8",
+      "original_reference": "Capacity and Performance Management",
+      "title": "Capacity and Performance Management",
+      "description": "The purpose of capacity and performance management is to ensure that services achieve agreed and expected performance, satisfying current and future demand.",
+      "full_text": "Plan and monitor capacity to meet current and future service demand. Analyze performance trends and forecast capacity requirements. Implement capacity improvements before limits are reached. Document capacity plans aligned with business growth projections.",
+      "domain": "Service Management Practices",
+      "category": "Capacity Management",
+      "section_number": "P.8",
+      "parent_section": "Practices",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Capacity management plan",
+        "Performance monitoring reports",
+        "Capacity forecasting records",
+        "Performance improvement records"
+      ]
+    },
+    {
+      "control_id": "P.9",
+      "original_reference": "IT Asset Management",
+      "title": "IT Asset Management",
+      "description": "The purpose of IT asset management is to plan and manage the full lifecycle of all IT assets to help the organization maximize value, control costs, manage risks, and support decision-making.",
+      "full_text": "Maintain a comprehensive IT asset register covering hardware, software, and digital assets. Manage assets through their full lifecycle from acquisition to disposal. Track software licenses and ensure compliance. Manage end-of-life assets and disposal. Report on asset value and utilization.",
+      "domain": "General Management Practices",
+      "category": "Asset Management",
+      "section_number": "P.9",
+      "parent_section": "Practices",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "IT asset register",
+        "Software license compliance reports",
+        "Asset disposal records",
+        "Asset lifecycle documentation"
+      ]
+    },
+    {
+      "control_id": "P.10",
+      "original_reference": "Service Continuity Management",
+      "title": "IT Service Continuity Management",
+      "description": "The purpose of IT service continuity management is to ensure that the availability and performance of an IT service are maintained at sufficient levels in case of a disaster.",
+      "full_text": "Develop and maintain IT service continuity plans aligned with business continuity requirements. Define RTOs and RPOs for critical services. Implement disaster recovery capabilities. Test continuity plans periodically through exercises and simulations. Update plans after incidents and business changes.",
+      "domain": "Service Management Practices",
+      "category": "Service Continuity",
+      "section_number": "P.10",
+      "parent_section": "Practices",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "IT service continuity plans",
+        "DR test results",
+        "RTO/RPO documentation",
+        "Business impact analysis"
+      ]
+    },
+    {
+      "control_id": "P.11",
+      "original_reference": "Information Security Management",
+      "title": "Information Security Management (ITSM Context)",
+      "description": "The purpose of information security management is to protect the information needed by the organization to conduct its business.",
+      "full_text": "Implement information security management within the IT service delivery context. Define and enforce security policies for IT services. Manage security incidents within the incident management process. Coordinate with the CISO for enterprise security requirements. Include security requirements in service design.",
+      "domain": "General Management Practices",
+      "category": "Security Management",
+      "section_number": "P.11",
+      "parent_section": "Practices",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "IT security policies and procedures",
+        "Security requirement in service design",
+        "Security incident management records",
+        "Security monitoring in IT services"
+      ]
+    },
+    {
+      "control_id": "P.12",
+      "original_reference": "Knowledge Management",
+      "title": "Knowledge Management",
+      "description": "The purpose of knowledge management is to maintain and improve the effective, efficient, and convenient use of information and knowledge across an organization.",
+      "full_text": "Develop and maintain a service knowledge management system (SKMS). Capture and share knowledge from incidents, problems, changes, and projects. Provide knowledge base access to service desk and users for self-service. Measure and improve knowledge quality and usage.",
+      "domain": "General Management Practices",
+      "category": "Knowledge Management",
+      "section_number": "P.12",
+      "parent_section": "Practices",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Knowledge base system",
+        "Knowledge article utilization metrics",
+        "Knowledge contribution records",
+        "Self-service utilization data"
+      ]
+    },
+    {
+      "control_id": "P.13",
+      "original_reference": "Continual Improvement",
+      "title": "Continual Improvement",
+      "description": "The purpose of the continual improvement practice is to align the organization's practices and services with changing business needs through the ongoing identification and improvement of services, components, practices, or any element involved in the efficient and effective management of products and services.",
+      "full_text": "Establish a continual improvement register (CIR) to capture, prioritize, and track improvement initiatives. Apply the ITIL continual improvement model to drive systematic improvement. Measure the impact of improvements. Allocate time and resources for improvement activities.",
+      "domain": "General Management Practices",
+      "category": "Continual Improvement",
+      "section_number": "P.13",
+      "parent_section": "Practices",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Continual improvement register",
+        "Improvement initiative tracking",
+        "Before/after metrics for improvements",
+        "CSI (Continual Service Improvement) reports"
+      ]
+    },
+    {
+      "control_id": "P.14",
+      "original_reference": "Release Management",
+      "title": "Release Management",
+      "description": "The purpose of release management is to make new and changed services and features available for use.",
+      "full_text": "Plan and manage releases of new or changed services. Release planning coordinates with change management. Release testing validates functionality and performance. Release deployment follows defined procedures. Post-release monitoring verifies successful delivery.",
+      "domain": "Technical Management Practices",
+      "category": "Release Management",
+      "section_number": "P.14",
+      "parent_section": "Practices",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Release management procedure",
+        "Release plans and schedules",
+        "Release testing results",
+        "Post-release monitoring reports"
+      ]
+    },
+    {
+      "control_id": "P.15",
+      "original_reference": "Monitoring and Event Management",
+      "title": "Monitoring and Event Management",
+      "description": "The purpose of monitoring and event management is to systematically observe services and their components, and record and report selected changes of state identified as events.",
+      "full_text": "Implement monitoring of all critical IT services, infrastructure, and applications. Define meaningful alerts and events that require action. Categorize events (informational, warning, exception). Route events to appropriate support teams. Monitor SLA performance indicators automatically.",
+      "domain": "Technical Management Practices",
+      "category": "Monitoring",
+      "section_number": "P.15",
+      "parent_section": "Practices",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Monitoring tool configuration",
+        "Alert and event thresholds",
+        "Event management procedures",
+        "Monitoring coverage reports"
+      ]
+    },
+    {
+      "control_id": "P.16",
+      "original_reference": "Supplier Management",
+      "title": "Supplier Management",
+      "description": "The purpose of supplier management is to ensure that the organization's suppliers and their performance are managed appropriately to support the seamless provision of quality IT products and services.",
+      "full_text": "Manage IT supplier relationships and performance through the complete supplier lifecycle. Maintain a supplier register with contract details. Monitor supplier performance against SLAs. Conduct supplier reviews. Manage supplier risks. Implement vendor diversification for critical services.",
+      "domain": "General Management Practices",
+      "category": "Supplier Management",
+      "section_number": "P.16",
+      "parent_section": "Practices",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Supplier register and contracts",
+        "Supplier performance reports",
+        "Supplier review meeting minutes",
+        "Vendor risk assessments"
+      ]
+    },
+    {
+      "control_id": "P.17",
+      "original_reference": "Service Request Management",
+      "title": "Service Request Management",
+      "description": "The purpose of service request management is to support the agreed quality of a service by handling all predefined, user-initiated service requests in an effective and user-friendly manner.",
+      "full_text": "Define and publish a service catalog of available service requests. Implement a service request management process separate from incident management. Automate common service requests where possible. Set and monitor fulfillment time targets. Measure service request satisfaction.",
+      "domain": "Service Management Practices",
+      "category": "Service Request",
+      "section_number": "P.17",
+      "parent_section": "Practices",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Service catalog",
+        "Service request workflows",
+        "Fulfillment time metrics",
+        "Customer satisfaction results"
+      ]
+    },
+    {
+      "control_id": "P.18",
+      "original_reference": "Deployment Management",
+      "title": "Deployment Management",
+      "description": "The purpose of deployment management is to move new or changed hardware, software, documentation, processes, or any other component to live environments.",
+      "full_text": "Manage deployment of components to live environments using controlled procedures. Separate deployment management from release management (what is deployed vs. how). Apply deployment approaches including phased, blue-green, canary, and big-bang deployments. Automate deployment where feasible.",
+      "domain": "Technical Management Practices",
+      "category": "Deployment",
+      "section_number": "P.18",
+      "parent_section": "Practices",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Deployment procedure documentation",
+        "Deployment records and logs",
+        "Rollback procedures",
+        "Deployment automation tools"
+      ]
+    }
+  ]
+}

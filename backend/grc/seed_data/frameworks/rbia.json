@@ -1,0 +1,391 @@
+{
+  "metadata": {
+    "name": "Risk-Based Internal Auditing (RBIA) Methodology",
+    "description": "Risk-Based Internal Auditing (RBIA) is a methodology that focuses audit resources on areas of greatest risk to organizational objectives. RBIA aligns the audit plan with organizational risk assessments, prioritizes audit coverage by risk exposure, and ensures internal audit adds maximum value to the organization.",
+    "version": "Current",
+    "source_organization": "The Institute of Internal Auditors (IIA) / CRSA Institute",
+    "effective_date": "2004-01-01",
+    "classification": "compliance",
+    "framework_type": "audit_methodology",
+    "classification_confidence": 0.90,
+    "classification_reasoning": "RBIA is the globally adopted methodology for modern internal auditing, endorsed by the IIA and required by auditing standards to ensure audit resources are allocated based on risk.",
+    "framework_purpose": "To focus internal audit resources on areas of greatest risk, ensuring audit work is aligned with organizational risk exposure and providing maximum assurance value.",
+    "framework_scope": "All internal audit functions seeking to develop and execute risk-based audit plans aligned with organizational risk management frameworks.",
+    "framework_objectives": [
+      "Align audit plan with organizational risk exposure",
+      "Prioritize audit resources on highest risk areas",
+      "Integrate audit with enterprise risk management",
+      "Provide risk-based assurance to the board",
+      "Maximize internal audit value and coverage efficiency"
+    ],
+    "target_audience": "Chief Audit Executives, Internal Audit Managers, Risk Managers, Audit Committees, and organizations implementing or improving internal audit functions",
+    "regulatory_authority": "The Institute of Internal Auditors (IIA)",
+    "adoption_approach": [
+      "Develop and maintain the audit universe",
+      "Conduct annual risk assessment of the audit universe",
+      "Build the risk-based audit plan",
+      "Execute individual risk-based audit engagements",
+      "Monitor and report on audit plan completion",
+      "Update risk assessment based on changing risk landscape"
+    ],
+    "hierarchy_structure": {
+      "levels": ["Phase", "Activity"],
+      "numbering_pattern": "Phase.Activity"
+    },
+    "document_structure": {
+      "sections": [
+        "Audit Universe Development",
+        "Risk Assessment",
+        "Audit Planning",
+        "Engagement Execution",
+        "Reporting and Follow-Up",
+        "Quality and Continuous Improvement"
+      ]
+    },
+    "total_controls": 18
+  },
+  "controls": [
+    {
+      "control_id": "AU.1",
+      "original_reference": "Audit Universe - Development",
+      "title": "Audit Universe Development",
+      "description": "The internal audit function develops and maintains a comprehensive audit universe encompassing all auditable units, processes, and systems.",
+      "full_text": "The CAE develops an audit universe that includes all auditable entities, business processes, IT systems, regulatory requirements, and significant projects. The universe is organized by business area, risk category, or regulatory domain. The audit universe is reviewed and updated at least annually to reflect organizational changes.",
+      "domain": "Audit Universe",
+      "category": "Universe Development",
+      "section_number": "AU.1",
+      "parent_section": "AU",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Documented audit universe",
+        "Universe update records",
+        "Entity categorization methodology",
+        "Coverage mapping"
+      ]
+    },
+    {
+      "control_id": "AU.2",
+      "original_reference": "Audit Universe - Maintenance",
+      "title": "Audit Universe Maintenance",
+      "description": "The audit universe is maintained to reflect current organizational structure, processes, and risk landscape.",
+      "full_text": "The audit universe is reviewed at least annually and updated for organizational changes, new business activities, regulatory changes, and emerging risks. Additions and deletions are documented with rationale. Senior management and the audit committee are informed of significant changes to the universe.",
+      "domain": "Audit Universe",
+      "category": "Universe Maintenance",
+      "section_number": "AU.2",
+      "parent_section": "AU",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Universe review documentation",
+        "Change log for universe updates",
+        "Communication to audit committee",
+        "Version control for universe document"
+      ]
+    },
+    {
+      "control_id": "RA.1",
+      "original_reference": "Risk Assessment - Methodology",
+      "title": "Risk Assessment Methodology",
+      "description": "The internal audit function applies a documented, consistent methodology for assessing risk across the audit universe.",
+      "full_text": "The CAE develops and documents a risk assessment methodology that defines risk factors, scoring criteria, and risk weighting. Common factors include inherent risk (business complexity, external threats), control environment quality, management quality, regulatory exposure, financial materiality, and strategic importance. The methodology ensures consistent and defensible risk prioritization.",
+      "domain": "Risk Assessment",
+      "category": "Methodology",
+      "section_number": "RA.1",
+      "parent_section": "RA",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Risk assessment methodology document",
+        "Risk factor definitions and weightings",
+        "Scoring guide with examples",
+        "Methodology review records"
+      ]
+    },
+    {
+      "control_id": "RA.2",
+      "original_reference": "Risk Assessment - Execution",
+      "title": "Annual Risk Assessment Execution",
+      "description": "The internal audit function conducts an annual risk assessment of the audit universe to prioritize audit coverage.",
+      "full_text": "The CAE conducts a comprehensive risk assessment of each auditable entity in the universe. Risk assessments incorporate input from management, the board, external auditors, regulators, and the internal audit team. Risk factors are scored and aggregated to produce an overall risk rating that drives audit prioritization.",
+      "domain": "Risk Assessment",
+      "category": "Risk Assessment Execution",
+      "section_number": "RA.2",
+      "parent_section": "RA",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Completed risk assessment worksheets",
+        "Risk ratings for all auditable entities",
+        "Management and board input records",
+        "Risk heat map or prioritization matrix"
+      ]
+    },
+    {
+      "control_id": "RA.3",
+      "original_reference": "Risk Assessment - Alignment",
+      "title": "ERM Alignment",
+      "description": "The internal audit risk assessment is aligned with the organization's enterprise risk management process.",
+      "full_text": "The CAE coordinates the audit risk assessment with the organization's ERM process. Audit risk ratings reflect the organizational risk register. Areas identified as high risk by ERM receive priority audit coverage. The CAE attends risk committee meetings and reviews ERM reporting.",
+      "domain": "Risk Assessment",
+      "category": "ERM Alignment",
+      "section_number": "RA.3",
+      "parent_section": "RA",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "ERM alignment documentation",
+        "Risk committee attendance records",
+        "Audit risk assessment vs. ERM comparison",
+        "Emerging risk consideration records"
+      ]
+    },
+    {
+      "control_id": "AP.1",
+      "original_reference": "Audit Planning - Plan Development",
+      "title": "Risk-Based Audit Plan Development",
+      "description": "The annual audit plan is developed based on risk assessment results, allocating audit resources to highest risk areas.",
+      "full_text": "The CAE translates risk assessment results into an annual audit plan. High-risk areas receive priority scheduling and greater resource allocation. The plan balances risk-based priorities with regulatory requirements, management requests, and coverage of all significant areas over a multi-year cycle. Resource requirements (staff, time, budget) are estimated for each engagement.",
+      "domain": "Audit Planning",
+      "category": "Plan Development",
+      "section_number": "AP.1",
+      "parent_section": "AP",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Annual audit plan document",
+        "Risk-to-plan mapping",
+        "Resource allocation plan",
+        "Multi-year audit coverage analysis"
+      ]
+    },
+    {
+      "control_id": "AP.2",
+      "original_reference": "Audit Planning - Approval",
+      "title": "Audit Plan Approval",
+      "description": "The risk-based audit plan is approved by senior management and the audit committee, with the risk assessment supporting the prioritization decisions.",
+      "full_text": "The CAE presents the risk-based audit plan to senior management and the audit committee for approval. The presentation explains how risk assessment drives prioritization, resource requirements, and coverage decisions. The audit committee approves the plan and any subsequent material changes.",
+      "domain": "Audit Planning",
+      "category": "Plan Approval",
+      "section_number": "AP.2",
+      "parent_section": "AP",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Audit committee approval minutes",
+        "Risk-to-plan rationale presentation",
+        "Management endorsement records",
+        "Plan change approval documentation"
+      ]
+    },
+    {
+      "control_id": "AP.3",
+      "original_reference": "Audit Planning - Dynamic Updates",
+      "title": "Dynamic Audit Plan Updates",
+      "description": "The audit plan is updated dynamically during the year to reflect changes in the risk environment.",
+      "full_text": "The CAE monitors the risk environment throughout the year and adjusts the audit plan as needed. Material changes in risk — including significant business changes, regulatory changes, incidents, or management requests — may trigger plan updates. Changes are communicated to and approved by the audit committee.",
+      "domain": "Audit Planning",
+      "category": "Dynamic Planning",
+      "section_number": "AP.3",
+      "parent_section": "AP",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Mid-year risk assessment updates",
+        "Plan change log",
+        "Audit committee communications on plan changes",
+        "Agility and responsiveness metrics"
+      ]
+    },
+    {
+      "control_id": "EE.1",
+      "original_reference": "Engagement Execution - Risk-Based Scope",
+      "title": "Risk-Based Engagement Scoping",
+      "description": "Each audit engagement is scoped based on risk assessment to focus on the most significant risks within the audit area.",
+      "full_text": "For each engagement, the auditor conducts a preliminary risk assessment to identify the key risks within scope. The risk assessment informs the engagement objectives, testing focus, and sampling approach. Higher-risk areas receive more intensive testing and deeper substantive procedures.",
+      "domain": "Engagement Execution",
+      "category": "Risk-Based Scoping",
+      "section_number": "EE.1",
+      "parent_section": "EE",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Engagement risk and control matrix (RCM)",
+        "Scope documentation with risk rationale",
+        "Preliminary risk assessment records",
+        "Opening meeting risk discussion notes"
+      ]
+    },
+    {
+      "control_id": "EE.2",
+      "original_reference": "Engagement Execution - Control Evaluation",
+      "title": "Control Design and Operating Effectiveness",
+      "description": "Auditors evaluate both the design adequacy and operating effectiveness of controls over identified risks.",
+      "full_text": "Auditors assess whether controls are appropriately designed to mitigate identified risks and whether they are operating effectively over the period under review. Design evaluation precedes operating effectiveness testing. Results are documented in the risk and control matrix with clear linkage to risks and conclusions.",
+      "domain": "Engagement Execution",
+      "category": "Control Evaluation",
+      "section_number": "EE.2",
+      "parent_section": "EE",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Control design assessment documentation",
+        "Operating effectiveness test results",
+        "Sample selection methodology",
+        "Exception analysis and conclusions"
+      ]
+    },
+    {
+      "control_id": "EE.3",
+      "original_reference": "Engagement Execution - Documentation",
+      "title": "Working Paper Documentation",
+      "description": "Audit working papers document procedures performed, evidence gathered, and conclusions reached for each engagement.",
+      "full_text": "Auditors prepare and maintain working papers that document audit procedures, evidence collected, analysis performed, and conclusions. Working papers link back to the work program and RCM. They are reviewed by the in-charge auditor and manager before the report is issued. Working papers are retained per the document retention policy.",
+      "domain": "Engagement Execution",
+      "category": "Documentation",
+      "section_number": "EE.3",
+      "parent_section": "EE",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Completed working papers",
+        "Supervisor review sign-offs",
+        "Evidence files and samples",
+        "Conclusions and findings documentation"
+      ]
+    },
+    {
+      "control_id": "RF.1",
+      "original_reference": "Reporting - Findings and Recommendations",
+      "title": "Risk-Based Findings and Recommendations",
+      "description": "Audit findings are reported with clear linkage to risks and business impact, and recommendations are actionable and risk-prioritized.",
+      "full_text": "Audit reports communicate findings in the context of the risks they represent. Each finding includes the condition (what is), criteria (what should be), cause (why), risk/impact (what could happen), and recommendation (what should be done). Findings are rated by risk severity. Recommendations are specific, actionable, and prioritized by risk.",
+      "domain": "Reporting",
+      "category": "Findings",
+      "section_number": "RF.1",
+      "parent_section": "RF",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Draft and final audit reports",
+        "Finding risk ratings",
+        "Management responses and action plans",
+        "Report distribution records"
+      ]
+    },
+    {
+      "control_id": "RF.2",
+      "original_reference": "Reporting - Follow-Up",
+      "title": "Finding Follow-Up and Closure",
+      "description": "Audit follows up on management's implementation of agreed recommendations to ensure risk remediation.",
+      "full_text": "The CAE establishes a follow-up process to verify that management has effectively implemented agreed action plans. Follow-up is risk-prioritized, with critical findings receiving earlier and more intensive follow-up. Results are reported to the audit committee. Unresolved issues are escalated appropriately.",
+      "domain": "Reporting",
+      "category": "Follow-Up",
+      "section_number": "RF.2",
+      "parent_section": "RF",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Follow-up tracking system",
+        "Verification evidence for closed findings",
+        "Aging report for open findings",
+        "Audit committee reporting on open items"
+      ]
+    },
+    {
+      "control_id": "RF.3",
+      "original_reference": "Reporting - Board Communication",
+      "title": "Risk-Focused Board Reporting",
+      "description": "The CAE provides risk-focused reporting to the board, including overall risk coverage, significant risks identified, and the residual risk posture.",
+      "full_text": "The CAE provides periodic risk-focused reports to the board and audit committee. Reports include audit plan progress, significant findings and emerging risks, assessment of the overall control environment, and the residual risk profile based on audit work. The CAE communicates any limitations on audit scope or resources.",
+      "domain": "Reporting",
+      "category": "Board Reporting",
+      "section_number": "RF.3",
+      "parent_section": "RF",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Quarterly or semi-annual board reports",
+        "Annual CAE report to audit committee",
+        "Risk posture dashboards",
+        "Plan vs. actual coverage reporting"
+      ]
+    },
+    {
+      "control_id": "QCI.1",
+      "original_reference": "Quality - QAIP",
+      "title": "RBIA Quality Assurance",
+      "description": "The internal audit function maintains a quality assurance and improvement program that validates the effectiveness of the RBIA approach.",
+      "full_text": "The quality assurance program evaluates whether the risk assessment is comprehensive and current, the audit plan reflects risk priorities, engagement execution meets professional standards, and reporting is timely and effective. Internal and external quality assessments measure RBIA effectiveness.",
+      "domain": "Quality and Improvement",
+      "category": "Quality Assurance",
+      "section_number": "QCI.1",
+      "parent_section": "QCI",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "QAIP documentation and results",
+        "Internal assessment reports",
+        "External quality assessment results",
+        "RBIA effectiveness metrics"
+      ]
+    },
+    {
+      "control_id": "QCI.2",
+      "original_reference": "Quality - Analytics",
+      "title": "Data Analytics in RBIA",
+      "description": "The internal audit function leverages data analytics to enhance risk assessment and engagement effectiveness.",
+      "full_text": "Internal audit uses data analytics to improve risk identification, expand testing coverage, and increase audit efficiency. Analytics are used in the risk assessment (trend analysis, anomaly detection) and in individual engagements (full population testing, continuous monitoring). Technology skills are developed within the audit team.",
+      "domain": "Quality and Improvement",
+      "category": "Technology",
+      "section_number": "QCI.2",
+      "parent_section": "QCI",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Analytics tools and methodology documentation",
+        "Data analysis results in workpapers",
+        "Analytics training records",
+        "Continuous auditing framework"
+      ]
+    },
+    {
+      "control_id": "QCI.3",
+      "original_reference": "Quality - Continuous Improvement",
+      "title": "RBIA Continuous Improvement",
+      "description": "The internal audit function continuously improves its RBIA approach based on internal feedback, external assessments, and industry developments.",
+      "full_text": "The CAE implements a continuous improvement program for the RBIA methodology. Improvements are based on QAIP results, staff feedback, benchmark data from industry surveys, and external quality assessment recommendations. The board is informed of significant improvements.",
+      "domain": "Quality and Improvement",
+      "category": "Continuous Improvement",
+      "section_number": "QCI.3",
+      "parent_section": "QCI",
+      "is_mandatory": false,
+      "priority": "low",
+      "evidence_requirements": [
+        "Improvement action plans",
+        "Benchmark comparisons",
+        "Innovation and technology adoption",
+        "Maturity assessment results"
+      ]
+    },
+    {
+      "control_id": "QCI.4",
+      "original_reference": "Quality - Stakeholder Satisfaction",
+      "title": "Stakeholder Satisfaction Measurement",
+      "description": "The internal audit function measures and acts on stakeholder satisfaction to ensure audit services meet organizational needs.",
+      "full_text": "The CAE measures satisfaction with internal audit services from the board, management, and other stakeholders. Satisfaction surveys are conducted after engagements and annually. Results are analyzed and used to improve audit processes, communication, and relationships. Results are reported in the QAIP.",
+      "domain": "Quality and Improvement",
+      "category": "Stakeholder Management",
+      "section_number": "QCI.4",
+      "parent_section": "QCI",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Stakeholder satisfaction survey results",
+        "Action plans based on feedback",
+        "Management satisfaction trends",
+        "Board satisfaction assessment"
+      ]
+    }
+  ]
+}

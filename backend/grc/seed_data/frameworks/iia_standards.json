@@ -1,0 +1,433 @@
+{
+  "metadata": {
+    "name": "IIA International Standards for the Professional Practice of Internal Auditing",
+    "description": "The International Standards for the Professional Practice of Internal Auditing (Standards) are principle-based mandatory requirements consisting of core principles, a definition of internal auditing, a code of ethics, and standards. The 2024 revision represents a comprehensive modernization to address the evolving risk landscape, stakeholder expectations, and technology.",
+    "version": "2024",
+    "source_organization": "The Institute of Internal Auditors (IIA)",
+    "effective_date": "2025-01-09",
+    "classification": "compliance",
+    "framework_type": "audit_standard",
+    "classification_confidence": 0.99,
+    "classification_reasoning": "The IIA Standards are the globally recognized mandatory framework for internal audit functions, defining requirements for quality, competency, and conduct of internal audit activities worldwide.",
+    "framework_purpose": "To define the nature of internal auditing, establish the basis for measuring internal audit performance, and foster improved organizational processes and operations for all types of organizations globally.",
+    "framework_scope": "All internal audit functions regardless of size, industry, or sector. Applicable to chief audit executives, internal auditors, and those providing internal audit services.",
+    "framework_objectives": [
+      "Define the professional practice of internal auditing",
+      "Ensure internal audit quality and consistency",
+      "Protect the independence and objectivity of internal auditors",
+      "Guide governance, risk management, and control assurance",
+      "Support organizational achievement of objectives"
+    ],
+    "target_audience": "Chief Audit Executives, Internal Auditors, Audit Committees, Boards of Directors, Senior Management, and external parties relying on internal audit work",
+    "regulatory_authority": "The Institute of Internal Auditors (IIA)",
+    "adoption_approach": [
+      "Assess current internal audit function against the Standards",
+      "Develop Internal Audit Charter aligned with Domain I",
+      "Establish quality assurance and improvement program",
+      "Conduct internal assessments annually",
+      "Obtain external assessment at least every five years",
+      "Report conformance to the Standards to governing body"
+    ],
+    "hierarchy_structure": {
+      "levels": ["Domain", "Standard", "Requirement"],
+      "numbering_pattern": "N.N (e.g., 1.1, 2.2)"
+    },
+    "document_structure": {
+      "sections": [
+        "Domain I: Purpose of Internal Auditing",
+        "Domain II: Ethics and Professionalism",
+        "Domain III: Governing the Internal Audit Function",
+        "Domain IV: Managing the Internal Audit Function",
+        "Domain V: Performing Internal Audit Services",
+        "Domain VI: Impact of Internal Auditing"
+      ]
+    },
+    "total_controls": 20
+  },
+  "controls": [
+    {
+      "control_id": "STD-1.1",
+      "original_reference": "Standard 1 - Organizational Objectives, Governance, and Risk",
+      "title": "Organizational Objectives, Governance, and Risk",
+      "description": "Internal auditors must have a thorough understanding of the organization's objectives, governance structures, risk management practices, and control environment to provide effective assurance and advisory services.",
+      "full_text": "Internal auditing adds value by providing stakeholders with objective assessments of whether the organization's governance structures, risk management practices, and internal controls are appropriate and effective. Internal auditors must understand the organization's strategic objectives, risk appetite, and governance framework to prioritize and scope audit work appropriately.",
+      "domain": "Purpose of Internal Auditing",
+      "category": "Core Purpose",
+      "section_number": "1.1",
+      "parent_section": "1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Internal Audit Charter defining purpose and scope",
+        "Strategic audit plan aligned with organizational objectives",
+        "Risk assessment documentation",
+        "Stakeholder communication records"
+      ]
+    },
+    {
+      "control_id": "STD-1.2",
+      "original_reference": "Standard 2 - Ethical Conduct",
+      "title": "Ethical Conduct",
+      "description": "Internal auditors must adhere to the IIA Code of Ethics, demonstrating integrity, objectivity, confidentiality, and competency in all professional activities.",
+      "full_text": "Internal auditors must comply with the IIA Code of Ethics. The principles of integrity, objectivity, confidentiality, and competency are fundamental to the professional conduct of internal auditors. Auditors must not participate in any activity that impairs their ability to carry out responsibilities ethically.",
+      "domain": "Ethics and Professionalism",
+      "category": "Ethics",
+      "section_number": "1.2",
+      "parent_section": "1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Signed acknowledgment of IIA Code of Ethics",
+        "Conflict of interest disclosures",
+        "Independence declarations",
+        "Ethics training completion records"
+      ]
+    },
+    {
+      "control_id": "STD-2.1",
+      "original_reference": "Standard 3 - Internal Audit Charter",
+      "title": "Internal Audit Charter",
+      "description": "The chief audit executive must establish a charter that defines the internal audit function's purpose, authority, and responsibility, formally approved by the board.",
+      "full_text": "The internal audit charter is a formal document that defines the internal audit activity's purpose, authority, and responsibility. The charter must establish the internal audit activity's position within the organization, authorize access to records, personnel, and physical properties, and define the scope of internal audit activities. The charter must be approved by the board.",
+      "domain": "Governing the Internal Audit Function",
+      "category": "Charter and Authority",
+      "section_number": "2.1",
+      "parent_section": "2",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Board-approved Internal Audit Charter",
+        "Charter review and update records",
+        "Board/Audit Committee approval minutes"
+      ]
+    },
+    {
+      "control_id": "STD-2.2",
+      "original_reference": "Standard 4 - Independence and Objectivity",
+      "title": "Independence and Objectivity",
+      "description": "The internal audit function must be independent, and internal auditors must be objective in performing their work. Independence and objectivity must be free from conditions that threaten unbiased professional judgments.",
+      "full_text": "The internal audit activity must be independent, and internal auditors must be objective in performing their work. Independence is the freedom from conditions that threaten the ability of the internal audit activity to carry out its responsibilities. Objectivity is an unbiased mental attitude that allows internal auditors to perform engagements in such a manner that they believe in their work product and that no quality compromises are made.",
+      "domain": "Governing the Internal Audit Function",
+      "category": "Independence",
+      "section_number": "2.2",
+      "parent_section": "2",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Organizational independence documentation (reporting to board)",
+        "Individual objectivity assessments",
+        "Impairment disclosure records",
+        "Rotation policy for audit assignments"
+      ]
+    },
+    {
+      "control_id": "STD-2.3",
+      "original_reference": "Standard 5 - Quality Assurance and Improvement Program",
+      "title": "Quality Assurance and Improvement Program",
+      "description": "The chief audit executive must develop and maintain a quality assurance and improvement program (QAIP) that covers all aspects of the internal audit activity.",
+      "full_text": "The chief audit executive must develop and maintain a quality assurance and improvement program that covers all aspects of the internal audit activity. The program must include both internal and external assessments. Internal assessments must include ongoing monitoring and periodic self-assessments. External assessments must be conducted at least once every five years by a qualified, independent assessor or assessment team from outside the organization.",
+      "domain": "Governing the Internal Audit Function",
+      "category": "Quality Assurance",
+      "section_number": "2.3",
+      "parent_section": "2",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "QAIP policy and procedures",
+        "Internal assessment reports",
+        "External quality assessment reports (every 5 years)",
+        "QAIP improvement action plans",
+        "Conformance ratings communicated to stakeholders"
+      ]
+    },
+    {
+      "control_id": "STD-3.1",
+      "original_reference": "Standard 6 - Risk-Based Planning",
+      "title": "Risk-Based Strategic Audit Planning",
+      "description": "The chief audit executive must establish a risk-based plan to determine internal audit priorities, consistent with the organization's goals.",
+      "full_text": "The chief audit executive must establish risk-based plans to determine the priorities of the internal audit activity, consistent with the organization's goals. The plan must be based on documented risk assessment, undertaken at least annually. The CAE must consider input from senior management and the board. The plan must take into account audit engagements or other tasks requested by management and the board.",
+      "domain": "Managing the Internal Audit Function",
+      "category": "Planning",
+      "section_number": "3.1",
+      "parent_section": "3",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Annual audit risk assessment",
+        "Strategic audit plan document",
+        "Board/management consultation records",
+        "Audit universe documentation",
+        "Resource allocation plan"
+      ]
+    },
+    {
+      "control_id": "STD-3.2",
+      "original_reference": "Standard 7 - Resource Management",
+      "title": "Resource Management",
+      "description": "The chief audit executive must ensure that internal audit resources are appropriate, sufficient, and effectively deployed to achieve the approved plan.",
+      "full_text": "The chief audit executive must ensure that internal audit resources are appropriate, sufficient, and effectively deployed to achieve the approved plan. Resources include personnel, technology, and other tools. The CAE must identify resource requirements and obtain sufficient resources from senior management and the board. Resources must be appropriately skilled and experienced.",
+      "domain": "Managing the Internal Audit Function",
+      "category": "Resource Management",
+      "section_number": "3.2",
+      "parent_section": "3",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Resource assessment against audit plan",
+        "Staff competency assessments",
+        "Training and development records",
+        "Outsourcing or co-sourcing agreements",
+        "Technology inventory for audit tools"
+      ]
+    },
+    {
+      "control_id": "STD-3.3",
+      "original_reference": "Standard 8 - Coordination and Reliance",
+      "title": "Coordination and Reliance",
+      "description": "The chief audit executive should share information and coordinate activities with other internal and external providers of assurance to ensure proper coverage and minimize duplication of effort.",
+      "full_text": "The chief audit executive should share information and coordinate activities with other internal and external providers of assurance and consulting services to ensure proper coverage and minimize duplication of effort. Internal audit may rely on the work of other assurance providers provided it evaluates the providers' objectivity and professional competence.",
+      "domain": "Managing the Internal Audit Function",
+      "category": "Coordination",
+      "section_number": "3.3",
+      "parent_section": "3",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Coordination agreements with external auditors",
+        "Assurance mapping documentation",
+        "Records of reliance on external work",
+        "Combined assurance framework"
+      ]
+    },
+    {
+      "control_id": "STD-4.1",
+      "original_reference": "Standard 9 - Engagement Planning",
+      "title": "Engagement Planning",
+      "description": "Internal auditors must develop and document a plan for each engagement including its objectives, scope, timing, resource allocations, and risk assessment.",
+      "full_text": "Internal auditors must develop and document a plan for each engagement. The engagement plan must include objectives, scope, timing, resource allocations, and an assessment of the risk of the engagement. The plan must consider the strategies and objectives of the activity being reviewed and the means by which the activity controls its performance. The plan must be approved by the activity being audited.",
+      "domain": "Performing Internal Audit Services",
+      "category": "Engagement Planning",
+      "section_number": "4.1",
+      "parent_section": "4",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Engagement planning memorandum",
+        "Risk and control matrix",
+        "Engagement scope document",
+        "Opening meeting documentation",
+        "Time budget and resource plan"
+      ]
+    },
+    {
+      "control_id": "STD-4.2",
+      "original_reference": "Standard 10 - Engagement Work Program",
+      "title": "Engagement Work Program",
+      "description": "Internal auditors must develop and document work programs that achieve the engagement objectives, reflecting the procedures to be performed during the engagement.",
+      "full_text": "Internal auditors must develop and document work programs that achieve the engagement objectives. The work program must include the procedures for identifying, analyzing, evaluating, and documenting information during the engagement. The work program must be approved before implementation and any adjustments made during the engagement.",
+      "domain": "Performing Internal Audit Services",
+      "category": "Work Program",
+      "section_number": "4.2",
+      "parent_section": "4",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Documented audit work programs",
+        "Work program approval records",
+        "Audit procedures documentation",
+        "Testing methodology documentation"
+      ]
+    },
+    {
+      "control_id": "STD-4.3",
+      "original_reference": "Standard 11 - Engagement Work Performance",
+      "title": "Engagement Work Performance",
+      "description": "Internal auditors must identify, analyze, evaluate, and document sufficient information to achieve the engagement objectives.",
+      "full_text": "Internal auditors must identify, analyze, evaluate, and document sufficient information to achieve the engagement's objectives. The information gathered must be sufficient, reliable, relevant, and useful to support engagement conclusions. Internal auditors must evaluate the adequacy and effectiveness of controls in responding to risks within the organization's governance, operations, and information systems.",
+      "domain": "Performing Internal Audit Services",
+      "category": "Fieldwork",
+      "section_number": "4.3",
+      "parent_section": "4",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Workpapers documenting procedures performed",
+        "Evidence collected and analyzed",
+        "Control testing results",
+        "Interview notes and observations",
+        "Supervisor review sign-offs"
+      ]
+    },
+    {
+      "control_id": "STD-4.4",
+      "original_reference": "Standard 12 - Engagement Communication",
+      "title": "Engagement Communication",
+      "description": "Internal auditors must communicate the engagement results, including objectives, scope, conclusions, recommendations, and action plans.",
+      "full_text": "Internal auditors must communicate the results of engagements. Final communications must include the engagement's objectives, scope, and results. Where applicable, final communications must contain the internal auditors' opinion and must acknowledge satisfactory performance. Communications must be accurate, objective, clear, concise, constructive, complete, and timely.",
+      "domain": "Performing Internal Audit Services",
+      "category": "Reporting",
+      "section_number": "4.4",
+      "parent_section": "4",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Draft and final audit reports",
+        "Management response documentation",
+        "Report distribution records",
+        "Report quality review sign-off"
+      ]
+    },
+    {
+      "control_id": "STD-4.5",
+      "original_reference": "Standard 13 - Monitoring Progress",
+      "title": "Monitoring Progress",
+      "description": "The chief audit executive must establish and maintain a system to monitor the disposition of results communicated to management and the board.",
+      "full_text": "The chief audit executive must establish and maintain a system to monitor the disposition of results communicated to management. The CAE must establish a follow-up process to monitor and ensure that management actions have been effectively implemented or that senior management has accepted the risk of not taking action.",
+      "domain": "Performing Internal Audit Services",
+      "category": "Follow-Up",
+      "section_number": "4.5",
+      "parent_section": "4",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Follow-up tracking system/log",
+        "Management action verification evidence",
+        "Overdue action escalation records",
+        "Status reports to audit committee"
+      ]
+    },
+    {
+      "control_id": "STD-4.6",
+      "original_reference": "Standard 14 - Communicating with the Board",
+      "title": "Communicating with the Board",
+      "description": "The chief audit executive must report periodically to the board and senior management on the internal audit activity's purpose, authority, responsibility, and performance.",
+      "full_text": "The chief audit executive must report periodically to the board and senior management on the internal audit activity's purpose, authority, responsibility, and performance relative to its plan and on its conformance with the Code of Ethics and the Standards. Reporting must also include significant risk exposures and control issues, governance issues, and other matters.",
+      "domain": "Impact of Internal Auditing",
+      "category": "Governance Reporting",
+      "section_number": "4.6",
+      "parent_section": "4",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Board/audit committee reporting package",
+        "Annual audit activity report",
+        "Significant risk and control issue communications",
+        "Audit plan status reports"
+      ]
+    },
+    {
+      "control_id": "STD-5.1",
+      "original_reference": "Standard 15 - Proficiency and Due Professional Care",
+      "title": "Proficiency and Due Professional Care",
+      "description": "Engagements must be performed with proficiency and due professional care, reflecting the collective knowledge, skills, and other competencies of the internal audit team.",
+      "full_text": "Internal auditors must possess the knowledge, skills, and other competencies needed to perform their individual responsibilities. The internal audit activity collectively must possess or obtain the knowledge, skills, and other competencies needed to perform its responsibilities. Internal auditors must exercise due professional care by considering scope, complexity, materiality, and adequacy of procedures.",
+      "domain": "Ethics and Professionalism",
+      "category": "Proficiency",
+      "section_number": "5.1",
+      "parent_section": "5",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Staff qualification and certification records",
+        "Continuing professional education (CPE) records",
+        "Skills assessment and competency frameworks",
+        "Expert consultation records when needed"
+      ]
+    },
+    {
+      "control_id": "STD-5.2",
+      "original_reference": "Standard 16 - Continuing Professional Development",
+      "title": "Continuing Professional Development",
+      "description": "Internal auditors must enhance their knowledge, skills, and other competencies through continuing professional development.",
+      "full_text": "Internal auditors must enhance their knowledge, skills, and other competencies through continuing professional development. The CAE must establish policies encouraging ongoing development relevant to the roles and responsibilities of internal audit staff. Development should cover technical audit skills, subject matter expertise, and leadership capabilities.",
+      "domain": "Ethics and Professionalism",
+      "category": "Professional Development",
+      "section_number": "5.2",
+      "parent_section": "5",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "CPE tracking records (minimum 40 hours/year for CIA)",
+        "Training plans and completion records",
+        "Conference and seminar attendance records",
+        "Professional certification maintenance records"
+      ]
+    },
+    {
+      "control_id": "STD-5.3",
+      "original_reference": "Standard 17 - Consulting Services",
+      "title": "Internal Audit Consulting Services",
+      "description": "When providing consulting services, internal auditors must preserve objectivity and not assume management responsibility, and the nature and scope must be agreed with the engagement client.",
+      "full_text": "Internal auditors may provide consulting services when the work is consistent with the internal audit activity's overall plan and does not impair independence or objectivity. Consulting engagements must be clearly distinguished from assurance engagements. The nature and scope of consulting engagements must be agreed upon with the engagement client and consistent with the internal audit activity's values, strategy, and objectives.",
+      "domain": "Performing Internal Audit Services",
+      "category": "Consulting",
+      "section_number": "5.3",
+      "parent_section": "5",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Consulting engagement agreements",
+        "Scope documentation for advisory projects",
+        "Objectivity assessment for consulting engagements",
+        "Consulting deliverables and reports"
+      ]
+    },
+    {
+      "control_id": "STD-5.4",
+      "original_reference": "Standard 18 - Information Security and Fraud",
+      "title": "Awareness of Fraud, Cybersecurity, and Technology",
+      "description": "Internal auditors must have sufficient knowledge to identify indicators of fraud, cybersecurity risks, and technology-related risks, and to evaluate the adequacy of controls.",
+      "full_text": "Internal auditors must have sufficient knowledge to evaluate the risk of fraud and the manner in which the organization manages that risk, cybersecurity risk management practices, and technology-enabled audit techniques. They must be alert to the possibility of intentional wrongdoing, errors and omissions, inefficiency, waste, ineffectiveness, and conflicts of interest.",
+      "domain": "Performing Internal Audit Services",
+      "category": "Specialized Areas",
+      "section_number": "5.4",
+      "parent_section": "5",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Fraud risk assessment documentation",
+        "Data analytics and CAAT tool usage",
+        "Cybersecurity audit procedures",
+        "Specialized training records (CFE, CISA)"
+      ]
+    },
+    {
+      "control_id": "STD-6.1",
+      "original_reference": "Standard 19 - Conformance Reporting",
+      "title": "Conformance with the Standards",
+      "description": "Internal auditors must disclose non-conformance with the Standards and the potential impact when disclosed to stakeholders.",
+      "full_text": "If the internal audit activity is not in conformance with the Definition of Internal Auditing, the Code of Ethics, or the Standards, the chief audit executive must disclose the non-conformance and the impact of non-conformance to senior management and the board. The disclosure must include the reason for non-conformance and actions being taken to achieve conformance.",
+      "domain": "Impact of Internal Auditing",
+      "category": "Conformance",
+      "section_number": "6.1",
+      "parent_section": "6",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Conformance assessment results",
+        "Non-conformance disclosures to board",
+        "Remediation plans for non-conformances",
+        "Use of 'Conforms with IIA Standards' statement documentation"
+      ]
+    },
+    {
+      "control_id": "STD-6.2",
+      "original_reference": "Standard 20 - Overall Opinions",
+      "title": "Overall Audit Opinions",
+      "description": "When an overall opinion is issued, it must take into account the expectations of senior management, the board, and other stakeholders and must be supported by sufficient, reliable, and relevant information.",
+      "full_text": "When the chief audit executive issues an overall opinion about governance, risk management, or internal controls, it must be based on sufficient work performed or directed by the internal audit function. The opinion must be expressed in a manner consistent with the internal audit activity's charter and must be communicated to the board.",
+      "domain": "Impact of Internal Auditing",
+      "category": "Audit Opinion",
+      "section_number": "6.2",
+      "parent_section": "6",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Overall opinion methodology documentation",
+        "Supporting work products for opinion",
+        "Aggregated findings and risk ratings",
+        "Board communication of overall opinion"
+      ]
+    }
+  ]
+}

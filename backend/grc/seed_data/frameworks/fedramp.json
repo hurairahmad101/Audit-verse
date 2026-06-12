@@ -1,0 +1,389 @@
+{
+  "metadata": {
+    "name": "FedRAMP (Federal Risk and Authorization Management Program)",
+    "description": "FedRAMP is a US government-wide program that provides a standardized approach to security assessment, authorization, and continuous monitoring for cloud products and services used by federal agencies. It leverages NIST SP 800-53 controls with additional FedRAMP-specific requirements.",
+    "version": "Rev 5 (2022)",
+    "source_organization": "US General Services Administration (GSA) / FedRAMP PMO",
+    "effective_date": "2022-09-01",
+    "classification": "regulatory",
+    "framework_type": "regulatory",
+    "classification_confidence": 0.98,
+    "classification_reasoning": "FedRAMP is a mandatory US federal program requiring cloud service providers seeking to offer services to federal agencies to obtain ATO (Authorization to Operate).",
+    "framework_purpose": "To provide a cost-effective, risk-based approach for the adoption and use of cloud services by the federal government through the standardization of security assessments.",
+    "framework_scope": "Cloud Service Providers (CSPs) offering IaaS, PaaS, or SaaS services to US federal agencies. Federal agencies procuring cloud services must use FedRAMP-authorized offerings.",
+    "framework_objectives": [
+      "Standardize cloud security assessment and authorization",
+      "Reuse security authorizations across federal agencies",
+      "Ensure continuous monitoring of cloud security",
+      "Enable federal adoption of secure cloud services",
+      "Reduce duplication of security assessment efforts"
+    ],
+    "target_audience": "Cloud Service Providers (CSPs), Third-Party Assessment Organizations (3PAOs), Federal Agency Information Security Officers, Contracting Officers, and Program Managers",
+    "regulatory_authority": "US General Services Administration (GSA) / FedRAMP Joint Authorization Board (JAB)",
+    "adoption_approach": [
+      "Determine FedRAMP impact level (Low, Moderate, High)",
+      "Implement required NIST 800-53 controls for impact level",
+      "Engage a FedRAMP-authorized 3PAO for assessment",
+      "Develop System Security Plan (SSP) package",
+      "Obtain Authority to Operate (ATO)",
+      "Implement continuous monitoring program"
+    ],
+    "hierarchy_structure": {
+      "levels": ["Control Family", "Control"],
+      "numbering_pattern": "NIST 800-53 with FedRAMP additions (XX-N)"
+    },
+    "document_structure": {
+      "sections": [
+        "FedRAMP Low Baseline (125 controls)",
+        "FedRAMP Moderate Baseline (323 controls)",
+        "FedRAMP High Baseline (421 controls)",
+        "FedRAMP-Specific Requirements"
+      ]
+    },
+    "total_controls": 18
+  },
+  "controls": [
+    {
+      "control_id": "FED-AC-1",
+      "original_reference": "AC-1 / FedRAMP",
+      "title": "Access Control Policy and Procedures",
+      "description": "The organization develops, documents, and disseminates an access control policy and procedures to facilitate implementation of access control measures.",
+      "full_text": "Develop, document, and disseminate an access control policy addressing purpose, scope, roles, responsibilities, management commitment, coordination, and compliance. Review and update the policy at least every three years. FedRAMP requires additional documentation of agency-specific access requirements.",
+      "domain": "Access Control",
+      "category": "Policy",
+      "section_number": "AC-1",
+      "parent_section": "AC",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "FedRAMP access control policy",
+        "Policy review and approval records",
+        "Policy distribution evidence"
+      ]
+    },
+    {
+      "control_id": "FED-AC-2",
+      "original_reference": "AC-2 / FedRAMP",
+      "title": "Account Management",
+      "description": "The organization manages information system accounts including establishing, activating, modifying, reviewing, disabling, and removing accounts.",
+      "full_text": "Implement account management processes for all account types (individual, group, system, application, guest). Review accounts quarterly. Disable inactive accounts within 30 days. Remove accounts within 24 hours upon employee termination. FedRAMP requires automated mechanisms for account management review.",
+      "domain": "Access Control",
+      "category": "Account Management",
+      "section_number": "AC-2",
+      "parent_section": "AC",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Account management procedures",
+        "Quarterly account review records",
+        "Account termination records within 24 hours",
+        "Automated account management tool configuration"
+      ]
+    },
+    {
+      "control_id": "FED-AU-2",
+      "original_reference": "AU-2 / FedRAMP",
+      "title": "Audit Events",
+      "description": "The organization determines events to be audited and coordinates with other entities requiring audit-related information.",
+      "full_text": "Define and implement audit events for FedRAMP-required event categories including authentication events, privilege escalation, policy changes, system events, and data access. Review and update audited events annually. FedRAMP requires coordination with the agency customer on audit event requirements.",
+      "domain": "Audit and Accountability",
+      "category": "Audit Logging",
+      "section_number": "AU-2",
+      "parent_section": "AU",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Audit event definition documentation",
+        "Audit log configuration",
+        "Agency customer coordination records"
+      ]
+    },
+    {
+      "control_id": "FED-CA-2",
+      "original_reference": "CA-2 / FedRAMP",
+      "title": "Security Assessments",
+      "description": "The organization conducts security control assessments of the system at least annually and after significant changes.",
+      "full_text": "Conduct security assessments using FedRAMP-approved assessment procedures. Engage a FedRAMP-authorized Third-Party Assessment Organization (3PAO) for the initial authorization. Conduct annual assessments or when significant changes occur. Document assessment results in the Security Assessment Report (SAR).",
+      "domain": "Security Assessment",
+      "category": "Security Assessment",
+      "section_number": "CA-2",
+      "parent_section": "CA",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Security Assessment Report (SAR) from 3PAO",
+        "Annual assessment records",
+        "3PAO authorization letter",
+        "Significant change assessment records"
+      ]
+    },
+    {
+      "control_id": "FED-CA-7",
+      "original_reference": "CA-7 / FedRAMP",
+      "title": "Continuous Monitoring",
+      "description": "The organization develops and implements a continuous monitoring strategy including establishing metrics, monitoring frequencies, and ongoing assessments.",
+      "full_text": "Implement FedRAMP Continuous Monitoring requirements including monthly vulnerability scanning, annual penetration testing, annual control assessments (17% of controls), monthly reporting to agency customer, and submission of continuous monitoring deliverables to the FedRAMP PMO.",
+      "domain": "Security Assessment",
+      "category": "Continuous Monitoring",
+      "section_number": "CA-7",
+      "parent_section": "CA",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Continuous monitoring plan",
+        "Monthly vulnerability scan reports",
+        "Annual penetration test results",
+        "Monthly reporting to agency AO",
+        "FedRAMP PMO deliverable submissions"
+      ]
+    },
+    {
+      "control_id": "FED-CM-6",
+      "original_reference": "CM-6 / FedRAMP",
+      "title": "Configuration Settings",
+      "description": "The organization establishes and documents configuration settings for IT products, implements the settings, identifies and documents deviations from established settings.",
+      "full_text": "Establish and implement configuration baselines using US Government Configuration Baselines (USGCB) or DISA STIGs. Document deviations from standard configuration baselines with justification. Configure systems to the most restrictive settings consistent with operational requirements.",
+      "domain": "Configuration Management",
+      "category": "Configuration",
+      "section_number": "CM-6",
+      "parent_section": "CM",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Configuration baseline documentation",
+        "USGCB/STIG compliance scan results",
+        "Deviation documentation and approvals",
+        "Configuration management plan"
+      ]
+    },
+    {
+      "control_id": "FED-IA-2",
+      "original_reference": "IA-2 / FedRAMP",
+      "title": "Identification and Authentication (Organizational Users)",
+      "description": "The information system uniquely identifies and authenticates organizational users and implements multifactor authentication.",
+      "full_text": "Uniquely identify and authenticate all users. Implement multi-factor authentication (MFA) for network access and privileged accounts. MFA must use PIV (Personal Identity Verification) credentials for US government personnel. FedRAMP High requires MFA for all network access including non-privileged users.",
+      "domain": "Identification and Authentication",
+      "category": "Authentication",
+      "section_number": "IA-2",
+      "parent_section": "IA",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "MFA implementation documentation",
+        "PIV credential acceptance configuration",
+        "User authentication policy",
+        "Non-privileged MFA enforcement (High)"
+      ]
+    },
+    {
+      "control_id": "FED-IR-4",
+      "original_reference": "IR-4 / FedRAMP",
+      "title": "Incident Handling",
+      "description": "The organization implements an incident handling capability for security incidents including preparation, detection, analysis, containment, eradication, and recovery.",
+      "full_text": "Implement incident handling aligned with NIST guidelines and FedRAMP requirements. Report incidents to US-CERT within required timeframes (1 hour for major incidents). Notify the agency AO immediately upon confirmed breach. Coordinate incident response with agency customers and FedRAMP PMO.",
+      "domain": "Incident Response",
+      "category": "Incident Handling",
+      "section_number": "IR-4",
+      "parent_section": "IR",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Incident response plan",
+        "US-CERT reporting records",
+        "Agency notification procedures",
+        "Incident handling exercises"
+      ]
+    },
+    {
+      "control_id": "FED-PE-2",
+      "original_reference": "PE-2 / FedRAMP",
+      "title": "Physical Access Authorizations",
+      "description": "The organization develops and maintains lists of individuals with authorized access to facilities, verifies access authorizations, and reviews the access list.",
+      "full_text": "Maintain authorized physical access lists for all data center facilities hosting federal data. Review access lists at least annually. Immediately remove terminated personnel from access lists. FedRAMP requires federal personnel to have access to data center operations during authorized visits.",
+      "domain": "Physical and Environmental Protection",
+      "category": "Physical Access",
+      "section_number": "PE-2",
+      "parent_section": "PE",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Physical access authorization lists",
+        "Annual access list reviews",
+        "Data center access procedures",
+        "Federal personnel access records"
+      ]
+    },
+    {
+      "control_id": "FED-PL-2",
+      "original_reference": "PL-2 / FedRAMP",
+      "title": "System Security Plan",
+      "description": "The organization develops a security plan for the information system that covers FedRAMP-required content and maintains and updates the plan.",
+      "full_text": "Develop and maintain a comprehensive System Security Plan (SSP) using the FedRAMP SSP template. The SSP must document all required controls, system boundaries, data flows, and authorization package components. Update the SSP annually and when significant changes occur. Submit SSP to the agency AO and FedRAMP PMO.",
+      "domain": "Planning",
+      "category": "Security Planning",
+      "section_number": "PL-2",
+      "parent_section": "PL",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Current FedRAMP SSP",
+        "SSP annual review records",
+        "Significant change SSP updates",
+        "FedRAMP PMO submission records"
+      ]
+    },
+    {
+      "control_id": "FED-RA-5",
+      "original_reference": "RA-5 / FedRAMP",
+      "title": "Vulnerability Scanning",
+      "description": "The organization scans for vulnerabilities in the information system monthly for operating systems and web applications.",
+      "full_text": "Conduct vulnerability scanning monthly for all operating systems and databases, and monthly for web applications. Use authenticated scanning. Share vulnerability scan results with agency customers. Remediate critical vulnerabilities within 30 days, high within 90 days. Submit scan results through the FedRAMP continuous monitoring process.",
+      "domain": "Risk Assessment",
+      "category": "Vulnerability Scanning",
+      "section_number": "RA-5",
+      "parent_section": "RA",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Monthly vulnerability scan reports",
+        "Remediation tracking by severity",
+        "Authenticated scanning configuration",
+        "Agency customer scan result sharing"
+      ]
+    },
+    {
+      "control_id": "FED-SA-11",
+      "original_reference": "SA-11 / FedRAMP",
+      "title": "Developer Security Testing",
+      "description": "The organization requires the developer of the information system to create and implement a security assessment plan and conduct security testing during system development.",
+      "full_text": "Require developers to conduct security testing including SAST (static analysis), DAST (dynamic analysis), and penetration testing during development. Annual penetration testing by a FedRAMP-authorized 3PAO is required. Penetration testing must include all FedRAMP-required rules of engagement.",
+      "domain": "System and Services Acquisition",
+      "category": "Developer Testing",
+      "section_number": "SA-11",
+      "parent_section": "SA",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Annual penetration test by 3PAO",
+        "SAST and DAST results",
+        "Rules of engagement documentation",
+        "Remediation of penetration test findings"
+      ]
+    },
+    {
+      "control_id": "FED-SC-7",
+      "original_reference": "SC-7 / FedRAMP",
+      "title": "Boundary Protection",
+      "description": "The information system monitors and controls communications at the external boundary and key internal boundaries.",
+      "full_text": "Implement boundary protection using firewalls, IDS/IPS, and network access controls at all external boundaries and key internal boundaries. Implement network segmentation to protect federal data. FedRAMP Moderate/High requires FIPS 140-2 validated cryptography for all encryption.",
+      "domain": "System and Communications Protection",
+      "category": "Boundary Protection",
+      "section_number": "SC-7",
+      "parent_section": "SC",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Network architecture documentation",
+        "Boundary protection configuration",
+        "FIPS 140-2 validated encryption documentation",
+        "Network monitoring records"
+      ]
+    },
+    {
+      "control_id": "FED-SI-2",
+      "original_reference": "SI-2 / FedRAMP",
+      "title": "Flaw Remediation",
+      "description": "The organization identifies, reports, and corrects information system flaws and tests software updates for effectiveness and potential side effects.",
+      "full_text": "Implement flaw remediation with defined timelines: Critical vulnerabilities within 30 days, High within 90 days, Moderate within 180 days. Automate patch deployment where feasible. Test patches before deployment. Report patch status in monthly continuous monitoring deliverables.",
+      "domain": "System and Information Integrity",
+      "category": "Flaw Remediation",
+      "section_number": "SI-2",
+      "parent_section": "SI",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Patch management policy with SLAs",
+        "Patch deployment records",
+        "Patch compliance reports",
+        "Monthly reporting of patch status"
+      ]
+    },
+    {
+      "control_id": "FED-ATO",
+      "original_reference": "Authority to Operate",
+      "title": "Authority to Operate (ATO) Maintenance",
+      "description": "The cloud service provider maintains its FedRAMP Authorization through continuous monitoring and annual authorization maintenance.",
+      "full_text": "Maintain FedRAMP Authorization to Operate (ATO) through: submission of monthly continuous monitoring deliverables, annual security assessment of 17% of controls, annual penetration testing, timely submission of Plan of Action and Milestones (POA&M), and notification of significant changes to agency AOs and FedRAMP PMO.",
+      "domain": "Authorization",
+      "category": "ATO Maintenance",
+      "section_number": "ATO.1",
+      "parent_section": "ATO",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Current ATO letters",
+        "Monthly ConMon deliverables",
+        "POA&M management records",
+        "Significant change notifications",
+        "Annual assessment results"
+      ]
+    },
+    {
+      "control_id": "FED-POAM",
+      "original_reference": "POA&M",
+      "title": "Plan of Action and Milestones",
+      "description": "The organization develops and manages a Plan of Action and Milestones (POA&M) to track remediation of identified weaknesses.",
+      "full_text": "Maintain a current FedRAMP-formatted POA&M tracking all open weaknesses identified through vulnerability scanning, penetration testing, and security assessments. Update the POA&M monthly. Submit to agency AO monthly. Close findings with evidence upon remediation. Escalate aged findings.",
+      "domain": "Security Assessment",
+      "category": "Remediation Tracking",
+      "section_number": "POA&M.1",
+      "parent_section": "POA&M",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Current POA&M in FedRAMP format",
+        "Monthly POA&M updates",
+        "Finding closure evidence",
+        "Agency AO submission records"
+      ]
+    },
+    {
+      "control_id": "FED-INV",
+      "original_reference": "Inventory",
+      "title": "System Component Inventory",
+      "description": "The organization develops and documents an inventory of information system components that accurately reflects the current system.",
+      "full_text": "Maintain an accurate, up-to-date inventory of all system components within the FedRAMP authorization boundary. Include hardware, software, firmware, and virtual components. Update inventory when changes occur. Submit inventory as part of continuous monitoring deliverables. Use automated discovery tools to maintain accuracy.",
+      "domain": "Configuration Management",
+      "category": "Asset Inventory",
+      "section_number": "CM-8",
+      "parent_section": "CM",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "System component inventory",
+        "Automated discovery tool configuration",
+        "Monthly inventory submissions",
+        "Inventory update procedures"
+      ]
+    },
+    {
+      "control_id": "FED-3PAO",
+      "original_reference": "3PAO Assessment",
+      "title": "Third-Party Assessment Organization Requirements",
+      "description": "FedRAMP requires use of accredited Third-Party Assessment Organizations (3PAOs) for initial authorization and annual assessments.",
+      "full_text": "Engage a FedRAMP-accredited 3PAO for initial authorization assessment and annual security assessments. The 3PAO must be independent from the CSP. Coordinate 3PAO assessment activities with the agency AO. Provide 3PAO access to all systems, documentation, and personnel required for the assessment.",
+      "domain": "Security Assessment",
+      "category": "Independent Assessment",
+      "section_number": "3PAO.1",
+      "parent_section": "3PAO",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "3PAO accreditation letter",
+        "3PAO assessment contract",
+        "Assessment scope documentation",
+        "3PAO final assessment reports"
+      ]
+    }
+  ]
+}

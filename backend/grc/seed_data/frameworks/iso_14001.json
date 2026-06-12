@@ -1,0 +1,384 @@
+{
+  "metadata": {
+    "name": "ISO 14001:2015 Environmental Management Systems",
+    "description": "ISO 14001:2015 specifies requirements for an environmental management system (EMS) that an organization can use to enhance its environmental performance. It is intended for use by organizations seeking to manage their environmental responsibilities in a systematic manner that contributes to the environmental pillar of sustainability.",
+    "version": "2015",
+    "source_organization": "International Organization for Standardization (ISO)",
+    "effective_date": "2015-09-15",
+    "classification": "certification",
+    "framework_type": "certification",
+    "classification_confidence": 0.97,
+    "classification_reasoning": "ISO 14001 is a globally recognized environmental management certification standard with over 300,000 organizations certified worldwide.",
+    "framework_purpose": "To provide organizations with a framework to protect the environment and respond to changing environmental conditions in balance with socio-economic needs.",
+    "framework_scope": "All types and sizes of organizations operating in any sector that wish to manage environmental impacts and improve environmental performance.",
+    "framework_objectives": [
+      "Protect the environment through prevention or mitigation of adverse environmental impacts",
+      "Mitigate the potential adverse effect of environmental conditions on the organization",
+      "Assist the organization in the fulfillment of compliance obligations",
+      "Enhance environmental performance",
+      "Control or influence how products and services are designed, manufactured, distributed, consumed, and disposed"
+    ],
+    "target_audience": "Environmental Managers, Sustainability Officers, Operations Managers, Internal Auditors, Compliance Officers, and organizations with significant environmental footprint",
+    "regulatory_authority": "ISO (International Organization for Standardization)",
+    "adoption_approach": [
+      "Understand organizational context and environmental aspects",
+      "Determine compliance obligations",
+      "Establish environmental objectives",
+      "Implement operational controls for significant aspects",
+      "Monitor and measure environmental performance",
+      "Conduct internal audits and management reviews"
+    ],
+    "hierarchy_structure": {
+      "levels": ["Clause", "Sub-clause"],
+      "numbering_pattern": "N.N (e.g., 4.1, 6.1)"
+    },
+    "document_structure": {
+      "sections": [
+        "Clause 4: Context of the Organization",
+        "Clause 5: Leadership",
+        "Clause 6: Planning",
+        "Clause 7: Support",
+        "Clause 8: Operation",
+        "Clause 9: Performance Evaluation",
+        "Clause 10: Improvement"
+      ]
+    },
+    "total_controls": 18
+  },
+  "controls": [
+    {
+      "control_id": "4.1",
+      "original_reference": "Clause 4.1",
+      "title": "Environmental Context Understanding",
+      "description": "The organization shall determine external and internal issues relevant to its purpose and that affect its ability to achieve the intended outcomes of its environmental management system.",
+      "full_text": "Conduct analysis of internal and external issues relevant to environmental management. External issues include climate change, environmental regulations, stakeholder expectations, and environmental conditions. Internal issues include organizational capabilities, culture, and legacy environmental liabilities.",
+      "domain": "Context of the Organization",
+      "category": "Context Analysis",
+      "section_number": "4.1",
+      "parent_section": "4",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Environmental context analysis documentation",
+        "External issues register",
+        "Internal issues assessment"
+      ]
+    },
+    {
+      "control_id": "4.2",
+      "original_reference": "Clause 4.2",
+      "title": "Interested Parties and Compliance Obligations",
+      "description": "The organization shall determine the interested parties relevant to the EMS and their relevant needs and expectations, and which become compliance obligations.",
+      "full_text": "Identify interested parties including regulators, communities, customers, shareholders, and employees. Document their environmental requirements and expectations. Determine which requirements are legally binding (compliance obligations) versus voluntary commitments.",
+      "domain": "Context of the Organization",
+      "category": "Stakeholder Requirements",
+      "section_number": "4.2",
+      "parent_section": "4",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Interested parties register",
+        "Compliance obligations register",
+        "Legal and regulatory requirements inventory"
+      ]
+    },
+    {
+      "control_id": "4.4",
+      "original_reference": "Clause 4.4",
+      "title": "Environmental Management System",
+      "description": "The organization shall establish, implement, maintain, and continually improve an environmental management system, including the processes needed and their interactions.",
+      "full_text": "Establish a formal EMS including documented environmental policy, procedures, and records. Define the scope of the EMS. Ensure the EMS is integrated with business processes. Maintain and continually improve the EMS.",
+      "domain": "Context of the Organization",
+      "category": "EMS Establishment",
+      "section_number": "4.4",
+      "parent_section": "4",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "EMS scope documentation",
+        "EMS processes documentation",
+        "Documented environmental management system"
+      ]
+    },
+    {
+      "control_id": "6.1.1",
+      "original_reference": "Clause 6.1.1",
+      "title": "Environmental Aspects Identification",
+      "description": "The organization shall determine the environmental aspects of its activities, products, and services within the scope of the EMS that it can control or influence, and their associated environmental impacts.",
+      "full_text": "Identify all environmental aspects associated with activities, products, and services throughout their lifecycle. For each aspect, identify the associated environmental impact. Determine significant aspects using defined criteria. Document and update the environmental aspects register.",
+      "domain": "Planning",
+      "category": "Environmental Aspects",
+      "section_number": "6.1.1",
+      "parent_section": "6.1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Environmental aspects and impacts register",
+        "Significance determination criteria",
+        "Lifecycle considerations documentation",
+        "Aspects register update records"
+      ]
+    },
+    {
+      "control_id": "6.1.2",
+      "original_reference": "Clause 6.1.2",
+      "title": "Compliance Obligations",
+      "description": "The organization shall determine and have access to the compliance obligations related to its environmental aspects.",
+      "full_text": "Identify and document all applicable legal requirements, permits, and other compliance obligations related to environmental aspects. Maintain an up-to-date legal register. Monitor changes in legal requirements and update the compliance register accordingly.",
+      "domain": "Planning",
+      "category": "Compliance",
+      "section_number": "6.1.2",
+      "parent_section": "6.1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Environmental legal and regulatory register",
+        "Permit inventory and status",
+        "Regulatory update monitoring process"
+      ]
+    },
+    {
+      "control_id": "6.2",
+      "original_reference": "Clause 6.2",
+      "title": "Environmental Objectives",
+      "description": "The organization shall establish environmental objectives at relevant functions, levels, and processes, considering significant environmental aspects and compliance obligations.",
+      "full_text": "Set measurable environmental objectives aligned with the environmental policy. Objectives address significant aspects, compliance obligations, and continual improvement commitments. Plans to achieve objectives include responsible parties, timelines, resources, and evaluation methods.",
+      "domain": "Planning",
+      "category": "Environmental Objectives",
+      "section_number": "6.2",
+      "parent_section": "6",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Environmental objectives documentation",
+        "Objective performance tracking (KPIs)",
+        "Action plans for objective achievement"
+      ]
+    },
+    {
+      "control_id": "8.1",
+      "original_reference": "Clause 8.1",
+      "title": "Operational Planning and Control",
+      "description": "The organization shall plan, implement, control, and maintain processes needed to meet the requirements of the EMS and to implement the actions determined in planning.",
+      "full_text": "Implement operational controls to manage significant environmental aspects and compliance obligations. Controls include engineering controls, procedural controls, and administrative controls. Maintain documented information for significant processes. Manage changes to operations that could affect environmental performance.",
+      "domain": "Operation",
+      "category": "Operational Control",
+      "section_number": "8.1",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Environmental operational procedures",
+        "Significant aspect control documentation",
+        "Emergency response plans",
+        "Contractor environmental requirements"
+      ]
+    },
+    {
+      "control_id": "8.2",
+      "original_reference": "Clause 8.2",
+      "title": "Emergency Preparedness and Response",
+      "description": "The organization shall establish, implement, and maintain processes needed to prepare for and respond to potential emergency situations identified in the planning phase.",
+      "full_text": "Develop and maintain emergency response plans for potential environmental emergency situations (spills, leaks, fires). Test emergency response plans periodically. Review and update plans after emergencies or drills. Train personnel on emergency response procedures.",
+      "domain": "Operation",
+      "category": "Emergency Response",
+      "section_number": "8.2",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Environmental emergency response plans",
+        "Emergency drill records",
+        "Incident response records",
+        "Plan review and update records"
+      ]
+    },
+    {
+      "control_id": "9.1",
+      "original_reference": "Clause 9.1",
+      "title": "Environmental Monitoring and Measurement",
+      "description": "The organization shall monitor, measure, analyze, and evaluate its environmental performance.",
+      "full_text": "Establish and implement environmental monitoring and measurement processes. Monitor environmental performance against objectives and targets. Monitor compliance with legal requirements. Analyze and evaluate monitoring data. Report environmental performance to management and stakeholders.",
+      "domain": "Performance Evaluation",
+      "category": "Monitoring",
+      "section_number": "9.1",
+      "parent_section": "9",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Environmental KPI data and trends",
+        "Compliance monitoring records",
+        "Emissions and waste monitoring data",
+        "Calibration records for monitoring equipment"
+      ]
+    },
+    {
+      "control_id": "9.1.2",
+      "original_reference": "Clause 9.1.2",
+      "title": "Compliance Evaluation",
+      "description": "The organization shall establish, implement, and maintain a process to evaluate fulfillment of its compliance obligations.",
+      "full_text": "Periodically evaluate compliance with legal requirements and other compliance obligations. Maintain knowledge and understanding of compliance status. Take action if a compliance obligation is not fulfilled. Document compliance evaluation results.",
+      "domain": "Performance Evaluation",
+      "category": "Compliance Evaluation",
+      "section_number": "9.1.2",
+      "parent_section": "9.1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Compliance evaluation reports",
+        "Regulatory inspection results",
+        "Compliance status register",
+        "Non-compliance corrective actions"
+      ]
+    },
+    {
+      "control_id": "9.2",
+      "original_reference": "Clause 9.2",
+      "title": "Internal Environmental Audit",
+      "description": "The organization shall conduct internal audits at planned intervals to provide information on whether the EMS conforms to requirements and is effectively implemented.",
+      "full_text": "Conduct internal environmental audits covering all EMS requirements on a planned audit program. Auditors must be impartial and objective. Audit findings are reported to management. Nonconformances require corrective action. Audit results are an input to management review.",
+      "domain": "Performance Evaluation",
+      "category": "Internal Audit",
+      "section_number": "9.2",
+      "parent_section": "9",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Environmental audit program",
+        "Internal audit reports",
+        "Auditor competency records",
+        "Corrective actions from audits"
+      ]
+    },
+    {
+      "control_id": "9.3",
+      "original_reference": "Clause 9.3",
+      "title": "Management Review",
+      "description": "Top management shall review the organization's EMS at planned intervals to ensure its continuing suitability, adequacy, and effectiveness.",
+      "full_text": "Conduct management reviews at least annually. Review inputs include environmental performance data, compliance status, audit results, progress on objectives, stakeholder concerns, and opportunities for improvement. Outputs include improvement decisions, resource allocations, and objective revisions.",
+      "domain": "Performance Evaluation",
+      "category": "Management Review",
+      "section_number": "9.3",
+      "parent_section": "9",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Management review meeting minutes",
+        "Review inputs and outputs",
+        "Action items from management review"
+      ]
+    },
+    {
+      "control_id": "10.2",
+      "original_reference": "Clause 10.2",
+      "title": "Nonconformity and Corrective Action",
+      "description": "When a nonconformity occurs, the organization shall react, investigate root causes, and take corrective action to prevent recurrence.",
+      "full_text": "When nonconformities occur, react to control environmental impacts, investigate root causes, and implement corrective actions. Verify effectiveness of corrective actions. Update environmental risk assessments and EMS documentation if necessary. Retain records of nonconformities and actions.",
+      "domain": "Improvement",
+      "category": "Corrective Action",
+      "section_number": "10.2",
+      "parent_section": "10",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Environmental nonconformance records",
+        "Root cause analysis documentation",
+        "Corrective action plans and closure",
+        "Effectiveness verification records"
+      ]
+    },
+    {
+      "control_id": "5.2",
+      "original_reference": "Clause 5.2",
+      "title": "Environmental Policy",
+      "description": "Top management shall establish, implement, and maintain an environmental policy appropriate to the purpose and context of the organization.",
+      "full_text": "Establish an environmental policy that commits to protection of the environment, fulfillment of compliance obligations, and continual improvement of the EMS. The policy must be communicated within the organization, available to interested parties, and reviewed periodically.",
+      "domain": "Leadership",
+      "category": "Environmental Policy",
+      "section_number": "5.2",
+      "parent_section": "5",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Documented and approved environmental policy",
+        "Policy communication records",
+        "Policy availability documentation"
+      ]
+    },
+    {
+      "control_id": "7.3",
+      "original_reference": "Clause 7.3",
+      "title": "Environmental Awareness",
+      "description": "Persons doing work under the organization's control shall be aware of the environmental policy, significant aspects and impacts, their contribution to EMS effectiveness, and consequences of deviation.",
+      "full_text": "Ensure all personnel are aware of the environmental policy and objectives, their role in environmental management, significant environmental aspects related to their work, and potential consequences of deviation from EMS procedures. Deliver regular environmental awareness training.",
+      "domain": "Support",
+      "category": "Environmental Awareness",
+      "section_number": "7.3",
+      "parent_section": "7",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Environmental training records",
+        "Awareness assessment results",
+        "Environmental communication records"
+      ]
+    },
+    {
+      "control_id": "7.4",
+      "original_reference": "Clause 7.4",
+      "title": "Environmental Communication",
+      "description": "The organization shall establish and implement processes for communicating information relevant to the EMS both internally and externally.",
+      "full_text": "Establish and implement environmental communication processes for internal and external stakeholders. Determine what to communicate, when, to whom, and how. External environmental communication includes sustainability reports, regulatory disclosures, and stakeholder engagement. Maintain records of communications.",
+      "domain": "Support",
+      "category": "Communication",
+      "section_number": "7.4",
+      "parent_section": "7",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Environmental communication plan",
+        "Sustainability reporting",
+        "Regulatory disclosure records",
+        "Stakeholder communication records"
+      ]
+    },
+    {
+      "control_id": "6.1.3",
+      "original_reference": "Clause 6.1.3",
+      "title": "Environmental Risks and Opportunities",
+      "description": "The organization shall determine the risks and opportunities related to environmental aspects, compliance obligations, and other issues and requirements to ensure the EMS can achieve its intended outcomes.",
+      "full_text": "Identify environmental risks (physical climate risks, regulatory risks, reputational risks) and opportunities (resource efficiency, green market opportunities, stakeholder engagement). Plan actions to address significant risks and opportunities. Monitor the effectiveness of actions.",
+      "domain": "Planning",
+      "category": "Risk and Opportunity",
+      "section_number": "6.1.3",
+      "parent_section": "6.1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Environmental risk register",
+        "Opportunity assessment documentation",
+        "Risk treatment plans",
+        "Effectiveness monitoring records"
+      ]
+    },
+    {
+      "control_id": "8.1.2",
+      "original_reference": "Clause 8.1.2",
+      "title": "Supplier Environmental Controls",
+      "description": "The organization shall communicate its environmental requirements to external providers, including contractors and suppliers.",
+      "full_text": "Communicate environmental requirements to suppliers and contractors. Include environmental requirements in procurement processes and contracts. Monitor supplier environmental performance. Evaluate the lifecycle environmental impacts of procured products and services.",
+      "domain": "Operation",
+      "category": "Supplier Management",
+      "section_number": "8.1.2",
+      "parent_section": "8.1",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Supplier environmental requirements documentation",
+        "Green procurement policy",
+        "Supplier environmental assessments",
+        "Lifecycle assessment documentation"
+      ]
+    }
+  ]
+}

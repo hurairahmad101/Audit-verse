@@ -1,0 +1,20 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "2uMkKHp8XZQnHah211efD"
+uri = "file://assets/pitch/AuditVerse.AI_Pitch_Deck.pdf"
+type = "pdf"
+title = "AuditVerse.AI Pitch Deck (PDF, 22 pages, real product screenshots)"
+
+[[outputs]]
+id = "hyiK1tedDwLL_F-_tvaH-"
+uri = "file://assets/pitch/AuditVerse.AI_Pitch_Deck.pptx"
+type = "slides"
+title = "AuditVerse.AI Pitch Deck (PPTX, editable)"
+
+[[outputs]]
+id = "Wzkk5hDLVZkNy987TZ-KL"
+uri = "file://assets/pitch/AuditVerse.AI_Brochure.pdf"
+type = "pdf"
+title = "AuditVerse.AI One-Page Brochure (PDF, 17 module thumbnails)"

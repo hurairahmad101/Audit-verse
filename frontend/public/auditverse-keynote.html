@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AuditVerse.AI — Enterprise Audit Intelligence Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0A0A0F;
+  --surface: #12121A;
+  --surface2: #1C1C2A;
+  --blue: #2563EB;
+  --blue-light: #3B82F6;
+  --red: #DC2626;
+  --amber: #F59E0B;
+  --green: #059669;
+  --text: #F8FAFC;
+  --dim: rgba(248,250,252,0.58);
+  --faint: rgba(248,250,252,0.28);
+  --border: rgba(248,250,252,0.08);
+  --font-h: 'Montserrat', sans-serif;
+  --font-b: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-h);
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  user-select: none;
+}
+
+/* ─── SLIDE CONTAINER ─── */
+.deck { position: relative; width: 100vw; height: calc(100vh - 7vh); }
+
+.slide {
+  display: none;
+  position: absolute;
+  inset: 0;
+  padding: 6vh 7vw 4vh;
+  flex-direction: column;
+  justify-content: center;
+}
+.slide.active { display: flex; }
+.slide.center { align-items: center; text-align: center; }
+
+/* ─── BACKGROUNDS ─── */
+.bg-title   { background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(37,99,235,0.1) 0%, var(--bg) 70%); }
+.bg-pain    { background: radial-gradient(ellipse 60% 70% at 35% 55%, rgba(220,38,38,0.12) 0%, var(--bg) 65%); }
+.bg-amber   { background: radial-gradient(ellipse 55% 60% at 65% 45%, rgba(245,158,11,0.08) 0%, var(--bg) 65%); }
+.bg-reveal  { background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(37,99,235,0.2) 0%, rgba(37,99,235,0.04) 55%, var(--bg) 75%); }
+.bg-blue    { background: linear-gradient(140deg, rgba(37,99,235,0.07) 0%, var(--bg) 50%); }
+.bg-blue-r  { background: linear-gradient(220deg, rgba(37,99,235,0.07) 0%, var(--bg) 50%); }
+.bg-dark    { background: var(--bg); }
+
+/* ─── DECORATIVE BARS ─── */
+.bar-top {
+  position: absolute; top: 0; left: 0; right: 0; height: 0.35vh;
+}
+.bar-left {
+  position: absolute; left: 4vw; top: 15vh; bottom: 15vh; width: 0.3vw;
+  background: linear-gradient(180deg, transparent 0%, var(--blue) 20%, var(--blue) 80%, transparent 100%);
+}
+.bar-right {
+  position: absolute; right: 4vw; top: 15vh; bottom: 15vh; width: 0.3vw;
+  background: linear-gradient(180deg, transparent 0%, var(--blue) 20%, var(--blue) 80%, transparent 100%);
+}
+.bar-right-red {
+  position: absolute; right: 0; top: 15vh; bottom: 15vh; width: 0.3vw;
+  background: linear-gradient(180deg, transparent 0%, var(--red) 25%, var(--red) 75%, transparent 100%);
+}
+
+/* ─── TYPOGRAPHY ─── */
+.label {
+  font-family: var(--font-b);
+  font-size: 1.1vw; font-weight: 700;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  margin-bottom: 2.5vh;
+}
+.label.blue  { color: var(--blue-light); }
+.label.red   { color: #F87171; }
+.label.amber { color: var(--amber); }
+.label.faint { color: var(--faint); }
+
+.hero { font-size: 6.5vw; font-weight: 900; line-height: 1.02; letter-spacing: -0.03em; text-wrap: balance; }
+.h1   { font-size: 4.2vw; font-weight: 900; line-height: 1.08; letter-spacing: -0.025em; text-wrap: balance; margin-bottom: 2.5vh; }
+.h2   { font-size: 3vw;   font-weight: 900; line-height: 1.1;  letter-spacing: -0.02em;  text-wrap: balance; margin-bottom: 2vh; }
+.sub  { font-family: var(--font-b); font-size: 2vw; font-weight: 400; color: var(--dim); line-height: 1.55; margin-bottom: 2vh; }
+.body { font-family: var(--font-b); font-size: 1.6vw; font-weight: 400; color: var(--dim); line-height: 1.7; }
+.big-stat { font-size: 14vw; font-weight: 900; line-height: 0.88; letter-spacing: -0.04em; }
+
+.col-blue  { color: var(--blue-light); }
+.col-red   { color: #F87171; }
+.col-amber { color: var(--amber); }
+.col-green { color: #34D399; }
+.col-dim   { color: var(--dim); }
+.col-faint { color: var(--faint); }
+
+/* ─── STAT CARDS ─── */
+.stat-row { display: flex; gap: 2vw; margin-top: 3vh; }
+.stat-card {
+  flex: 1;
+  background: rgba(37,99,235,0.08); border: 1px solid rgba(37,99,235,0.2);
+  border-radius: 1vw; padding: 2.5vh 2vw;
+}
+.stat-card.red   { background: rgba(220,38,38,0.08); border-color: rgba(220,38,38,0.22); }
+.stat-card.green { background: rgba(5,150,105,0.08); border-color: rgba(5,150,105,0.22); }
+.stat-n { font-size: 3.5vw; font-weight: 900; letter-spacing: -0.03em; color: var(--blue-light); line-height: 1; margin-bottom: 0.8vh; }
+.stat-n.red   { color: #F87171; }
+.stat-n.green { color: #34D399; }
+.stat-l { font-family: var(--font-b); font-size: 1.25vw; color: var(--dim); line-height: 1.45; }
+
+/* ─── BULLET LISTS ─── */
+.bullets { list-style: none; padding: 0; }
+.bullets li {
+  display: flex; align-items: flex-start; gap: 1vw;
+  font-family: var(--font-b); font-size: 1.55vw; color: var(--dim);
+  line-height: 1.55; margin-bottom: 1.8vh;
+}
+.bullets li::before {
+  content: '';
+  flex-shrink: 0; width: 0.5vw; height: 0.5vw;
+  border-radius: 50%; background: var(--blue); margin-top: 0.65vh;
+}
+.bullets li strong { color: var(--text); font-weight: 600; }
+
+/* ─── TWO COLUMN ─── */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3vw; align-items: start; margin-top: 2.5vh; }
+.col-box {
+  background: rgba(37,99,235,0.07); border: 1px solid rgba(37,99,235,0.18);
+  border-radius: 0.8vw; padding: 2.5vh 2vw;
+}
+.col-box h3 { font-size: 1.4vw; font-weight: 700; color: var(--blue-light); margin-bottom: 1.5vh; }
+
+/* ─── THREE COLUMN ─── */
+.three-col { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5vw; margin-top: 2.5vh; }
+.feat-card {
+  background: rgba(37,99,235,0.07); border: 1px solid rgba(37,99,235,0.18);
+  border-radius: 0.8vw; padding: 2.5vh 2vw;
+}
+.feat-card .ico { font-size: 1.8vw; margin-bottom: 1.5vh; }
+.feat-card h3 { font-size: 1.4vw; font-weight: 700; color: var(--text); margin-bottom: 1.2vh; }
+.feat-card p { font-family: var(--font-b); font-size: 1.3vw; color: var(--dim); line-height: 1.55; }
+
+/* ─── QUAD GRID ─── */
+.quad-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5vh 2vw; margin-top: 2.5vh; }
+.quad-card {
+  border-radius: 0.8vw; padding: 2.5vh 2.5vw;
+  display: flex; flex-direction: column;
+}
+.quad-card.a { background: rgba(37,99,235,0.09); border: 1px solid rgba(37,99,235,0.22); }
+.quad-card.b { background: rgba(37,99,235,0.05); border: 1px solid rgba(37,99,235,0.14); }
+.quad-card h3 {
+  font-family: var(--font-b); font-size: 1.1vw; font-weight: 700; color: var(--blue-light);
+  letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.2vh;
+}
+.quad-card p { font-family: var(--font-b); font-size: 1.5vw; color: var(--dim); line-height: 1.9; }
+
+/* ─── FRAMEWORK FOUR-COL GRID ─── */
+.fw-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.2vw; margin-top: 2.5vh; }
+.fw-card {
+  border-radius: 0.8vw; padding: 2vh 1.8vw;
+  background: rgba(37,99,235,0.07); border: 1px solid rgba(37,99,235,0.18);
+}
+.fw-card h3 {
+  font-family: var(--font-b); font-size: 1.0vw; font-weight: 700; color: var(--blue-light);
+  letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.2vh;
+}
+.fw-card p { font-family: var(--font-b); font-size: 1.25vw; color: var(--dim); line-height: 1.85; }
+
+.tag-row { display: flex; flex-wrap: wrap; gap: 0.7vw; margin-top: 1.8vh; }
+.tag {
+  background: rgba(37,99,235,0.12); border: 1px solid rgba(37,99,235,0.25);
+  color: var(--blue-light); border-radius: 2vw;
+  padding: 0.4vh 1.2vw; font-family: var(--font-b); font-size: 1.15vw; font-weight: 600;
+}
+
+/* ─── COMPARISON TABLE ─── */
+.comp-table { width: 100%; border-collapse: collapse; font-family: var(--font-b); font-size: 1.4vw; margin-top: 2.5vh; }
+.comp-table th {
+  padding: 1.5vh 1.5vw; text-align: left; border-bottom: 2px solid var(--blue);
+  color: var(--blue-light); font-weight: 700; font-size: 1.15vw; letter-spacing: 0.05em;
+}
+.comp-table th:first-child { color: var(--faint); }
+.comp-table td { padding: 1.4vh 1.5vw; border-bottom: 1px solid var(--border); color: var(--dim); }
+.comp-table tr:last-child td { border-bottom: none; }
+.comp-table td:first-child { font-weight: 600; color: var(--text); }
+.comp-table tr.hi td { background: rgba(37,99,235,0.08); }
+.yes { color: #34D399; font-weight: 700; }
+.no  { color: #F87171; }
+.partial { color: var(--amber); }
+
+/* ─── TIMELINE ─── */
+.timeline { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; margin-top: 4vh; position: relative; }
+.timeline::before {
+  content: ''; position: absolute; top: 1.2vw; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--blue) 0%, rgba(37,99,235,0.3) 100%);
+}
+.t-step { text-align: center; padding: 0 1vw; position: relative; z-index: 1; }
+.t-dot {
+  width: 1.2vw; height: 1.2vw; background: var(--blue); border-radius: 50%;
+  margin: 0 auto 2vh; border: 3px solid var(--bg);
+}
+.t-step h4 { font-size: 1.2vw; font-weight: 700; color: var(--text); margin-bottom: 1vh; }
+.t-step p { font-family: var(--font-b); font-size: 1.15vw; color: var(--dim); line-height: 1.55; }
+
+/* ─── GLOW ─── */
+.glow {
+  position: absolute; border-radius: 50%; pointer-events: none;
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+  width: 45vw; height: 45vw;
+  background: radial-gradient(circle, rgba(37,99,235,0.14) 0%, transparent 70%);
+  filter: blur(5vw);
+}
+
+/* ─── NAV BAR ─── */
+.nav {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 7vh;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2.5vw;
+  background: rgba(10,10,15,0.96); backdrop-filter: blur(10px);
+  border-top: 1px solid var(--border); z-index: 200;
+  font-family: var(--font-b);
+}
+.nav-btn {
+  background: none; border: none; color: var(--dim); cursor: pointer;
+  font-size: 1.3vw; font-family: var(--font-b); padding: 0.5vh 1vw;
+  border-radius: 6px; transition: all 0.18s; display: flex; align-items: center; gap: 0.5vw;
+}
+.nav-btn:hover { background: rgba(255,255,255,0.06); color: var(--text); }
+.nav-btn:disabled { opacity: 0.25; cursor: default; }
+.nav-btn:disabled:hover { background: none; color: var(--dim); }
+.counter { font-size: 1.2vw; color: var(--faint); min-width: 4.5vw; text-align: center; }
+.dots { display: flex; gap: 0.4vw; align-items: center; }
+.dot {
+  width: 0.5vw; height: 0.5vw; border-radius: 50%;
+  background: rgba(255,255,255,0.2); cursor: pointer; transition: all 0.2s; border: none; padding: 0;
+}
+.dot.on { background: var(--blue); width: 1.5vw; border-radius: 0.25vw; }
+.ntoggle {
+  background: none; border: 1px solid var(--border); color: var(--faint); cursor: pointer;
+  font-size: 1.1vw; font-family: var(--font-b); padding: 0.45vh 0.9vw;
+  border-radius: 6px; transition: all 0.18s;
+}
+.ntoggle:hover, .ntoggle.on { border-color: var(--blue); color: var(--blue); }
+
+/* ─── NOTES PANEL ─── */
+.notes-panel {
+  display: none; position: fixed; bottom: 7vh; left: 0; right: 0;
+  background: rgba(14,14,22,0.98); border-top: 1px solid var(--border);
+  padding: 2.5vh 5vw; max-height: 28vh; overflow-y: auto; z-index: 199;
+}
+.notes-panel.open { display: block; }
+.notes-panel h4 {
+  font-family: var(--font-b); font-size: 1.0vw; font-weight: 700; color: var(--blue-light);
+  text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 1.2vh;
+}
+.notes-panel p { font-family: var(--font-b); font-size: 1.35vw; color: var(--dim); line-height: 1.65; }
+
+/* ─── DIVIDER ─── */
+.divider { width: 6vw; height: 0.4vh; background: var(--blue); margin-top: 4vh; }
+.divider.center { margin: 4vh auto 0; }
+</style>
+</head>
+<body>
+
+<div class="deck" id="deck">
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 1 — TITLE
+═══════════════════════════════════════════════════════════ -->
+<div class="slide bg-title center active"
+  data-notes="Welcome, everyone. Today I want to address a $14.8 billion problem that organizations around the world are navigating without the right tools. This is not a technology gap. It is a process gap. And AuditVerse.AI closes it — permanently. Let's begin.">
+  <div class="bar-top" style="background:linear-gradient(90deg,transparent 0%,#F59E0B 20%,#F59E0B 80%,transparent 100%);"></div>
+  <div class="label faint" style="margin-bottom:3vh;">Enterprise Audit Intelligence Platform</div>
+  <div class="hero" style="margin-bottom:3.5vh;">AuditVerse.AI</div>
+  <div class="sub" style="max-width:58vw;">Redefining how organizations manage audit, compliance,<br>and governance — powered by AI.</div>
+  <div style="display:flex;gap:3vw;font-family:var(--font-b);font-size:1.25vw;color:var(--faint);margin-top:4vh;">
+    <span>12 Core Modules</span>
+    <span style="color:rgba(248,250,252,0.15);">|</span>
+    <span>60+ Compliance Frameworks</span>
+    <span style="color:rgba(248,250,252,0.15);">|</span>
+    <span>AI-Native Architecture</span>
+    <span style="color:rgba(248,250,252,0.15);">|</span>
+    <span>4–8 Week Implementation</span>
+  </div>
+  <div class="divider center"></div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 2 — EXECUTIVE SUMMARY
+═══════════════════════════════════════════════════════════ -->
+<div class="slide bg-blue"
+  data-notes="Before we go deep, here is the thesis in three numbers. $14.8 billion in regulatory fines last year — mostly driven by audit and compliance failures. 60% of audit teams still on spreadsheets with no real-time visibility. And the average time to close a high-severity finding is 4.2 months — compared to 6 weeks with AI-assisted workflows. AuditVerse.AI changes all three of these numbers.">
+  <div class="bar-left"></div>
+  <div class="label blue">Executive Summary</div>
+  <div class="h1">The case for AuditVerse.AI<br>in three numbers.</div>
+  <div class="stat-row">
+    <div class="stat-card">
+      <div class="stat-n">$14.8B</div>
+      <div class="stat-l">in regulatory fines paid globally in 2023 — the majority driven by audit and compliance failures that were preventable</div>
+    </div>
+    <div class="stat-card red">
+      <div class="stat-n red">60%</div>
+      <div class="stat-l">of internal audit teams rely on spreadsheets as their primary tool — no versioning, no audit trail, no real-time view</div>
+    </div>
+    <div class="stat-card green">
+      <div class="stat-n green">4.2 mo</div>
+      <div class="stat-l">average time to close a high-severity finding in legacy environments — down to 6 weeks with AI-assisted workflows</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 3 — THE PROBLEM AT SCALE
+═══════════════════════════════════════════════════════════ -->
+<div class="slide bg-pain"
+  data-notes="Let's talk about the scale of the cost. $14.8 billion. Not a one-year anomaly — regulatory fine totals have grown every year for the past decade. The regulatory environment is not becoming simpler. It is becoming more demanding, more global, and more complex. Every organization in this room is exposed. The question is not whether you will face a regulatory event. It is whether your audit infrastructure can catch it first.">
+  <div class="bar-right-red"></div>
+  <div class="label red">The Problem — Scale</div>
+  <div class="big-stat col-red">$14.8B</div>
+  <div class="h1" style="font-size:2.8vw;margin-top:2vh;">in regulatory fines.<br><span class="col-dim" style="font-weight:400;font-size:2.2vw;">Last year alone.</span></div>
+  <div class="body" style="margin-top:3vh;max-width:62vw;">
+    Banks. Hospitals. Energy firms. Government agencies.<br>
+    All paying the price for audit failures they never saw coming.<br><br>
+    <span style="color:rgba(248,250,252,0.3);font-size:1.3vw;">Regulatory fine volumes have grown 23% year-over-year since 2019. This trend does not reverse.</span>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 4 — WHY CURRENT TOOLS FAIL
+═══════════════════════════════════════════════════════════ -->
+<div class="slide bg-amber"
+  data-notes="The tools audit teams use were not designed for the complexity of the modern audit function. Spreadsheets create version risk, have no collaboration layer, and leave zero audit trail. Legacy GRC platforms were built for checkbox compliance in the early 2000s — they are rigid, expensive, and structurally unable to incorporate AI. Point solutions from five different vendors don't share a data model. The result is a function that is reactive, fragmented, and invisible to leadership.">
+  <div class="label amber">Root Cause — Why Tools Fail</div>
+  <div class="h1">Current tools were not built<br>for the modern audit function.</div>
+  <div class="two-col">
+    <ul class="bullets">
+      <li><span><strong>Spreadsheets:</strong> No version control, no audit trail, no concurrent editing. One corrupted file can invalidate months of work and create regulatory liability.</span></li>
+      <li><span><strong>Legacy GRC platforms:</strong> Architected for checkbox compliance in the early 2000s. Rigid, expensive six-to-twelve month implementations, structurally incapable of real AI integration.</span></li>
+      <li><span><strong>Point solutions:</strong> Separate vendors for planning, workpapers, and findings — no unified data model, no cross-module intelligence, no single source of truth.</span></li>
+    </ul>
+    <ul class="bullets">
+      <li><span><strong>Zero AI layer:</strong> Finding drafts, risk scoring, and framework mapping are still done manually — consuming thousands of senior auditor hours per year on low-value work.</span></li>
+      <li><span><strong>No real-time visibility:</strong> Leadership sees the full risk picture only at quarter-end, months after issues have compounded and become material.</span></li>
+      <li><span><strong>Framework library gaps:</strong> Most platforms cover eight to twelve frameworks. Organizations spanning multiple sectors or jurisdictions are left to manage the rest on their own.</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 5 — MARKET OPPORTUNITY
+═══════════════════════════════════════════════════════════ -->
+<div class="slide bg-blue"
+  data-notes="The market timing is ideal. The global GRC software market is on track to surpass $45 billion by 2028 at a 13% CAGR. The internal audit segment is growing even faster — at 17% — as boards and regulators push organizations to modernize. And critically, fewer than 5% of current market leaders have meaningful AI capability built into their core product. There is no AI-native incumbent. The category is wide open.">
+  <div class="bar-left"></div>
+  <div class="label blue">Market Opportunity</div>
+  <div class="h1">A $45 billion market with<br>no AI-native leader.</div>
+  <div class="stat-row">
+    <div class="stat-card">
+      <div class="stat-n">$45B</div>
+      <div class="stat-l">Global GRC software market by 2028, growing at 13% CAGR — one of the fastest-growing enterprise software segments</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-n">$4.2B</div>
+      <div class="stat-l">Internal audit software TAM specifically, growing at 17% CAGR — the fastest-growing segment within GRC</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-n">&lt;5%</div>
+      <div class="stat-l">of current market leaders have meaningful AI embedded in their core audit workflow — the category is structurally wide open</div>
+    </div>
+  </div>
+  <div class="body" style="margin-top:2.5vh;color:rgba(248,250,252,0.35);font-size:1.3vw;">Primary growth segments: Banking &amp; Financial Services · Healthcare &amp; Life Sciences · Government &amp; Defense · Energy &amp; Utilities.</div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 6 — PRODUCT REVEAL
+═══════════════════════════════════════════════════════════ -->
+<div class="slide bg-reveal center"
+  data-notes="This is where everything changes. AuditVerse.AI is not a GRC platform with an AI feature bolted on as an afterthought. It is an AI-native audit intelligence platform, built from the ground up for how audit functions actually work. Five integrated pillars. One unified workflow. No data silos. No duct tape between modules. Let me walk you through each pillar.">
+  <div class="glow"></div>
+  <div style="position:relative;z-index:1;">
+    <div class="label" style="color:rgba(37,99,235,0.85);margin-bottom:4vh;">The Solution</div>
+    <div class="hero" style="font-size:6vw;margin-bottom:3vh;">Introducing AuditVerse.AI</div>
+    <div class="sub" style="max-width:58vw;margin:0 auto 3vh;">Five integrated pillars. One platform. No data silos.<br>AI embedded at every step of the audit lifecycle.</div>
+    <div class="divider center"></div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 7 — PILLAR 01: AUDIT UNIVERSE & PLANNING
+═══════════════════════════════════════════════════════════ -->
+<div class="slide bg-blue"
+  data-notes="The audit universe is the foundation of everything. If you do not know what you need to audit, you cannot plan effectively. AuditVerse.AI builds and maintains a living catalog of every auditable entity in your organization — business units, IT systems, processes, third-party vendors, regulatory obligations — all scored, ranked, and prioritized automatically. AI then takes that universe and generates a complete annual audit plan in minutes, calibrated to your risk profile and team capacity. What used to take three months of planning meetings now happens in a single session.">
+  <div class="bar-left"></div>
+  <div class="label blue">Pillar 01 — Audit Universe &amp; Planning</div>
+  <div class="h1">Know what to audit.<br>Before the regulator does.</div>
+  <div class="two-col">
+    <ul class="bullets">
+      <li><span><strong>Audit Universe:</strong> A living, dynamic catalog of every auditable entity across your organization — business units, IT systems, processes, vendors, regulatory obligations — with risk scores updated continuously based on new findings and environmental signals.</span></li>
+      <li><span><strong>AI-Generated Annual Plans:</strong> Based on your risk universe, team headcount, and historical coverage data, AI generates a complete annual audit plan in minutes. Quarters mapped, entities assigned, coverage justified.</span></li>
+      <li><span><strong>Coverage Gap Analysis:</strong> Automatic identification of entities that have not been audited in 12, 24, or 36+ months — surfaced before the regulator asks the question.</span></li>
+    </ul>
+    <div class="col-box">
+      <h3>What this replaces</h3>
+      <ul class="bullets" style="margin-top:0;">
+        <li><span>Manual risk assessment spreadsheets updated twice a year</span></li>
+        <li><span>Quarterly planning meetings with no underlying data model</span></li>
+        <li><span>Gut-feel prioritization of audit topics by senior leadership</span></li>
+        <li><span>Disconnected entity lists maintained across multiple tools</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 8 — PILLAR 02: ENGAGEMENTS & WORKPAPERS
+═══════════════════════════════════════════════════════════ -->
+<div class="slide bg-blue-r"
+  data-notes="Engagements are where the real audit work happens, and where most teams spend the most time on administrative overhead. AuditVerse.AI guides the team through every phase of every engagement — Planning, Fieldwork, Reporting, Review, and Close — with every step logged, every transition timestamped, every document version-controlled. AI generates a complete fieldwork guide based on the audit area. Every workpaper goes through a structured three-level sign-off: Preparer, Reviewer, Lead. Nothing gets skipped. Nothing gets lost. Budget versus actual hours are tracked in real time so cost overruns are visible when they start, not after the engagement is over.">
+  <div class="bar-right"></div>
+  <div class="label blue" style="text-align:right;padding-right:2vw;">Pillar 02 — Engagements &amp; Workpapers</div>
+  <div class="h1" style="text-align:right;padding-right:2vw;">Run every audit start to finish.<br>Without switching tools.</div>
+  <div style="text-align:right;padding-right:2vw;">
+    <ul class="bullets" style="display:inline-block;text-align:left;max-width:75vw;">
+      <li><span><strong>Full lifecycle management:</strong> Planning → Fieldwork → Reporting → Review → Close. Every stage tracked, every transition logged, every milestone timestamped automatically.</span></li>
+      <li><span><strong>AI Fieldwork Guide:</strong> Enter the audit area and objectives — AI generates a complete set of test procedures and evidence requirements in minutes. Fully editable and version-controlled.</span></li>
+      <li><span><strong>Budget vs. Actuals:</strong> Real-time tracking of planned versus actual hours for every engagement. Cost overruns are visible when they start — not after the final report is issued.</span></li>
+      <li><span><strong>Three-level sign-off:</strong> Preparer → Reviewer → Lead. Each workpaper fully documented, dated, and digitally signed. Inviolable audit trail for every piece of evidence.</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 9 — PILLAR 03: FINDINGS & ACTION MANAGEMENT
+═══════════════════════════════════════════════════════════ -->
+<div class="slide bg-blue"
+  data-notes="Findings are where audit value is realized — and where most organizations fall short. AuditVerse.AI captures every finding using the CCCE methodology: Condition, Criteria, Cause, Effect. This structured approach ensures every finding tells a complete story and meets the standard for board-level reporting. AI calibrates severity automatically based on the risk context and regulatory precedent, reducing scoring bias and inconsistency across the team. Multi-level escalation routes critical findings to the right people immediately. And recurring pattern detection — which no competitor currently offers — identifies when new findings mirror previous issues, triggering root-cause analysis before the pattern becomes systemic.">
+  <div class="bar-top" style="background:linear-gradient(90deg,transparent 0%,var(--blue) 30%,var(--blue) 70%,transparent 100%);"></div>
+  <div class="label blue" style="margin-top:1vh;">Pillar 03 — Findings &amp; Action Management</div>
+  <div class="h1">Every finding. Every action.<br>Nothing falls through the cracks.</div>
+  <div class="two-col">
+    <ul class="bullets">
+      <li><span><strong>CCCE Methodology:</strong> Structured documentation of Condition, Criteria, Cause, and Effect for every finding. Every issue tells a complete, auditor-quality story suitable for board-level review.</span></li>
+      <li><span><strong>AI Severity Calibration:</strong> Machine learning assesses severity against historical findings and regulatory precedent — reducing scoring inconsistency and bias across the audit team.</span></li>
+      <li><span><strong>Multi-Level Escalation:</strong> Configurable thresholds route findings automatically to department heads, C-suite, or audit committee within minutes of identification.</span></li>
+    </ul>
+    <ul class="bullets">
+      <li><span><strong>Recurring Pattern Detection:</strong> AI identifies when new findings mirror previous issues — triggering root-cause analysis workflows automatically before patterns become systemic.</span></li>
+      <li><span><strong>Management Action Plans:</strong> Owners are assigned, deadlines set, and progress tracked through to validated closure. No more open findings that drift for years.</span></li>
+      <li><span><strong>Overdue Alerts:</strong> Automated escalation when action items pass their due date — eliminating the manual chasing that consumes senior audit team capacity.</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 10 — PILLAR 04: ANALYTICS & REPORTING
+═══════════════════════════════════════════════════════════ -->
+<div class="slide bg-blue"
+  data-notes="The analytics module transforms raw audit data into strategic intelligence. Chief Audit Executives and boards need to see the full picture — not a spreadsheet of open findings. AuditVerse.AI provides real-time dashboards for KPI tracking, coverage analysis, finding trend analysis, and budget performance. Reports can be generated in one click and exported in board-ready formats. This is what audit leadership looks like when the function is running on real data.">
+  <div class="bar-left"></div>
+  <div class="label blue">Pillar 04 — Analytics &amp; Reporting</div>
+  <div class="h1">The intelligence your board<br>has been asking for.</div>
+  <div class="three-col">
+    <div class="feat-card">
+      <div class="ico">📊</div>
+      <h3>Live KPI Dashboard</h3>
+      <p>Findings closure rate, budget utilization, plan completion, overdue items — all updated in real time. No end-of-quarter scramble to compile numbers.</p>
+    </div>
+    <div class="feat-card">
+      <div class="ico">🗺️</div>
+      <h3>Coverage Heat Maps</h3>
+      <p>Visual maps showing audit coverage across every entity in the universe. Blind spots surface automatically — before the regulator finds them first.</p>
+    </div>
+    <div class="feat-card">
+      <div class="ico">📈</div>
+      <h3>Trend Intelligence</h3>
+      <p>Finding severity trends, repeat issue rates, and department-level risk profiles over time. Pattern recognition that turns historical data into forward-looking insight.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 11 — PILLAR 05: AI INTELLIGENCE LAYER
+═══════════════════════════════════════════════════════════ -->
+<div class="slide bg-reveal center"
+  data-notes="The fifth pillar is what makes AuditVerse.AI genuinely different from every other platform in the market. The AI intelligence layer is not a chatbot bolted on top of a legacy system. It is a native AI engine that understands audit language, regulatory frameworks, and organizational risk context. It drafts findings. It calibrates severity. It generates fieldwork guides. It answers compliance questions in plain English. It is the smartest member of every audit team — available 24 hours a day, across every engagement, at no additional cost per query.">
+  <div class="glow"></div>
+  <div style="position:relative;z-index:1;">
+    <div class="label blue" style="margin-bottom:4vh;">Pillar 05 — AI Intelligence Layer</div>
+    <div class="h1" style="font-size:5vw;margin-bottom:3vh;">Your smartest auditor<br>never sleeps.</div>
+    <div class="sub" style="max-width:62vw;margin:0 auto;">AI that drafts findings, calibrates risk, generates fieldwork guides,<br>creates board-ready reports, and answers compliance questions in plain English.<br>Not a chatbot. A native audit intelligence engine.</div>
+    <div class="divider center"></div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 12 — COMPLIANCE FRAMEWORKS
+═══════════════════════════════════════════════════════════ -->
+<div class="slide bg-dark"
+  data-notes="One of the most persistent frustrations in legacy GRC tools is the framework library — most cover eight to twelve frameworks and charge significant additional fees for anything beyond that. AuditVerse.AI ships with over sixty built-in frameworks across every major category. Financial audit, IT security, healthcare, energy, ESG, government — all included. Switch industries. Expand internationally. Add a new regulated business line. The frameworks come with you, already configured and ready to use.">
+  <div class="label blue">Framework Library — 60+ Built In</div>
+  <div class="h2">Switch industries. The frameworks come with you.</div>
+  <div class="fw-grid">
+    <div class="fw-card">
+      <h3>Financial Audit</h3>
+      <p>SOX · COSO · PCAOB · GAAS · ISAE 3402 · Basel III · DORA · PCI-DSS · MiFID II · BCBS 239</p>
+    </div>
+    <div class="fw-card">
+      <h3>IT &amp; Cybersecurity</h3>
+      <p>ISO 27001 · NIST CSF · SOC 2 · COBIT · CIS Controls · FedRAMP · FISMA · CMMC · SWIFT · IEC 62443</p>
+    </div>
+    <div class="fw-card">
+      <h3>Healthcare &amp; Life Sciences</h3>
+      <p>HIPAA · HITECH · FDA 21 CFR Part 11 · ISO 9001 · ISO 13485 · GxP · HL7 FHIR · COPPA</p>
+    </div>
+    <div class="fw-card">
+      <h3>ESG &amp; Sustainability</h3>
+      <p>GRI · TCFD · ISSB S1/S2 · CSRD · UN SDGs · ISO 14001 · CDP · SASB · SEC Climate Rule</p>
+    </div>
+  </div>
+  <div class="tag-row">
+    <span class="tag">NERC-CIP</span>
+    <span class="tag">NIS2</span>
+    <span class="tag">GDPR</span>
+    <span class="tag">NIST 800-53</span>
+    <span class="tag">ISO 50001</span>
+    <span class="tag">FERPA</span>
+    <span class="tag">OMB A-123</span>
+    <span class="tag">IPSAS</span>
+    <span class="tag">Yellow Book (GAO)</span>
+    <span class="tag">+ 25 more</span>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 13 — INDUSTRY VERTICALS
+═══════════════════════════════════════════════════════════ -->
+<div class="slide bg-dark"
+  data-notes="AuditVerse.AI is purpose-built for the four sectors that face the highest regulatory complexity and the highest cost of audit failure: Banking and Financial Services, Healthcare and Life Sciences, Energy and Utilities, and Government and Public Sector. Each industry configuration ships with pre-loaded frameworks, sector-specific risk templates, and AI models trained on the language and precedent of that industry's regulatory environment. You are not starting from a blank generic platform. You are starting from a platform that already knows your industry.">
+  <div class="label blue">Industry Coverage</div>
+  <div class="h2" style="margin-bottom:3vh;">Built for every industry that can't afford to fail.</div>
+  <div class="quad-grid">
+    <div class="quad-card a">
+      <h3>Banking &amp; Financial Services</h3>
+      <p>SOX · DORA · Basel III · PCI-DSS · AML · KYC · MiFID II · BCBS 239 · IFRS 9 · FINRA</p>
+    </div>
+    <div class="quad-card b">
+      <h3>Healthcare &amp; Life Sciences</h3>
+      <p>HIPAA · HITECH · FDA 21 CFR Part 11 · ISO 9001 · ISO 13485 · GxP · SOX (public cos.)</p>
+    </div>
+    <div class="quad-card b">
+      <h3>Energy &amp; Utilities</h3>
+      <p>NERC-CIP · ISO 50001 · IEC 62443 · FERC · EPA Clean Air · ISO 14001 · OSHA PSM · NIS2</p>
+    </div>
+    <div class="quad-card a">
+      <h3>Government &amp; Public Sector</h3>
+      <p>FISMA · FedRAMP · NIST 800-53 · CMMC · Yellow Book (GAO) · IPSAS · OMB A-123 · CJIS</p>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 14 — COMPETITIVE LANDSCAPE
+═══════════════════════════════════════════════════════════ -->
+<div class="slide bg-dark"
+  data-notes="The category has incumbents — TeamMate+, AuditBoard, Galvanize by Diligent, Workiva. They have enterprise sales teams and large legacy install bases. What they do not have is a genuine AI-native architecture, a framework library of this depth, an implementation timeline under four months, or a pricing model that serves organizations outside the Fortune 500. We win on AI depth, framework breadth, time to value, and total cost of ownership. This table shows the comparison directly.">
+  <div class="label amber">Competitive Landscape</div>
+  <div class="h2" style="margin-bottom:0;">How AuditVerse.AI compares.</div>
+  <table class="comp-table">
+    <thead>
+      <tr>
+        <th>Capability</th>
+        <th style="color:var(--blue-light);">AuditVerse.AI</th>
+        <th>TeamMate+</th>
+        <th>AuditBoard</th>
+        <th>Galvanize</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="hi"><td>AI-native audit workflow</td><td class="yes">Full</td><td class="no">None</td><td class="partial">Limited</td><td class="no">None</td></tr>
+      <tr><td>Compliance framework library</td><td class="yes">60+</td><td class="partial">~12</td><td class="partial">~18</td><td class="partial">~10</td></tr>
+      <tr class="hi"><td>AI finding drafting &amp; calibration</td><td class="yes">Native</td><td class="no">No</td><td class="partial">Beta</td><td class="no">No</td></tr>
+      <tr><td>End-to-end lifecycle management</td><td class="yes">Full</td><td class="yes">Full</td><td class="partial">Partial</td><td class="partial">Partial</td></tr>
+      <tr class="hi"><td>Recurring pattern detection</td><td class="yes">Yes</td><td class="no">No</td><td class="no">No</td><td class="no">No</td></tr>
+      <tr><td>Implementation timeline</td><td class="yes">4–8 weeks</td><td class="no">6–12 months</td><td class="no">4–6 months</td><td class="no">3–6 months</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 15 — IMPLEMENTATION ROADMAP
+═══════════════════════════════════════════════════════════ -->
+<div class="slide bg-blue"
+  data-notes="Speed to value is one of our sharpest differentiators. Legacy GRC implementations routinely take six to twelve months and require third-party consulting firms to complete. AuditVerse.AI is live in four to eight weeks. Week one and two: environment provisioning and data migration from existing tools. Weeks two and three: framework selection, risk scoring calibration, and workflow configuration. Week three and four: role-based user training and admin certification. Weeks four through eight: supervised live operations with dedicated customer success — ending with your first completed audit engagement on the new platform. You will be in production before your competitors have finished contract negotiations for their implementation.">
+  <div class="bar-left"></div>
+  <div class="label blue">Implementation &amp; Timeline</div>
+  <div class="h1">Live in 4–8 weeks.<br>Not 4–8 months.</div>
+  <div class="timeline">
+    <div class="t-step">
+      <div class="t-dot"></div>
+      <h4>Week 1–2<br>Environment Setup</h4>
+      <p>Tenant provisioning, environment configuration, and data migration from existing spreadsheets or legacy GRC tools</p>
+    </div>
+    <div class="t-step">
+      <div class="t-dot"></div>
+      <h4>Week 2–3<br>Configure</h4>
+      <p>Framework selection, audit universe import, risk scoring calibration, workflow customization, and integration setup</p>
+    </div>
+    <div class="t-step">
+      <div class="t-dot"></div>
+      <h4>Week 3–4<br>Train</h4>
+      <p>Role-based training for audit managers, senior auditors, and staff. Admin certification program for your IT team.</p>
+    </div>
+    <div class="t-step">
+      <div class="t-dot"></div>
+      <h4>Week 4–8<br>Go Live</h4>
+      <p>Supervised live operations with dedicated customer success. First full audit engagement completed on the platform.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 16 — CLOSING
+═══════════════════════════════════════════════════════════ -->
+<div class="slide bg-reveal center"
+  data-notes="I want to close with one thought. The world of audit and compliance is changing faster than any team can keep up with manually. Regulators are adding frameworks. Risks are becoming more interconnected. Boards are asking harder questions. The audit function of five years from now will look nothing like the audit function of today. AuditVerse.AI is the platform that ensures your team leads that change — rather than being overwhelmed by it. Let's talk about your pilot program. We can have you live within the month. Thank you.">
+  <div class="glow"></div>
+  <div style="position:relative;z-index:1;">
+    <div class="label faint" style="font-style:italic;font-size:2vw;margin-bottom:4vh;">One more thing.</div>
+    <div class="h1" style="font-size:4vw;max-width:68vw;margin:0 auto 3vh;">AuditVerse.AI doesn't just manage audits.<br><span class="col-blue">It makes audit teams unstoppable.</span></div>
+    <div class="sub" style="max-width:50vw;margin:0 auto;">The future of audit starts now.</div>
+    <div style="margin-top:6vh;border-top:1px solid var(--border);padding-top:3.5vh;display:flex;flex-direction:column;align-items:center;gap:1.5vh;">
+      <div style="color:var(--blue);font-size:2.2vw;font-weight:800;letter-spacing:0.04em;">AuditVerse.AI</div>
+      <div style="color:var(--faint);font-family:var(--font-b);font-size:1.1vw;letter-spacing:0.14em;text-transform:uppercase;">Enterprise Audit Intelligence</div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /deck -->
+
+<!-- ─── NAV BAR ─── -->
+<div class="nav">
+  <div style="display:flex;gap:1vw;align-items:center;">
+    <button class="nav-btn" id="prevBtn" onclick="nav(-1)" disabled>&#8592; Prev</button>
+    <button class="nav-btn" id="nextBtn" onclick="nav(1)">Next &#8594;</button>
+  </div>
+  <div class="dots" id="dotRow"></div>
+  <div style="display:flex;gap:1.5vw;align-items:center;">
+    <span class="counter" id="ctr">1 / 16</span>
+    <button class="ntoggle" id="nBtn" onclick="toggleNotes()">Notes [N]</button>
+  </div>
+</div>
+
+<!-- ─── NOTES PANEL ─── -->
+<div class="notes-panel" id="notesPnl">
+  <h4>Speaker Notes</h4>
+  <p id="noteTxt"></p>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const total  = slides.length;
+  let cur      = 0;
+  let notesOn  = false;
+
+  // Build dots
+  const dotRow = document.getElementById('dotRow');
+  slides.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'dot' + (i === 0 ? ' on' : '');
+    d.title = 'Slide ' + (i + 1);
+    d.onclick = () => goTo(i);
+    dotRow.appendChild(d);
+  });
+
+  function goTo(i) {
+    slides[cur].classList.remove('active');
+    dotRow.children[cur].classList.remove('on');
+    cur = Math.max(0, Math.min(i, total - 1));
+    slides[cur].classList.add('active');
+    dotRow.children[cur].classList.add('on');
+    document.getElementById('ctr').textContent = (cur + 1) + ' / ' + total;
+    document.getElementById('prevBtn').disabled = cur === 0;
+    document.getElementById('nextBtn').disabled = cur === total - 1;
+    document.getElementById('noteTxt').textContent = slides[cur].dataset.notes || '';
+  }
+
+  function nav(dir) { goTo(cur + dir); }
+
+  function toggleNotes() {
+    notesOn = !notesOn;
+    document.getElementById('notesPnl').classList.toggle('open', notesOn);
+    document.getElementById('nBtn').classList.toggle('on', notesOn);
+  }
+
+  // Init notes
+  document.getElementById('noteTxt').textContent = slides[0].dataset.notes || '';
+
+  // Keyboard
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); nav(1); }
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); nav(-1); }
+    if (e.key === 'n' || e.key === 'N') toggleNotes();
+    if (e.key === 'Escape' && notesOn) toggleNotes();
+  });
+
+  // Click slide to advance
+  document.getElementById('deck').addEventListener('click', e => {
+    if (!e.target.closest('button')) nav(1);
+  });
+</script>
+</body>
+</html>

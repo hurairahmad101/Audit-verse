@@ -1,0 +1,397 @@
+{
+  "metadata": {
+    "name": "NERC CIP (Critical Infrastructure Protection) Standards",
+    "description": "The NERC CIP (North American Electric Reliability Corporation Critical Infrastructure Protection) standards are a set of requirements designed to secure the assets required for operating North America's bulk electric system. Compliance with NERC CIP standards is mandatory for utilities and electricity suppliers in North America.",
+    "version": "CIP-002 through CIP-014 (Current)",
+    "source_organization": "North American Electric Reliability Corporation (NERC)",
+    "effective_date": "2016-01-01",
+    "classification": "regulatory",
+    "framework_type": "regulatory",
+    "classification_confidence": 0.97,
+    "classification_reasoning": "NERC CIP is a mandatory regulatory framework for electricity sector entities in North America, enforced by NERC with fines for non-compliance.",
+    "framework_purpose": "To ensure cybersecurity and physical security of assets required for operating North America's bulk electric system, protecting critical infrastructure from cyber and physical attacks.",
+    "framework_scope": "Registered entities within NERC's jurisdiction including utilities, transmission operators, generation operators, reliability coordinators, and others operating Bulk Electric System (BES) assets.",
+    "framework_objectives": [
+      "Protect critical cyber assets supporting the Bulk Electric System",
+      "Establish physical security for critical infrastructure",
+      "Ensure personnel reliability and security training",
+      "Manage supply chain risks for industrial control systems",
+      "Implement incident reporting and response for the electricity sector"
+    ],
+    "target_audience": "Utility companies, grid operators, generation facilities, transmission operators, regulatory compliance officers, and OT/ICS security professionals",
+    "regulatory_authority": "North American Electric Reliability Corporation (NERC) / Regional Entities",
+    "adoption_approach": [
+      "Identify BES Cyber Systems within scope using CIP-002",
+      "Implement security management controls (CIP-003)",
+      "Establish personnel training and access management",
+      "Implement electronic and physical security perimeters",
+      "Develop incident response and recovery plans",
+      "Conduct compliance audits and report violations"
+    ],
+    "hierarchy_structure": {
+      "levels": ["Standard", "Requirement"],
+      "numbering_pattern": "CIP-NNN-N RN"
+    },
+    "document_structure": {
+      "sections": [
+        "CIP-002: BES Cyber System Categorization",
+        "CIP-003: Security Management Controls",
+        "CIP-004: Personnel & Training",
+        "CIP-005: Electronic Security Perimeters",
+        "CIP-006: Physical Security",
+        "CIP-007: Systems Security Management",
+        "CIP-008: Incident Reporting",
+        "CIP-009: Recovery Plans",
+        "CIP-010: Configuration Change Management",
+        "CIP-011: Information Protection",
+        "CIP-013: Supply Chain Risk",
+        "CIP-014: Physical Security (Transmission)"
+      ]
+    },
+    "total_controls": 18
+  },
+  "controls": [
+    {
+      "control_id": "CIP-002-R1",
+      "original_reference": "CIP-002-5.1a R1",
+      "title": "BES Cyber System Identification",
+      "description": "Each responsible entity shall implement a process that considers each of the following assets for purposes of categorizing BES Cyber Systems.",
+      "full_text": "Identify all BES Cyber Systems and their associated BES Cyber Assets. Apply the impact rating criteria (High, Medium, Low) to each BES Cyber System based on the systems they support. Maintain documentation of the categorization rationale.",
+      "domain": "BES Cyber System Categorization",
+      "category": "Asset Identification",
+      "section_number": "CIP-002-R1",
+      "parent_section": "CIP-002",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "BES Cyber System identification documentation",
+        "Impact rating methodology",
+        "BES Cyber System list with categorizations",
+        "Annual categorization review records"
+      ]
+    },
+    {
+      "control_id": "CIP-003-R1",
+      "original_reference": "CIP-003-8 R1",
+      "title": "Cybersecurity Policies",
+      "description": "Each responsible entity shall review and obtain CIP Senior Manager approval at least once every 15 calendar months for one or more documented cybersecurity policies.",
+      "full_text": "Develop and maintain cybersecurity policies covering all CIP standards. Policies must be approved by the CIP Senior Manager at least every 15 months. Policies must address all applicable NERC CIP standards. Policies must be communicated to all personnel with access to BES Cyber Systems.",
+      "domain": "Security Management Controls",
+      "category": "Security Policy",
+      "section_number": "CIP-003-R1",
+      "parent_section": "CIP-003",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Cybersecurity policies documentation",
+        "CIP Senior Manager approval records",
+        "Policy review and update records",
+        "Policy communication records"
+      ]
+    },
+    {
+      "control_id": "CIP-004-R1",
+      "original_reference": "CIP-004-6 R1",
+      "title": "Security Awareness Training",
+      "description": "Each responsible entity shall implement a documented ongoing cyber security awareness program to reinforce cyber security practices.",
+      "full_text": "Implement an ongoing cybersecurity awareness program covering all personnel with access to BES Cyber Systems. Cybersecurity training must be completed at least once per calendar year and must include applicable policies, physical and electronic access controls, NERC CIP requirements, and methods of reporting cybersecurity incidents.",
+      "domain": "Personnel & Training",
+      "category": "Security Awareness",
+      "section_number": "CIP-004-R1",
+      "parent_section": "CIP-004",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Cybersecurity awareness program documentation",
+        "Annual training completion records",
+        "Training content covering NERC CIP requirements",
+        "Personnel acknowledgment records"
+      ]
+    },
+    {
+      "control_id": "CIP-004-R4",
+      "original_reference": "CIP-004-6 R4",
+      "title": "Access Management Program",
+      "description": "Each responsible entity shall implement one or more documented access management programs for physical and electronic access.",
+      "full_text": "Implement access management programs for BES Cyber Systems and Critical Cyber Assets. Manage access authorizations, revoke access timely upon personnel changes, conduct quarterly reviews of Electronic Access Control Lists, and review physical access authorizations at least every 15 months.",
+      "domain": "Personnel & Training",
+      "category": "Access Management",
+      "section_number": "CIP-004-R4",
+      "parent_section": "CIP-004",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Access authorization documentation",
+        "Quarterly access review records",
+        "Timely access revocation records",
+        "Personnel exit procedures"
+      ]
+    },
+    {
+      "control_id": "CIP-005-R1",
+      "original_reference": "CIP-005-6 R1",
+      "title": "Electronic Security Perimeter",
+      "description": "Each responsible entity shall implement one or more documented Electronic Security Perimeter(s) for all applicable high and medium impact BES Cyber Systems.",
+      "full_text": "Establish Electronic Security Perimeters (ESPs) around all High and Medium impact BES Cyber Systems. Control all routable communications crossing the ESP boundary. Identify all Electronic Access Points (EAPs) in the ESP. Deny all access by default and allow only specifically authorized communications.",
+      "domain": "Electronic Security Perimeters",
+      "category": "Network Security",
+      "section_number": "CIP-005-R1",
+      "parent_section": "CIP-005",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "ESP documentation and network diagrams",
+        "EAP inventory",
+        "Firewall rules with deny-all default",
+        "Perimeter monitoring records"
+      ]
+    },
+    {
+      "control_id": "CIP-005-R2",
+      "original_reference": "CIP-005-6 R2",
+      "title": "Interactive Remote Access Management",
+      "description": "Each responsible entity allowing Interactive Remote Access must implement and document methods for managing Interactive Remote Access.",
+      "full_text": "Manage all Interactive Remote Access sessions to BES Cyber Systems. Require MFA for all remote access. Encrypt all remote access sessions. Monitor and log all remote access. Implement session timeout controls. Limit remote access to authorized individuals only.",
+      "domain": "Electronic Security Perimeters",
+      "category": "Remote Access",
+      "section_number": "CIP-005-R2",
+      "parent_section": "CIP-005",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Remote access policy",
+        "MFA implementation for remote access",
+        "Remote session encryption configuration",
+        "Remote access logs"
+      ]
+    },
+    {
+      "control_id": "CIP-006-R1",
+      "original_reference": "CIP-006-6 R1",
+      "title": "Physical Security Plan",
+      "description": "Each responsible entity shall implement one or more documented Physical Security Plan(s) for its applicable high and medium impact BES Cyber Systems.",
+      "full_text": "Develop and implement physical security plans for BES Cyber Systems. Define Physical Security Perimeters (PSPs). Control and monitor all physical access to PSPs. Use access controls such as badges, biometrics, or guards. Retain physical access logs for at least 90 calendar days.",
+      "domain": "Physical Security",
+      "category": "Physical Security",
+      "section_number": "CIP-006-R1",
+      "parent_section": "CIP-006",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Physical security plan documentation",
+        "Physical access control configurations",
+        "Physical access logs (90 days minimum)",
+        "Visitor management records"
+      ]
+    },
+    {
+      "control_id": "CIP-007-R1",
+      "original_reference": "CIP-007-6 R1",
+      "title": "Ports and Services Management",
+      "description": "Each responsible entity shall implement one or more documented processes that collectively include each of the applicable requirement parts in CIP-007-6 Table R1.",
+      "full_text": "Enable only necessary ports and services on BES Cyber Systems. Document all enabled ports and services. Disable or restrict unnecessary ports and services. Review enabled ports and services at least every 35 calendar months. Protect BES Cyber Systems from unintentional or active communications via other protocols.",
+      "domain": "Systems Security Management",
+      "category": "System Hardening",
+      "section_number": "CIP-007-R1",
+      "parent_section": "CIP-007",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Port and service inventory",
+        "Port hardening documentation",
+        "Periodic port review records",
+        "Configuration scan results"
+      ]
+    },
+    {
+      "control_id": "CIP-007-R3",
+      "original_reference": "CIP-007-6 R3",
+      "title": "Malicious Code Prevention",
+      "description": "Each responsible entity shall implement one or more documented processes for malicious code prevention.",
+      "full_text": "Deploy and maintain anti-malware protection on all BES Cyber Systems where technically feasible. Update signatures within 35 calendar days of availability. Test mitigation procedures where malware prevention tools cannot be installed. Log malware events and investigate detections.",
+      "domain": "Systems Security Management",
+      "category": "Malware Prevention",
+      "section_number": "CIP-007-R3",
+      "parent_section": "CIP-007",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Anti-malware deployment records",
+        "Signature update logs",
+        "Malware event logs",
+        "Exception documentation for systems without anti-malware"
+      ]
+    },
+    {
+      "control_id": "CIP-007-R4",
+      "original_reference": "CIP-007-6 R4",
+      "title": "Security Event Monitoring",
+      "description": "Each responsible entity shall implement one or more documented processes for security event monitoring.",
+      "full_text": "Log security events on BES Cyber Systems for at least the last 90 calendar days. Review logs of security events to identify cyber security incidents or potential incidents. Alert designated personnel for specific events requiring immediate response such as detected compromise or attempted unauthorized access.",
+      "domain": "Systems Security Management",
+      "category": "Security Monitoring",
+      "section_number": "CIP-007-R4",
+      "parent_section": "CIP-007",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Security event logging configuration",
+        "90-day log retention",
+        "Log review procedures and records",
+        "Alert configuration and response records"
+      ]
+    },
+    {
+      "control_id": "CIP-008-R1",
+      "original_reference": "CIP-008-6 R1",
+      "title": "Incident Response Plan",
+      "description": "Each responsible entity shall document one or more Cyber Security Incident response plan(s) that collectively include each of the applicable requirement parts in CIP-008-6 Table R1.",
+      "full_text": "Develop and maintain a Cyber Security Incident response plan for BES Cyber Systems. The plan must include roles and responsibilities, incident classification criteria, response procedures, communication plans, and reporting requirements to NERC E-ISAC and government agencies. Test the plan annually.",
+      "domain": "Incident Reporting",
+      "category": "Incident Response",
+      "section_number": "CIP-008-R1",
+      "parent_section": "CIP-008",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Cyber Security Incident response plan",
+        "Annual test records",
+        "Incident reporting procedures to NERC E-ISAC",
+        "After-action review records"
+      ]
+    },
+    {
+      "control_id": "CIP-009-R1",
+      "original_reference": "CIP-009-6 R1",
+      "title": "Recovery Plans",
+      "description": "Each responsible entity shall have one or more documented recovery plan(s) for BES Cyber Systems that collectively include each of the applicable requirement parts.",
+      "full_text": "Develop and maintain recovery plans for restoring BES Cyber Systems following a cyber incident. Recovery plans must include conditions for activation, roles and responsibilities, backup and restoration procedures, and verification testing procedures. Test recovery plans at least once every 15 calendar months.",
+      "domain": "Recovery Plans",
+      "category": "Cyber Recovery",
+      "section_number": "CIP-009-R1",
+      "parent_section": "CIP-009",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "BES Cyber System recovery plans",
+        "Recovery test results",
+        "Backup media inventory",
+        "Recovery time objective documentation"
+      ]
+    },
+    {
+      "control_id": "CIP-010-R1",
+      "original_reference": "CIP-010-3 R1",
+      "title": "Configuration Change Management",
+      "description": "Each responsible entity shall implement one or more documented processes for configuration change management in accordance with the requirements in CIP-010.",
+      "full_text": "Maintain baseline configurations for all BES Cyber Systems. Document all authorized changes. Verify the identity of hardware components for High impact systems. Authorize all changes and test changes before implementation in the production environment. Revert to baseline if unauthorized changes are detected.",
+      "domain": "Configuration Change Management",
+      "category": "Configuration Management",
+      "section_number": "CIP-010-R1",
+      "parent_section": "CIP-010",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "BES Cyber System baseline configurations",
+        "Change authorization records",
+        "Change implementation procedures",
+        "Baseline deviation detection records"
+      ]
+    },
+    {
+      "control_id": "CIP-010-R3",
+      "original_reference": "CIP-010-3 R3",
+      "title": "Vulnerability Management",
+      "description": "Each responsible entity shall implement one or more documented processes for vulnerability management in accordance with CIP-010-3 R3.",
+      "full_text": "Conduct vulnerability assessments for BES Cyber Systems at least once every 15 calendar months. Include active vulnerability scanning where technically feasible. Document discovered vulnerabilities. Implement mitigation plans for identified vulnerabilities based on risk.",
+      "domain": "Configuration Change Management",
+      "category": "Vulnerability Management",
+      "section_number": "CIP-010-R3",
+      "parent_section": "CIP-010",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Vulnerability assessment reports",
+        "Vulnerability mitigation plans",
+        "Patch management records",
+        "Scanning tool exemptions and compensating controls"
+      ]
+    },
+    {
+      "control_id": "CIP-011-R1",
+      "original_reference": "CIP-011-2 R1",
+      "title": "BES Cyber System Information Protection",
+      "description": "Each responsible entity shall implement and document one or more information protection program(s) to identify, classify, and protect information associated with BES Cyber Systems.",
+      "full_text": "Develop and implement a BES Cyber System Information (BCSI) protection program. Identify what constitutes BCSI. Classify and protect BCSI from unauthorized disclosure. Control access to BCSI based on need-to-know. Implement secure handling and disposal procedures for BCSI.",
+      "domain": "Information Protection",
+      "category": "Data Protection",
+      "section_number": "CIP-011-R1",
+      "parent_section": "CIP-011",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "BCSI identification and classification",
+        "BCSI protection procedures",
+        "Access controls for BCSI",
+        "BCSI disposal records"
+      ]
+    },
+    {
+      "control_id": "CIP-013-R1",
+      "original_reference": "CIP-013-1 R1",
+      "title": "Supply Chain Risk Management Plan",
+      "description": "Each responsible entity shall develop one or more documented supply chain cyber security risk management plan(s) for high and medium impact BES Cyber Systems.",
+      "full_text": "Develop and implement a supply chain cybersecurity risk management plan for vendors of BES Cyber Systems. Address: vendor risk identification, software integrity verification, vendor remote access controls, and information sharing about known vulnerabilities. Review and obtain approval for the plan at least every 15 calendar months.",
+      "domain": "Supply Chain Risk",
+      "category": "Supply Chain Security",
+      "section_number": "CIP-013-R1",
+      "parent_section": "CIP-013",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Supply chain risk management plan",
+        "Vendor risk assessments",
+        "Software integrity verification records",
+        "Plan review and approval records"
+      ]
+    },
+    {
+      "control_id": "CIP-014-R1",
+      "original_reference": "CIP-014-2 R1",
+      "title": "Transmission Station Physical Security",
+      "description": "Each applicable Transmission Owner shall perform an initial and subsequent periodic risk assessment of its Transmission stations and Transmission substations to identify those that, if rendered inoperable or damaged, could result in widespread instability, uncontrolled separation, or cascading within an Interconnection.",
+      "full_text": "Conduct risk assessments of transmission stations and substations to identify those with high criticality to grid reliability. Implement physical security plans for identified critical facilities. Include security patrols, barriers, monitoring systems, and intrusion detection. Engage law enforcement and government agencies in planning.",
+      "domain": "Physical Security",
+      "category": "Transmission Security",
+      "section_number": "CIP-014-R1",
+      "parent_section": "CIP-014",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Transmission facility risk assessment",
+        "Physical security plans for critical substations",
+        "Law enforcement coordination records",
+        "Physical security test results"
+      ]
+    },
+    {
+      "control_id": "AUDIT.1",
+      "original_reference": "NERC Compliance Auditing",
+      "title": "NERC CIP Compliance Auditing",
+      "description": "Responsible entities must maintain evidence of compliance with all applicable CIP standards for audit purposes.",
+      "full_text": "Maintain comprehensive evidence for all applicable NERC CIP requirements including policies, procedures, training records, access logs, configuration records, and test results. Prepare for periodic NERC/Regional Entity compliance audits. Self-certify compliance annually. Report violations promptly to NERC. Implement mitigation plans for violations.",
+      "domain": "Compliance",
+      "category": "Compliance Auditing",
+      "section_number": "AUDIT.1",
+      "parent_section": "Compliance",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Evidence retention procedures",
+        "Compliance evidence files by standard",
+        "Self-certification records",
+        "Violation reporting and mitigation records"
+      ]
+    }
+  ]
+}

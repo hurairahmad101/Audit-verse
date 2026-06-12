@@ -1,0 +1,333 @@
+{
+  "metadata": {
+    "name": "ISO 50001:2018 Energy Management Systems",
+    "description": "ISO 50001:2018 specifies requirements for establishing, implementing, maintaining, and improving an energy management system (EnMS). Its intent is to enable organizations to follow a systematic approach in achieving continual improvement of energy performance, including energy efficiency, energy use, and energy consumption.",
+    "version": "2018",
+    "source_organization": "International Organization for Standardization (ISO)",
+    "effective_date": "2018-08-21",
+    "classification": "certification",
+    "framework_type": "certification",
+    "classification_confidence": 0.95,
+    "classification_reasoning": "ISO 50001 is the international certification standard for energy management, used by organizations to reduce energy costs, improve sustainability, and demonstrate environmental responsibility.",
+    "framework_purpose": "To help organizations establish systems and processes necessary to improve energy performance, including energy efficiency, energy use, and energy consumption.",
+    "framework_scope": "All types of organizations regardless of size, sector, or geographical location that wish to improve energy performance and demonstrate compliance with energy regulations.",
+    "framework_objectives": [
+      "Improve energy performance and efficiency",
+      "Reduce energy costs",
+      "Reduce greenhouse gas emissions",
+      "Support sustainability and ESG objectives",
+      "Demonstrate compliance with energy regulations"
+    ],
+    "target_audience": "Energy Managers, Sustainability Officers, Facilities Managers, Environmental Managers, Operations Directors, and organizations with significant energy consumption",
+    "regulatory_authority": "ISO (International Organization for Standardization)",
+    "adoption_approach": [
+      "Establish energy management team and policy",
+      "Conduct energy review and identify significant energy users",
+      "Establish energy baselines and performance indicators",
+      "Set energy objectives and targets",
+      "Implement operational controls for energy",
+      "Monitor, measure, and review energy performance"
+    ],
+    "hierarchy_structure": {
+      "levels": ["Clause", "Sub-clause"],
+      "numbering_pattern": "N.N"
+    },
+    "document_structure": {
+      "sections": [
+        "Clause 4: Context",
+        "Clause 5: Leadership",
+        "Clause 6: Planning",
+        "Clause 7: Support",
+        "Clause 8: Operation",
+        "Clause 9: Performance Evaluation",
+        "Clause 10: Improvement"
+      ]
+    },
+    "total_controls": 15
+  },
+  "controls": [
+    {
+      "control_id": "6.3",
+      "original_reference": "Clause 6.3",
+      "title": "Energy Review",
+      "description": "The organization shall conduct and document an energy review to analyze energy use, identify significant energy uses, and identify opportunities for improving energy performance.",
+      "full_text": "Conduct an energy review covering: analysis of energy use and consumption based on measurement, identification and prioritization of significant energy uses (SEUs), identification of variables affecting SEUs, determination of current energy performance, and identification of opportunities for improving energy performance.",
+      "domain": "Planning",
+      "category": "Energy Review",
+      "section_number": "6.3",
+      "parent_section": "6",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Energy review report",
+        "Significant energy user (SEU) identification",
+        "Energy use data analysis",
+        "Opportunities for improvement log"
+      ]
+    },
+    {
+      "control_id": "6.4",
+      "original_reference": "Clause 6.4",
+      "title": "Energy Performance Indicators",
+      "description": "The organization shall determine energy performance indicators (EnPIs) appropriate for measuring and monitoring its energy performance.",
+      "full_text": "Define energy performance indicators (EnPIs) that reflect significant energy uses and energy performance drivers. EnPIs may be simple metrics (kWh per unit of production) or complex ratios. Review and update EnPIs as energy performance improves. Compare EnPIs against established baselines.",
+      "domain": "Planning",
+      "category": "Energy KPIs",
+      "section_number": "6.4",
+      "parent_section": "6",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "EnPI definitions and methodology",
+        "EnPI tracking data",
+        "EnPI review and update records",
+        "Energy performance trend reports"
+      ]
+    },
+    {
+      "control_id": "6.5",
+      "original_reference": "Clause 6.5",
+      "title": "Energy Baseline",
+      "description": "The organization shall establish an energy baseline using energy review information and considering a period of data appropriate to the organization's energy use.",
+      "full_text": "Establish an energy baseline for each significant energy use and for overall organizational energy use. The baseline is established using data from a representative period. When significant changes occur in facilities, equipment, or operations, the baseline is adjusted and documented.",
+      "domain": "Planning",
+      "category": "Energy Baseline",
+      "section_number": "6.5",
+      "parent_section": "6",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Energy baseline documentation",
+        "Baseline data records",
+        "Baseline adjustment documentation",
+        "Energy performance comparison to baseline"
+      ]
+    },
+    {
+      "control_id": "6.6",
+      "original_reference": "Clause 6.6",
+      "title": "Energy Planning and Objectives",
+      "description": "The organization shall establish energy objectives and energy targets at relevant functions, levels, processes, and facilities for improving energy performance.",
+      "full_text": "Establish measurable energy objectives and targets for reducing energy consumption and improving efficiency. Objectives must be consistent with the energy policy and address significant energy uses. Action plans define measures, resources, responsibilities, and timeframes for achieving targets.",
+      "domain": "Planning",
+      "category": "Energy Objectives",
+      "section_number": "6.6",
+      "parent_section": "6",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Energy objectives and targets",
+        "Energy action plans",
+        "Target achievement monitoring",
+        "Energy reduction project records"
+      ]
+    },
+    {
+      "control_id": "8.1",
+      "original_reference": "Clause 8.1",
+      "title": "Operational and Maintenance Controls",
+      "description": "The organization shall implement operational and maintenance controls for significant energy uses to ensure that operations are carried out under specified conditions.",
+      "full_text": "Establish operational controls for processes and systems that significantly affect energy performance. Include energy-efficient operating procedures for significant energy users. Implement predictive and preventive maintenance programs to maintain equipment efficiency. Document operating parameters for SEUs.",
+      "domain": "Operation",
+      "category": "Operational Control",
+      "section_number": "8.1",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Energy operating procedures",
+        "Maintenance program for SEUs",
+        "Equipment efficiency records",
+        "Setpoint and parameter documentation"
+      ]
+    },
+    {
+      "control_id": "8.2",
+      "original_reference": "Clause 8.2",
+      "title": "Design for Energy Performance",
+      "description": "The organization shall consider energy performance improvement opportunities and operational controls in the design of new facilities, equipment, systems, and processes.",
+      "full_text": "Integrate energy performance considerations into the design of new or renovated facilities, major equipment procurements, and significant process changes. Document energy performance analysis results for design decisions. Set energy performance criteria for design specifications.",
+      "domain": "Operation",
+      "category": "Energy Design",
+      "section_number": "8.2",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Energy criteria in design specifications",
+        "Energy performance analysis for designs",
+        "Design review records with energy considerations",
+        "Energy efficiency in capital expenditure justifications"
+      ]
+    },
+    {
+      "control_id": "8.3",
+      "original_reference": "Clause 8.3",
+      "title": "Energy Procurement",
+      "description": "The organization shall inform suppliers that procurement is partly evaluated on the basis of energy performance.",
+      "full_text": "Include energy performance criteria in the procurement of energy, energy services, products, and equipment. Evaluate suppliers and products based on energy efficiency. Define minimum energy performance specifications for equipment purchases. Source renewable energy where feasible.",
+      "domain": "Operation",
+      "category": "Energy Procurement",
+      "section_number": "8.3",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Energy procurement criteria",
+        "Energy efficiency in purchasing specifications",
+        "Renewable energy contracts",
+        "Supplier energy assessment records"
+      ]
+    },
+    {
+      "control_id": "9.1",
+      "original_reference": "Clause 9.1",
+      "title": "Energy Performance Monitoring",
+      "description": "The organization shall monitor, measure, analyze, and evaluate energy performance, including significant energy uses.",
+      "full_text": "Implement metering and monitoring for significant energy uses and overall energy consumption. Analyze energy data to detect trends and anomalies. Compare actual energy consumption against baselines and targets. Investigate significant deviations from expected energy performance.",
+      "domain": "Performance Evaluation",
+      "category": "Energy Monitoring",
+      "section_number": "9.1",
+      "parent_section": "9",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Energy metering and monitoring data",
+        "Energy consumption reports",
+        "Deviation analysis records",
+        "Energy dashboard and reporting"
+      ]
+    },
+    {
+      "control_id": "9.2",
+      "original_reference": "Clause 9.2",
+      "title": "Internal Energy Audit",
+      "description": "The organization shall conduct internal audits at planned intervals to provide information on whether the EnMS conforms to requirements and is effective.",
+      "full_text": "Conduct internal energy management system audits covering all EnMS requirements. Auditors must be objective and impartial. Audit findings are reported to management. Nonconformances require corrective action. Audit results are inputs to management review.",
+      "domain": "Performance Evaluation",
+      "category": "Internal Audit",
+      "section_number": "9.2",
+      "parent_section": "9",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Internal audit program",
+        "Energy audit reports",
+        "Auditor qualifications",
+        "Corrective actions from audits"
+      ]
+    },
+    {
+      "control_id": "9.3",
+      "original_reference": "Clause 9.3",
+      "title": "Energy Management Review",
+      "description": "Top management shall review the organization's EnMS at planned intervals to ensure its continuing suitability, adequacy, and effectiveness.",
+      "full_text": "Conduct management reviews of the EnMS at least annually. Review inputs include energy performance data, objective achievement, audit results, legal compliance, stakeholder concerns, and opportunities. Review outputs include decisions on EnMS changes, resource allocation, and objective revisions.",
+      "domain": "Performance Evaluation",
+      "category": "Management Review",
+      "section_number": "9.3",
+      "parent_section": "9",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Management review meeting minutes",
+        "Energy performance dashboard for review",
+        "Decisions and action items from review"
+      ]
+    },
+    {
+      "control_id": "5.2",
+      "original_reference": "Clause 5.2",
+      "title": "Energy Policy",
+      "description": "Top management shall establish an energy policy that commits to improving energy performance and providing information and resources for achieving objectives.",
+      "full_text": "Establish a documented energy policy committing to energy performance improvement, compliance with applicable legal requirements, procurement of energy-efficient products and services, and support for design of energy-efficient facilities. Communicate the policy throughout the organization.",
+      "domain": "Leadership",
+      "category": "Energy Policy",
+      "section_number": "5.2",
+      "parent_section": "5",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Documented energy policy",
+        "Policy approval records",
+        "Policy communication records"
+      ]
+    },
+    {
+      "control_id": "5.3",
+      "original_reference": "Clause 5.3",
+      "title": "Energy Management Team",
+      "description": "Top management shall appoint a management representative who establishes and manages the energy management team.",
+      "full_text": "Appoint an Energy Manager or Energy Management Representative with authority over the EnMS. Establish a cross-functional energy management team. Define roles and responsibilities for energy management. Provide resources for the energy management function.",
+      "domain": "Leadership",
+      "category": "Organization",
+      "section_number": "5.3",
+      "parent_section": "5",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Energy manager appointment records",
+        "Energy team charter",
+        "Energy roles and responsibilities",
+        "Energy team meeting records"
+      ]
+    },
+    {
+      "control_id": "7.2",
+      "original_reference": "Clause 7.2",
+      "title": "Energy Competence",
+      "description": "The organization shall ensure that persons doing work under its control that affects energy performance are competent.",
+      "full_text": "Identify energy management competency requirements. Ensure energy team members and operators of significant energy users have appropriate training and skills. Provide energy awareness training to all relevant personnel. Maintain training records.",
+      "domain": "Support",
+      "category": "Competence",
+      "section_number": "7.2",
+      "parent_section": "7",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Energy competency requirements",
+        "Training records for energy personnel",
+        "Energy awareness training records",
+        "Competency assessments"
+      ]
+    },
+    {
+      "control_id": "10.1",
+      "original_reference": "Clause 10.1",
+      "title": "Nonconformities and Corrective Action",
+      "description": "When a nonconformity related to energy management occurs, the organization shall react, investigate, and take corrective action.",
+      "full_text": "Address EnMS nonconformities through corrective action processes. Investigate root causes of energy performance gaps and nonconformities. Implement corrective actions to prevent recurrence. Verify effectiveness of corrective actions. Document and retain corrective action records.",
+      "domain": "Improvement",
+      "category": "Corrective Action",
+      "section_number": "10.1",
+      "parent_section": "10",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Energy nonconformance records",
+        "Root cause analysis",
+        "Corrective action plans",
+        "Effectiveness verification records"
+      ]
+    },
+    {
+      "control_id": "10.2",
+      "original_reference": "Clause 10.2",
+      "title": "Continual Energy Improvement",
+      "description": "The organization shall continually improve the suitability, adequacy, and effectiveness of the EnMS and demonstrate improvement of energy performance.",
+      "full_text": "Demonstrate year-over-year improvement in energy performance through measurable reductions in energy intensity, absolute consumption, or carbon emissions. Implement energy efficiency projects. Track and report energy savings. Share energy improvement success stories.",
+      "domain": "Improvement",
+      "category": "Continual Improvement",
+      "section_number": "10.2",
+      "parent_section": "10",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Energy performance trend data",
+        "Energy savings project records",
+        "Year-over-year energy intensity improvements",
+        "Carbon reduction achievements"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,350 @@
+{
+  "metadata": {
+    "name": "CCPA/CPRA (California Consumer Privacy Act / California Privacy Rights Act)",
+    "description": "The California Consumer Privacy Act (CCPA) and its amendment, the California Privacy Rights Act (CPRA), create comprehensive data privacy rights for California consumers. CPRA, effective January 1, 2023, significantly expanded CCPA by adding new rights, creating the California Privacy Protection Agency (CPPA), and establishing stricter requirements for sensitive personal information.",
+    "version": "CPRA (2023)",
+    "source_organization": "State of California / California Privacy Protection Agency (CPPA)",
+    "effective_date": "2023-01-01",
+    "classification": "regulatory",
+    "framework_type": "regulatory",
+    "classification_confidence": 0.97,
+    "classification_reasoning": "CCPA/CPRA is a legally binding state privacy law in California with enforcement by the California Attorney General and the California Privacy Protection Agency.",
+    "framework_purpose": "To give California consumers the right to know about, delete, correct, and opt-out of the sale or sharing of their personal information, and to establish enhanced protections for sensitive personal information.",
+    "framework_scope": "For-profit businesses that do business in California and meet any of: $25M+ in annual revenues, buy/sell/share personal information of 100,000+ consumers or households, or derive 50%+ revenue from selling/sharing personal information.",
+    "framework_objectives": [
+      "Provide California consumers control over their personal information",
+      "Require transparency about data collection and use",
+      "Establish rights to access, delete, correct, and limit use",
+      "Create protections for sensitive personal information",
+      "Establish data minimization and purpose limitation requirements"
+    ],
+    "target_audience": "Privacy Counsel, Compliance Officers, Data Protection Officers, Marketing Teams, IT and Engineering Teams, and businesses operating in California",
+    "regulatory_authority": "California Privacy Protection Agency (CPPA) / California Attorney General",
+    "adoption_approach": [
+      "Conduct data mapping for California consumer personal information",
+      "Update privacy notice and disclosures",
+      "Implement consumer rights request procedures",
+      "Establish opt-out mechanisms for sale/sharing",
+      "Create contracts with service providers and contractors",
+      "Implement data minimization practices"
+    ],
+    "hierarchy_structure": {
+      "levels": ["Right/Requirement", "Obligation"],
+      "numbering_pattern": "Civil Code Section 1798.N"
+    },
+    "document_structure": {
+      "sections": [
+        "Consumer Rights",
+        "Business Obligations",
+        "Sensitive Personal Information",
+        "Service Provider Requirements",
+        "Enforcement"
+      ]
+    },
+    "total_controls": 16
+  },
+  "controls": [
+    {
+      "control_id": "CCPA-1",
+      "original_reference": "1798.100 - Right to Know",
+      "title": "Right to Know and Access Personal Information",
+      "description": "Consumers have the right to request that a business disclose the categories and specific pieces of personal information collected, the sources, purposes, third parties disclosed to, and categories sold.",
+      "full_text": "Implement a verifiable consumer request process to fulfill right to know requests. Disclose: categories of personal information collected, sources of collection, business purposes, categories of third parties shared with, and specific pieces of personal information. Respond within 45 days (extendable by 45 days). Free of charge twice per year.",
+      "domain": "Consumer Rights",
+      "category": "Right to Know",
+      "section_number": "1798.100",
+      "parent_section": "Consumer Rights",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Verifiable consumer request process",
+        "45-day response capability",
+        "Personal information inventory",
+        "Request log and response records"
+      ]
+    },
+    {
+      "control_id": "CCPA-2",
+      "original_reference": "1798.105 - Right to Delete",
+      "title": "Right to Deletion",
+      "description": "Consumers have the right to request deletion of their personal information collected and to direct service providers and contractors to delete the same.",
+      "full_text": "Implement deletion request processes. Delete personal information upon verified request unless an exception applies (legal obligation, security purposes, detect security incidents, bug fixing, certain research, internal use consistent with expectations). Direct service providers and contractors to delete as well. Respond within 45 days.",
+      "domain": "Consumer Rights",
+      "category": "Right to Delete",
+      "section_number": "1798.105",
+      "parent_section": "Consumer Rights",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Deletion request procedures",
+        "Service provider deletion direction records",
+        "Deletion confirmation records",
+        "Exception documentation"
+      ]
+    },
+    {
+      "control_id": "CCPA-3",
+      "original_reference": "1798.106 - Right to Correct",
+      "title": "Right to Correct Inaccurate Personal Information",
+      "description": "Consumers have the right to request that a business correct inaccurate personal information maintained about them.",
+      "full_text": "Implement correction request processes. Upon verified request, correct inaccurate personal information. Use commercially reasonable efforts to correct through best practices for the type of personal information at issue. Direct service providers and contractors to make corrections. Respond within 45 days.",
+      "domain": "Consumer Rights",
+      "category": "Right to Correct",
+      "section_number": "1798.106",
+      "parent_section": "Consumer Rights",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Correction request procedures",
+        "Correction implementation records",
+        "Service provider correction direction records"
+      ]
+    },
+    {
+      "control_id": "CCPA-4",
+      "original_reference": "1798.120 - Right to Opt-Out of Sale",
+      "title": "Right to Opt-Out of Sale or Sharing of Personal Information",
+      "description": "Consumers have the right to opt-out of the sale or sharing of their personal information to third parties.",
+      "full_text": "Provide a clear and conspicuous 'Do Not Sell or Share My Personal Information' link on the homepage and privacy policy. Honor opt-out requests within 15 business days. Do not sell personal information of consumers who have opted out. Honor Global Privacy Control (GPC) signals as opt-out requests.",
+      "domain": "Consumer Rights",
+      "category": "Right to Opt-Out",
+      "section_number": "1798.120",
+      "parent_section": "Consumer Rights",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Do Not Sell or Share link on website",
+        "GPC signal implementation",
+        "Opt-out request records",
+        "15-day compliance timeline records"
+      ]
+    },
+    {
+      "control_id": "CCPA-5",
+      "original_reference": "1798.121 - Sensitive Personal Information",
+      "title": "Right to Limit Use of Sensitive Personal Information",
+      "description": "Consumers have the right to direct a business to limit its use and disclosure of sensitive personal information (SPI) to specific purposes.",
+      "full_text": "Implement procedures to limit use of sensitive personal information (SPI) when consumers exercise this right. SPI includes: Social Security numbers, financial account details, precise geolocation, racial/ethnic origin, religious beliefs, union membership, contents of messages, biometric and health data, sexual orientation. Provide Limit Use of SPI link or honor GPC signals.",
+      "domain": "Consumer Rights",
+      "category": "Sensitive Personal Information",
+      "section_number": "1798.121",
+      "parent_section": "Consumer Rights",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Limit Use of SPI link or mechanism",
+        "SPI inventory and classification",
+        "SPI use limitation procedures",
+        "GPC signal handling for SPI"
+      ]
+    },
+    {
+      "control_id": "CCPA-6",
+      "original_reference": "1798.100(b) - Non-Discrimination",
+      "title": "Non-Discrimination for Exercising Privacy Rights",
+      "description": "Businesses shall not discriminate against consumers for exercising their CCPA/CPRA rights.",
+      "full_text": "Do not deny goods or services, charge different prices, provide different quality of service, or suggest adverse consequences to consumers who exercise their privacy rights. Financial incentive programs offering different prices for data sharing must be disclosed and based on reasonably related value.",
+      "domain": "Consumer Rights",
+      "category": "Non-Discrimination",
+      "section_number": "1798.100(b)",
+      "parent_section": "Consumer Rights",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Non-discrimination policy",
+        "Financial incentive program disclosures",
+        "Value of personal information calculations"
+      ]
+    },
+    {
+      "control_id": "CCPA-7",
+      "original_reference": "1798.130 - Privacy Notice at Collection",
+      "title": "Notice at Collection",
+      "description": "Businesses must provide a notice at or before the point of collection informing consumers about the categories of personal information collected and the purposes.",
+      "full_text": "Provide clear and conspicuous notice at or before collecting personal information. Notice must include: categories of PI collected, purposes of collection, whether PI is sold or shared, retention periods (or criteria), consumer rights, and link to privacy policy. Update notices if collection practices change.",
+      "domain": "Business Obligations",
+      "category": "Privacy Notice",
+      "section_number": "1798.130",
+      "parent_section": "Business Obligations",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Notice at collection on data collection forms",
+        "Cookie banner with privacy notice",
+        "Privacy policy with required disclosures",
+        "Mobile app privacy labels"
+      ]
+    },
+    {
+      "control_id": "CCPA-8",
+      "original_reference": "1798.100(a) - Privacy Policy",
+      "title": "Comprehensive Privacy Policy",
+      "description": "Businesses must maintain a comprehensive privacy policy describing their practices regarding the collection, use, and disclosure of personal information.",
+      "full_text": "Maintain a comprehensive California-compliant privacy policy covering: categories of PI collected and sources, purposes of collection, categories sold/shared and to whom, consumer rights and how to exercise them, retention periods, and sensitive PI handling. Update annually at minimum. Ensure accessibility for persons with disabilities.",
+      "domain": "Business Obligations",
+      "category": "Privacy Policy",
+      "section_number": "1798.100(a)",
+      "parent_section": "Business Obligations",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Current California privacy policy",
+        "Annual policy review records",
+        "Accessibility compliance for privacy policy",
+        "Policy effective date and version history"
+      ]
+    },
+    {
+      "control_id": "CCPA-9",
+      "original_reference": "1798.140 - Service Provider Contracts",
+      "title": "Service Provider and Contractor Agreements",
+      "description": "Businesses must have written contracts with service providers and contractors that restrict their use of personal information.",
+      "full_text": "Establish written contracts with all service providers (process PI for business purpose) and contractors (process PI per written instructions). Contracts must prohibit: selling or sharing PI, retaining/using/disclosing PI beyond the business purpose, combining PI across clients, sub-processing without written permission. Monitor service providers for compliance.",
+      "domain": "Business Obligations",
+      "category": "Vendor Management",
+      "section_number": "1798.140",
+      "parent_section": "Business Obligations",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Service provider/contractor contracts with required provisions",
+        "Vendor inventory with categorization",
+        "Service provider compliance monitoring",
+        "Third-party audit rights"
+      ]
+    },
+    {
+      "control_id": "CCPA-10",
+      "original_reference": "Data Minimization",
+      "title": "Data Minimization and Purpose Limitation",
+      "description": "Under CPRA, businesses must collect only personal information reasonably necessary for the disclosed purpose and limit use to purposes disclosed at collection.",
+      "full_text": "Implement data minimization practices ensuring personal information collected is reasonably necessary for the disclosed purposes. Do not use, retain, share, or sell personal information for purposes incompatible with the purpose for which it was collected, unless the consumer provides consent. Document data minimization decisions.",
+      "domain": "Business Obligations",
+      "category": "Data Minimization",
+      "section_number": "1798.100(c)",
+      "parent_section": "Business Obligations",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Data minimization policy",
+        "Purpose limitation documentation",
+        "Data mapping with purpose alignment",
+        "Data minimization assessments"
+      ]
+    },
+    {
+      "control_id": "CCPA-11",
+      "original_reference": "Data Retention",
+      "title": "Data Retention Disclosure and Management",
+      "description": "CPRA requires businesses to disclose the length of time they retain personal information and implement reasonable retention periods.",
+      "full_text": "Define and disclose retention periods for each category of personal information, or the criteria used to determine retention. Implement retention schedules and delete personal information when retention periods expire. Do not retain personal information longer than reasonably necessary for the disclosed purpose.",
+      "domain": "Business Obligations",
+      "category": "Data Retention",
+      "section_number": "1798.100(a)(3)",
+      "parent_section": "Business Obligations",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Retention schedules disclosed in privacy policy",
+        "Automated deletion procedures",
+        "Retention schedule documentation",
+        "Data aging and purge records"
+      ]
+    },
+    {
+      "control_id": "CCPA-12",
+      "original_reference": "Security Measures",
+      "title": "Reasonable Security Measures",
+      "description": "Businesses must implement and maintain reasonable security measures to protect personal information.",
+      "full_text": "Implement reasonable security measures appropriate to the nature of the personal information and risks involved. Security measures should align with industry standards (e.g., CIS Controls, NIST CSF). Private right of action exists for consumers whose non-encrypted personal information is breached due to failure to implement reasonable security.",
+      "domain": "Security",
+      "category": "Data Security",
+      "section_number": "1798.150",
+      "parent_section": "Security",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Information security program documentation",
+        "Security risk assessments for personal data",
+        "Encryption implementation for PI",
+        "Security incident response plan"
+      ]
+    },
+    {
+      "control_id": "CCPA-13",
+      "original_reference": "1798.185 - CPPA Regulations",
+      "title": "CPPA Regulatory Compliance",
+      "description": "Businesses must comply with CPPA regulations covering risk assessments, cybersecurity audits, and automated decision-making transparency.",
+      "full_text": "Comply with CPPA regulations including: conducting and submitting Privacy Risk Assessments for high-risk processing, conducting cybersecurity audits for businesses processing large amounts of PI, providing opt-outs for automated decision-making, and complying with new regulations on AI and profiling.",
+      "domain": "Regulatory Compliance",
+      "category": "CPPA Regulations",
+      "section_number": "1798.185",
+      "parent_section": "Regulatory Compliance",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Privacy Risk Assessments (when required)",
+        "Cybersecurity audit documentation",
+        "Automated decision-making opt-out mechanisms",
+        "CPPA regulatory monitoring"
+      ]
+    },
+    {
+      "control_id": "CCPA-14",
+      "original_reference": "1798.110 - Consumer Request Process",
+      "title": "Verifiable Consumer Request Process",
+      "description": "Businesses must establish a process for consumers to submit verifiable requests to exercise their privacy rights.",
+      "full_text": "Provide at least two methods for consumers to submit requests (for businesses with websites, include a web form and at a minimum a toll-free number). Verify consumer identity before fulfilling requests. Do not require account creation. Respond within 45 days. Track and log all requests.",
+      "domain": "Consumer Rights Management",
+      "category": "Request Handling",
+      "section_number": "1798.110",
+      "parent_section": "Consumer Rights",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Consumer request web form",
+        "Toll-free number or contact mechanism",
+        "Identity verification procedures",
+        "Request response time tracking"
+      ]
+    },
+    {
+      "control_id": "CCPA-15",
+      "original_reference": "Children's Privacy",
+      "title": "Children's Privacy Protections",
+      "description": "Businesses must obtain opt-in consent before selling or sharing personal information of consumers under 16 years of age.",
+      "full_text": "Obtain affirmative opt-in consent before selling or sharing personal information of consumers aged 13-15. For children under 13, obtain consent from a parent or guardian before selling or sharing. Do not sell personal information of minors without opt-in consent. Implement age verification where necessary.",
+      "domain": "Special Protections",
+      "category": "Children's Privacy",
+      "section_number": "1798.120(d)",
+      "parent_section": "Special Protections",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Age verification procedures",
+        "Parental consent mechanisms",
+        "Children's data protection policy",
+        "Opt-in records for minors' data sale"
+      ]
+    },
+    {
+      "control_id": "CCPA-16",
+      "original_reference": "1798.155 - Enforcement",
+      "title": "CCPA/CPRA Enforcement and Penalties",
+      "description": "The California Attorney General and CPPA can enforce CCPA/CPRA violations with civil penalties and consumers can bring private actions for data breaches.",
+      "full_text": "Understand enforcement mechanisms: CPPA and AG can impose civil penalties of $2,500 per unintentional violation and $7,500 per intentional violation. Consumers have a private right of action for data breaches due to failure to implement reasonable security. Businesses have 30 days to cure violations before enforcement action (cure period being phased out).",
+      "domain": "Enforcement",
+      "category": "Penalties",
+      "section_number": "1798.155",
+      "parent_section": "Enforcement",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "CCPA compliance program documentation",
+        "Annual privacy compliance review",
+        "Regulatory correspondence records",
+        "Security incident response demonstrating reasonable security"
+      ]
+    }
+  ]
+}

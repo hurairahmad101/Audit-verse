@@ -1,0 +1,353 @@
+{
+  "metadata": {
+    "name": "NIST SP 800-82 Rev 3 (Industrial Control Systems Security)",
+    "description": "NIST SP 800-82 provides guidance on how to secure industrial control systems (ICS), including supervisory control and data acquisition (SCADA) systems, distributed control systems (DCS), and programmable logic controllers (PLC). It addresses the unique security requirements of operational technology (OT) environments.",
+    "version": "Rev 3 (2023)",
+    "source_organization": "National Institute of Standards and Technology (NIST)",
+    "effective_date": "2023-09-28",
+    "classification": "compliance",
+    "framework_type": "best_practice",
+    "classification_confidence": 0.95,
+    "classification_reasoning": "NIST SP 800-82 is the authoritative US government guidance for ICS/OT cybersecurity, referenced by federal agencies, critical infrastructure operators, and NERC CIP.",
+    "framework_purpose": "To provide guidance for improving security of industrial control systems while considering unique performance, reliability, and safety requirements of ICS environments.",
+    "framework_scope": "Industrial control systems including SCADA, DCS, PLCs, Remote Terminal Units (RTUs), Human Machine Interfaces (HMIs), and other OT/ICS components in critical infrastructure and industrial environments.",
+    "framework_objectives": [
+      "Establish ICS-specific security controls and countermeasures",
+      "Address unique OT security challenges (availability over confidentiality)",
+      "Enable safe and secure ICS operations",
+      "Protect critical infrastructure from cyber threats",
+      "Bridge IT and OT security practices"
+    ],
+    "target_audience": "ICS Security Engineers, OT Security Managers, Control Systems Engineers, CISO Teams, Critical Infrastructure Operators, and Industrial Cybersecurity Professionals",
+    "regulatory_authority": "NIST / US CISA (Cybersecurity and Infrastructure Security Agency)",
+    "adoption_approach": [
+      "Assess ICS environment and network architecture",
+      "Identify assets and inventory OT systems",
+      "Conduct ICS-specific risk assessment",
+      "Implement ICS security controls using NIST 800-53",
+      "Establish IT/OT network segmentation",
+      "Develop ICS incident response procedures"
+    ],
+    "hierarchy_structure": {
+      "levels": ["Domain", "Control"],
+      "numbering_pattern": "Domain code - Control number"
+    },
+    "document_structure": {
+      "sections": [
+        "ICS Overview",
+        "ICS Security Program Development",
+        "Network Architecture",
+        "Platform Security",
+        "Incident Response",
+        "Security Controls for ICS"
+      ]
+    },
+    "total_controls": 16
+  },
+  "controls": [
+    {
+      "control_id": "ICS-NET-1",
+      "original_reference": "Network Architecture - Segmentation",
+      "title": "OT/ICS Network Segmentation",
+      "description": "Establish a defense-in-depth architecture with clear segmentation between corporate IT networks and OT/ICS networks using industrial DMZ architecture.",
+      "full_text": "Implement network segmentation between corporate IT and OT/ICS networks using industrial firewalls and DMZ architecture. Apply the Purdue Enterprise Reference Architecture (PERA) or ISA/IEC 62443 zones and conduits model. Prevent direct communication between control networks and enterprise networks.",
+      "domain": "Network Architecture",
+      "category": "Network Segmentation",
+      "section_number": "NET.1",
+      "parent_section": "Network",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "OT network architecture documentation",
+        "Firewall rules between IT and OT",
+        "Industrial DMZ configuration",
+        "Purdue model or zone mapping"
+      ]
+    },
+    {
+      "control_id": "ICS-NET-2",
+      "original_reference": "Network Architecture - Remote Access",
+      "title": "Secure Remote Access to ICS",
+      "description": "Implement secure remote access controls for OT/ICS systems that limit exposure while enabling authorized maintenance activities.",
+      "full_text": "Implement secure remote access for OT/ICS using: VPN with MFA, jump servers, privileged access workstations, time-limited access sessions, and activity logging. Prohibit direct remote desktop connections to control systems. Vendor remote access must be monitored and terminated after use.",
+      "domain": "Network Architecture",
+      "category": "Remote Access",
+      "section_number": "NET.2",
+      "parent_section": "Network",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Remote access policy for OT",
+        "VPN and jump server configuration",
+        "Remote session logging",
+        "Vendor access management records"
+      ]
+    },
+    {
+      "control_id": "ICS-ASSET-1",
+      "original_reference": "Asset Management - Inventory",
+      "title": "OT Asset Inventory and Management",
+      "description": "Maintain a comprehensive inventory of all OT/ICS assets including hardware, software, firmware, and communications.",
+      "full_text": "Develop and maintain an inventory of all OT assets including PLCs, RTUs, HMIs, historians, engineering workstations, and network devices. Record firmware versions, operating systems, protocols, and communication ports. Use passive discovery tools to avoid disrupting OT operations. Classify assets by criticality.",
+      "domain": "Asset Management",
+      "category": "OT Inventory",
+      "section_number": "ASSET.1",
+      "parent_section": "Asset Management",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "OT asset inventory",
+        "Passive discovery tool usage",
+        "Asset criticality classification",
+        "Firmware and version records"
+      ]
+    },
+    {
+      "control_id": "ICS-PATCH-1",
+      "original_reference": "Patch Management - OT Systems",
+      "title": "OT Patch and Vulnerability Management",
+      "description": "Implement a patch management program for OT/ICS systems that balances security with operational availability requirements.",
+      "full_text": "Implement OT-specific patch management considering: vendor patch testing requirements, scheduled maintenance windows, impact on operational continuity, validation testing before deployment, and compensating controls when patching is not feasible. Prioritize patches based on exploitation risk and operational impact.",
+      "domain": "Platform Security",
+      "category": "Patch Management",
+      "section_number": "PATCH.1",
+      "parent_section": "Platform Security",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "OT patch management procedure",
+        "Patch testing records",
+        "Compensating controls for unpatched systems",
+        "Vendor coordination records for patches"
+      ]
+    },
+    {
+      "control_id": "ICS-HARDEN-1",
+      "original_reference": "System Hardening - OT",
+      "title": "OT System Hardening",
+      "description": "Harden OT systems by disabling unnecessary services, applying secure configurations, and implementing application whitelisting.",
+      "full_text": "Harden OT systems including: disabling unused ports and services, removing unnecessary accounts, applying vendor hardening guides, implementing application whitelisting on HMIs and workstations, removing default credentials, and segregating operator and administrative functions.",
+      "domain": "Platform Security",
+      "category": "System Hardening",
+      "section_number": "HARDEN.1",
+      "parent_section": "Platform Security",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "OT hardening standards documentation",
+        "Application whitelisting implementation",
+        "Default credential removal records",
+        "Hardening scan results (passive)"
+      ]
+    },
+    {
+      "control_id": "ICS-ACCESS-1",
+      "original_reference": "Access Control - OT",
+      "title": "OT Access Control and Authentication",
+      "description": "Implement role-based access control and authentication for OT systems appropriate to the operational environment.",
+      "full_text": "Implement access controls for OT systems appropriate to operational requirements. Enforce least privilege for operator, technician, and administrator roles. Implement authentication without disrupting control functions. Manage shared accounts where technically required. Monitor privileged access.",
+      "domain": "Platform Security",
+      "category": "Access Control",
+      "section_number": "ACCESS.1",
+      "parent_section": "Platform Security",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "OT access control policy",
+        "Role-based access documentation",
+        "Privileged access monitoring",
+        "Shared account management controls"
+      ]
+    },
+    {
+      "control_id": "ICS-MON-1",
+      "original_reference": "Monitoring - OT",
+      "title": "OT Security Monitoring",
+      "description": "Implement monitoring for OT networks and systems to detect anomalies and potential attacks without disrupting operations.",
+      "full_text": "Deploy passive monitoring solutions for OT networks that detect anomalous communications, unauthorized devices, and configuration changes without disrupting control operations. Use OT-specific monitoring tools (Claroty, Dragos, Nozomi). Establish baselines for normal OT communications and alert on deviations.",
+      "domain": "Monitoring",
+      "category": "OT Monitoring",
+      "section_number": "MON.1",
+      "parent_section": "Monitoring",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "OT monitoring tool deployment",
+        "Network baseline documentation",
+        "Alert configuration for OT anomalies",
+        "Monitoring coverage reports"
+      ]
+    },
+    {
+      "control_id": "ICS-IR-1",
+      "original_reference": "Incident Response - OT",
+      "title": "OT Cyber Incident Response",
+      "description": "Develop and maintain incident response procedures specific to OT/ICS environments that prioritize process safety and availability.",
+      "full_text": "Develop ICS-specific incident response plans that prioritize: (1) Process safety — prevent physical harm, (2) Environmental protection, (3) Operational continuity, (4) Cyber forensics. Train OT personnel on cyber incident indicators and response procedures. Coordinate with IT security team and executive management for significant incidents.",
+      "domain": "Incident Response",
+      "category": "OT Incident Response",
+      "section_number": "IR.1",
+      "parent_section": "Incident Response",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "OT incident response plan",
+        "OT-specific incident procedures",
+        "Exercise and drill records",
+        "Safety-security coordination procedures"
+      ]
+    },
+    {
+      "control_id": "ICS-BACKUP-1",
+      "original_reference": "Backup and Recovery - OT",
+      "title": "OT System Backup and Recovery",
+      "description": "Implement backup and recovery procedures for OT systems to enable recovery from cyber incidents or hardware failures.",
+      "full_text": "Maintain backups of OT system configurations, HMI screens, PLC programs, historian data, and engineering workstation configurations. Test backups by performing restoration drills. Store backups offline and protected from ransomware. Document recovery procedures for each critical OT system.",
+      "domain": "Platform Security",
+      "category": "Backup and Recovery",
+      "section_number": "BACKUP.1",
+      "parent_section": "Platform Security",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "OT backup procedures",
+        "Backup frequency and retention records",
+        "Restoration drill records",
+        "Offline backup storage configuration"
+      ]
+    },
+    {
+      "control_id": "ICS-SUPPLY-1",
+      "original_reference": "Supply Chain - OT",
+      "title": "OT Supply Chain Security",
+      "description": "Manage cybersecurity risks in the OT supply chain including vendors, integrators, and embedded components.",
+      "full_text": "Manage OT supply chain risks including: vendor security assessment, hardware and software bill of materials (SBOM), integrity verification of firmware updates, secure delivery of software patches, and management of third-party access for maintenance. Implement supply chain risk management aligned with NERC CIP-013 where applicable.",
+      "domain": "Supply Chain",
+      "category": "OT Supply Chain",
+      "section_number": "SUPPLY.1",
+      "parent_section": "Supply Chain",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "OT vendor security assessments",
+        "SBOM documentation",
+        "Firmware integrity verification",
+        "Third-party access management records"
+      ]
+    },
+    {
+      "control_id": "ICS-RISK-1",
+      "original_reference": "Risk Assessment - OT",
+      "title": "ICS Security Risk Assessment",
+      "description": "Conduct ICS-specific risk assessments that consider unique OT risks including physical safety, process disruption, and environmental impacts.",
+      "full_text": "Conduct ICS security risk assessments that address: consequences of cyber attacks on physical processes (safety, environmental, operational), threat actors targeting ICS, vulnerabilities in legacy OT systems, and likelihood of exploitation. Risk assessments should be conducted annually and after significant changes.",
+      "domain": "Risk Management",
+      "category": "OT Risk Assessment",
+      "section_number": "RISK.1",
+      "parent_section": "Risk Management",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "OT risk assessment methodology",
+        "ICS risk assessment reports",
+        "Safety and cyber risk integration",
+        "Consequence analysis for OT incidents"
+      ]
+    },
+    {
+      "control_id": "ICS-PHYS-1",
+      "original_reference": "Physical Security - OT",
+      "title": "Physical Security for OT/ICS Facilities",
+      "description": "Implement physical security for OT facilities, control rooms, and field devices to prevent unauthorized physical access.",
+      "full_text": "Implement physical security controls for: control rooms, substations, plant facilities, field device cabinets, and remote sites. Controls include access control systems, CCTV, intrusion detection, cable locks for USB ports, and tamper-evident seals on critical devices.",
+      "domain": "Physical Security",
+      "category": "OT Physical Security",
+      "section_number": "PHYS.1",
+      "parent_section": "Physical Security",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Physical security plan for OT facilities",
+        "Access control records for control rooms",
+        "Tamper evidence procedures",
+        "Security inspection records"
+      ]
+    },
+    {
+      "control_id": "ICS-TRAIN-1",
+      "original_reference": "Training - OT Security",
+      "title": "OT Security Awareness and Training",
+      "description": "Train OT personnel on cybersecurity threats, procedures, and their role in maintaining OT security.",
+      "full_text": "Provide OT-specific cybersecurity training to control engineers, operators, maintenance technicians, and IT staff supporting OT. Training covers: OT threat landscape, phishing recognition, removable media risks, secure remote access procedures, incident reporting, and emergency response procedures.",
+      "domain": "Training",
+      "category": "OT Security Training",
+      "section_number": "TRAIN.1",
+      "parent_section": "Training",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "OT security training records",
+        "Training content documentation",
+        "Competency assessments for OT security roles",
+        "Annual refresher training records"
+      ]
+    },
+    {
+      "control_id": "ICS-USB-1",
+      "original_reference": "Removable Media - OT",
+      "title": "Removable Media Controls for OT",
+      "description": "Implement controls for removable media used in OT environments to prevent introduction of malware.",
+      "full_text": "Implement controls for USB drives and removable media in OT environments: restrict USB port use on control systems, use dedicated clean media for OT use only, scan all media before use in OT networks using air-gapped scanning stations, and maintain a media tracking register.",
+      "domain": "Platform Security",
+      "category": "Removable Media",
+      "section_number": "USB.1",
+      "parent_section": "Platform Security",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "USB policy for OT environments",
+        "Media scanning station records",
+        "USB port restriction configuration",
+        "Media usage log"
+      ]
+    },
+    {
+      "control_id": "ICS-VULN-1",
+      "original_reference": "Vulnerability Management - OT",
+      "title": "OT Vulnerability Assessment and Management",
+      "description": "Conduct passive vulnerability assessments of OT systems and implement risk-based remediation.",
+      "full_text": "Conduct OT vulnerability assessments using passive techniques that do not disrupt operations. Monitor ICS-CERT advisories and vendor security bulletins for OT-specific vulnerabilities. Apply compensating controls when patching is not feasible. Conduct vendor-approved penetration testing during maintenance windows.",
+      "domain": "Risk Management",
+      "category": "OT Vulnerabilities",
+      "section_number": "VULN.1",
+      "parent_section": "Risk Management",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "OT vulnerability assessment reports",
+        "ICS-CERT advisory review records",
+        "Compensating controls for unpatched systems",
+        "Vulnerability remediation tracking"
+      ]
+    },
+    {
+      "control_id": "ICS-POLICY-1",
+      "original_reference": "ICS Security Policy",
+      "title": "ICS/OT Security Policy and Governance",
+      "description": "Establish an ICS-specific security policy and governance framework that addresses the unique requirements of operational technology environments.",
+      "full_text": "Develop ICS security policies that address OT-specific requirements. Establish ICS security governance including ownership (typically OT/Engineering + IT Security), security roles and responsibilities, and coordination between safety and cybersecurity functions. The ICS security program must not compromise process safety or operational reliability.",
+      "domain": "Governance",
+      "category": "ICS Policy",
+      "section_number": "POLICY.1",
+      "parent_section": "Governance",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "ICS security policy",
+        "OT governance structure documentation",
+        "Safety-security interface procedures",
+        "ICS security roles and responsibilities"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,373 @@
+{
+  "metadata": {
+    "name": "COSO Internal Control — Integrated Framework",
+    "description": "The Committee of Sponsoring Organizations of the Treadway Commission (COSO) Internal Control — Integrated Framework provides a comprehensive model for designing, implementing, and evaluating internal control systems. The 2013 edition introduced 17 principles and 87 points of focus aligned across five components of internal control.",
+    "version": "2013",
+    "source_organization": "Committee of Sponsoring Organizations of the Treadway Commission (COSO)",
+    "effective_date": "2013-05-14",
+    "classification": "compliance",
+    "framework_type": "audit_standard",
+    "classification_confidence": 0.97,
+    "classification_reasoning": "The COSO IC Framework is the globally recognized standard for internal control, mandated for SOX compliance by SEC and PCAOB, and referenced by most major regulatory frameworks worldwide.",
+    "framework_purpose": "To provide a framework for organizations to design, implement, and evaluate internal control to achieve operational effectiveness, reliable financial reporting, and compliance with laws and regulations.",
+    "framework_scope": "Applicable to all organizations in all industries. Particularly relevant for publicly listed companies (SOX compliance), financial institutions, and any organization seeking to demonstrate sound internal controls.",
+    "framework_objectives": [
+      "Operations Objective: Effectiveness and efficiency of operations",
+      "Reporting Objective: Reliability of internal and external financial and non-financial reporting",
+      "Compliance Objective: Adherence to applicable laws and regulations"
+    ],
+    "target_audience": "Boards of Directors, Audit Committees, Senior Management, Controllers, Internal Auditors, External Auditors, Risk Managers, and Compliance Officers",
+    "regulatory_authority": "COSO (Committee of Sponsoring Organizations of the Treadway Commission)",
+    "adoption_approach": [
+      "Understand the five components and 17 principles",
+      "Assess current state of internal controls against each principle",
+      "Identify gaps and design control enhancements",
+      "Implement controls with appropriate documentation",
+      "Monitor effectiveness through ongoing monitoring and separate evaluations",
+      "Report deficiencies and remediation to governance"
+    ],
+    "hierarchy_structure": {
+      "levels": ["Component", "Principle", "Point of Focus"],
+      "numbering_pattern": "Component.Principle (e.g., CE.1, RA.6)"
+    },
+    "document_structure": {
+      "sections": [
+        "Control Environment (Principles 1-5)",
+        "Risk Assessment (Principles 6-9)",
+        "Control Activities (Principles 10-12)",
+        "Information & Communication (Principles 13-15)",
+        "Monitoring Activities (Principles 16-17)"
+      ]
+    },
+    "total_controls": 17
+  },
+  "controls": [
+    {
+      "control_id": "CE.1",
+      "original_reference": "Principle 1",
+      "title": "Commitment to Integrity and Ethical Values",
+      "description": "The organization demonstrates a commitment to integrity and ethical values.",
+      "full_text": "The board of directors and management at all levels of the entity demonstrate, through their directives, actions, and behavior, the importance of integrity and ethical values in supporting the functioning of the system of internal control. This includes establishing standards of conduct, evaluating adherence to those standards, and addressing deviations in a timely manner.",
+      "domain": "Control Environment",
+      "category": "Integrity and Ethics",
+      "section_number": "1",
+      "parent_section": "CE",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Code of conduct document",
+        "Ethics policy and communication records",
+        "Whistleblower program documentation",
+        "Ethics training completion records",
+        "Management behavior assessments and evaluations"
+      ]
+    },
+    {
+      "control_id": "CE.2",
+      "original_reference": "Principle 2",
+      "title": "Board Independence and Oversight",
+      "description": "The board of directors demonstrates independence from management and exercises oversight of the development and performance of internal control.",
+      "full_text": "The board of directors, which is separate from management, establishes oversight responsibilities. The board retains oversight responsibility for management's design, implementation, and conduct of internal control. The board must include members with competencies relevant to the organization's operations and be sufficiently independent from management.",
+      "domain": "Control Environment",
+      "category": "Board Oversight",
+      "section_number": "2",
+      "parent_section": "CE",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Board composition and independence documentation",
+        "Audit committee charter",
+        "Board meeting minutes and oversight activities",
+        "Director qualifications and competency assessments"
+      ]
+    },
+    {
+      "control_id": "CE.3",
+      "original_reference": "Principle 3",
+      "title": "Management Accountability Structures",
+      "description": "Management establishes structures, reporting lines, and appropriate authorities and responsibilities in the pursuit of objectives.",
+      "full_text": "Management and the board consider the multiple structures used within the entity in setting up operating units, legal entities, geographic distribution, and outsourced service providers. Management designs and evaluates lines of reporting to enable execution of authorities and responsibilities and flow of information to manage the activities of the entity.",
+      "domain": "Control Environment",
+      "category": "Organizational Structure",
+      "section_number": "3",
+      "parent_section": "CE",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Organizational chart with reporting lines",
+        "Delegation of authority matrix",
+        "Job descriptions with responsibilities",
+        "Committee structures and charters"
+      ]
+    },
+    {
+      "control_id": "CE.4",
+      "original_reference": "Principle 4",
+      "title": "Commitment to Competence",
+      "description": "The organization demonstrates a commitment to attract, develop, and retain competent individuals in alignment with objectives.",
+      "full_text": "The organization establishes policies and practices reflecting expectations of competence necessary to support the achievement of objectives. The board and management evaluate competence across the organization and address shortcomings through recruitment, training, or succession planning.",
+      "domain": "Control Environment",
+      "category": "Human Capital",
+      "section_number": "4",
+      "parent_section": "CE",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Competency frameworks and job requirements",
+        "Performance evaluation records",
+        "Training and development programs",
+        "Succession planning documentation"
+      ]
+    },
+    {
+      "control_id": "CE.5",
+      "original_reference": "Principle 5",
+      "title": "Accountability for Internal Control",
+      "description": "The organization holds individuals accountable for their internal control responsibilities in the pursuit of objectives.",
+      "full_text": "Management and the board establish mechanisms to communicate and hold individuals accountable for performance of internal control responsibilities across the organization. The entity implements actions such as corrective discipline for employees who fail to meet the standards. Accountability is demonstrated by attitudes, behaviors, and outcomes.",
+      "domain": "Control Environment",
+      "category": "Accountability",
+      "section_number": "5",
+      "parent_section": "CE",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Performance metrics tied to control objectives",
+        "Disciplinary action records for control failures",
+        "Control ownership assignments",
+        "Incentive and reward structures aligned with ethical behavior"
+      ]
+    },
+    {
+      "control_id": "RA.6",
+      "original_reference": "Principle 6",
+      "title": "Specification of Suitable Objectives",
+      "description": "The organization specifies objectives with sufficient clarity to enable the identification and assessment of risks relating to objectives.",
+      "full_text": "Internal control supports the achievement of an entity's mission and objectives. Management specifies objectives in sufficient detail to allow for the identification and assessment of risks to those objectives. Objectives are established at the entity level, operations, reporting, and compliance categories.",
+      "domain": "Risk Assessment",
+      "category": "Objective Setting",
+      "section_number": "6",
+      "parent_section": "RA",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Strategic and operational objectives documentation",
+        "Financial reporting objectives aligned with GAAP/IFRS",
+        "Compliance objectives mapped to regulations",
+        "Objectives communicated to relevant personnel"
+      ]
+    },
+    {
+      "control_id": "RA.7",
+      "original_reference": "Principle 7",
+      "title": "Risk Identification and Analysis",
+      "description": "The organization identifies risks to the achievement of its objectives across the entity and analyzes risks as a basis for determining how risks should be managed.",
+      "full_text": "The organization identifies risks across the entity, including subsidiary, division, operating unit, and functional levels, and analyzes risks as a basis for determining how the risks should be managed. Risk identification considers both internal and external sources, inherent risk, and fraud risk.",
+      "domain": "Risk Assessment",
+      "category": "Risk Identification",
+      "section_number": "7",
+      "parent_section": "RA",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Risk register and risk inventory",
+        "Risk assessment methodology",
+        "Risk workshop records",
+        "Inherent and residual risk ratings"
+      ]
+    },
+    {
+      "control_id": "RA.8",
+      "original_reference": "Principle 8",
+      "title": "Fraud Risk Assessment",
+      "description": "The organization considers the potential for fraud in assessing risks to the achievement of objectives.",
+      "full_text": "In assessing risks to the achievement of the entity's objectives, management considers how fraud risk may arise in the context of objectives and risk assessment. Management identifies and assesses the risk of fraudulent financial reporting, misappropriation of assets, and illegal acts.",
+      "domain": "Risk Assessment",
+      "category": "Fraud Risk",
+      "section_number": "8",
+      "parent_section": "RA",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Fraud risk assessment documentation",
+        "Fraud risk register",
+        "Anti-fraud program and controls",
+        "Fraud incident reporting mechanisms"
+      ]
+    },
+    {
+      "control_id": "RA.9",
+      "original_reference": "Principle 9",
+      "title": "Change Management",
+      "description": "The organization identifies and assesses changes that could significantly impact the system of internal control.",
+      "full_text": "The organization identifies and assesses changes that could significantly impact the system of internal control, including changes in the external environment, business model, leadership, and technology. Management reassesses internal controls in response to significant changes.",
+      "domain": "Risk Assessment",
+      "category": "Change Risk",
+      "section_number": "9",
+      "parent_section": "RA",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Change risk assessment procedures",
+        "Change management log",
+        "Control updates following significant changes",
+        "External environment monitoring records"
+      ]
+    },
+    {
+      "control_id": "CA.10",
+      "original_reference": "Principle 10",
+      "title": "Control Activities Selection and Development",
+      "description": "The organization selects and develops control activities that contribute to the mitigation of risks to the achievement of objectives to acceptable levels.",
+      "full_text": "Management determines which relevant risks require control activities and which existing control activities are adequate. Control activities are actions established through policies and procedures that help ensure management directives are carried out. Control activities are performed at all levels of the entity and at various stages within business processes.",
+      "domain": "Control Activities",
+      "category": "Control Design",
+      "section_number": "10",
+      "parent_section": "CA",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Control activity inventory mapped to risks",
+        "Control design documentation",
+        "Preventive and detective control balance",
+        "Automated vs. manual control analysis"
+      ]
+    },
+    {
+      "control_id": "CA.11",
+      "original_reference": "Principle 11",
+      "title": "Technology General Controls",
+      "description": "The organization selects and develops general control activities over technology to support the achievement of objectives.",
+      "full_text": "The organization selects and develops general control activities over technology infrastructure, security management, and acquisition, development, and maintenance processes, considering how technology is used in the achievement of objectives. IT general controls support the continued operation and reliability of control activities.",
+      "domain": "Control Activities",
+      "category": "IT Controls",
+      "section_number": "11",
+      "parent_section": "CA",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "IT general controls documentation",
+        "Access management controls",
+        "Change management controls",
+        "System development lifecycle controls",
+        "Computer operations controls"
+      ]
+    },
+    {
+      "control_id": "CA.12",
+      "original_reference": "Principle 12",
+      "title": "Policies and Procedures",
+      "description": "The organization deploys control activities through policies that establish what is expected and procedures that put policies into action.",
+      "full_text": "The organization establishes policies and procedures to implement management directives. Policies and procedures establish the purpose, define the approach, and dictate the actions required. Policies and procedures communicate accountability and responsibilities, and define acceptable tolerances and levels of performance.",
+      "domain": "Control Activities",
+      "category": "Policy Framework",
+      "section_number": "12",
+      "parent_section": "CA",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Policy and procedure inventory",
+        "Policy approval and review records",
+        "Policy communication and distribution records",
+        "Procedure compliance testing results"
+      ]
+    },
+    {
+      "control_id": "IC.13",
+      "original_reference": "Principle 13",
+      "title": "Relevant Information Quality",
+      "description": "The organization obtains or generates and uses relevant, quality information to support the functioning of internal control.",
+      "full_text": "Management has a process for identifying the information requirements needed to support the functioning of the other components of internal control and the achievement of the entity's objectives. Information processing controls ensure completeness, accuracy, and validity of information used in control activities.",
+      "domain": "Information and Communication",
+      "category": "Information Quality",
+      "section_number": "13",
+      "parent_section": "IC",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Information requirements documentation",
+        "Data quality controls",
+        "Information processing procedures",
+        "Data integrity monitoring results"
+      ]
+    },
+    {
+      "control_id": "IC.14",
+      "original_reference": "Principle 14",
+      "title": "Internal Communication",
+      "description": "The organization internally communicates information, including objectives and responsibilities for internal control, necessary to support the functioning of internal control.",
+      "full_text": "The organization communicates control information throughout the entity, from the board to operations and back up. Communication enables personnel to understand their roles and responsibilities and to identify issues and communicate them up the organization.",
+      "domain": "Information and Communication",
+      "category": "Internal Communication",
+      "section_number": "14",
+      "parent_section": "IC",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Communication plans and records",
+        "Internal audit findings communication",
+        "Deficiency escalation procedures",
+        "Town halls and management briefings"
+      ]
+    },
+    {
+      "control_id": "IC.15",
+      "original_reference": "Principle 15",
+      "title": "External Communication",
+      "description": "The organization communicates with external parties regarding matters affecting the functioning of internal control.",
+      "full_text": "The organization establishes and implements policies and procedures for communicating with external parties on matters affecting the achievement of objectives. External communications include customers, vendors, regulators, investors, and others as appropriate.",
+      "domain": "Information and Communication",
+      "category": "External Communication",
+      "section_number": "15",
+      "parent_section": "IC",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Regulatory communication records",
+        "Investor and stakeholder communication",
+        "Whistleblower channel for external parties",
+        "External reporting policies"
+      ]
+    },
+    {
+      "control_id": "MA.16",
+      "original_reference": "Principle 16",
+      "title": "Ongoing and Separate Evaluations",
+      "description": "The organization selects, develops, and performs ongoing and/or separate evaluations to ascertain whether the components of internal control are present and functioning.",
+      "full_text": "Ongoing evaluations, separate evaluations, or some combination of the two are used to ascertain whether each of the five components of internal control, including the controls to effect the principles within each component, is present and functioning. Ongoing evaluations are built into business processes and provide timely information. Separate evaluations are conducted periodically.",
+      "domain": "Monitoring Activities",
+      "category": "Ongoing Monitoring",
+      "section_number": "16",
+      "parent_section": "MA",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Monitoring activities documentation",
+        "Key performance indicators and dashboards",
+        "Self-assessment results",
+        "Internal audit evaluation reports",
+        "Management review records"
+      ]
+    },
+    {
+      "control_id": "MA.17",
+      "original_reference": "Principle 17",
+      "title": "Deficiency Evaluation and Communication",
+      "description": "The organization evaluates and communicates internal control deficiencies in a timely manner to those parties responsible for taking corrective action, including senior management and the board.",
+      "full_text": "The organization evaluates internal control deficiencies identified through ongoing and separate evaluations and communicates them in a timely fashion to those in a position to act. The organization evaluates the severity of each deficiency — significant deficiency or material weakness — and communicates to senior management and the board as appropriate.",
+      "domain": "Monitoring Activities",
+      "category": "Deficiency Reporting",
+      "section_number": "17",
+      "parent_section": "MA",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Deficiency evaluation methodology",
+        "Deficiency tracking log",
+        "Management reporting of deficiencies",
+        "Board/audit committee deficiency communications",
+        "Remediation tracking and closure records"
+      ]
+    }
+  ]
+}

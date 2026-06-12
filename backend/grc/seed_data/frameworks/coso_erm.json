@@ -1,0 +1,431 @@
+{
+  "metadata": {
+    "name": "COSO Enterprise Risk Management Framework",
+    "description": "The COSO Enterprise Risk Management — Integrating with Strategy and Performance framework (2017) provides organizations with a structured approach to managing enterprise-wide risk aligned with strategy and performance. It emphasizes the relationship between risk management and strategy, and introduces the concept of risk appetite in strategic setting.",
+    "version": "2017",
+    "source_organization": "Committee of Sponsoring Organizations of the Treadway Commission (COSO)",
+    "effective_date": "2017-09-06",
+    "classification": "compliance",
+    "framework_type": "risk_management",
+    "classification_confidence": 0.96,
+    "classification_reasoning": "COSO ERM is the globally recognized enterprise risk management framework, referenced by SEC, ISO 31000, and most major GRC frameworks worldwide.",
+    "framework_purpose": "To enhance an organization's ability to create, preserve, and realize value by integrating enterprise risk management with strategy setting and performance management.",
+    "framework_scope": "All organizations regardless of size, sector, or industry seeking to integrate risk management with strategy formulation, execution, and performance monitoring.",
+    "framework_objectives": [
+      "Align risk appetite and strategy",
+      "Enhance risk response decisions",
+      "Reduce operational surprises and losses",
+      "Identify and manage cross-enterprise risks",
+      "Seize strategic opportunities by taking appropriate risks",
+      "Improve deployment of capital"
+    ],
+    "target_audience": "Boards of Directors, CEOs, CFOs, CROs, Risk Managers, Internal Auditors, Strategic Planners, and Senior Management",
+    "regulatory_authority": "COSO (Committee of Sponsoring Organizations of the Treadway Commission)",
+    "adoption_approach": [
+      "Establish governance and culture for ERM",
+      "Set strategy and define risk appetite",
+      "Identify and assess risks across the portfolio",
+      "Develop risk responses",
+      "Monitor and report on risk performance",
+      "Review and revise ERM framework periodically"
+    ],
+    "hierarchy_structure": {
+      "levels": ["Component", "Principle"],
+      "numbering_pattern": "Component.Principle"
+    },
+    "document_structure": {
+      "sections": [
+        "Governance and Culture (Principles 1-5)",
+        "Strategy and Objective-Setting (Principles 6-9)",
+        "Performance (Principles 10-14)",
+        "Review and Revision (Principles 15-17)",
+        "Information, Communication, and Reporting (Principles 18-20)"
+      ]
+    },
+    "total_controls": 20
+  },
+  "controls": [
+    {
+      "control_id": "GC.1",
+      "original_reference": "Principle 1 - Governance and Culture",
+      "title": "Oversight of Enterprise Risk Management",
+      "description": "The board of directors provides risk oversight, applying critical skills and objectivity to the organization's ERM practices.",
+      "full_text": "The board of directors oversees the entity's enterprise risk management. The board fulfills this responsibility by understanding the strategy and risk of the entity, overseeing how management integrates ERM with the entity's strategy and performance, approving the risk appetite, and reviewing significant risks to the entity.",
+      "domain": "Governance and Culture",
+      "category": "Board Oversight",
+      "section_number": "1",
+      "parent_section": "GC",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Board ERM oversight charter",
+        "Risk committee meeting minutes",
+        "Board-approved risk appetite statement",
+        "Risk reporting to board"
+      ]
+    },
+    {
+      "control_id": "GC.2",
+      "original_reference": "Principle 2 - Governance and Culture",
+      "title": "Operating Structures",
+      "description": "The organization establishes operating structures in the pursuit of strategy and business objectives.",
+      "full_text": "The organization establishes appropriate operating structures to support the achievement of its objectives. Operating structures may include legal entities, subsidiaries, geographic locations, and functional units. The operating structure reflects the overall strategy and the allocation of authority and responsibility across the entity.",
+      "domain": "Governance and Culture",
+      "category": "Operating Structure",
+      "section_number": "2",
+      "parent_section": "GC",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Organizational structure documentation",
+        "Legal entity structure",
+        "Accountability frameworks",
+        "Authority matrices"
+      ]
+    },
+    {
+      "control_id": "GC.3",
+      "original_reference": "Principle 3 - Governance and Culture",
+      "title": "Culture Definition",
+      "description": "The organization defines the desired behaviors that characterize the entity's desired culture.",
+      "full_text": "Management reinforces the importance of, and expected standards for, enterprise risk management through their directives, actions, and behavior. Leadership communicates the organization's core values, expected behaviors, and the importance of ERM to achieving objectives.",
+      "domain": "Governance and Culture",
+      "category": "Culture",
+      "section_number": "3",
+      "parent_section": "GC",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Values and cultural statement",
+        "Leadership behavior assessments",
+        "Culture surveys and results",
+        "Tone-at-the-top communications"
+      ]
+    },
+    {
+      "control_id": "GC.4",
+      "original_reference": "Principle 4 - Governance and Culture",
+      "title": "Core Values Commitment",
+      "description": "The organization demonstrates a commitment to the core values defined within the culture.",
+      "full_text": "The organization reinforces core values through policies, procedures, and actions. Management communicates expectations for behavior and enforces standards. Employees understand the connection between their actions and the organization's achievement of objectives.",
+      "domain": "Governance and Culture",
+      "category": "Core Values",
+      "section_number": "4",
+      "parent_section": "GC",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Code of conduct and ethics policy",
+        "Ethics training records",
+        "Whistleblower and reporting mechanisms",
+        "Accountability measures for violations"
+      ]
+    },
+    {
+      "control_id": "GC.5",
+      "original_reference": "Principle 5 - Governance and Culture",
+      "title": "Talent Attraction and Retention",
+      "description": "The organization is committed to building human capital in alignment with the strategy and business objectives.",
+      "full_text": "The organization attracts, develops, and retains individuals with the skills needed to execute the strategy. The organization establishes and applies succession plans, and considers the impact of culture on attracting and retaining talent. ERM capabilities are considered part of the required competencies.",
+      "domain": "Governance and Culture",
+      "category": "Talent Management",
+      "section_number": "5",
+      "parent_section": "GC",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Talent management strategy",
+        "Risk management competency frameworks",
+        "Succession planning documentation",
+        "ERM training programs"
+      ]
+    },
+    {
+      "control_id": "SO.6",
+      "original_reference": "Principle 6 - Strategy and Objective-Setting",
+      "title": "Business Context Analysis",
+      "description": "The organization considers potential effects of business context on risk profile.",
+      "full_text": "The organization considers how the external and internal environment impacts its strategic direction. This includes analysis of market, economic, technology, regulatory, and competitive factors that create risks and opportunities. The business context informs strategy setting and the identification of risk.",
+      "domain": "Strategy and Objective-Setting",
+      "category": "Context Analysis",
+      "section_number": "6",
+      "parent_section": "SO",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "PESTLE or environmental analysis",
+        "Competitive landscape assessment",
+        "SWOT analysis incorporating risk",
+        "Market and regulatory trend reports"
+      ]
+    },
+    {
+      "control_id": "SO.7",
+      "original_reference": "Principle 7 - Strategy and Objective-Setting",
+      "title": "Risk Appetite Definition",
+      "description": "The organization defines risk appetite in the context of creating, preserving, and realizing value.",
+      "full_text": "The board approves the risk appetite for the entity. Risk appetite is the types and amount of risk, broadly, that an entity is willing to accept in pursuit of value. Risk appetite reflects the entity's risk management philosophy and influences the entity's culture and operating style.",
+      "domain": "Strategy and Objective-Setting",
+      "category": "Risk Appetite",
+      "section_number": "7",
+      "parent_section": "SO",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Board-approved risk appetite statement",
+        "Risk tolerance levels by category",
+        "Risk appetite metrics and thresholds",
+        "Communication of risk appetite throughout organization"
+      ]
+    },
+    {
+      "control_id": "SO.8",
+      "original_reference": "Principle 8 - Strategy and Objective-Setting",
+      "title": "Alternative Strategy Evaluation",
+      "description": "The organization evaluates alternative strategies and potential impact on risk profile.",
+      "full_text": "Management evaluates alternative strategies through a risk lens. This includes understanding how each strategic alternative aligns with the entity's mission, vision, and core values, and how each creates, preserves, or erodes value over time. Risk considerations are embedded in the strategy-setting process.",
+      "domain": "Strategy and Objective-Setting",
+      "category": "Strategy Evaluation",
+      "section_number": "8",
+      "parent_section": "SO",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Strategic planning documentation with risk analysis",
+        "Board strategy review records",
+        "Risk-adjusted strategy scenarios",
+        "Value creation analysis"
+      ]
+    },
+    {
+      "control_id": "SO.9",
+      "original_reference": "Principle 9 - Strategy and Objective-Setting",
+      "title": "Business Objectives Formulation",
+      "description": "The organization considers risk while establishing the business objectives at various levels that align and support strategy.",
+      "full_text": "Management formulates business objectives that align with and support the strategy. Objectives are set at the entity level and cascaded through operational units. Risk considerations are factored into objective setting, ensuring they are consistent with the risk appetite.",
+      "domain": "Strategy and Objective-Setting",
+      "category": "Objective Setting",
+      "section_number": "9",
+      "parent_section": "SO",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Business objectives documentation",
+        "Objective-to-strategy alignment mapping",
+        "Risk-adjusted performance targets",
+        "KPI frameworks linked to objectives"
+      ]
+    },
+    {
+      "control_id": "PE.10",
+      "original_reference": "Principle 10 - Performance",
+      "title": "Risk Identification",
+      "description": "The organization identifies risks that affect the performance of strategy and business objectives.",
+      "full_text": "The organization uses various techniques to identify risks across the entity. Risk identification considers both internal and external events and conditions that may affect the achievement of objectives. Identified risks are documented in a risk register and categorized.",
+      "domain": "Performance",
+      "category": "Risk Identification",
+      "section_number": "10",
+      "parent_section": "PE",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Risk register and inventory",
+        "Risk identification workshops",
+        "Risk taxonomy and categorization",
+        "Emerging risk monitoring process"
+      ]
+    },
+    {
+      "control_id": "PE.11",
+      "original_reference": "Principle 11 - Performance",
+      "title": "Risk Severity Assessment",
+      "description": "The organization assesses the severity of risks.",
+      "full_text": "The organization assesses the severity of identified risks through qualitative and/or quantitative methods. Severity is typically expressed through likelihood and impact. The organization considers velocity (speed of onset) and persistence (duration of impact) in addition to traditional likelihood and impact dimensions.",
+      "domain": "Performance",
+      "category": "Risk Assessment",
+      "section_number": "11",
+      "parent_section": "PE",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Risk assessment methodology document",
+        "Risk heat maps and matrices",
+        "Likelihood and impact ratings",
+        "Quantitative risk models (where applicable)"
+      ]
+    },
+    {
+      "control_id": "PE.12",
+      "original_reference": "Principle 12 - Performance",
+      "title": "Risk Prioritization",
+      "description": "The organization prioritizes risks as a basis for selecting risk responses.",
+      "full_text": "The organization prioritizes risks based on severity and considers risk appetite to determine which risks require response. Risks that exceed risk appetite require management attention. The prioritization informs resource allocation for risk management activities.",
+      "domain": "Performance",
+      "category": "Risk Prioritization",
+      "section_number": "12",
+      "parent_section": "PE",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Prioritized risk register",
+        "Risk appetite comparison",
+        "Risk committee prioritization records",
+        "Resource allocation documentation"
+      ]
+    },
+    {
+      "control_id": "PE.13",
+      "original_reference": "Principle 13 - Performance",
+      "title": "Risk Response",
+      "description": "The organization identifies and selects risk responses.",
+      "full_text": "Management identifies and selects risk responses — accept, avoid, pursue, reduce, or share — that align risk severity with risk appetite. Response selection considers costs, benefits, and alignment with strategy. Risk responses are documented and implemented with assigned ownership.",
+      "domain": "Performance",
+      "category": "Risk Response",
+      "section_number": "13",
+      "parent_section": "PE",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Risk response plans",
+        "Risk treatment documentation",
+        "Control implementation evidence",
+        "Risk transfer agreements (insurance)",
+        "Residual risk acceptance records"
+      ]
+    },
+    {
+      "control_id": "PE.14",
+      "original_reference": "Principle 14 - Performance",
+      "title": "Portfolio View of Risk",
+      "description": "The organization develops and evaluates a portfolio view of risk.",
+      "full_text": "The chief risk officer or equivalent develops and maintains a portfolio view of risk across the entity. The portfolio view considers how individual risks interact and aggregate. Management reports the portfolio risk position against risk appetite to the board.",
+      "domain": "Performance",
+      "category": "Portfolio Risk",
+      "section_number": "14",
+      "parent_section": "PE",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Enterprise risk portfolio report",
+        "Aggregated risk exposure analysis",
+        "Risk correlation analysis",
+        "Board risk reporting package"
+      ]
+    },
+    {
+      "control_id": "RR.15",
+      "original_reference": "Principle 15 - Review and Revision",
+      "title": "Substantial Change Assessment",
+      "description": "The organization identifies and assesses changes that may substantially affect strategy and business objectives.",
+      "full_text": "Management identifies substantial changes in the internal and external context and considers how those changes affect risk and ERM practices. Substantial changes include changes in business model, leadership, regulations, or external environment. ERM is updated accordingly.",
+      "domain": "Review and Revision",
+      "category": "Change Management",
+      "section_number": "15",
+      "parent_section": "RR",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Change monitoring process",
+        "Risk reassessment triggered by changes",
+        "ERM framework update records",
+        "Emerging risk identification process"
+      ]
+    },
+    {
+      "control_id": "RR.16",
+      "original_reference": "Principle 16 - Review and Revision",
+      "title": "ERM Review and Improvement",
+      "description": "The organization reviews entity performance and considers risk.",
+      "full_text": "Management reviews entity performance relative to strategy and objectives, considering risk. The organization assesses whether risk management practices remain current and effective. Reviews identify areas for improvement in the ERM framework.",
+      "domain": "Review and Revision",
+      "category": "Performance Review",
+      "section_number": "16",
+      "parent_section": "RR",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Periodic ERM effectiveness reviews",
+        "Performance vs. objectives analysis",
+        "ERM maturity assessment",
+        "Improvement action plans"
+      ]
+    },
+    {
+      "control_id": "RR.17",
+      "original_reference": "Principle 17 - Review and Revision",
+      "title": "ERM Improvement Pursuit",
+      "description": "The organization pursues improvement of enterprise risk management.",
+      "full_text": "The organization identifies, prioritizes, and pursues improvements to its enterprise risk management practices. Improvements may include processes, tools, competencies, reporting, or governance mechanisms. The board reviews ERM improvement plans.",
+      "domain": "Review and Revision",
+      "category": "Continuous Improvement",
+      "section_number": "17",
+      "parent_section": "RR",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "ERM improvement roadmap",
+        "ERM maturity progression tracking",
+        "Training for ERM enhancements",
+        "Board-approved ERM improvement plans"
+      ]
+    },
+    {
+      "control_id": "ICR.18",
+      "original_reference": "Principle 18 - Information, Communication, and Reporting",
+      "title": "Risk Information Leveraging",
+      "description": "The organization leverages the entity's information and technology systems to support enterprise risk management.",
+      "full_text": "Management uses information systems to capture, process, and maintain data relating to enterprise risk management. Information systems support risk identification, assessment, and reporting. Technology enables the aggregation and analysis of risk information across the enterprise.",
+      "domain": "Information, Communication, and Reporting",
+      "category": "Risk Information",
+      "section_number": "18",
+      "parent_section": "ICR",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "GRC system or risk management tool",
+        "Risk data quality controls",
+        "Risk dashboard and reporting tools",
+        "Data governance for risk information"
+      ]
+    },
+    {
+      "control_id": "ICR.19",
+      "original_reference": "Principle 19 - Information, Communication, and Reporting",
+      "title": "Risk Communication",
+      "description": "The organization uses communication channels to support enterprise risk management.",
+      "full_text": "Management communicates risk information across all levels of the organization. Communication channels support the timely flow of risk information upward, downward, and laterally. External communication with stakeholders on risk is also part of ERM.",
+      "domain": "Information, Communication, and Reporting",
+      "category": "Risk Communication",
+      "section_number": "19",
+      "parent_section": "ICR",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Risk communication plan",
+        "Risk reporting to board and management",
+        "Risk culture surveys",
+        "External stakeholder risk disclosures"
+      ]
+    },
+    {
+      "control_id": "ICR.20",
+      "original_reference": "Principle 20 - Information, Communication, and Reporting",
+      "title": "Risk and ERM Reporting",
+      "description": "The organization reports on risk, culture, and performance at multiple levels and across the entity.",
+      "full_text": "Management reports on risk, risk management activities, culture, and performance to both internal and external stakeholders. Reports include the entity's current risk profile, any changes to risk profile, and significant risk events. Reporting enables informed decision-making by the board and management.",
+      "domain": "Information, Communication, and Reporting",
+      "category": "Risk Reporting",
+      "section_number": "20",
+      "parent_section": "ICR",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Board risk reports",
+        "Risk dashboard reports",
+        "Annual risk management report",
+        "Risk disclosures in annual report",
+        "Regulatory risk reporting"
+      ]
+    }
+  ]
+}

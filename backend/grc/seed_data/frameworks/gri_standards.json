@@ -1,0 +1,427 @@
+{
+  "metadata": {
+    "name": "GRI Standards (Global Reporting Initiative)",
+    "description": "The GRI Standards are the world's most widely used standards for sustainability reporting. They enable organizations to report on their impacts on the economy, environment, and people in a comparable and credible way, thereby increasing transparency on their contribution to sustainable development.",
+    "version": "GRI Universal Standards 2021 / GRI Topic Standards",
+    "source_organization": "Global Reporting Initiative (GRI)",
+    "effective_date": "2023-01-01",
+    "classification": "compliance",
+    "framework_type": "reporting_standard",
+    "classification_confidence": 0.95,
+    "classification_reasoning": "GRI Standards are the most widely used global framework for sustainability reporting, adopted voluntarily by thousands of organizations and increasingly required by regulations like CSRD.",
+    "framework_purpose": "To enable organizations to publicly communicate information about their most significant impacts on the economy, environment, and people, including on their human rights.",
+    "framework_scope": "All organizations of any size, type, sector, or geographic location wishing to report on their sustainability impacts and performance.",
+    "framework_objectives": [
+      "Enable transparent sustainability reporting",
+      "Provide comparable and consistent sustainability data",
+      "Support stakeholder decision-making",
+      "Drive accountability for sustainability impacts",
+      "Enable alignment with global sustainability goals (SDGs)"
+    ],
+    "target_audience": "Sustainability Officers, ESG Teams, CFOs, Boards of Directors, Investor Relations, Legal/Compliance Teams, and stakeholders including investors, employees, and communities",
+    "regulatory_authority": "Global Reporting Initiative (GRI)",
+    "adoption_approach": [
+      "Determine the GRI Standards to use (In Accordance or GRI-Referenced)",
+      "Conduct materiality assessment to identify significant topics",
+      "Collect data for material topics",
+      "Prepare sustainability report using GRI Standards",
+      "Obtain external assurance",
+      "Report to GRI Database (optional)"
+    ],
+    "hierarchy_structure": {
+      "levels": ["Standard", "Disclosure"],
+      "numbering_pattern": "GRI N-N (e.g., GRI 2-1, GRI 302-1)"
+    },
+    "document_structure": {
+      "sections": [
+        "GRI 1: Foundation 2021",
+        "GRI 2: General Disclosures 2021",
+        "GRI 3: Material Topics 2021",
+        "Economic Standards (GRI 200)",
+        "Environmental Standards (GRI 300)",
+        "Social Standards (GRI 400)"
+      ]
+    },
+    "total_controls": 20
+  },
+  "controls": [
+    {
+      "control_id": "GRI2-1",
+      "original_reference": "GRI 2-1",
+      "title": "Organizational Details",
+      "description": "Report the organization's legal name, nature of ownership and legal form, location of headquarters, countries of operation, and scale of the organization.",
+      "full_text": "Disclose fundamental organizational information including: legal name, nature of ownership, legal form, location of headquarters, countries where the organization operates or has significant activities, and the scale of the organization (employees, revenues, total assets, products/services offered).",
+      "domain": "General Disclosures",
+      "category": "Organizational Profile",
+      "section_number": "2-1",
+      "parent_section": "GRI 2",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Legal entity documentation",
+        "Global operational footprint data",
+        "Employee count data",
+        "Revenue and asset data"
+      ]
+    },
+    {
+      "control_id": "GRI2-9",
+      "original_reference": "GRI 2-9",
+      "title": "Governance Structure and Composition",
+      "description": "Report the governance structure, its composition, including information on the highest governance body and its committees, and processes for overseeing sustainability.",
+      "full_text": "Disclose the organization's governance structure, the composition of the highest governance body and its committees (gender, age, independence, other diversity), and processes for overseeing the organization's impacts on the economy, environment, and people.",
+      "domain": "General Disclosures",
+      "category": "Governance",
+      "section_number": "2-9",
+      "parent_section": "GRI 2",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Board composition data",
+        "Board diversity metrics",
+        "ESG oversight committee documentation",
+        "Governance structure diagram"
+      ]
+    },
+    {
+      "control_id": "GRI2-22",
+      "original_reference": "GRI 2-22",
+      "title": "Statement on Sustainable Development Strategy",
+      "description": "Report a statement from the highest governance body or most senior executive about the relevance of sustainable development to the organization and its strategy.",
+      "full_text": "Provide a statement from the CEO or equivalent describing how sustainable development and its connection to the organization's strategy, operations, and reporting is prioritized. The statement should address how the organization creates value over the short, medium, and long term.",
+      "domain": "General Disclosures",
+      "category": "Strategy",
+      "section_number": "2-22",
+      "parent_section": "GRI 2",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "CEO/board sustainability statement",
+        "ESG strategy documentation",
+        "Integration of sustainability in business strategy"
+      ]
+    },
+    {
+      "control_id": "GRI3-1",
+      "original_reference": "GRI 3-1",
+      "title": "Materiality Assessment Process",
+      "description": "Report the process the organization has used to determine its material topics.",
+      "full_text": "Conduct and report on a double materiality assessment identifying: (1) Topics with significant impacts on the economy, environment, and people (impact materiality), and (2) Topics representing significant risks or opportunities for the organization's financial performance (financial materiality). Describe the process, stakeholders consulted, and how priorities were determined.",
+      "domain": "Material Topics",
+      "category": "Materiality",
+      "section_number": "3-1",
+      "parent_section": "GRI 3",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Materiality assessment process documentation",
+        "Stakeholder engagement records",
+        "Materiality matrix",
+        "Material topics list with rationale"
+      ]
+    },
+    {
+      "control_id": "GRI201-1",
+      "original_reference": "GRI 201-1",
+      "title": "Direct Economic Value Generated and Distributed",
+      "description": "Report on the direct economic value generated and distributed, including revenues, operating costs, employee wages, payments to capital providers, payments to governments, and community investments.",
+      "full_text": "Disclose direct economic value generated (revenues) and distributed to: operating costs, employee wages and benefits, payments to capital providers, payments to government (taxes), community investments. Report the economic value retained (generated minus distributed).",
+      "domain": "Economic Standards",
+      "category": "Economic Performance",
+      "section_number": "201-1",
+      "parent_section": "GRI 201",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Financial statements data",
+        "Revenue by region",
+        "Tax payments by jurisdiction",
+        "Community investment data"
+      ]
+    },
+    {
+      "control_id": "GRI302-1",
+      "original_reference": "GRI 302-1",
+      "title": "Energy Consumption Within the Organization",
+      "description": "Report on energy consumption within the organization from non-renewable and renewable sources, including fuel, electricity, heating, cooling, and steam.",
+      "full_text": "Disclose total energy consumption within the organization from non-renewable fuel sources, renewable fuel sources, purchased electricity/heat/steam/cooling, and self-generated electricity from renewables. Report energy intensity ratios. Report reductions in energy consumption achieved through conservation and efficiency initiatives.",
+      "domain": "Environmental Standards",
+      "category": "Energy",
+      "section_number": "302-1",
+      "parent_section": "GRI 302",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Energy consumption data by source",
+        "Energy intensity metrics",
+        "Renewable energy usage data",
+        "Energy reduction initiatives"
+      ]
+    },
+    {
+      "control_id": "GRI305-1",
+      "original_reference": "GRI 305-1",
+      "title": "Scope 1 GHG Emissions",
+      "description": "Report on direct (Scope 1) greenhouse gas emissions in metric tons of CO2 equivalent.",
+      "full_text": "Disclose gross direct (Scope 1) GHG emissions in metric tons of CO2 equivalent, gases included in the calculation, base year, source of emission factors, and consolidation approach (equity share, financial control, or operational control). Report emissions by gas type and business unit where relevant.",
+      "domain": "Environmental Standards",
+      "category": "Emissions",
+      "section_number": "305-1",
+      "parent_section": "GRI 305",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Scope 1 GHG emissions data",
+        "Emissions calculation methodology",
+        "GHG protocol alignment documentation",
+        "Emissions factor sources"
+      ]
+    },
+    {
+      "control_id": "GRI305-2",
+      "original_reference": "GRI 305-2",
+      "title": "Scope 2 GHG Emissions",
+      "description": "Report on indirect (Scope 2) greenhouse gas emissions from purchased electricity, steam, heating, and cooling in metric tons of CO2 equivalent.",
+      "full_text": "Disclose gross location-based and market-based Scope 2 GHG emissions in metric tons of CO2 equivalent. For market-based method, disclose emissions factors used. Include sources of grid emission factors. Report reductions achieved through renewable energy certificates or power purchase agreements.",
+      "domain": "Environmental Standards",
+      "category": "Emissions",
+      "section_number": "305-2",
+      "parent_section": "GRI 305",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Scope 2 GHG emissions data (location and market-based)",
+        "Grid emission factors",
+        "Renewable Energy Certificates (RECs)",
+        "Power Purchase Agreement documentation"
+      ]
+    },
+    {
+      "control_id": "GRI305-3",
+      "original_reference": "GRI 305-3",
+      "title": "Scope 3 GHG Emissions",
+      "description": "Report on other indirect (Scope 3) greenhouse gas emissions in metric tons of CO2 equivalent, covering all relevant Scope 3 categories.",
+      "full_text": "Disclose gross Scope 3 GHG emissions across relevant upstream and downstream categories including: purchased goods and services, capital goods, fuel and energy activities, transportation, waste, business travel, employee commuting, investments, and use of sold products. Use GHG Protocol Corporate Value Chain Standard.",
+      "domain": "Environmental Standards",
+      "category": "Emissions",
+      "section_number": "305-3",
+      "parent_section": "GRI 305",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Scope 3 emissions data by category",
+        "Scope 3 calculation methodology",
+        "Supply chain emissions data",
+        "Use-phase emissions for products"
+      ]
+    },
+    {
+      "control_id": "GRI303-1",
+      "original_reference": "GRI 303-1",
+      "title": "Water and Effluents",
+      "description": "Report on the organization's interaction with water, including water withdrawal, consumption, and discharge.",
+      "full_text": "Disclose total water withdrawal, water consumption, and water discharge by source and destination. Report water-related impacts and water stewardship activities. Identify operations in water-stressed areas. Report on targets for water reduction and recycling. Include water quality data for significant discharges.",
+      "domain": "Environmental Standards",
+      "category": "Water",
+      "section_number": "303-1",
+      "parent_section": "GRI 303",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Water withdrawal data by source",
+        "Water consumption and discharge data",
+        "Water stress area mapping",
+        "Water reduction targets and performance"
+      ]
+    },
+    {
+      "control_id": "GRI306-1",
+      "original_reference": "GRI 306-1",
+      "title": "Waste",
+      "description": "Report on waste generated, diverted from disposal, and directed to disposal.",
+      "full_text": "Disclose total weight of waste generated by composition and disposal method. Report waste diverted from disposal through recovery, reuse, recycling, and composting. Report waste directed to disposal including incineration and landfill. Apply waste hierarchy to minimize waste generation.",
+      "domain": "Environmental Standards",
+      "category": "Waste",
+      "section_number": "306-1",
+      "parent_section": "GRI 306",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Waste generation data by type",
+        "Waste diversion rates",
+        "Waste disposal methods data",
+        "Waste reduction initiatives"
+      ]
+    },
+    {
+      "control_id": "GRI401-1",
+      "original_reference": "GRI 401-1",
+      "title": "New Employee Hires and Employee Turnover",
+      "description": "Report on the total number and rate of new employee hires and employee turnover during the reporting period, by age group, gender, and region.",
+      "full_text": "Disclose total number and rate of new employee hires during the reporting period by age group, gender, and region. Disclose total number and rate of employee turnover by age group, gender, and region. Provide context for turnover rates compared to industry benchmarks.",
+      "domain": "Social Standards",
+      "category": "Employment",
+      "section_number": "401-1",
+      "parent_section": "GRI 401",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Employee hire data by demographic",
+        "Employee turnover data by demographic",
+        "HR system data",
+        "Voluntary vs. involuntary turnover breakdown"
+      ]
+    },
+    {
+      "control_id": "GRI403-1",
+      "original_reference": "GRI 403-1",
+      "title": "Occupational Health and Safety Management System",
+      "description": "Report on the occupational health and safety management system, including scope and whether workers are covered.",
+      "full_text": "Describe the occupational health and safety management system, whether it has been internally audited or certified to a recognized standard (ISO 45001), the scope of workers and activities covered, and any exclusions. Disclose the system's effectiveness in preventing work-related injuries and ill health.",
+      "domain": "Social Standards",
+      "category": "Occupational Health and Safety",
+      "section_number": "403-1",
+      "parent_section": "GRI 403",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "OH&S management system documentation",
+        "ISO 45001 or equivalent certification",
+        "Worker coverage documentation",
+        "Safety performance metrics"
+      ]
+    },
+    {
+      "control_id": "GRI405-1",
+      "original_reference": "GRI 405-1",
+      "title": "Diversity of Governance Bodies and Employees",
+      "description": "Report on the percentage of individuals within the organization's governance bodies and employee categories by gender, age group, and other diversity categories.",
+      "full_text": "Disclose the percentage of individuals in governance bodies (board, committees) by gender, age group, minority group membership, and other indicators of diversity. Disclose employee diversity by gender, age group, and other relevant diversity categories by employee category.",
+      "domain": "Social Standards",
+      "category": "Diversity and Inclusion",
+      "section_number": "405-1",
+      "parent_section": "GRI 405",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Board diversity data",
+        "Employee diversity data by category",
+        "Gender pay equity analysis",
+        "Diversity programs documentation"
+      ]
+    },
+    {
+      "control_id": "GRI414-1",
+      "original_reference": "GRI 414-1",
+      "title": "Supplier Social Assessment",
+      "description": "Report on the percentage of new suppliers screened using social criteria.",
+      "full_text": "Disclose the percentage of new suppliers screened using social criteria including labor practices, human rights, health and safety, and community impacts. Report the number of suppliers assessed for social impacts, negative impacts identified, and actions taken. Describe supplier engagement on social issues.",
+      "domain": "Social Standards",
+      "category": "Supply Chain Social",
+      "section_number": "414-1",
+      "parent_section": "GRI 414",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Supplier screening criteria and results",
+        "Social risk supplier assessment records",
+        "Supplier audit findings and actions",
+        "Human rights due diligence in supply chain"
+      ]
+    },
+    {
+      "control_id": "GRI416-1",
+      "original_reference": "GRI 416-1",
+      "title": "Customer Health and Safety",
+      "description": "Report on assessment of health and safety impacts of product and service categories.",
+      "full_text": "Disclose the percentage of significant product/service categories for which health and safety impacts are assessed for improvement. Describe processes for ensuring product and service health and safety. Report on incidents of non-compliance with regulations related to product health and safety.",
+      "domain": "Social Standards",
+      "category": "Customer Health and Safety",
+      "section_number": "416-1",
+      "parent_section": "GRI 416",
+      "is_mandatory": false,
+      "priority": "low",
+      "evidence_requirements": [
+        "Product safety assessment records",
+        "Regulatory compliance for product safety",
+        "Product recall and incident data",
+        "Customer safety feedback data"
+      ]
+    },
+    {
+      "control_id": "GRI-ASSURANCE",
+      "original_reference": "GRI 2-5",
+      "title": "External Assurance",
+      "description": "Report whether the organization seeks external assurance for its sustainability reporting, the scope and basis of assurance, and the relationship with the assurance provider.",
+      "full_text": "Disclose whether the organization seeks external assurance for its GRI report or related sustainability data. If assurance is obtained, describe the scope, standard used (ISAE 3000, AA1000), the assurance level (reasonable or limited), the assurance provider's relationship with the organization, and conclusions.",
+      "domain": "General Disclosures",
+      "category": "External Assurance",
+      "section_number": "2-5",
+      "parent_section": "GRI 2",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "External assurance report",
+        "Assurance scope documentation",
+        "Assurance provider independence confirmation",
+        "Assurance standard reference (ISAE 3000 / AA1000)"
+      ]
+    },
+    {
+      "control_id": "GRI304-1",
+      "original_reference": "GRI 304-1",
+      "title": "Biodiversity",
+      "description": "Report on operational sites owned, leased, managed in, or adjacent to protected areas and areas of high biodiversity value.",
+      "full_text": "Disclose all operational sites in or adjacent to protected areas or areas of high biodiversity value. Describe significant direct and indirect impacts on biodiversity in protected and high-value areas. Report on biodiversity risk assessments and conservation strategies.",
+      "domain": "Environmental Standards",
+      "category": "Biodiversity",
+      "section_number": "304-1",
+      "parent_section": "GRI 304",
+      "is_mandatory": false,
+      "priority": "low",
+      "evidence_requirements": [
+        "Site location mapping near protected areas",
+        "Biodiversity risk assessments",
+        "Conservation programs documentation"
+      ]
+    },
+    {
+      "control_id": "GRI413-1",
+      "original_reference": "GRI 413-1",
+      "title": "Local Community Engagement",
+      "description": "Report on operations with local community engagement, impact assessments, and development programs.",
+      "full_text": "Disclose the percentage of operations with implemented local community engagement, impact assessments, and development programs. Describe community engagement approaches, grievance mechanisms for communities, and significant positive and negative impacts on local communities.",
+      "domain": "Social Standards",
+      "category": "Local Communities",
+      "section_number": "413-1",
+      "parent_section": "GRI 413",
+      "is_mandatory": false,
+      "priority": "low",
+      "evidence_requirements": [
+        "Community engagement records",
+        "Community impact assessments",
+        "Grievance mechanism records",
+        "Community investment data"
+      ]
+    },
+    {
+      "control_id": "GRI2-29",
+      "original_reference": "GRI 2-29",
+      "title": "Approach to Stakeholder Engagement",
+      "description": "Report the categories of stakeholders the organization engages with and the approach to stakeholder engagement.",
+      "full_text": "Describe the categories of stakeholders (employees, investors, customers, suppliers, communities, regulators) and the basis for identifying and selecting stakeholders. Report the approach to engaging each stakeholder category, the key topics raised by stakeholders, and how the organization has responded to their interests.",
+      "domain": "General Disclosures",
+      "category": "Stakeholder Engagement",
+      "section_number": "2-29",
+      "parent_section": "GRI 2",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Stakeholder mapping",
+        "Stakeholder engagement records",
+        "Topics raised by stakeholders",
+        "Response to stakeholder concerns"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "metadata": {
+    "name": "ISO 14064 Greenhouse Gas Accounting and Verification",
+    "description": "ISO 14064 is a three-part international standard for greenhouse gas (GHG) accounting and verification. Part 1 covers organizational-level GHG inventories, Part 2 covers project-level GHG reductions, and Part 3 covers validation and verification of GHG assertions. It provides the technical foundation for carbon accounting and reporting.",
+    "version": "2018 (Part 1 and 2) / 2019 (Part 3)",
+    "source_organization": "International Organization for Standardization (ISO)",
+    "effective_date": "2018-12-15",
+    "classification": "certification",
+    "framework_type": "reporting_standard",
+    "classification_confidence": 0.94,
+    "classification_reasoning": "ISO 14064 is the international standard for GHG accounting and verification, providing the technical framework for carbon inventories and third-party assurance used in corporate sustainability reporting.",
+    "framework_purpose": "To provide guidance for quantification, monitoring, reporting, and verification of greenhouse gas emissions and removals at the organizational and project levels.",
+    "framework_scope": "Organizations of all types and sizes seeking to quantify, monitor, and report GHG emissions and removals at the organizational level, or verify GHG claims and inventories.",
+    "framework_objectives": [
+      "Establish a credible and consistent GHG inventory",
+      "Enable comparison of GHG performance over time",
+      "Support carbon markets and offsetting programs",
+      "Enable third-party verification of GHG claims",
+      "Align with global GHG reporting requirements (TCFD, CSRD, SEC)"
+    ],
+    "target_audience": "Sustainability Officers, Environmental Managers, Carbon Accountants, GHG Verifiers, CFOs, and organizations with GHG reporting obligations",
+    "regulatory_authority": "ISO (International Organization for Standardization)",
+    "adoption_approach": [
+      "Define organizational and operational boundaries",
+      "Identify and quantify GHG sources and sinks",
+      "Select base year and establish baseline",
+      "Implement GHG data management and monitoring",
+      "Report GHG inventory in accordance with standard",
+      "Obtain third-party verification"
+    ],
+    "hierarchy_structure": {
+      "levels": ["Part", "Clause"],
+      "numbering_pattern": "ISO 14064-N Clause N.N"
+    },
+    "document_structure": {
+      "sections": [
+        "ISO 14064-1: Organizations",
+        "ISO 14064-2: Projects",
+        "ISO 14064-3: Verification"
+      ]
+    },
+    "total_controls": 15
+  },
+  "controls": [
+    {
+      "control_id": "14064-1.5",
+      "original_reference": "ISO 14064-1 Clause 5",
+      "title": "Organizational Boundaries",
+      "description": "Define and document the organizational boundaries for the GHG inventory using either equity share, financial control, or operational control approach.",
+      "full_text": "Define the organizational boundary for GHG accounting using one of three consolidation approaches: (1) Equity share — account for GHG proportional to ownership, (2) Financial control — account for GHG from operations over which financial control is held, (3) Operational control — account for GHG from operations for which the organization has operational control. Document the approach selected and apply consistently.",
+      "domain": "ISO 14064-1 - Organizations",
+      "category": "Organizational Boundary",
+      "section_number": "1.5",
+      "parent_section": "14064-1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Organizational boundary documentation",
+        "Consolidation approach selection rationale",
+        "List of entities included/excluded",
+        "Boundary review records"
+      ]
+    },
+    {
+      "control_id": "14064-1.6",
+      "original_reference": "ISO 14064-1 Clause 6",
+      "title": "Operational Boundaries and GHG Source Identification",
+      "description": "Identify and categorize all GHG sources, sinks, and reservoirs within the operational boundary including Scope 1, 2, and 3 emissions.",
+      "full_text": "Identify and document all GHG emission sources (Scope 1 direct, Scope 2 indirect from purchased energy, and Scope 3 other indirect). Classify sources into direct emissions (Scope 1), energy indirect (Scope 2), and other indirect (Scope 3). Assess materiality of each source for inclusion or exclusion. Justify any excluded sources.",
+      "domain": "ISO 14064-1 - Organizations",
+      "category": "Emission Sources",
+      "section_number": "1.6",
+      "parent_section": "14064-1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "GHG source identification register",
+        "Scope 1, 2, 3 classification",
+        "Source materiality assessment",
+        "Exclusion justifications"
+      ]
+    },
+    {
+      "control_id": "14064-1.7",
+      "original_reference": "ISO 14064-1 Clause 7",
+      "title": "GHG Quantification",
+      "description": "Quantify GHG emissions and removals using appropriate methods, emission factors, and activity data.",
+      "full_text": "Quantify all identified GHG emission sources and sinks using appropriate methods: direct measurement, mass balance, or emission factor approaches. Apply recognized emission factors (IPCC, DEFRA, EPA, IEA). Convert all GHGs to CO2 equivalent using Global Warming Potential (GWP) values. Document calculation methodology for each source.",
+      "domain": "ISO 14064-1 - Organizations",
+      "category": "GHG Quantification",
+      "section_number": "1.7",
+      "parent_section": "14064-1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "GHG calculation methodology by source",
+        "Activity data records",
+        "Emission factors used with sources",
+        "GWP values applied",
+        "Calculation spreadsheets or tool documentation"
+      ]
+    },
+    {
+      "control_id": "14064-1.8",
+      "original_reference": "ISO 14064-1 Clause 8",
+      "title": "GHG Base Year",
+      "description": "Select and document a GHG base year, establish the base year inventory, and define recalculation policy.",
+      "full_text": "Select a base year that is representative of typical emissions and has reliable data. Establish the base year inventory for each quantified source. Define a recalculation policy specifying conditions under which the base year will be recalculated (significant acquisitions, divestitures, methodology changes). Apply consistent methodology across reporting years.",
+      "domain": "ISO 14064-1 - Organizations",
+      "category": "Base Year",
+      "section_number": "1.8",
+      "parent_section": "14064-1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Base year selection rationale",
+        "Base year GHG inventory data",
+        "Recalculation policy document",
+        "Historical base year recalculation records"
+      ]
+    },
+    {
+      "control_id": "14064-1.9",
+      "original_reference": "ISO 14064-1 Clause 9",
+      "title": "GHG Inventory Documentation and Reporting",
+      "description": "Document and report the GHG inventory in a manner that is accurate, complete, consistent, transparent, and relevant.",
+      "full_text": "Prepare a GHG inventory report or statement including: total Scope 1 and 2 emissions (and Scope 3 where applicable), base year emissions and changes, methodology description, organizational and operational boundary description, emission factors and GWP values, data quality assessment, and uncertainty analysis. Apply the five GHG reporting principles: accuracy, completeness, consistency, transparency, and relevance.",
+      "domain": "ISO 14064-1 - Organizations",
+      "category": "GHG Reporting",
+      "section_number": "1.9",
+      "parent_section": "14064-1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "GHG inventory report",
+        "Scope 1, 2, 3 emissions data",
+        "Methodology documentation",
+        "Uncertainty assessment",
+        "Year-over-year comparison"
+      ]
+    },
+    {
+      "control_id": "14064-1.10",
+      "original_reference": "ISO 14064-1 Clause 10",
+      "title": "GHG Data Quality Management",
+      "description": "Implement data management systems and quality controls to ensure GHG data is accurate, complete, and reliable.",
+      "full_text": "Implement GHG data management systems including: data collection procedures, quality control checks, data entry validation, uncertainty analysis, gap-filling methodology for missing data, and data governance. Maintain audit trails for all GHG data. Implement internal review processes before finalizing the inventory.",
+      "domain": "ISO 14064-1 - Organizations",
+      "category": "Data Quality",
+      "section_number": "1.10",
+      "parent_section": "14064-1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "GHG data management system",
+        "Data quality control procedures",
+        "Uncertainty analysis methodology",
+        "Gap-filling procedures",
+        "Internal review records"
+      ]
+    },
+    {
+      "control_id": "14064-1.INT",
+      "original_reference": "ISO 14064-1 - Internal Verification",
+      "title": "Internal GHG Inventory Review",
+      "description": "Conduct internal review of the GHG inventory before seeking external verification.",
+      "full_text": "Implement internal review processes to validate GHG data accuracy, completeness, and methodology consistency before external verification. Internal reviewers should be independent of the data collection team. Review should cover: data accuracy, completeness, consistency, boundary compliance, and documentation quality.",
+      "domain": "ISO 14064-1 - Organizations",
+      "category": "Internal Review",
+      "section_number": "INT.1",
+      "parent_section": "14064-1",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Internal review checklist",
+        "Internal review findings and corrections",
+        "Reviewer independence documentation"
+      ]
+    },
+    {
+      "control_id": "14064-3.1",
+      "original_reference": "ISO 14064-3 - Verification Planning",
+      "title": "GHG Verification Planning",
+      "description": "Plan the GHG verification engagement including scope, materiality threshold, and level of assurance.",
+      "full_text": "Plan the GHG verification engagement including: verification scope (which years, which scopes), materiality threshold (typically 5% for reasonable assurance, higher for limited assurance), level of assurance (reasonable or limited), verification criteria (ISO 14064-1, GHG Protocol), and verification team qualifications.",
+      "domain": "ISO 14064-3 - Verification",
+      "category": "Verification Planning",
+      "section_number": "3.1",
+      "parent_section": "14064-3",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Verification engagement plan",
+        "Materiality threshold documentation",
+        "Assurance level determination",
+        "Verifier qualifications"
+      ]
+    },
+    {
+      "control_id": "14064-3.2",
+      "original_reference": "ISO 14064-3 - Verification Evidence",
+      "title": "GHG Verification Evidence Collection",
+      "description": "Collect sufficient and appropriate evidence to support the verification conclusion.",
+      "full_text": "Collect verification evidence through: document review (policies, procedures, calculations), data testing (sampling activity data, checking emission factors), site visits (if required), and management inquiry. Evidence must be sufficient and appropriate to support the verification conclusion at the stated assurance level.",
+      "domain": "ISO 14064-3 - Verification",
+      "category": "Verification Evidence",
+      "section_number": "3.2",
+      "parent_section": "14064-3",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Verification workpapers",
+        "Evidence of sampling and testing",
+        "Site visit records",
+        "Management representation letters"
+      ]
+    },
+    {
+      "control_id": "14064-3.3",
+      "original_reference": "ISO 14064-3 - Verification Opinion",
+      "title": "GHG Verification Statement",
+      "description": "Issue a verification statement expressing an opinion on whether the GHG assertion is free from material misstatement.",
+      "full_text": "Issue a GHG verification statement that includes: the verifier's identity, the scope of verification, the criteria applied, the level of assurance provided, any material misstatements identified, and the verification conclusion. For reasonable assurance: 'the GHG inventory presents fairly.' For limited assurance: 'nothing has come to our attention.'",
+      "domain": "ISO 14064-3 - Verification",
+      "category": "Verification Opinion",
+      "section_number": "3.3",
+      "parent_section": "14064-3",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "GHG verification statement",
+        "Verifier accreditation documentation",
+        "Verification findings log",
+        "Material misstatement assessment"
+      ]
+    },
+    {
+      "control_id": "GHG-INT-1",
+      "original_reference": "GHG Intensity Metrics",
+      "title": "GHG Intensity and Performance Tracking",
+      "description": "Track and report GHG emissions intensity metrics to measure progress in decoupling emissions from business growth.",
+      "full_text": "Define and track GHG emissions intensity metrics relevant to the organization (e.g., tCO2e per unit of revenue, per unit of production, per employee). Monitor intensity trends relative to base year. Report intensity improvements that demonstrate decoupling of emissions from growth. Use intensity metrics to set and track science-based targets.",
+      "domain": "Performance Metrics",
+      "category": "GHG Intensity",
+      "section_number": "INT.1",
+      "parent_section": "Performance",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "GHG intensity metrics by year",
+        "Intensity target setting documentation",
+        "SBTi alignment assessment",
+        "Intensity trend charts"
+      ]
+    },
+    {
+      "control_id": "GHG-SCOPE3-1",
+      "original_reference": "Scope 3 Emissions",
+      "title": "Scope 3 Value Chain Emissions",
+      "description": "Account for and report Scope 3 upstream and downstream emissions across the value chain using GHG Protocol Scope 3 standard.",
+      "full_text": "Identify and quantify material Scope 3 emission categories using the GHG Protocol Corporate Value Chain (Scope 3) Standard. Categories include: purchased goods and services, capital goods, fuel and energy activities, upstream transportation, waste, business travel, employee commuting, investments, use of sold products, and end-of-life treatment. Engage suppliers to improve Scope 3 data quality.",
+      "domain": "Scope 3 Emissions",
+      "category": "Value Chain Emissions",
+      "section_number": "SC3.1",
+      "parent_section": "Scope 3",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Scope 3 category identification and materiality",
+        "Scope 3 quantification methodology",
+        "Supplier emissions data collection",
+        "Scope 3 data quality improvement plan"
+      ]
+    },
+    {
+      "control_id": "GHG-OFFSET-1",
+      "original_reference": "Carbon Credits and Offsets",
+      "title": "Carbon Credit and Offset Management",
+      "description": "Manage voluntary carbon credits and offsets used to address residual emissions in net zero strategies.",
+      "full_text": "Manage carbon credits and offsets using high-quality standards (Verra VCS, Gold Standard, ACR). Ensure offsets represent additional, permanent, verifiable, and exclusive emissions reductions. Retire offsets in recognized registries to prevent double counting. Disclose offset use separately from emission reductions. Apply Science Based Targets initiative removals guidance.",
+      "domain": "Carbon Credits",
+      "category": "Carbon Offsets",
+      "section_number": "OFFSET.1",
+      "parent_section": "Carbon Credits",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Carbon credit registry retirement records",
+        "Credit quality and standard documentation",
+        "Offset retirement certificates",
+        "Separation of offsets from emission reductions in reporting"
+      ]
+    },
+    {
+      "control_id": "GHG-ALIGN-1",
+      "original_reference": "Regulatory Alignment",
+      "title": "GHG Reporting Regulatory Alignment",
+      "description": "Align the GHG inventory with applicable regulatory reporting requirements and voluntary frameworks.",
+      "full_text": "Align GHG inventory with applicable regulatory requirements (EU ETS, UK ETS, SEC climate disclosures, CSRD) and voluntary frameworks (TCFD, GRI 305, ISSB IFRS S2, SASB). Ensure the ISO 14064-1 inventory meets the data quality requirements for regulatory submissions. Coordinate with legal teams on regulatory disclosures.",
+      "domain": "Regulatory Compliance",
+      "category": "Regulatory Alignment",
+      "section_number": "REG.1",
+      "parent_section": "Regulatory",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Regulatory GHG reporting submissions",
+        "Framework alignment mapping",
+        "Regulatory deadline compliance records"
+      ]
+    },
+    {
+      "control_id": "GHG-TARGET-1",
+      "original_reference": "GHG Reduction Targets",
+      "title": "Science-Based GHG Reduction Targets",
+      "description": "Establish GHG reduction targets aligned with climate science and the Paris Agreement.",
+      "full_text": "Set science-based GHG reduction targets aligned with keeping global warming to 1.5°C. Submit targets to the Science Based Targets initiative (SBTi) for validation. Set near-term targets (5-10 years) and long-term net zero targets (by 2050). Report annual progress against targets. Implement action plans to achieve targets.",
+      "domain": "Targets",
+      "category": "Science-Based Targets",
+      "section_number": "TARGET.1",
+      "parent_section": "Targets",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "SBTi approved targets documentation",
+        "GHG reduction roadmap",
+        "Annual progress reports",
+        "Decarbonization action plans"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,352 @@
+{
+  "metadata": {
+    "name": "ISO 28000:2022 Security and Resilience — Supply Chain Security Management Systems",
+    "description": "ISO 28000:2022 specifies requirements for a security management system for the supply chain, enabling organizations to identify security threats and manage supply chain security risks. The 2022 revision modernized the standard to align with the High-Level Structure (HLS) used by ISO 9001, 14001, and 45001.",
+    "version": "2022",
+    "source_organization": "International Organization for Standardization (ISO)",
+    "effective_date": "2022-10-01",
+    "classification": "certification",
+    "framework_type": "certification",
+    "classification_confidence": 0.93,
+    "classification_reasoning": "ISO 28000 is the international standard for supply chain security management systems, used by logistics providers, ports, customs operators, and organizations with complex global supply chains.",
+    "framework_purpose": "To specify requirements for a security management system for supply chains, enabling organizations to effectively address security threats and implement appropriate security measures throughout the supply chain.",
+    "framework_scope": "Organizations of all types and sizes involved in manufacturing, service, storage, or transportation of goods at any stage of the production or supply process.",
+    "framework_objectives": [
+      "Identify and assess supply chain security threats and risks",
+      "Implement effective security measures across the supply chain",
+      "Ensure business continuity through supply chain security",
+      "Comply with customs and trade security requirements",
+      "Build supply chain resilience and stakeholder trust"
+    ],
+    "target_audience": "Supply Chain Managers, Logistics Managers, Security Officers, Trade Compliance Managers, Port Authorities, Freight Forwarders, and Customs Brokers",
+    "regulatory_authority": "ISO (International Organization for Standardization)",
+    "adoption_approach": [
+      "Define supply chain security management system scope",
+      "Assess supply chain security risks and threats",
+      "Implement security controls at critical supply chain points",
+      "Train personnel on supply chain security",
+      "Monitor and review security performance",
+      "Obtain ISO 28000 certification"
+    ],
+    "hierarchy_structure": {
+      "levels": ["Clause", "Sub-clause"],
+      "numbering_pattern": "N.N"
+    },
+    "document_structure": {
+      "sections": [
+        "Clause 4: Context",
+        "Clause 5: Leadership",
+        "Clause 6: Planning",
+        "Clause 7: Support",
+        "Clause 8: Operation",
+        "Clause 9: Performance Evaluation",
+        "Clause 10: Improvement"
+      ]
+    },
+    "total_controls": 16
+  },
+  "controls": [
+    {
+      "control_id": "4.1",
+      "original_reference": "Clause 4.1",
+      "title": "Supply Chain Security Context",
+      "description": "The organization shall determine external and internal issues that affect its ability to achieve the intended outcomes of its supply chain security management system.",
+      "full_text": "Conduct analysis of the supply chain security context including: geographic regions of operation, modes of transport, types of goods, regulatory requirements (C-TPAT, AEO, customs requirements), threat landscape, and organizational security capabilities. This analysis informs the security risk assessment.",
+      "domain": "Context",
+      "category": "Organizational Context",
+      "section_number": "4.1",
+      "parent_section": "4",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Supply chain context analysis",
+        "Geographic and transport mode risk analysis",
+        "Regulatory requirements inventory",
+        "Security threat landscape assessment"
+      ]
+    },
+    {
+      "control_id": "6.1",
+      "original_reference": "Clause 6.1",
+      "title": "Supply Chain Security Risk Assessment",
+      "description": "The organization shall establish, implement, and maintain processes to identify, analyze, and assess supply chain security risks.",
+      "full_text": "Conduct comprehensive supply chain security risk assessment covering: physical security risks (theft, sabotage, unauthorized access), cyber security risks to logistics systems, personnel security risks, cargo integrity risks, and geopolitical risks. Assess risks along the entire supply chain from suppliers to customers.",
+      "domain": "Planning",
+      "category": "Risk Assessment",
+      "section_number": "6.1",
+      "parent_section": "6",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Supply chain security risk assessment",
+        "Threat identification and analysis",
+        "Vulnerability assessment",
+        "Risk prioritization records"
+      ]
+    },
+    {
+      "control_id": "6.2",
+      "original_reference": "Clause 6.2",
+      "title": "Security Objectives",
+      "description": "The organization shall establish security objectives at relevant functions, levels, and processes of the supply chain security management system.",
+      "full_text": "Set measurable supply chain security objectives aligned with the security policy. Objectives address identified risks and compliance requirements. Action plans define measures, responsible parties, timelines, and performance indicators for achieving objectives.",
+      "domain": "Planning",
+      "category": "Security Objectives",
+      "section_number": "6.2",
+      "parent_section": "6",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Supply chain security objectives",
+        "Security KPI tracking",
+        "Action plans for objectives"
+      ]
+    },
+    {
+      "control_id": "8.1",
+      "original_reference": "Clause 8.1",
+      "title": "Operational Planning and Control",
+      "description": "The organization shall plan, implement, control, and maintain the processes needed to meet supply chain security requirements.",
+      "full_text": "Implement operational controls for supply chain security covering: physical facility security (fencing, lighting, access control), cargo security (sealing, scanning, tracking), vehicle and conveyance security, personnel security (background checks, vetting), and technology security (cargo tracking systems).",
+      "domain": "Operation",
+      "category": "Security Controls",
+      "section_number": "8.1",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Physical security procedures",
+        "Cargo integrity controls",
+        "Personnel security vetting records",
+        "Security technology implementation"
+      ]
+    },
+    {
+      "control_id": "8.2",
+      "original_reference": "Clause 8.2",
+      "title": "Physical Security",
+      "description": "The organization shall implement physical security measures to prevent unauthorized access to facilities, vehicles, and cargo.",
+      "full_text": "Implement physical security controls at all critical supply chain locations including warehouses, distribution centers, ports, and vehicles. Controls include perimeter security (fencing, gates, barriers), access control systems, CCTV surveillance, lighting, intrusion detection, and security personnel. Conduct regular security patrols and inspections.",
+      "domain": "Operation",
+      "category": "Physical Security",
+      "section_number": "8.2",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Physical security controls documentation",
+        "Access control system records",
+        "CCTV coverage mapping",
+        "Security patrol records"
+      ]
+    },
+    {
+      "control_id": "8.3",
+      "original_reference": "Clause 8.3",
+      "title": "Cargo and Container Security",
+      "description": "The organization shall implement controls to ensure the integrity and security of cargo and containers throughout the supply chain.",
+      "full_text": "Implement cargo integrity controls including container sealing procedures (ISO 17712 high-security seals), seal inspection at key handover points, cargo count verification, seal number documentation, and anomaly reporting. Implement cargo tracking for high-value or high-risk shipments.",
+      "domain": "Operation",
+      "category": "Cargo Security",
+      "section_number": "8.3",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Cargo sealing procedures",
+        "Seal inspection and verification records",
+        "Cargo tracking system",
+        "Anomaly reporting records"
+      ]
+    },
+    {
+      "control_id": "8.4",
+      "original_reference": "Clause 8.4",
+      "title": "Personnel and Access Security",
+      "description": "The organization shall implement personnel security measures including background checks, access control, and security awareness.",
+      "full_text": "Implement personnel security including pre-employment background screening, security clearances for sensitive roles, identity verification, access control based on roles, and visitor management. Train all personnel on supply chain security awareness. Implement processes for reporting suspicious activities.",
+      "domain": "Operation",
+      "category": "Personnel Security",
+      "section_number": "8.4",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Background check procedures and records",
+        "Access control by role",
+        "Visitor management records",
+        "Security training records"
+      ]
+    },
+    {
+      "control_id": "8.5",
+      "original_reference": "Clause 8.5",
+      "title": "Cyber Security for Supply Chain",
+      "description": "The organization shall implement cyber security measures to protect information and technology systems supporting supply chain operations.",
+      "full_text": "Protect supply chain IT systems (ERP, TMS, WMS, tracking systems) from cyber threats. Implement access controls, network security, data encryption, and incident response for cyber events affecting supply chain operations. Manage cyber risks from suppliers and logistics partners.",
+      "domain": "Operation",
+      "category": "Cyber Security",
+      "section_number": "8.5",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Supply chain IT security controls",
+        "Network security for logistics systems",
+        "Third-party cyber risk management",
+        "Cyber incident response for supply chain"
+      ]
+    },
+    {
+      "control_id": "8.6",
+      "original_reference": "Clause 8.6",
+      "title": "Supply Chain Partner Security Requirements",
+      "description": "The organization shall establish security requirements for supply chain partners including suppliers, logistics providers, and subcontractors.",
+      "full_text": "Establish and communicate security requirements to all supply chain partners. Conduct security assessments of critical suppliers and logistics providers. Include security requirements in contracts. Monitor partner security performance. Consider partner security status in authorized economic operator (AEO) programs.",
+      "domain": "Operation",
+      "category": "Partner Security",
+      "section_number": "8.6",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Supplier security assessment records",
+        "Security requirements in contracts",
+        "Partner security monitoring records",
+        "AEO partner qualification records"
+      ]
+    },
+    {
+      "control_id": "8.7",
+      "original_reference": "Clause 8.7",
+      "title": "Security Incident Response",
+      "description": "The organization shall establish, implement, and maintain processes to detect, respond to, and recover from supply chain security incidents.",
+      "full_text": "Develop and maintain supply chain security incident response plans for events such as cargo theft, tampering, unauthorized access, piracy, and cyber incidents affecting logistics. Define escalation procedures and notification requirements to customers, carriers, customs authorities, and law enforcement.",
+      "domain": "Operation",
+      "category": "Incident Response",
+      "section_number": "8.7",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Security incident response plans",
+        "Incident response test records",
+        "Notification procedures for incidents",
+        "Incident investigation records"
+      ]
+    },
+    {
+      "control_id": "8.8",
+      "original_reference": "Clause 8.8",
+      "title": "Regulatory Compliance (C-TPAT/AEO)",
+      "description": "The organization shall maintain compliance with applicable supply chain security regulations and voluntary programs such as C-TPAT, AEO, and ISO 28000.",
+      "full_text": "Maintain compliance with supply chain security regulations including Customs-Trade Partnership Against Terrorism (C-TPAT), Authorized Economic Operator (AEO) programs, ISPS Code (maritime), cargo security regulations, and border control requirements. Seek trusted trader status where beneficial.",
+      "domain": "Operation",
+      "category": "Regulatory Compliance",
+      "section_number": "8.8",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "C-TPAT or AEO certification",
+        "Customs compliance documentation",
+        "Regulatory audit results",
+        "Trade compliance records"
+      ]
+    },
+    {
+      "control_id": "9.1",
+      "original_reference": "Clause 9.1",
+      "title": "Security Performance Monitoring",
+      "description": "The organization shall monitor, measure, analyze, and evaluate security performance.",
+      "full_text": "Monitor supply chain security performance through KPIs including: cargo theft incidents, seal integrity failures, security breaches, access control violations, security training completion, and supplier security compliance. Analyze trends and investigate anomalies. Report performance to management.",
+      "domain": "Performance Evaluation",
+      "category": "Monitoring",
+      "section_number": "9.1",
+      "parent_section": "9",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Security KPI dashboard",
+        "Incident tracking data",
+        "Security trend analysis",
+        "Supplier security compliance reports"
+      ]
+    },
+    {
+      "control_id": "9.2",
+      "original_reference": "Clause 9.2",
+      "title": "Internal Security Audit",
+      "description": "The organization shall conduct internal audits to provide information on whether the security management system conforms to requirements and is effectively implemented.",
+      "full_text": "Conduct internal security audits at all supply chain locations and for all key security processes. Auditors must be independent and competent. Audit findings are reported to management. Nonconformances require corrective action. Audit programs are risk-based and cover all high-risk supply chain nodes.",
+      "domain": "Performance Evaluation",
+      "category": "Internal Audit",
+      "section_number": "9.2",
+      "parent_section": "9",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Security audit program",
+        "Internal audit reports",
+        "Corrective action tracking",
+        "Audit coverage across supply chain"
+      ]
+    },
+    {
+      "control_id": "5.2",
+      "original_reference": "Clause 5.2",
+      "title": "Supply Chain Security Policy",
+      "description": "Top management shall establish a supply chain security policy appropriate to the organization and its security risk profile.",
+      "full_text": "Establish a supply chain security policy committing to: protection of goods and information throughout the supply chain, compliance with applicable security regulations, continual improvement of security performance, and security requirements for supply chain partners. Communicate the policy throughout the organization and to partners.",
+      "domain": "Leadership",
+      "category": "Security Policy",
+      "section_number": "5.2",
+      "parent_section": "5",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Supply chain security policy",
+        "Policy approval and communication records",
+        "Partner communication of security requirements"
+      ]
+    },
+    {
+      "control_id": "7.2",
+      "original_reference": "Clause 7.2",
+      "title": "Security Competence",
+      "description": "The organization shall ensure that persons involved in supply chain security are competent based on appropriate education, training, and experience.",
+      "full_text": "Define security competency requirements for all roles involved in supply chain security. Provide security training including initial training and refresher training. Conduct competency assessments for critical security roles. Maintain training records.",
+      "domain": "Support",
+      "category": "Competence",
+      "section_number": "7.2",
+      "parent_section": "7",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Security training records",
+        "Competency assessments",
+        "Role-specific security training",
+        "Security awareness program"
+      ]
+    },
+    {
+      "control_id": "10.2",
+      "original_reference": "Clause 10.2",
+      "title": "Continual Improvement of Supply Chain Security",
+      "description": "The organization shall continually improve the suitability, adequacy, and effectiveness of the supply chain security management system.",
+      "full_text": "Implement continual improvement of supply chain security through systematic analysis of security incidents, near misses, audit findings, emerging threats, and best practices. Share security learnings across the supply chain. Improve security controls proactively based on threat intelligence.",
+      "domain": "Improvement",
+      "category": "Continual Improvement",
+      "section_number": "10.2",
+      "parent_section": "10",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Security improvement initiatives",
+        "Lessons learned from incidents",
+        "Security maturity assessments",
+        "Best practice implementation records"
+      ]
+    }
+  ]
+}

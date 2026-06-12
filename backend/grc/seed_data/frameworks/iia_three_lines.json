@@ -1,0 +1,333 @@
+{
+  "metadata": {
+    "name": "IIA Three Lines Model",
+    "description": "The Three Lines Model (2020) replaces the Three Lines of Defense model. It provides a framework for how governance and risk management structures within organizations should be arranged to achieve effective oversight and accountability. The model clarifies roles of management, risk and compliance functions, and internal audit.",
+    "version": "2020",
+    "source_organization": "The Institute of Internal Auditors (IIA)",
+    "effective_date": "2020-07-20",
+    "classification": "compliance",
+    "framework_type": "governance_model",
+    "classification_confidence": 0.95,
+    "classification_reasoning": "The IIA Three Lines Model is the globally recognized framework for organizing governance, risk management, and internal audit roles within organizations.",
+    "framework_purpose": "To help organizations clearly define roles and responsibilities for governance, risk management, and assurance to support achievement of organizational objectives.",
+    "framework_scope": "All organizations seeking to clarify governance structures, particularly the relationship between the board, management, risk functions, and internal audit.",
+    "framework_objectives": [
+      "Clarify roles and responsibilities for governance",
+      "Align governance structures with organizational objectives",
+      "Improve coordination between assurance providers",
+      "Strengthen accountability frameworks",
+      "Support effective risk management"
+    ],
+    "target_audience": "Boards of Directors, Audit Committees, Chief Executive Officers, Chief Risk Officers, Chief Compliance Officers, Chief Audit Executives, and Senior Management",
+    "regulatory_authority": "The Institute of Internal Auditors (IIA)",
+    "adoption_approach": [
+      "Educate board and senior management on the model",
+      "Map existing functions to the three lines",
+      "Define responsibilities for each line",
+      "Establish coordination mechanisms between lines",
+      "Align reporting structures with the model",
+      "Review and update governance documents accordingly"
+    ],
+    "hierarchy_structure": {
+      "levels": ["Principle", "Role"],
+      "numbering_pattern": "Line.Role (e.g., L1.1, L2.1)"
+    },
+    "document_structure": {
+      "sections": [
+        "Governing Body",
+        "First Line: Management",
+        "Second Line: Risk and Compliance",
+        "Third Line: Internal Audit",
+        "External Assurance"
+      ]
+    },
+    "total_controls": 15
+  },
+  "controls": [
+    {
+      "control_id": "GB.1",
+      "original_reference": "Governing Body - Accountability",
+      "title": "Governing Body Accountability",
+      "description": "The governing body (board) is accountable to stakeholders for organizational oversight. It delegates responsibilities while maintaining oversight and ensuring integrity of governance.",
+      "full_text": "The governing body (typically the board of directors) maintains ultimate accountability to stakeholders for the organization's performance and governance. The governing body approves risk appetite, oversees management, and ensures effective controls are in place. The audit committee specifically oversees internal audit and financial reporting.",
+      "domain": "Governing Body",
+      "category": "Board Governance",
+      "section_number": "GB.1",
+      "parent_section": "GB",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Board governance charter",
+        "Audit committee charter",
+        "Board risk oversight documentation",
+        "Board meeting minutes"
+      ]
+    },
+    {
+      "control_id": "GB.2",
+      "original_reference": "Governing Body - Delegation",
+      "title": "Governing Body Delegation",
+      "description": "The governing body delegates responsibilities to management and internal audit, maintaining oversight of both.",
+      "full_text": "The governing body delegates to management the responsibility for achieving organizational objectives, including governance and risk management. It separately delegates to internal audit the responsibility for providing independent assurance. The governing body maintains oversight of both delegations and ensures they operate effectively.",
+      "domain": "Governing Body",
+      "category": "Delegation Framework",
+      "section_number": "GB.2",
+      "parent_section": "GB",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Delegation of authority documentation",
+        "Internal audit charter approved by board",
+        "Management accountability frameworks",
+        "Board oversight processes"
+      ]
+    },
+    {
+      "control_id": "L1.1",
+      "original_reference": "First Line - Operations",
+      "title": "Operational Management Responsibilities",
+      "description": "First-line management provides products and services, manages risk inherent in those activities, and is accountable for achieving organizational objectives.",
+      "full_text": "First-line roles include all roles that create or deliver value — operational management, customer-facing staff, and support functions. First-line management is responsible for managing risk as an integral part of their work. They implement and maintain effective controls over their own activities and report on their performance.",
+      "domain": "First Line",
+      "category": "Operational Management",
+      "section_number": "L1.1",
+      "parent_section": "L1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Control self-assessments by management",
+        "Operational risk registers",
+        "Incident and exception reporting",
+        "Management control testing evidence"
+      ]
+    },
+    {
+      "control_id": "L1.2",
+      "original_reference": "First Line - Control Ownership",
+      "title": "Control Ownership and Execution",
+      "description": "First-line roles own and operate controls, maintaining accountability for identifying, assessing, and managing risks in their areas.",
+      "full_text": "First-line managers design, implement, operate, and maintain effective processes and controls. They identify risks, implement responses, and monitor and report on performance and control effectiveness. They escalate issues appropriately and foster a risk-aware culture in their teams.",
+      "domain": "First Line",
+      "category": "Control Execution",
+      "section_number": "L1.2",
+      "parent_section": "L1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Control activity documentation",
+        "Risk and control matrices (RCMs)",
+        "Control testing and monitoring records",
+        "Issue escalation records"
+      ]
+    },
+    {
+      "control_id": "L2.1",
+      "original_reference": "Second Line - Risk Management",
+      "title": "Risk Management Function",
+      "description": "The risk management function helps management establish effective risk management practices, monitors risk exposures, and reports on risk performance.",
+      "full_text": "Second-line risk functions establish risk management frameworks, policies, and methodologies. They assist the first line in identifying and managing risk, provide oversight of risk-taking activities, and report on the aggregate risk profile to management and the board. The CRO typically leads this function.",
+      "domain": "Second Line",
+      "category": "Risk Management",
+      "section_number": "L2.1",
+      "parent_section": "L2",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Risk management policy and framework",
+        "Risk oversight reports",
+        "Risk limit monitoring",
+        "Enterprise risk reporting to board"
+      ]
+    },
+    {
+      "control_id": "L2.2",
+      "original_reference": "Second Line - Compliance",
+      "title": "Compliance Function",
+      "description": "The compliance function helps management ensure the organization meets legal, regulatory, and ethical obligations.",
+      "full_text": "Second-line compliance functions monitor adherence to laws, regulations, and internal policies. They provide guidance to management on compliance requirements, monitor compliance risks, and report compliance status to management and regulators. They maintain the regulatory change management process.",
+      "domain": "Second Line",
+      "category": "Compliance",
+      "section_number": "L2.2",
+      "parent_section": "L2",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Compliance monitoring program",
+        "Regulatory change management records",
+        "Compliance risk assessments",
+        "Regulatory reporting documentation"
+      ]
+    },
+    {
+      "control_id": "L2.3",
+      "original_reference": "Second Line - Oversight",
+      "title": "Second-Line Oversight Activities",
+      "description": "Second-line functions maintain specialized expertise and provide objective oversight of first-line management practices.",
+      "full_text": "Second-line functions — including risk management, compliance, information security, legal, finance, and others — provide expertise and oversight that helps management fulfill its responsibilities. They set standards, provide guidance, challenge risk decisions, and escalate concerns. They report independently on risk and compliance matters to senior management and the board.",
+      "domain": "Second Line",
+      "category": "Oversight",
+      "section_number": "L2.3",
+      "parent_section": "L2",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Second-line reporting to senior management",
+        "Policy and standards documentation",
+        "Advisory and challenge activities",
+        "Escalation of material concerns"
+      ]
+    },
+    {
+      "control_id": "L2.4",
+      "original_reference": "Second Line - Coordination",
+      "title": "Second-Line Coordination",
+      "description": "Second-line functions coordinate with first line and internal audit to ensure efficient and effective governance.",
+      "full_text": "Second-line functions coordinate with first-line management and internal audit to avoid gaps and overlaps in assurance. They share risk and control information with internal audit to improve audit planning. They maintain awareness of audit findings and monitor management's remediation of issues.",
+      "domain": "Second Line",
+      "category": "Coordination",
+      "section_number": "L2.4",
+      "parent_section": "L2",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Coordination agreements with internal audit",
+        "Joint risk assessment records",
+        "Issue remediation tracking",
+        "Combined assurance frameworks"
+      ]
+    },
+    {
+      "control_id": "L3.1",
+      "original_reference": "Third Line - Independence",
+      "title": "Internal Audit Independence",
+      "description": "Internal audit provides independent and objective assurance and advice to the governing body and management.",
+      "full_text": "Internal audit is organizationally independent from management and reports to the governing body (board/audit committee). This independence enables internal audit to provide objective assessments of the effectiveness of governance, risk management, and control. The CAE has direct access to the board without management interference.",
+      "domain": "Third Line",
+      "category": "Independence",
+      "section_number": "L3.1",
+      "parent_section": "L3",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Internal audit charter establishing independence",
+        "Functional reporting to audit committee",
+        "Independence declarations",
+        "Direct board access documentation"
+      ]
+    },
+    {
+      "control_id": "L3.2",
+      "original_reference": "Third Line - Assurance",
+      "title": "Independent Assurance Provision",
+      "description": "Internal audit provides assurance on the effectiveness of governance, risk management, and control to the governing body.",
+      "full_text": "Internal audit systematically evaluates the effectiveness of governance processes, risk management, and internal controls. Assurance engagements are based on the audit risk assessment and include all significant risk areas. The results are communicated through audit reports with findings, recommendations, and management responses.",
+      "domain": "Third Line",
+      "category": "Assurance",
+      "section_number": "L3.2",
+      "parent_section": "L3",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Annual risk-based audit plan",
+        "Individual engagement reports",
+        "Overall audit opinion (where applicable)",
+        "Audit committee reporting"
+      ]
+    },
+    {
+      "control_id": "L3.3",
+      "original_reference": "Third Line - Advisory",
+      "title": "Advisory Services",
+      "description": "Internal audit provides advisory services to management to improve governance, risk management, and control.",
+      "full_text": "Internal audit provides advice and consultation to management on governance, risk, and control matters without assuming management responsibility. Advisory services add value by sharing audit observations, benchmarks, and best practices. Consulting must not impair the objectivity of assurance work.",
+      "domain": "Third Line",
+      "category": "Advisory",
+      "section_number": "L3.3",
+      "parent_section": "L3",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Advisory engagement records",
+        "Consulting deliverables",
+        "Objectivity safeguards documentation",
+        "Advisory outcomes and value tracking"
+      ]
+    },
+    {
+      "control_id": "L3.4",
+      "original_reference": "Third Line - Communication",
+      "title": "Internal Audit Communication",
+      "description": "Internal audit communicates findings and insights to the governing body and management to inform decision-making.",
+      "full_text": "Internal audit maintains open communication with both management and the governing body. The CAE reports audit results to senior management and the board, including significant risks, control deficiencies, and overall assurance opinions. Communication is timely, accurate, and actionable.",
+      "domain": "Third Line",
+      "category": "Communication",
+      "section_number": "L3.4",
+      "parent_section": "L3",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Audit committee reporting package",
+        "Management reporting on audit results",
+        "Significant matter escalations",
+        "Annual internal audit activity report"
+      ]
+    },
+    {
+      "control_id": "EA.1",
+      "original_reference": "External Assurance - Coordination",
+      "title": "External Assurance Coordination",
+      "description": "Organizations coordinate between internal and external assurance providers to ensure effective and efficient coverage.",
+      "full_text": "The governing body oversees both internal and external assurance providers. Internal audit and external auditors coordinate their work to avoid duplication and ensure comprehensive coverage. External auditors may rely on internal audit work where appropriate. Regulatory examiners and other external providers are also considered in the assurance landscape.",
+      "domain": "External Assurance",
+      "category": "Coordination",
+      "section_number": "EA.1",
+      "parent_section": "EA",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "External auditor coordination meetings",
+        "Reliance arrangements documentation",
+        "Combined assurance map",
+        "Regulatory examination coordination"
+      ]
+    },
+    {
+      "control_id": "EA.2",
+      "original_reference": "External Assurance - Alignment",
+      "title": "Assurance Mapping and Coverage",
+      "description": "The organization maintains a comprehensive assurance map showing coverage of significant risks by all three lines and external providers.",
+      "full_text": "The organization develops and maintains an assurance map that identifies key risks and the assurance provided by each line and external providers. The map enables the board to understand coverage, identify gaps, and avoid unnecessary duplication. The assurance map is reviewed periodically and updated for changes in risk profile.",
+      "domain": "External Assurance",
+      "category": "Assurance Mapping",
+      "section_number": "EA.2",
+      "parent_section": "EA",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Combined assurance map",
+        "Risk coverage analysis",
+        "Assurance provider inventory",
+        "Gap analysis in assurance coverage"
+      ]
+    },
+    {
+      "control_id": "EA.3",
+      "original_reference": "Model Integration - Effectiveness",
+      "title": "Three Lines Model Effectiveness Review",
+      "description": "The organization periodically reviews the effectiveness of the Three Lines Model and makes improvements.",
+      "full_text": "The governing body and senior management periodically assess whether the Three Lines Model is operating effectively. The review considers whether roles are clearly defined, coordination is effective, and there are no significant gaps or overlaps. Improvements are made to governance structures based on the assessment.",
+      "domain": "Model Integration",
+      "category": "Effectiveness",
+      "section_number": "EA.3",
+      "parent_section": "EA",
+      "is_mandatory": false,
+      "priority": "low",
+      "evidence_requirements": [
+        "Three Lines effectiveness review report",
+        "Governance structure assessments",
+        "Improvement action plans",
+        "Board review of governance effectiveness"
+      ]
+    }
+  ]
+}

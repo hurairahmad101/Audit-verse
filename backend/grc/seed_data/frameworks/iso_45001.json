@@ -1,0 +1,391 @@
+{
+  "metadata": {
+    "name": "ISO 45001:2018 Occupational Health and Safety Management Systems",
+    "description": "ISO 45001:2018 specifies requirements for an occupational health and safety (OH&S) management system, with guidance for its use, to enable organizations to provide safe and healthy workplaces by preventing work-related injury and ill health. It replaces OHSAS 18001.",
+    "version": "2018",
+    "source_organization": "International Organization for Standardization (ISO)",
+    "effective_date": "2018-03-12",
+    "classification": "certification",
+    "framework_type": "certification",
+    "classification_confidence": 0.97,
+    "classification_reasoning": "ISO 45001 is the international certification standard for occupational health and safety, replacing OHSAS 18001 with over 80,000 organizations certified worldwide.",
+    "framework_purpose": "To enable organizations to provide safe and healthy workplaces for workers and other persons, and to proactively improve OH&S performance.",
+    "framework_scope": "All organizations regardless of size, type, or nature that wish to establish, implement, and maintain an OH&S management system to improve OH&S performance.",
+    "framework_objectives": [
+      "Eliminate hazards and minimize OH&S risks",
+      "Take advantage of OH&S opportunities",
+      "Address OH&S management system nonconformities",
+      "Achieve continual improvement of OH&S performance",
+      "Fulfill legal and other requirements"
+    ],
+    "target_audience": "Health and Safety Managers, HR Directors, Operations Managers, Internal Auditors, Senior Management, and organizations with significant workplace hazards",
+    "regulatory_authority": "ISO (International Organization for Standardization)",
+    "adoption_approach": [
+      "Understand organizational context and worker consultation needs",
+      "Identify hazards, risks, and opportunities",
+      "Establish OH&S objectives",
+      "Implement operational controls including hierarchy of controls",
+      "Monitor and measure OH&S performance",
+      "Conduct internal audits and management reviews"
+    ],
+    "hierarchy_structure": {
+      "levels": ["Clause", "Sub-clause"],
+      "numbering_pattern": "N.N (e.g., 4.1, 6.1)"
+    },
+    "document_structure": {
+      "sections": [
+        "Clause 4: Context of the Organization",
+        "Clause 5: Leadership and Worker Participation",
+        "Clause 6: Planning",
+        "Clause 7: Support",
+        "Clause 8: Operation",
+        "Clause 9: Performance Evaluation",
+        "Clause 10: Improvement"
+      ]
+    },
+    "total_controls": 18
+  },
+  "controls": [
+    {
+      "control_id": "5.4",
+      "original_reference": "Clause 5.4",
+      "title": "Worker Consultation and Participation",
+      "description": "The organization shall establish, implement, and maintain processes for consultation and participation of workers at all applicable levels and functions in the development, planning, implementation, performance evaluation, and actions for improvement of the OH&S management system.",
+      "full_text": "Workers must be consulted and participate in OH&S management system development and implementation. Consultation mechanisms include safety committees, hazard reporting systems, and regular communication. Workers must be able to raise concerns without fear of reprisal.",
+      "domain": "Leadership and Worker Participation",
+      "category": "Worker Participation",
+      "section_number": "5.4",
+      "parent_section": "5",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Worker consultation mechanisms documentation",
+        "Safety committee meeting minutes",
+        "Hazard reporting system records",
+        "Worker feedback and response records"
+      ]
+    },
+    {
+      "control_id": "6.1.1",
+      "original_reference": "Clause 6.1.1",
+      "title": "Hazard Identification",
+      "description": "The organization shall establish, implement, and maintain processes for ongoing and proactive hazard identification.",
+      "full_text": "Conduct systematic hazard identification covering all routine and non-routine activities, situations, and workplaces. Consider hazards related to people (behavior, capabilities), work organization, physical environment (heat, noise, vibration), chemical, biological, and ergonomic hazards. Include contractors and visitors.",
+      "domain": "Planning",
+      "category": "Hazard Identification",
+      "section_number": "6.1.1",
+      "parent_section": "6.1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Hazard identification procedures",
+        "Hazard register",
+        "Job safety analysis (JSA) records",
+        "Hazard reporting system"
+      ]
+    },
+    {
+      "control_id": "6.1.2",
+      "original_reference": "Clause 6.1.2",
+      "title": "OH&S Risk Assessment",
+      "description": "The organization shall establish, implement, and maintain processes to assess OH&S risks from the identified hazards.",
+      "full_text": "Assess OH&S risks using a systematic methodology that considers likelihood and severity of harm. Determine current controls and evaluate residual risk levels. Prioritize risks for action. Document risk assessments and keep them current.",
+      "domain": "Planning",
+      "category": "Risk Assessment",
+      "section_number": "6.1.2",
+      "parent_section": "6.1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "OH&S risk assessment methodology",
+        "Risk assessment records",
+        "Risk register with prioritization",
+        "Risk assessment review records"
+      ]
+    },
+    {
+      "control_id": "6.1.3",
+      "original_reference": "Clause 6.1.3",
+      "title": "Legal and Other OH&S Requirements",
+      "description": "The organization shall establish, implement, and maintain processes to determine and have access to up-to-date legal requirements and other requirements applicable to its hazards and OH&S risks.",
+      "full_text": "Identify and maintain current knowledge of all applicable OH&S legal requirements including regulations, standards, permits, and government agency requirements. Determine how these requirements apply to the organization. Communicate compliance requirements to workers.",
+      "domain": "Planning",
+      "category": "Compliance Obligations",
+      "section_number": "6.1.3",
+      "parent_section": "6.1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "OH&S legal register",
+        "Regulatory compliance tracking",
+        "Permit inventory",
+        "Compliance monitoring records"
+      ]
+    },
+    {
+      "control_id": "8.1.2",
+      "original_reference": "Clause 8.1.2",
+      "title": "Hierarchy of Controls",
+      "description": "The organization shall establish, implement, and maintain processes for the elimination of hazards and reduction of OH&S risks using the hierarchy of controls.",
+      "full_text": "Apply the hierarchy of controls to reduce OH&S risks: (1) Elimination, (2) Substitution, (3) Engineering controls, (4) Administrative controls, (5) Personal protective equipment. Document the selection of controls and reasons for choosing specific levels of the hierarchy.",
+      "domain": "Operation",
+      "category": "Hazard Controls",
+      "section_number": "8.1.2",
+      "parent_section": "8.1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Hierarchy of controls documentation",
+        "Engineering control designs",
+        "Administrative control procedures",
+        "PPE specification and management records"
+      ]
+    },
+    {
+      "control_id": "8.1.3",
+      "original_reference": "Clause 8.1.3",
+      "title": "Management of Change",
+      "description": "The organization shall establish processes for the implementation and control of planned temporary and permanent changes that impact OH&S performance.",
+      "full_text": "Manage changes to processes, equipment, materials, and workforce that may affect OH&S. Conduct OH&S risk assessment before implementing changes. Implement temporary controls during transition periods. Communicate changes to affected workers. Review the effects of unintended changes.",
+      "domain": "Operation",
+      "category": "Change Management",
+      "section_number": "8.1.3",
+      "parent_section": "8.1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Change management procedure",
+        "Pre-change risk assessments",
+        "Change implementation records",
+        "Worker communication records for changes"
+      ]
+    },
+    {
+      "control_id": "8.2",
+      "original_reference": "Clause 8.2",
+      "title": "Emergency Preparedness and Response",
+      "description": "The organization shall establish, implement, and maintain processes needed to prepare for and respond to potential emergency situations.",
+      "full_text": "Identify potential OH&S emergency situations (fires, medical emergencies, chemical spills, natural disasters). Develop and maintain emergency response plans. Train workers on emergency procedures. Conduct drills and exercises. Review and update plans after emergencies.",
+      "domain": "Operation",
+      "category": "Emergency Response",
+      "section_number": "8.2",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Emergency response plans",
+        "Emergency drill records",
+        "First aid resources documentation",
+        "Emergency response training records"
+      ]
+    },
+    {
+      "control_id": "9.1.1",
+      "original_reference": "Clause 9.1.1",
+      "title": "OH&S Performance Monitoring",
+      "description": "The organization shall establish, implement, and maintain processes to monitor, measure, analyze, and evaluate OH&S performance.",
+      "full_text": "Monitor OH&S performance including leading indicators (near misses, hazard reports, training completion) and lagging indicators (injury rates, lost time incidents, occupational illnesses). Analyze trends. Evaluate effectiveness of OH&S controls. Report performance to management.",
+      "domain": "Performance Evaluation",
+      "category": "Performance Monitoring",
+      "section_number": "9.1.1",
+      "parent_section": "9.1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "OH&S KPI data and trends",
+        "Injury and illness records (OSHA 300 or equivalent)",
+        "Near miss reporting statistics",
+        "OH&S performance reports"
+      ]
+    },
+    {
+      "control_id": "9.1.2",
+      "original_reference": "Clause 9.1.2",
+      "title": "OH&S Compliance Evaluation",
+      "description": "The organization shall establish, implement, and maintain processes to evaluate fulfillment of legal requirements and other requirements.",
+      "full_text": "Periodically evaluate compliance with applicable OH&S legal requirements and other requirements. Determine frequency and methods for compliance evaluation. Document compliance status. Take action when a non-compliance is identified. Maintain records of compliance evaluations.",
+      "domain": "Performance Evaluation",
+      "category": "Compliance Evaluation",
+      "section_number": "9.1.2",
+      "parent_section": "9.1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "OH&S compliance evaluation reports",
+        "Regulatory inspection results",
+        "Non-compliance corrective actions",
+        "Regulatory correspondence"
+      ]
+    },
+    {
+      "control_id": "10.2",
+      "original_reference": "Clause 10.2",
+      "title": "Incident Investigation",
+      "description": "The organization shall establish, implement, and maintain processes to report, investigate, and take action on work-related incidents.",
+      "full_text": "Investigate all work-related injuries, illnesses, and near misses to determine causes and implement corrective actions. Include root cause analysis. Involve workers in investigations. Report findings to management. Implement corrective actions to prevent recurrence. Share learnings.",
+      "domain": "Improvement",
+      "category": "Incident Investigation",
+      "section_number": "10.2",
+      "parent_section": "10",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Incident investigation reports",
+        "Root cause analysis documentation",
+        "Corrective action plans",
+        "Lessons learned communication records"
+      ]
+    },
+    {
+      "control_id": "7.2",
+      "original_reference": "Clause 7.2",
+      "title": "OH&S Competence",
+      "description": "The organization shall determine the necessary competence of workers that affects, or can affect, its OH&S performance and ensure that workers are competent on the basis of appropriate education, training, or experience.",
+      "full_text": "Identify OH&S competency requirements by role and workplace. Ensure workers performing safety-critical tasks are trained and competent. Maintain training records. Evaluate training effectiveness. Address competency gaps through training or reassignment.",
+      "domain": "Support",
+      "category": "Competence",
+      "section_number": "7.2",
+      "parent_section": "7",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "OH&S training records",
+        "Competency assessments",
+        "Safety certification records",
+        "Training effectiveness evaluations"
+      ]
+    },
+    {
+      "control_id": "8.1.4",
+      "original_reference": "Clause 8.1.4",
+      "title": "Contractor and Outsourcing Safety",
+      "description": "The organization shall coordinate with contractors and take into account OH&S risks arising from contractors' activities and the effect of the organization's activities on contractors.",
+      "full_text": "Manage OH&S risks from contractors and subcontractors. Include OH&S requirements in contractor pre-qualification and contracts. Communicate site-specific hazards to contractors. Monitor contractor OH&S performance. Ensure contractor personnel receive appropriate safety orientation.",
+      "domain": "Operation",
+      "category": "Contractor Safety",
+      "section_number": "8.1.4",
+      "parent_section": "8.1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Contractor OH&S requirements",
+        "Contractor pre-qualification records",
+        "Contractor safety induction records",
+        "Contractor incident records"
+      ]
+    },
+    {
+      "control_id": "6.2",
+      "original_reference": "Clause 6.2",
+      "title": "OH&S Objectives",
+      "description": "The organization shall establish OH&S objectives at relevant functions and levels to maintain and continually improve the OH&S management system and OH&S performance.",
+      "full_text": "Set measurable OH&S objectives aligned with the OH&S policy. Objectives address risk reduction, regulatory compliance, and performance improvement. Develop action plans with responsibilities, timelines, resources, and evaluation methods. Monitor progress against objectives.",
+      "domain": "Planning",
+      "category": "OH&S Objectives",
+      "section_number": "6.2",
+      "parent_section": "6",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "OH&S objectives documentation",
+        "KPI tracking records",
+        "Action plans for OH&S objectives"
+      ]
+    },
+    {
+      "control_id": "5.2",
+      "original_reference": "Clause 5.2",
+      "title": "OH&S Policy",
+      "description": "Top management shall establish, implement, and maintain an OH&S policy that includes commitments to provide safe and healthy working conditions, eliminate hazards, fulfill legal requirements, and continually improve.",
+      "full_text": "Establish an OH&S policy that commits to safe and healthy workplaces, elimination of hazards, compliance with legal requirements, consultation with workers, and continual improvement. Communicate the policy to all workers and make it available to interested parties.",
+      "domain": "Leadership and Worker Participation",
+      "category": "OH&S Policy",
+      "section_number": "5.2",
+      "parent_section": "5",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Documented OH&S policy",
+        "Policy approval records",
+        "Policy communication records",
+        "Policy availability documentation"
+      ]
+    },
+    {
+      "control_id": "9.2",
+      "original_reference": "Clause 9.2",
+      "title": "Internal OH&S Audit",
+      "description": "The organization shall conduct internal audits at planned intervals to provide information on whether the OH&S management system conforms to requirements and is effectively implemented.",
+      "full_text": "Conduct internal OH&S audits using a planned audit program. Auditors must be impartial and objective. Audit findings are reported to management. Nonconformances require corrective action. Include high-hazard areas in audit scope. Results are an input to management review.",
+      "domain": "Performance Evaluation",
+      "category": "Internal Audit",
+      "section_number": "9.2",
+      "parent_section": "9",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "OH&S audit program",
+        "Internal audit reports",
+        "Auditor competency records",
+        "Corrective actions from audits"
+      ]
+    },
+    {
+      "control_id": "10.3",
+      "original_reference": "Clause 10.3",
+      "title": "Continual OH&S Improvement",
+      "description": "The organization shall continually improve the suitability, adequacy, and effectiveness of the OH&S management system to enhance OH&S performance.",
+      "full_text": "Demonstrate continual improvement of the OH&S management system through objective performance trends, incident rate reductions, and enhanced preventive measures. Share OH&S improvements across the organization. Benchmark against industry best practices.",
+      "domain": "Improvement",
+      "category": "Continual Improvement",
+      "section_number": "10.3",
+      "parent_section": "10",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "OH&S performance trend data",
+        "Improvement initiative records",
+        "Benchmarking results",
+        "Year-over-year safety metrics"
+      ]
+    },
+    {
+      "control_id": "7.4",
+      "original_reference": "Clause 7.4",
+      "title": "OH&S Communication",
+      "description": "The organization shall establish, implement, and maintain processes needed for internal and external communications relevant to the OH&S management system.",
+      "full_text": "Establish OH&S communication processes for internal communication between levels and functions, and external communication with contractors, visitors, and emergency services. Communication content includes hazards, risks, procedures, incidents, and safety performance. Maintain communication records.",
+      "domain": "Support",
+      "category": "Communication",
+      "section_number": "7.4",
+      "parent_section": "7",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Safety communication plan",
+        "Safety meeting records",
+        "Toolbox talk records",
+        "Safety bulletin and notice records"
+      ]
+    },
+    {
+      "control_id": "8.6",
+      "original_reference": "Clause 8.6 / 8.1.1",
+      "title": "Workplace Safety Inspections",
+      "description": "The organization shall implement planned workplace inspections and safety observations to identify hazards and verify control effectiveness.",
+      "full_text": "Conduct regular workplace safety inspections and safety observations to identify hazardous conditions and at-risk behaviors. Document inspection findings and corrective actions. Involve workers in inspections. Track correction of deficiencies. Report inspection results to management.",
+      "domain": "Operation",
+      "category": "Safety Inspections",
+      "section_number": "8.6",
+      "parent_section": "8",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Inspection program and schedule",
+        "Inspection reports and findings",
+        "Corrective action tracking",
+        "Safety observation records"
+      ]
+    }
+  ]
+}

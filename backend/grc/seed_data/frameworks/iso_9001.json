@@ -1,0 +1,424 @@
+{
+  "metadata": {
+    "name": "ISO 9001:2015 Quality Management Systems",
+    "description": "ISO 9001:2015 sets out the criteria for a quality management system (QMS) and is the only standard in the ISO 9000 family that can be certified to. It is based on a number of quality management principles including a strong customer focus, the motivation and implication of top management, the process approach, and continual improvement.",
+    "version": "2015",
+    "source_organization": "International Organization for Standardization (ISO)",
+    "effective_date": "2015-09-23",
+    "classification": "certification",
+    "framework_type": "certification",
+    "classification_confidence": 0.98,
+    "classification_reasoning": "ISO 9001 is a certification standard requiring formal audits by accredited certification bodies, with approximately 1 million organizations certified worldwide.",
+    "framework_purpose": "To provide requirements for a quality management system that enables organizations to consistently provide products and services that meet customer and regulatory requirements.",
+    "framework_scope": "All organizations regardless of type, size, or products and services provided. Applicable to any organization seeking to demonstrate its ability to consistently provide quality products and services.",
+    "framework_objectives": [
+      "Consistently meet customer requirements",
+      "Enhance customer satisfaction",
+      "Address risks and opportunities",
+      "Demonstrate conformity to specified requirements",
+      "Continually improve the QMS"
+    ],
+    "target_audience": "Quality Managers, Operations Managers, Process Owners, Internal Auditors, Senior Management, and certification-seeking organizations",
+    "regulatory_authority": "ISO (International Organization for Standardization)",
+    "adoption_approach": [
+      "Understand organizational context and stakeholder needs",
+      "Establish quality management system scope",
+      "Map processes and their interactions",
+      "Implement quality planning and controls",
+      "Conduct internal audits and management reviews",
+      "Obtain third-party certification"
+    ],
+    "hierarchy_structure": {
+      "levels": ["Clause", "Sub-clause"],
+      "numbering_pattern": "N.N (e.g., 4.1, 6.1)"
+    },
+    "document_structure": {
+      "sections": [
+        "Clause 4: Context of the Organization",
+        "Clause 5: Leadership",
+        "Clause 6: Planning",
+        "Clause 7: Support",
+        "Clause 8: Operation",
+        "Clause 9: Performance Evaluation",
+        "Clause 10: Improvement"
+      ]
+    },
+    "total_controls": 20
+  },
+  "controls": [
+    {
+      "control_id": "4.1",
+      "original_reference": "Clause 4.1",
+      "title": "Understanding the Organization and Its Context",
+      "description": "The organization shall determine external and internal issues that are relevant to its purpose and that affect its ability to achieve the intended results of its quality management system.",
+      "full_text": "The organization must conduct a PESTLE or SWOT analysis to identify internal and external factors relevant to quality. These include competitive factors, market changes, technology developments, regulatory requirements, and organizational capabilities. This analysis informs QMS scope and planning.",
+      "domain": "Context of the Organization",
+      "category": "Organizational Context",
+      "section_number": "4.1",
+      "parent_section": "4",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Context analysis documentation (SWOT/PESTLE)",
+        "Periodic review records of context",
+        "Issue register"
+      ]
+    },
+    {
+      "control_id": "4.2",
+      "original_reference": "Clause 4.2",
+      "title": "Understanding Needs and Expectations of Interested Parties",
+      "description": "The organization shall determine the interested parties relevant to the QMS and their relevant requirements.",
+      "full_text": "Identify interested parties (customers, regulators, employees, suppliers) and their relevant needs and expectations. Document these requirements and monitor them for changes. Interested party requirements inform quality planning and product/service design.",
+      "domain": "Context of the Organization",
+      "category": "Stakeholder Management",
+      "section_number": "4.2",
+      "parent_section": "4",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Interested parties register",
+        "Requirements documentation",
+        "Review records for stakeholder requirements"
+      ]
+    },
+    {
+      "control_id": "5.1",
+      "original_reference": "Clause 5.1",
+      "title": "Leadership and Commitment",
+      "description": "Top management shall demonstrate leadership and commitment with respect to the quality management system.",
+      "full_text": "Top management must demonstrate active commitment to the QMS by establishing quality policy, ensuring integration of QMS requirements into business processes, promoting customer focus, and providing resources. Management cannot delegate its overall accountability for QMS effectiveness.",
+      "domain": "Leadership",
+      "category": "Leadership",
+      "section_number": "5.1",
+      "parent_section": "5",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Signed quality policy",
+        "Management review minutes",
+        "Resource allocation records",
+        "Management participation in QMS activities"
+      ]
+    },
+    {
+      "control_id": "5.2",
+      "original_reference": "Clause 5.2",
+      "title": "Quality Policy",
+      "description": "Top management shall establish, implement, and maintain a quality policy appropriate to the organization's purpose and context.",
+      "full_text": "The quality policy must be appropriate to the organization, provide a framework for quality objectives, include a commitment to satisfy applicable requirements, and include a commitment to continual improvement. It must be communicated throughout the organization and available to relevant interested parties.",
+      "domain": "Leadership",
+      "category": "Quality Policy",
+      "section_number": "5.2",
+      "parent_section": "5",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Documented and approved quality policy",
+        "Policy communication records",
+        "Policy availability to stakeholders"
+      ]
+    },
+    {
+      "control_id": "5.3",
+      "original_reference": "Clause 5.3",
+      "title": "Organizational Roles, Responsibilities, and Authorities",
+      "description": "Top management shall ensure that the responsibilities and authorities for relevant roles are assigned, communicated, and understood within the organization.",
+      "full_text": "Assign quality management responsibilities throughout the organization. A management representative (Quality Manager) is accountable for QMS compliance. All personnel understand their quality responsibilities. Roles, responsibilities, and authorities are documented and communicated.",
+      "domain": "Leadership",
+      "category": "Roles and Responsibilities",
+      "section_number": "5.3",
+      "parent_section": "5",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Quality management responsibility matrix",
+        "Job descriptions with quality roles",
+        "Organization chart"
+      ]
+    },
+    {
+      "control_id": "6.1",
+      "original_reference": "Clause 6.1",
+      "title": "Actions to Address Risks and Opportunities",
+      "description": "When planning for the QMS, the organization shall consider the issues referred to in 4.1 and requirements in 4.2 and determine the risks and opportunities that need to be addressed.",
+      "full_text": "Conduct risk-based thinking throughout the QMS. Identify risks and opportunities related to quality objectives. Plan actions to address them proportional to their potential impact on product/service conformity. Monitor the effectiveness of actions taken.",
+      "domain": "Planning",
+      "category": "Risk and Opportunity Management",
+      "section_number": "6.1",
+      "parent_section": "6",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Risk and opportunity register",
+        "Risk treatment actions",
+        "Effectiveness monitoring of actions"
+      ]
+    },
+    {
+      "control_id": "6.2",
+      "original_reference": "Clause 6.2",
+      "title": "Quality Objectives",
+      "description": "The organization shall establish quality objectives at relevant functions, levels, and processes needed for the QMS.",
+      "full_text": "Establish measurable quality objectives consistent with the quality policy. Objectives must be communicated, measurable, monitored, updated as needed, and linked to the quality policy. Plans to achieve objectives must identify actions, resources, responsibilities, and timelines.",
+      "domain": "Planning",
+      "category": "Quality Objectives",
+      "section_number": "6.2",
+      "parent_section": "6",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Quality objectives document",
+        "KPI tracking records",
+        "Objective achievement reports",
+        "Action plans for objectives"
+      ]
+    },
+    {
+      "control_id": "7.1",
+      "original_reference": "Clause 7.1",
+      "title": "Resources",
+      "description": "The organization shall determine and provide the resources needed for the establishment, implementation, maintenance, and continual improvement of the QMS.",
+      "full_text": "Determine and provide adequate resources including people, infrastructure, process environment, monitoring equipment, and organizational knowledge. Resources must be sufficient for QMS operation and continual improvement.",
+      "domain": "Support",
+      "category": "Resources",
+      "section_number": "7.1",
+      "parent_section": "7",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Resource allocation records",
+        "Infrastructure maintenance records",
+        "Calibration and measurement records",
+        "Knowledge management processes"
+      ]
+    },
+    {
+      "control_id": "7.2",
+      "original_reference": "Clause 7.2",
+      "title": "Competence",
+      "description": "The organization shall determine the necessary competence of persons doing work under its control that affects the performance and effectiveness of the QMS.",
+      "full_text": "Identify required competencies, ensure personnel have the necessary competence through education, training, or experience, take action to address gaps, and retain evidence of competence. Quality competence is essential for product/service quality.",
+      "domain": "Support",
+      "category": "Competence",
+      "section_number": "7.2",
+      "parent_section": "7",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Competency requirements by role",
+        "Training records and certifications",
+        "Competency assessments",
+        "Skills gap analysis"
+      ]
+    },
+    {
+      "control_id": "7.5",
+      "original_reference": "Clause 7.5",
+      "title": "Documented Information",
+      "description": "The organization's QMS shall include documented information required by the standard and documented information determined by the organization as being necessary for the effectiveness of the QMS.",
+      "full_text": "Maintain required QMS documentation including quality manual, quality policy, quality objectives, procedures, and records. Control documented information for creation, update, and distribution. Retain documented information as evidence of conformity.",
+      "domain": "Support",
+      "category": "Documentation",
+      "section_number": "7.5",
+      "parent_section": "7",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "QMS documentation register",
+        "Document control procedures",
+        "Records management system",
+        "Document review and approval records"
+      ]
+    },
+    {
+      "control_id": "8.1",
+      "original_reference": "Clause 8.1",
+      "title": "Operational Planning and Control",
+      "description": "The organization shall plan, implement, control, monitor, and review the processes needed to meet the requirements for the provision of products and services.",
+      "full_text": "Plan and control operational processes by establishing criteria, implementing process controls, maintaining documented information, and controlling planned changes. Review unintended changes and mitigate adverse effects. Ensure externally provided processes are controlled.",
+      "domain": "Operation",
+      "category": "Operational Control",
+      "section_number": "8.1",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Process documentation and procedures",
+        "Process control records",
+        "Change management records",
+        "Supplier/subcontractor controls"
+      ]
+    },
+    {
+      "control_id": "8.4",
+      "original_reference": "Clause 8.4",
+      "title": "Control of Externally Provided Processes, Products, and Services",
+      "description": "The organization shall ensure that externally provided processes, products, and services conform to requirements.",
+      "full_text": "Determine and apply criteria for evaluation, selection, monitoring, and re-evaluation of external providers. Communicate requirements to external providers and maintain documented information of evaluation activities. Control extends to sub-tier suppliers where applicable.",
+      "domain": "Operation",
+      "category": "Supplier Management",
+      "section_number": "8.4",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Approved supplier list",
+        "Supplier evaluation records",
+        "Purchase order requirements",
+        "Supplier performance monitoring"
+      ]
+    },
+    {
+      "control_id": "8.5",
+      "original_reference": "Clause 8.5",
+      "title": "Production and Service Provision",
+      "description": "The organization shall implement production and service provision under controlled conditions.",
+      "full_text": "Implement controlled conditions for production and service delivery including documented information, resource availability, monitoring activities, and infrastructure. Identify and trace outputs, preserve outputs, and control post-delivery activities. Manage changes to production.",
+      "domain": "Operation",
+      "category": "Production Control",
+      "section_number": "8.5",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Production procedures and work instructions",
+        "Traceability records",
+        "Product/service inspection records",
+        "Change control records"
+      ]
+    },
+    {
+      "control_id": "8.7",
+      "original_reference": "Clause 8.7",
+      "title": "Control of Nonconforming Outputs",
+      "description": "The organization shall ensure that outputs that do not conform to their requirements are identified and controlled to prevent their unintended use or delivery.",
+      "full_text": "Identify, segregate, and disposition nonconforming products and services. Actions include correction, concession, segregation, containment, return, or notification to customer. Document nonconformances and authorization for dispositions. Retain records of nonconformances.",
+      "domain": "Operation",
+      "category": "Nonconformance Control",
+      "section_number": "8.7",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Nonconformance log",
+        "Disposition records",
+        "Customer notification records",
+        "Corrective action linkage"
+      ]
+    },
+    {
+      "control_id": "9.1",
+      "original_reference": "Clause 9.1",
+      "title": "Monitoring, Measurement, Analysis, and Evaluation",
+      "description": "The organization shall determine what needs to be monitored and measured, the methods to be used, when to analyze and evaluate the results, and when to report results.",
+      "full_text": "Determine quality KPIs, measurement methods, and evaluation frequency. Monitor customer satisfaction as a measure of QMS performance. Analyze data from monitoring to evaluate QMS effectiveness, product conformity, and supplier performance.",
+      "domain": "Performance Evaluation",
+      "category": "Monitoring",
+      "section_number": "9.1",
+      "parent_section": "9",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Quality KPI dashboard",
+        "Customer satisfaction surveys",
+        "Process performance metrics",
+        "Data analysis reports"
+      ]
+    },
+    {
+      "control_id": "9.2",
+      "original_reference": "Clause 9.2",
+      "title": "Internal Audit",
+      "description": "The organization shall conduct internal audits at planned intervals to provide information on whether the QMS conforms to requirements and is effectively implemented.",
+      "full_text": "Conduct planned internal quality audits using a documented program. Audits cover all QMS requirements and processes on a defined cycle. Internal auditors must be objective and impartial. Audit results are reported to management. Nonconformances found in audit require corrective action.",
+      "domain": "Performance Evaluation",
+      "category": "Internal Audit",
+      "section_number": "9.2",
+      "parent_section": "9",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Internal audit program",
+        "Audit schedule and reports",
+        "Auditor competency records",
+        "Corrective actions from audits"
+      ]
+    },
+    {
+      "control_id": "9.3",
+      "original_reference": "Clause 9.3",
+      "title": "Management Review",
+      "description": "Top management shall review the organization's QMS at planned intervals to ensure its continuing suitability, adequacy, effectiveness, and alignment with strategic direction.",
+      "full_text": "Conduct management reviews at least annually. Review inputs include customer feedback, process performance, product conformity, audit results, supplier performance, and risk status. Outputs include decisions on improvement opportunities, changes to the QMS, and resource needs.",
+      "domain": "Performance Evaluation",
+      "category": "Management Review",
+      "section_number": "9.3",
+      "parent_section": "9",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Management review meeting minutes",
+        "Review inputs documentation",
+        "Decisions and action items",
+        "Action item follow-up records"
+      ]
+    },
+    {
+      "control_id": "10.1",
+      "original_reference": "Clause 10.1",
+      "title": "General Improvement",
+      "description": "The organization shall determine and select opportunities for improvement and implement any necessary actions to meet customer requirements and enhance customer satisfaction.",
+      "full_text": "Identify improvement opportunities from internal audits, customer feedback, nonconformances, and data analysis. Implement improvements to processes, products, and the QMS itself. Continual improvement is a core requirement of ISO 9001.",
+      "domain": "Improvement",
+      "category": "Continual Improvement",
+      "section_number": "10.1",
+      "parent_section": "10",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Improvement initiative log",
+        "Improvement outcomes and metrics",
+        "Innovation and process improvement records"
+      ]
+    },
+    {
+      "control_id": "10.2",
+      "original_reference": "Clause 10.2",
+      "title": "Nonconformity and Corrective Action",
+      "description": "When a nonconformity occurs, the organization shall react to the nonconformity, take action to control and correct it, deal with the consequences, and take corrective action to eliminate the cause.",
+      "full_text": "When nonconformities occur, react to address them, investigate root cause, implement corrective actions, and verify their effectiveness. Update risk assessments and QMS if necessary. Retain evidence of nonconformities and corrective actions taken. Corrective actions are proportional to effects of nonconformities.",
+      "domain": "Improvement",
+      "category": "Corrective Action",
+      "section_number": "10.2",
+      "parent_section": "10",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Corrective Action Reports (CARs)",
+        "Root cause analysis records",
+        "Effectiveness verification evidence",
+        "Corrective action closure records"
+      ]
+    },
+    {
+      "control_id": "10.3",
+      "original_reference": "Clause 10.3",
+      "title": "Continual Improvement",
+      "description": "The organization shall continually improve the suitability, adequacy, and effectiveness of the quality management system.",
+      "full_text": "Demonstrate continual improvement of the QMS through management review outputs, customer feedback analysis, process performance trends, and strategic improvement initiatives. Track improvement over time and demonstrate positive trends in quality performance.",
+      "domain": "Improvement",
+      "category": "Continual Improvement",
+      "section_number": "10.3",
+      "parent_section": "10",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "QMS improvement trend data",
+        "Year-over-year quality metrics",
+        "Strategic improvement plans",
+        "Certification body feedback"
+      ]
+    }
+  ]
+}

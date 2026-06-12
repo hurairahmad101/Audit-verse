@@ -1,0 +1,389 @@
+{
+  "metadata": {
+    "name": "CSRD (Corporate Sustainability Reporting Directive)",
+    "description": "The Corporate Sustainability Reporting Directive (CSRD) is an EU directive that modernizes and strengthens sustainability reporting requirements for large companies and listed SMEs. It extends mandatory sustainability reporting to approximately 50,000 EU companies and requires reporting using European Sustainability Reporting Standards (ESRS).",
+    "version": "EU 2022/2464 (2024 Application)",
+    "source_organization": "European Commission / European Union",
+    "effective_date": "2024-01-01",
+    "classification": "regulatory",
+    "framework_type": "regulatory",
+    "classification_confidence": 0.98,
+    "classification_reasoning": "CSRD is a legally binding EU directive requiring mandatory sustainability reporting and third-party assurance for large EU companies and listed SMEs, with phased implementation from 2024-2028.",
+    "framework_purpose": "To improve the consistency, comparability, and reliability of corporate sustainability information to enable investors and stakeholders to make informed decisions about sustainability risks and impacts.",
+    "framework_scope": "Large EU public interest entities (PIEs) from 2024, other large companies from 2025, listed SMEs from 2026, and non-EU companies with significant EU business from 2028.",
+    "framework_objectives": [
+      "Standardize sustainability reporting using ESRS",
+      "Enable double materiality assessment",
+      "Require limited assurance on sustainability disclosures",
+      "Align with EU Taxonomy and other EU sustainable finance legislation",
+      "Support transition to sustainable economy"
+    ],
+    "target_audience": "CFOs, Sustainability Officers, ESG Teams, Boards of Directors, Legal/Compliance Teams, Auditors, and all large EU companies",
+    "regulatory_authority": "European Commission / European Financial Reporting Advisory Group (EFRAG)",
+    "adoption_approach": [
+      "Assess scope and determine when CSRD applies",
+      "Conduct double materiality assessment",
+      "Identify applicable ESRS standards",
+      "Implement data collection processes",
+      "Prepare sustainability statement in management report",
+      "Obtain limited assurance from external auditor"
+    ],
+    "hierarchy_structure": {
+      "levels": ["ESRS Set", "Standard", "Disclosure Requirement"],
+      "numbering_pattern": "ESRS E/S/G/GOV-N DR-N"
+    },
+    "document_structure": {
+      "sections": [
+        "ESRS 1: General Requirements",
+        "ESRS 2: General Disclosures",
+        "Environmental Standards (E1-E5)",
+        "Social Standards (S1-S4)",
+        "Governance Standards (G1)"
+      ]
+    },
+    "total_controls": 18
+  },
+  "controls": [
+    {
+      "control_id": "ESRS1-DMA",
+      "original_reference": "ESRS 1 - Double Materiality",
+      "title": "Double Materiality Assessment",
+      "description": "Companies must conduct a double materiality assessment to identify material sustainability topics covering both impact materiality and financial materiality.",
+      "full_text": "Conduct a double materiality assessment (DMA) covering: (1) Impact materiality — actual or potential significant impacts on people and environment (inward and outward), and (2) Financial materiality — sustainability-related risks and opportunities with significant financial effects. The DMA determines which ESRS topics are material and must be reported.",
+      "domain": "ESRS 1 - General Requirements",
+      "category": "Materiality",
+      "section_number": "DMA.1",
+      "parent_section": "ESRS 1",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Double materiality assessment process documentation",
+        "Stakeholder engagement in DMA",
+        "Materiality matrix covering impact and financial materiality",
+        "Material topics list with rationale"
+      ]
+    },
+    {
+      "control_id": "ESRS2-GOV",
+      "original_reference": "ESRS 2 - Governance",
+      "title": "Governance Structure and Sustainability Oversight",
+      "description": "Disclose the governance bodies and functions responsible for sustainability, including their roles in oversight, decision-making, and accountability.",
+      "full_text": "Disclose the roles of governance bodies (board, supervisory board, management) in sustainability oversight. Include how sustainability is integrated into governance including sustainability-related competencies, information flows to governance bodies, and integration of sustainability in remuneration policies. Disclose the sustainability statement preparation process.",
+      "domain": "ESRS 2 - General Disclosures",
+      "category": "Governance",
+      "section_number": "GOV.1",
+      "parent_section": "ESRS 2",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Board sustainability governance documentation",
+        "Sustainability committee charter",
+        "Board sustainability competencies",
+        "Sustainability in remuneration policy"
+      ]
+    },
+    {
+      "control_id": "ESRS2-STR",
+      "original_reference": "ESRS 2 - Strategy",
+      "title": "Business Model and Value Chain Sustainability",
+      "description": "Disclose the company's business model, value chain, and how sustainability considerations are integrated into strategy.",
+      "full_text": "Describe the company's business model and value chain including: main business activities, markets, products, customers, and supply chain. Describe how sustainability risks and opportunities influence business model and strategy. Disclose the resilience of strategy to sustainability risks and how the company plans to adjust strategy for transition.",
+      "domain": "ESRS 2 - General Disclosures",
+      "category": "Strategy",
+      "section_number": "SBM.1",
+      "parent_section": "ESRS 2",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Business model and value chain description",
+        "Strategy sustainability integration",
+        "Transition plan description",
+        "Sustainability risks in strategic planning"
+      ]
+    },
+    {
+      "control_id": "ESRS-E1",
+      "original_reference": "ESRS E1 - Climate Change",
+      "title": "Climate Change Mitigation and Adaptation",
+      "description": "Disclose the company's material impacts, risks, and opportunities related to climate change, including GHG emissions, energy consumption, and climate transition plan.",
+      "full_text": "Report on: (1) Climate change governance, (2) Climate strategy and transition plan, (3) Targets for GHG reduction (aligned with Paris Agreement), (4) Policies and actions for climate change, (5) Metrics: Scope 1, 2, and 3 GHG emissions, energy from fossil and renewable sources, and climate risk financial impacts.",
+      "domain": "Environmental Standards",
+      "category": "Climate Change",
+      "section_number": "E1",
+      "parent_section": "ESRS Environmental",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "GHG emissions data (Scope 1, 2, 3)",
+        "Climate transition plan",
+        "GHG reduction targets (SBTi aligned)",
+        "Climate change policy documentation"
+      ]
+    },
+    {
+      "control_id": "ESRS-E2",
+      "original_reference": "ESRS E2 - Pollution",
+      "title": "Pollution Prevention and Control",
+      "description": "Disclose the company's material impacts, risks, and opportunities related to pollution of air, water, soil, and substances of concern.",
+      "full_text": "Report on pollution of air (emissions to air), water (discharges), soil (contamination), substances of concern, and microplastics. Disclose: pollution governance, targets for pollution reduction, prevention and control policies, actions taken, and metrics for pollutant releases and substances of very high concern (SVHCs).",
+      "domain": "Environmental Standards",
+      "category": "Pollution",
+      "section_number": "E2",
+      "parent_section": "ESRS Environmental",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Pollution inventory and monitoring data",
+        "Pollution reduction targets",
+        "Regulatory permit compliance",
+        "Substances of concern management"
+      ]
+    },
+    {
+      "control_id": "ESRS-E3",
+      "original_reference": "ESRS E3 - Water and Marine Resources",
+      "title": "Water and Marine Resource Use and Management",
+      "description": "Disclose the company's material impacts, risks, and opportunities related to water and marine resources.",
+      "full_text": "Report on: water withdrawal, consumption, and discharge; water efficiency targets; water stress area exposures; marine resource use; and policies for water stewardship. Disclose metrics including total water consumption, water recycled, and proportion of operations in water-stressed areas.",
+      "domain": "Environmental Standards",
+      "category": "Water",
+      "section_number": "E3",
+      "parent_section": "ESRS Environmental",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Water consumption and efficiency data",
+        "Water stress mapping",
+        "Water stewardship policies",
+        "Marine resource impact assessment"
+      ]
+    },
+    {
+      "control_id": "ESRS-E4",
+      "original_reference": "ESRS E4 - Biodiversity and Ecosystems",
+      "title": "Biodiversity and Ecosystems Impact Management",
+      "description": "Disclose the company's material impacts, risks, and opportunities related to biodiversity and ecosystems.",
+      "full_text": "Report on biodiversity impacts including land use change, freshwater and marine ecosystem impacts, direct exploitation, invasive species, and pollution. Disclose sites in or near biodiversity-sensitive areas. Report on biodiversity targets and nature-positive commitments. Align with the Kunming-Montreal Global Biodiversity Framework.",
+      "domain": "Environmental Standards",
+      "category": "Biodiversity",
+      "section_number": "E4",
+      "parent_section": "ESRS Environmental",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Biodiversity impact assessment",
+        "Sensitive area site mapping",
+        "Nature-positive targets",
+        "Biodiversity action plans"
+      ]
+    },
+    {
+      "control_id": "ESRS-E5",
+      "original_reference": "ESRS E5 - Resource Use and Circular Economy",
+      "title": "Resource Use and Circular Economy",
+      "description": "Disclose the company's material impacts, risks, and opportunities related to resource use and transition to circular economy.",
+      "full_text": "Report on: resource use (materials, water, energy); waste generation and management; circularity strategies (design for longevity, repair, reuse, recycling); and targets for waste reduction and circular economy transition. Disclose metrics including total waste, waste diverted, recycled content, and circular economy revenue.",
+      "domain": "Environmental Standards",
+      "category": "Circular Economy",
+      "section_number": "E5",
+      "parent_section": "ESRS Environmental",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Waste generation and recycling data",
+        "Circular economy strategy",
+        "Material efficiency metrics",
+        "Product lifecycle assessment"
+      ]
+    },
+    {
+      "control_id": "ESRS-S1",
+      "original_reference": "ESRS S1 - Own Workforce",
+      "title": "Own Workforce Working Conditions and Human Rights",
+      "description": "Disclose the company's material impacts, risks, and opportunities related to its own workforce, including working conditions, health and safety, and diversity.",
+      "full_text": "Report on own workforce characteristics (headcount, gender split, contract type, by region), working conditions (wages, working hours, OH&S), equal treatment and opportunities (gender pay gap, diversity metrics), and other work-related rights. Disclose policies, targets, and metrics for workforce topics.",
+      "domain": "Social Standards",
+      "category": "Own Workforce",
+      "section_number": "S1",
+      "parent_section": "ESRS Social",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Workforce headcount and demographic data",
+        "Gender pay gap analysis",
+        "OH&S performance metrics",
+        "Equal opportunity policy"
+      ]
+    },
+    {
+      "control_id": "ESRS-S2",
+      "original_reference": "ESRS S2 - Workers in Value Chain",
+      "title": "Workers in the Value Chain",
+      "description": "Disclose the company's material impacts, risks, and opportunities related to workers in its value chain (suppliers and customers).",
+      "full_text": "Report on working conditions and human rights in the supply chain. Conduct supply chain human rights due diligence. Identify salient human rights issues in supply chain. Disclose policies for responsible sourcing, supplier audits, and remediation of supply chain violations.",
+      "domain": "Social Standards",
+      "category": "Supply Chain Workers",
+      "section_number": "S2",
+      "parent_section": "ESRS Social",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Supply chain human rights due diligence",
+        "Supplier code of conduct",
+        "Supplier audits and corrective actions",
+        "Salient human rights issues assessment"
+      ]
+    },
+    {
+      "control_id": "ESRS-S3",
+      "original_reference": "ESRS S3 - Affected Communities",
+      "title": "Affected Communities",
+      "description": "Disclose the company's material impacts, risks, and opportunities related to affected communities, including indigenous peoples.",
+      "full_text": "Report on economic, social, and cultural impacts on communities affected by operations. Address land rights, indigenous peoples' rights, human rights defenders, and community grievances. Disclose community engagement processes and free, prior, and informed consent (FPIC) where applicable.",
+      "domain": "Social Standards",
+      "category": "Affected Communities",
+      "section_number": "S3",
+      "parent_section": "ESRS Social",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Community impact assessments",
+        "Community grievance mechanism",
+        "FPIC documentation",
+        "Community engagement records"
+      ]
+    },
+    {
+      "control_id": "ESRS-S4",
+      "original_reference": "ESRS S4 - Consumers and End-Users",
+      "title": "Consumers and End-Users",
+      "description": "Disclose the company's material impacts, risks, and opportunities related to consumers and end-users of its products and services.",
+      "full_text": "Report on impacts on consumers and end-users including product safety, customer privacy, responsible marketing, access to products and services, and responsible business practices. Disclose customer satisfaction metrics, product safety incidents, and actions to enhance responsible consumption.",
+      "domain": "Social Standards",
+      "category": "Consumers",
+      "section_number": "S4",
+      "parent_section": "ESRS Social",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Product safety and quality data",
+        "Consumer privacy policies",
+        "Customer satisfaction metrics",
+        "Responsible marketing practices"
+      ]
+    },
+    {
+      "control_id": "ESRS-G1",
+      "original_reference": "ESRS G1 - Business Conduct",
+      "title": "Business Conduct and Anti-Corruption",
+      "description": "Disclose the company's business conduct practices including anti-corruption, whistleblowing, responsible lobbying, supplier relationships, and payment practices.",
+      "full_text": "Report on: corporate culture and business conduct, management of relationships with suppliers and customers, prevention and detection of corruption and bribery, anti-competitive behavior, political engagement, and payment practices. Disclose metrics including confirmed incidents of corruption, fines for non-compliance, and payment terms for suppliers.",
+      "domain": "Governance Standards",
+      "category": "Business Conduct",
+      "section_number": "G1",
+      "parent_section": "ESRS Governance",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Anti-corruption policy and training records",
+        "Corruption incident data",
+        "Whistleblowing reports and outcomes",
+        "Supplier payment terms data"
+      ]
+    },
+    {
+      "control_id": "CSRD-ASSURANCE",
+      "original_reference": "Article 26a - Assurance",
+      "title": "Limited Assurance on Sustainability Reporting",
+      "description": "CSRD requires limited assurance from a statutory auditor or accredited third party on the sustainability statement.",
+      "full_text": "Obtain limited assurance from the statutory auditor or an accredited independent assurance provider on the sustainability statement. Assurance must cover compliance with ESRS, double materiality process, and compliance with EU Taxonomy. Reasonable assurance (higher standard) will be required in later years. Report auditor's conclusion in the sustainability statement.",
+      "domain": "Reporting",
+      "category": "External Assurance",
+      "section_number": "Art.26a",
+      "parent_section": "CSRD",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Auditor assurance engagement documentation",
+        "Limited assurance report",
+        "Auditor independence confirmation",
+        "Assurance scope and conclusion"
+      ]
+    },
+    {
+      "control_id": "CSRD-TAXONOMY",
+      "original_reference": "EU Taxonomy Alignment",
+      "title": "EU Taxonomy-Aligned Activity Disclosure",
+      "description": "CSRD requires disclosure of EU Taxonomy-eligible and aligned activities as part of the sustainability statement.",
+      "full_text": "Disclose the proportion of turnover, CapEx, and OpEx from EU Taxonomy-aligned activities. Assess activities against technical screening criteria (substantial contribution, do no significant harm, and minimum social safeguards). Report taxonomy-eligible activities as a first step and then aligned activities after detailed assessment.",
+      "domain": "Reporting",
+      "category": "EU Taxonomy",
+      "section_number": "Taxonomy.1",
+      "parent_section": "CSRD",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "EU Taxonomy eligibility assessment",
+        "Taxonomy alignment assessment",
+        "KPI reporting (Turnover, CapEx, OpEx alignment %)",
+        "DNSH assessment documentation"
+      ]
+    },
+    {
+      "control_id": "CSRD-DIGITAL",
+      "original_reference": "Digital Reporting",
+      "title": "Digital Sustainability Reporting",
+      "description": "CSRD requires sustainability information to be tagged in XBRL format as part of the European Single Electronic Format (ESEF).",
+      "full_text": "Tag sustainability disclosures in compliance with ESEF requirements using the ESRS XBRL taxonomy. The XBRL tags enable machine-readable access to sustainability data for investors and regulators. Report the sustainability statement as part of the ESEF-compliant management report.",
+      "domain": "Reporting",
+      "category": "Digital Reporting",
+      "section_number": "Digital.1",
+      "parent_section": "CSRD",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "ESEF-compliant sustainability report",
+        "XBRL tagging of sustainability disclosures",
+        "ESRS taxonomy implementation"
+      ]
+    },
+    {
+      "control_id": "CSRD-SCOPING",
+      "original_reference": "Article 19a - Scope",
+      "title": "CSRD Applicability and Value Chain Reporting",
+      "description": "Determine CSRD applicability, reporting boundary, and value chain reporting requirements.",
+      "full_text": "Determine if the company meets CSRD thresholds (large company: 250+ employees, €40M+ turnover, €20M+ balance sheet; listed SME or non-EU company with significant EU business). Define the sustainability reporting boundary including subsidiaries. Report material impacts, risks, and opportunities across the value chain (upstream suppliers, own operations, downstream customers).",
+      "domain": "General Requirements",
+      "category": "Scoping",
+      "section_number": "Scope.1",
+      "parent_section": "CSRD",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "CSRD applicability assessment",
+        "Reporting boundary determination",
+        "Value chain mapping",
+        "Phase-in timeline documentation"
+      ]
+    },
+    {
+      "control_id": "CSRD-FORWARD",
+      "original_reference": "Forward-Looking Disclosures",
+      "title": "Sustainability Targets and Forward-Looking Disclosures",
+      "description": "CSRD requires disclosure of measurable sustainability targets and time-bound commitments aligned with business strategy.",
+      "full_text": "Set and disclose measurable sustainability targets for material topics with defined timelines. Targets must be aligned with business strategy and EU sustainability objectives. Report progress against targets with quantitative metrics. Address climate targets in alignment with Paris Agreement and EU Green Deal objectives.",
+      "domain": "Reporting",
+      "category": "Targets and Commitments",
+      "section_number": "FLD.1",
+      "parent_section": "CSRD",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Sustainability targets for each material topic",
+        "Progress metrics against targets",
+        "Target alignment with EU sustainability policy",
+        "Baseline and trajectory data"
+      ]
+    }
+  ]
+}

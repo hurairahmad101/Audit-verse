@@ -1,0 +1,353 @@
+{
+  "metadata": {
+    "name": "ISO/IEC 20000-1:2018 IT Service Management System",
+    "description": "ISO/IEC 20000-1:2018 specifies requirements for an organization to establish, implement, maintain, and continually improve a service management system (SMS). It enables organizations to plan, design, transition, deliver, and improve services to fulfill agreed service requirements and deliver value to customers.",
+    "version": "2018",
+    "source_organization": "International Organization for Standardization (ISO) / International Electrotechnical Commission (IEC)",
+    "effective_date": "2018-09-01",
+    "classification": "certification",
+    "framework_type": "certification",
+    "classification_confidence": 0.95,
+    "classification_reasoning": "ISO 20000 is the only auditable international standard for IT service management, enabling organizations to demonstrate IT service quality through third-party certification.",
+    "framework_purpose": "To specify requirements for organizations to establish, implement, maintain, and continually improve a service management system, demonstrating the ability to deliver IT services that meet customer requirements.",
+    "framework_scope": "Any organization providing or managing IT services, including internal IT departments, managed service providers, IT outsourcers, and software as a service providers.",
+    "framework_objectives": [
+      "Align IT services with business requirements",
+      "Ensure consistent and quality IT service delivery",
+      "Enable continual service improvement",
+      "Provide basis for certification of ITSM capability",
+      "Demonstrate compliance with service commitments"
+    ],
+    "target_audience": "IT Service Managers, CIOs, IT Operations Teams, Managed Service Providers, Internal IT Auditors, and organizations seeking ISO 20000 certification",
+    "regulatory_authority": "ISO/IEC",
+    "adoption_approach": [
+      "Define scope of SMS",
+      "Implement service management processes",
+      "Establish service level agreements",
+      "Implement incident, change, and problem management",
+      "Conduct internal audits",
+      "Obtain third-party certification"
+    ],
+    "hierarchy_structure": {
+      "levels": ["Clause", "Sub-clause"],
+      "numbering_pattern": "N.N"
+    },
+    "document_structure": {
+      "sections": [
+        "Clause 4: Context of the Organization",
+        "Clause 5: Leadership",
+        "Clause 6: Planning",
+        "Clause 7: Support",
+        "Clause 8: Operation",
+        "Clause 9: Performance Evaluation",
+        "Clause 10: Improvement"
+      ]
+    },
+    "total_controls": 16
+  },
+  "controls": [
+    {
+      "control_id": "8.2",
+      "original_reference": "Clause 8.2",
+      "title": "Plan and Design Services",
+      "description": "The organization shall plan and design new or changed services to meet agreed service requirements.",
+      "full_text": "Plan and design new or changed services, including planning for service introduction, service acceptance criteria, service catalogue, and service level requirements. Ensure new service designs meet security, availability, capacity, and continuity requirements.",
+      "domain": "Operation",
+      "category": "Service Design",
+      "section_number": "8.2",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Service design documentation",
+        "Service catalogue",
+        "Service level requirements",
+        "Service introduction plans"
+      ]
+    },
+    {
+      "control_id": "8.3",
+      "original_reference": "Clause 8.3",
+      "title": "Control of Parties Involved in the Service Lifecycle",
+      "description": "The organization shall ensure that parties involved in service delivery contribute to the overall service management requirements.",
+      "full_text": "Manage all parties involved in delivering services including internal teams, suppliers, and subcontractors. Establish agreements with all contributing parties. Monitor performance of contributing parties against agreed requirements. Maintain service continuity when changing contributing parties.",
+      "domain": "Operation",
+      "category": "Multi-Party Services",
+      "section_number": "8.3",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Agreements with all service delivery parties",
+        "Performance monitoring records",
+        "Supplier management records",
+        "Sub-contractor requirements"
+      ]
+    },
+    {
+      "control_id": "8.4",
+      "original_reference": "Clause 8.4",
+      "title": "Service Delivery — Demand and Capacity Management",
+      "description": "The organization shall manage service demand and capacity to ensure that services can meet agreed requirements.",
+      "full_text": "Implement demand and capacity management to ensure services can meet current and future requirements. Monitor demand trends, forecast capacity needs, and plan capacity enhancements. Manage peaks and troughs in demand. Report capacity performance against SLAs.",
+      "domain": "Operation",
+      "category": "Capacity Management",
+      "section_number": "8.4.1",
+      "parent_section": "8.4",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Capacity management plan",
+        "Demand monitoring records",
+        "Capacity performance reports",
+        "Capacity improvement plans"
+      ]
+    },
+    {
+      "control_id": "8.4.2",
+      "original_reference": "Clause 8.4.2",
+      "title": "Service Availability Management",
+      "description": "The organization shall monitor and report actual availability to enable comparison against agreed availability targets.",
+      "full_text": "Monitor and measure availability for all services covered by service level agreements. Compare actual availability against SLA targets. Investigate and remediate availability failures. Conduct availability risk assessments. Test failover capabilities and business continuity of services.",
+      "domain": "Operation",
+      "category": "Availability Management",
+      "section_number": "8.4.2",
+      "parent_section": "8.4",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Availability monitoring system",
+        "SLA availability performance reports",
+        "Availability incident investigations",
+        "Business continuity test results"
+      ]
+    },
+    {
+      "control_id": "8.5",
+      "original_reference": "Clause 8.5",
+      "title": "Incident and Service Request Management",
+      "description": "The organization shall log, classify, prioritize, and manage incidents and service requests through to resolution.",
+      "full_text": "Manage incidents to minimize impact and restore service as quickly as possible. Log all incidents and service requests, classify and prioritize them, and resolve them within SLA targets. Escalate major incidents. Manage service requests through defined procedures. Measure and report incident and request KPIs.",
+      "domain": "Operation",
+      "category": "Incident Management",
+      "section_number": "8.5",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Incident management process documentation",
+        "Incident records and resolution times",
+        "SLA compliance for incidents",
+        "Major incident reviews"
+      ]
+    },
+    {
+      "control_id": "8.6",
+      "original_reference": "Clause 8.6",
+      "title": "Problem Management",
+      "description": "The organization shall identify and manage problems including known errors to prevent incidents occurring and reduce the impact of incidents.",
+      "full_text": "Implement problem management to identify root causes of incidents and prevent recurrence. Maintain known error database. Proactively identify potential problems. Track problems through investigation and resolution. Measure effectiveness of problem management in reducing incident volumes.",
+      "domain": "Operation",
+      "category": "Problem Management",
+      "section_number": "8.6",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Problem records and investigations",
+        "Known error database",
+        "Problem KPI metrics",
+        "Incident trend analysis linked to problems"
+      ]
+    },
+    {
+      "control_id": "8.7",
+      "original_reference": "Clause 8.7",
+      "title": "Change and Deployment Management",
+      "description": "The organization shall manage changes to services and service components to minimize disruption to services.",
+      "full_text": "Implement change management to authorize, plan, assess risk, test, implement, and review all changes to services and infrastructure. Categorize changes (standard, normal, urgent/emergency). Conduct post-implementation reviews. Minimize failed changes and unintended service disruptions.",
+      "domain": "Operation",
+      "category": "Change Management",
+      "section_number": "8.7",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Change management process",
+        "Change records and approvals",
+        "Failed change statistics",
+        "Post-implementation review records"
+      ]
+    },
+    {
+      "control_id": "8.8",
+      "original_reference": "Clause 8.8",
+      "title": "Service Level Management",
+      "description": "The organization shall agree service levels with customers and monitor and report actual service performance.",
+      "full_text": "Establish service level agreements (SLAs) with all customers for all services. Define measurable service level requirements. Monitor and report performance against SLAs regularly. Conduct service review meetings with customers. Initiate improvement plans when SLAs are missed.",
+      "domain": "Operation",
+      "category": "Service Level Management",
+      "section_number": "8.8",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Customer SLAs",
+        "SLA performance reports",
+        "Service review meeting minutes",
+        "SLA improvement plans"
+      ]
+    },
+    {
+      "control_id": "8.9",
+      "original_reference": "Clause 8.9",
+      "title": "Configuration Management",
+      "description": "The organization shall maintain a configuration management system with records of all service components and their relationships.",
+      "full_text": "Maintain a configuration management database (CMDB) with accurate records of all service components (CIs). Control configuration items including hardware, software, documentation, and services. Verify CMDB accuracy through audits and discovery tools. Use CMDB to support incident, change, and problem management.",
+      "domain": "Operation",
+      "category": "Configuration Management",
+      "section_number": "8.9",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "CMDB documentation",
+        "CI audit and accuracy reports",
+        "Configuration control procedures",
+        "CMDB integration with other processes"
+      ]
+    },
+    {
+      "control_id": "8.1",
+      "original_reference": "Clause 8.1",
+      "title": "Service Portfolio and Catalogue",
+      "description": "The organization shall maintain a service portfolio and service catalogue defining all services, their requirements, and current status.",
+      "full_text": "Maintain a service portfolio documenting all services (proposed, active, retired). Maintain a service catalogue of all live services available to customers. The catalogue includes service descriptions, SLAs, ownership, and pricing. Review and update the catalogue when services change.",
+      "domain": "Operation",
+      "category": "Service Portfolio",
+      "section_number": "8.1",
+      "parent_section": "8",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Service portfolio documentation",
+        "Service catalogue",
+        "Catalogue update records",
+        "Service retirement procedures"
+      ]
+    },
+    {
+      "control_id": "9.1",
+      "original_reference": "Clause 9.1",
+      "title": "Monitoring, Measurement, and Review",
+      "description": "The organization shall monitor and measure the performance of the SMS and services and review the results.",
+      "full_text": "Monitor and measure SMS and service performance including SLA compliance, process KPIs, customer satisfaction, and supplier performance. Analyze and evaluate results. Use results to drive improvement. Report performance to management and customers.",
+      "domain": "Performance Evaluation",
+      "category": "Monitoring",
+      "section_number": "9.1",
+      "parent_section": "9",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "SMS KPI dashboard",
+        "SLA performance data",
+        "Customer satisfaction survey results",
+        "Service performance reports"
+      ]
+    },
+    {
+      "control_id": "6.2",
+      "original_reference": "Clause 6.2",
+      "title": "Service Management Objectives",
+      "description": "The organization shall establish service management objectives and plans to achieve them.",
+      "full_text": "Establish measurable service management objectives aligned with the SMS scope and organizational goals. Objectives cover service quality, customer satisfaction, continual improvement, and compliance. Plans define responsible parties, timelines, resources, and monitoring.",
+      "domain": "Planning",
+      "category": "SMS Objectives",
+      "section_number": "6.2",
+      "parent_section": "6",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "SMS objectives documentation",
+        "KPI tracking",
+        "Action plans for objectives"
+      ]
+    },
+    {
+      "control_id": "8.2.3",
+      "original_reference": "Clause 8.2.3",
+      "title": "Service Continuity and Business Continuity",
+      "description": "The organization shall ensure the continuity of services and manage the relationship with business continuity planning.",
+      "full_text": "Develop and maintain IT service continuity plans that align with business continuity requirements. Define RTOs and RPOs for critical services. Test continuity plans through exercises. Update plans after incidents or significant changes. Coordinate IT continuity with business continuity management.",
+      "domain": "Operation",
+      "category": "Service Continuity",
+      "section_number": "8.2.3",
+      "parent_section": "8.2",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "IT service continuity plans",
+        "Business continuity test results",
+        "RTO/RPO documentation",
+        "Business impact analysis"
+      ]
+    },
+    {
+      "control_id": "8.3.3",
+      "original_reference": "Clause 8.3.3",
+      "title": "Supplier Management",
+      "description": "The organization shall manage suppliers delivering elements of services to ensure they meet their commitments.",
+      "full_text": "Establish and manage contracts with suppliers. Monitor supplier performance against agreed requirements. Conduct supplier reviews. Manage changes to supplier contracts. Ensure supplier management aligns with overall service delivery requirements.",
+      "domain": "Operation",
+      "category": "Supplier Management",
+      "section_number": "8.3.3",
+      "parent_section": "8.3",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Supplier contracts",
+        "Supplier performance reports",
+        "Supplier review meeting minutes",
+        "Contract management records"
+      ]
+    },
+    {
+      "control_id": "10.1",
+      "original_reference": "Clause 10.1",
+      "title": "Nonconformities and Corrective Actions",
+      "description": "The organization shall address nonconformities in the SMS through corrective actions.",
+      "full_text": "When nonconformities occur, react to address the nonconformity, investigate root causes, and implement corrective actions. Verify effectiveness of corrective actions. Update risk assessments and SMS documentation. Retain records of nonconformities and actions.",
+      "domain": "Improvement",
+      "category": "Corrective Action",
+      "section_number": "10.1",
+      "parent_section": "10",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Nonconformance records",
+        "Root cause analysis",
+        "Corrective action plans",
+        "Effectiveness verification records"
+      ]
+    },
+    {
+      "control_id": "10.2",
+      "original_reference": "Clause 10.2",
+      "title": "Continual Improvement of SMS",
+      "description": "The organization shall continually improve the suitability, adequacy, and effectiveness of the SMS.",
+      "full_text": "Implement continual improvement of the SMS through analysis of performance data, customer feedback, internal audit results, and management review outputs. Implement improvements to services, processes, and the SMS. Measure the impact of improvements.",
+      "domain": "Improvement",
+      "category": "Continual Improvement",
+      "section_number": "10.2",
+      "parent_section": "10",
+      "is_mandatory": true,
+      "priority": "medium",
+      "evidence_requirements": [
+        "SMS improvement log",
+        "Improvement initiative tracking",
+        "Service quality trends",
+        "Continual service improvement reports"
+      ]
+    }
+  ]
+}

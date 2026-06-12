@@ -1,0 +1,1 @@
+- [Audit dark→light theming](audit-light-theming.md) — audit pages are dark-built; readability comes from the `.audit-light` conversion block in globals.css, applied at the audit layout.

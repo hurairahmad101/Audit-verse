@@ -1,0 +1,424 @@
+{
+  "metadata": {
+    "name": "ISACA IT Audit Framework (ITAF)",
+    "description": "The IT Audit Framework (ITAF) published by ISACA provides a comprehensive reference for IT audit professionals. It sets standards, guidelines, and tools for conducting IT audits, and serves as the foundation for the CISA certification. ITAF aligns IT audit with governance, risk, and business objectives.",
+    "version": "4th Edition",
+    "source_organization": "ISACA (Information Systems Audit and Control Association)",
+    "effective_date": "2020-01-01",
+    "classification": "compliance",
+    "framework_type": "audit_standard",
+    "classification_confidence": 0.95,
+    "classification_reasoning": "ITAF is the globally recognized standard for IT auditing, maintained by ISACA and forming the basis for the CISA certification exam and IT audit practice worldwide.",
+    "framework_purpose": "To provide guidance for IT audit professionals to conduct IT audits that add value, reduce risk, and support governance and compliance objectives.",
+    "framework_scope": "IT audit functions in organizations of all sizes and industries, including reviews of IT infrastructure, applications, cybersecurity, data management, and IT governance.",
+    "framework_objectives": [
+      "Establish IT audit standards and guidelines",
+      "Ensure IT audit quality and professionalism",
+      "Align IT audit with organizational risk and strategy",
+      "Support IT governance and control assurance",
+      "Provide basis for CISA professional certification"
+    ],
+    "target_audience": "IT Auditors, CISAs, Internal Auditors, IT Governance Professionals, CIOs, CISOs, and Risk Managers",
+    "regulatory_authority": "ISACA",
+    "adoption_approach": [
+      "Understand ITAF standards and guidelines",
+      "Align IT audit function with ITAF requirements",
+      "Develop IT audit risk assessment methodology",
+      "Build IT audit competency using ITAF guidance",
+      "Apply ITAF standards in all IT audit engagements",
+      "Report in accordance with ITAF requirements"
+    ],
+    "hierarchy_structure": {
+      "levels": ["Domain", "Standard", "Guideline"],
+      "numbering_pattern": "S.N or G.N (Standards or Guidelines)"
+    },
+    "document_structure": {
+      "sections": [
+        "General Standards (S1-S4)",
+        "Performance Standards (S5-S10)",
+        "Reporting Standards (S11-S14)",
+        "Guidelines and Tools"
+      ]
+    },
+    "total_controls": 20
+  },
+  "controls": [
+    {
+      "control_id": "S1",
+      "original_reference": "Standard S1",
+      "title": "Audit Charter",
+      "description": "The audit charter defines the authority and responsibility of the IT audit function and must be approved by senior leadership.",
+      "full_text": "The IT audit charter establishes the authority, accountability, and responsibilities of the IT audit function. It defines the scope, objectives, and authority of IT audit activities and the independence requirements. The charter must be approved by the board or equivalent governing body.",
+      "domain": "General Standards",
+      "category": "Charter",
+      "section_number": "S1",
+      "parent_section": "General",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Approved IT Audit Charter",
+        "Charter review and update records",
+        "Board approval documentation"
+      ]
+    },
+    {
+      "control_id": "S2",
+      "original_reference": "Standard S2",
+      "title": "Organizational Independence",
+      "description": "The IT audit function must maintain organizational and individual independence from audited entities.",
+      "full_text": "The IT audit activity must be free from conditions that threaten the ability to carry out audit responsibilities. IT auditors must maintain independence in fact and appearance. They must disclose any relationship that could compromise independence and refrain from auditing areas where independence is impaired.",
+      "domain": "General Standards",
+      "category": "Independence",
+      "section_number": "S2",
+      "parent_section": "General",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Independence declarations",
+        "Conflict of interest disclosures",
+        "Organizational reporting structure documentation"
+      ]
+    },
+    {
+      "control_id": "S3",
+      "original_reference": "Standard S3",
+      "title": "Professional Ethics",
+      "description": "IT auditors must adhere to the ISACA Code of Professional Ethics in all professional activities.",
+      "full_text": "IT audit professionals must comply with the ISACA Code of Professional Ethics. This includes maintaining confidentiality, performing work with due care, maintaining competence, and serving stakeholders with integrity. Violations of the code may result in investigation and disciplinary action by ISACA.",
+      "domain": "General Standards",
+      "category": "Ethics",
+      "section_number": "S3",
+      "parent_section": "General",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Ethics training completion records",
+        "Code of ethics acknowledgment",
+        "Conflict of interest declarations"
+      ]
+    },
+    {
+      "control_id": "S4",
+      "original_reference": "Standard S4",
+      "title": "Competence",
+      "description": "IT auditors must maintain technical competency through education, training, and experience.",
+      "full_text": "IT audit professionals must have the knowledge, skills, and experience to conduct IT audit engagements effectively. They must maintain competence through continuing professional education (CPE). CISA certification demonstrates baseline IT audit competence. Specialized engagements may require additional expertise.",
+      "domain": "General Standards",
+      "category": "Competence",
+      "section_number": "S4",
+      "parent_section": "General",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "CPE tracking records (120 CPE per 3 years for CISA)",
+        "Professional certification records",
+        "Technical skills assessments",
+        "Specialized training records"
+      ]
+    },
+    {
+      "control_id": "S5",
+      "original_reference": "Standard S5",
+      "title": "Planning",
+      "description": "The IT audit function must develop risk-based audit plans that address the IT risk landscape.",
+      "full_text": "The IT audit plan must be based on a risk assessment of the IT environment and aligned with organizational objectives. The plan must consider the IT governance framework, IT risk profile, regulatory requirements, and management's risk appetite. Resources are allocated based on risk priority.",
+      "domain": "Performance Standards",
+      "category": "Planning",
+      "section_number": "S5",
+      "parent_section": "Performance",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "IT audit risk assessment",
+        "Annual IT audit plan",
+        "Audit universe documentation",
+        "Plan approval records"
+      ]
+    },
+    {
+      "control_id": "S6",
+      "original_reference": "Standard S6",
+      "title": "Engagement Performance",
+      "description": "IT audit engagements must be planned and executed with due professional care using appropriate methodologies.",
+      "full_text": "IT auditors must plan each engagement to address risks and control objectives. They must gather sufficient and appropriate evidence, document procedures, and apply appropriate IT audit techniques including CAAT, data analytics, and systems testing. Work must be supervised and reviewed.",
+      "domain": "Performance Standards",
+      "category": "Engagement Execution",
+      "section_number": "S6",
+      "parent_section": "Performance",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Engagement planning memorandum",
+        "IT-specific audit procedures",
+        "CAAT and analytics documentation",
+        "Workpaper review sign-offs"
+      ]
+    },
+    {
+      "control_id": "S7",
+      "original_reference": "Standard S7",
+      "title": "Reporting",
+      "description": "IT audit findings, conclusions, and recommendations must be communicated effectively to management and the board.",
+      "full_text": "IT audit reports must be accurate, objective, complete, timely, and constructive. Reports must include findings with clear risk impact, root cause analysis, and actionable recommendations. Reports must be distributed to appropriate parties with management responses.",
+      "domain": "Reporting Standards",
+      "category": "Reporting",
+      "section_number": "S7",
+      "parent_section": "Reporting",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Draft and final IT audit reports",
+        "Management response documentation",
+        "Report distribution records",
+        "Report quality review"
+      ]
+    },
+    {
+      "control_id": "S8",
+      "original_reference": "Standard S8",
+      "title": "Follow-Up Activities",
+      "description": "The IT audit function must monitor and verify the implementation of audit recommendations.",
+      "full_text": "IT auditors must establish a process to follow up on findings and recommendations. Unresolved or high-risk open items are escalated to senior management or the audit committee. Findings are closed only when management has implemented agreed remediation and evidence is verified.",
+      "domain": "Reporting Standards",
+      "category": "Follow-Up",
+      "section_number": "S8",
+      "parent_section": "Reporting",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "Follow-up tracking database",
+        "Closure verification evidence",
+        "Overdue item escalation records",
+        "Audit committee reporting on open items"
+      ]
+    },
+    {
+      "control_id": "G1",
+      "original_reference": "Guideline G1",
+      "title": "IT Risk Assessment",
+      "description": "IT audit conducts and maintains a comprehensive IT risk assessment as the foundation for the audit plan.",
+      "full_text": "The IT risk assessment evaluates the inherent risk, control environment, and residual risk across IT domains including infrastructure, applications, cybersecurity, data management, and IT governance. Risk factors include technology complexity, change velocity, regulatory exposure, and past audit history.",
+      "domain": "Guidelines",
+      "category": "Risk Assessment",
+      "section_number": "G1",
+      "parent_section": "Guidelines",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "IT risk assessment methodology",
+        "Completed IT risk assessments",
+        "Risk heat map for IT domains",
+        "Input from CIO, CISO, and management"
+      ]
+    },
+    {
+      "control_id": "G2",
+      "original_reference": "Guideline G2",
+      "title": "Computer-Assisted Audit Techniques (CAATs)",
+      "description": "IT auditors leverage CAATs including data analysis, automated testing, and continuous auditing tools.",
+      "full_text": "IT auditors use computer-assisted audit techniques to process large volumes of data, perform full population testing, detect anomalies, and test automated controls. Common CAATs include ACL/IDEA data analysis, scripts, custom queries, and embedded audit modules. CAAT results are documented in workpapers.",
+      "domain": "Guidelines",
+      "category": "Audit Technology",
+      "section_number": "G2",
+      "parent_section": "Guidelines",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "CAAT methodology documentation",
+        "Data analysis scripts and results",
+        "Full population testing results",
+        "Continuous monitoring reports"
+      ]
+    },
+    {
+      "control_id": "G3",
+      "original_reference": "Guideline G3",
+      "title": "IT Governance Audit",
+      "description": "IT auditors evaluate the effectiveness of IT governance structures, policies, and oversight processes.",
+      "full_text": "IT governance audits assess the structures and processes by which IT decisions are made and IT strategies align with business objectives. Areas include IT steering committee effectiveness, IT policies and standards, portfolio management, vendor oversight, and performance measurement.",
+      "domain": "Guidelines",
+      "category": "IT Governance",
+      "section_number": "G3",
+      "parent_section": "Guidelines",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "IT governance structure documentation",
+        "IT committee meeting minutes",
+        "IT policies and standards review",
+        "IT governance maturity assessment"
+      ]
+    },
+    {
+      "control_id": "G4",
+      "original_reference": "Guideline G4",
+      "title": "IT General Controls Audit",
+      "description": "IT auditors evaluate IT general controls covering logical access, change management, operations, and backup and recovery.",
+      "full_text": "IT general controls (ITGCs) audit includes user access management (provisioning, periodic review, termination), change management (authorization, testing, approval), computer operations (job scheduling, incident management), and backup and recovery. ITGC effectiveness underpins application control reliability.",
+      "domain": "Guidelines",
+      "category": "IT General Controls",
+      "section_number": "G4",
+      "parent_section": "Guidelines",
+      "is_mandatory": true,
+      "priority": "high",
+      "evidence_requirements": [
+        "User access review results",
+        "Change management records testing",
+        "Operations logs and procedures",
+        "Backup and recovery test results"
+      ]
+    },
+    {
+      "control_id": "G5",
+      "original_reference": "Guideline G5",
+      "title": "Application Control Audit",
+      "description": "IT auditors evaluate application-level controls including input, processing, and output controls.",
+      "full_text": "Application control audits assess the controls embedded within business applications to ensure data accuracy, completeness, and validity. Input controls (data validation, edit checks), processing controls (calculations, business rules), and output controls (reporting accuracy, distribution) are evaluated.",
+      "domain": "Guidelines",
+      "category": "Application Controls",
+      "section_number": "G5",
+      "parent_section": "Guidelines",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Application control documentation",
+        "Input and processing control testing",
+        "Output verification testing",
+        "System walkthrough notes"
+      ]
+    },
+    {
+      "control_id": "G6",
+      "original_reference": "Guideline G6",
+      "title": "Cybersecurity Audit",
+      "description": "IT auditors evaluate cybersecurity controls covering risk management, security architecture, threat detection, and incident response.",
+      "full_text": "Cybersecurity audits assess the organization's ability to protect against, detect, and respond to cyber threats. Areas include security risk management, identity and access management, vulnerability management, network security, endpoint protection, data security, security monitoring, and incident response.",
+      "domain": "Guidelines",
+      "category": "Cybersecurity",
+      "section_number": "G6",
+      "parent_section": "Guidelines",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "Security architecture review",
+        "Penetration test results",
+        "Vulnerability management reports",
+        "Incident response plan testing"
+      ]
+    },
+    {
+      "control_id": "G7",
+      "original_reference": "Guideline G7",
+      "title": "Cloud Computing Audit",
+      "description": "IT auditors evaluate controls over cloud environments including governance, security, and vendor management.",
+      "full_text": "Cloud audits assess the controls over IaaS, PaaS, and SaaS environments. Key areas include cloud governance (classification, strategy), shared responsibility model understanding, cloud security configuration, data sovereignty, vendor management, and business continuity in cloud environments.",
+      "domain": "Guidelines",
+      "category": "Cloud Audit",
+      "section_number": "G7",
+      "parent_section": "Guidelines",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Cloud governance documentation",
+        "Cloud security configuration review",
+        "Vendor SLA and contract review",
+        "Shared responsibility matrix"
+      ]
+    },
+    {
+      "control_id": "G8",
+      "original_reference": "Guideline G8",
+      "title": "Data Management and Analytics Audit",
+      "description": "IT auditors evaluate data governance, data quality, and the controls over business intelligence and analytics systems.",
+      "full_text": "Data management audits assess data governance frameworks, data quality controls, master data management, data lineage, and the accuracy of business analytics and reporting systems. Data integrity throughout the lifecycle from ingestion to reporting is evaluated.",
+      "domain": "Guidelines",
+      "category": "Data Management",
+      "section_number": "G8",
+      "parent_section": "Guidelines",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Data governance framework",
+        "Data quality metrics and monitoring",
+        "Data lineage documentation",
+        "Analytics control testing"
+      ]
+    },
+    {
+      "control_id": "G9",
+      "original_reference": "Guideline G9",
+      "title": "System Development and Acquisition Audit",
+      "description": "IT auditors evaluate controls over the system development lifecycle and IT acquisition processes.",
+      "full_text": "SDLC audits assess whether IT development and acquisition projects include appropriate security requirements, testing, change control, and post-implementation review. Controls over agile, waterfall, and DevOps methodologies are evaluated. Quality assurance processes are examined.",
+      "domain": "Guidelines",
+      "category": "SDLC Audit",
+      "section_number": "G9",
+      "parent_section": "Guidelines",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "SDLC documentation review",
+        "Testing and QA records",
+        "Security requirements in development",
+        "Post-implementation reviews"
+      ]
+    },
+    {
+      "control_id": "G10",
+      "original_reference": "Guideline G10",
+      "title": "IT Business Continuity and Disaster Recovery Audit",
+      "description": "IT auditors evaluate IT continuity planning, disaster recovery capabilities, and testing effectiveness.",
+      "full_text": "IT BC/DR audits assess the completeness of IT continuity plans, alignment with business RTO/RPO requirements, backup and replication capabilities, and the results of DR testing. Auditors verify that recovery procedures are documented, tested, and would work in an actual disaster.",
+      "domain": "Guidelines",
+      "category": "IT Continuity",
+      "section_number": "G10",
+      "parent_section": "Guidelines",
+      "is_mandatory": false,
+      "priority": "high",
+      "evidence_requirements": [
+        "IT continuity and DR plans",
+        "DR test results and schedules",
+        "RTO/RPO compliance documentation",
+        "Backup verification reports"
+      ]
+    },
+    {
+      "control_id": "G11",
+      "original_reference": "Guideline G11",
+      "title": "Third-Party and Outsourcing Audit",
+      "description": "IT auditors evaluate controls over IT outsourcing arrangements, vendor management, and third-party risk.",
+      "full_text": "IT outsourcing audits assess vendor selection processes, contract management, service level monitoring, security requirements for vendors, and right-to-audit clauses. SOC 1, SOC 2, and ISO 27001 reports from vendors are reviewed. Subcontractor and fourth-party risks are considered.",
+      "domain": "Guidelines",
+      "category": "Vendor Management",
+      "section_number": "G11",
+      "parent_section": "Guidelines",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "Vendor contract review",
+        "SLA monitoring records",
+        "Vendor SOC reports review",
+        "Third-party risk assessments"
+      ]
+    },
+    {
+      "control_id": "G12",
+      "original_reference": "Guideline G12",
+      "title": "Artificial Intelligence and Emerging Technology Audit",
+      "description": "IT auditors evaluate controls over AI systems, machine learning models, and other emerging technologies.",
+      "full_text": "AI and emerging technology audits assess governance of AI model development, bias testing, explainability, data quality for model training, model risk management, and ethical AI use. Controls over RPA, blockchain, IoT, and other technologies are also evaluated based on risk.",
+      "domain": "Guidelines",
+      "category": "Emerging Technology",
+      "section_number": "G12",
+      "parent_section": "Guidelines",
+      "is_mandatory": false,
+      "priority": "medium",
+      "evidence_requirements": [
+        "AI governance framework",
+        "Model risk management documentation",
+        "Bias and fairness testing results",
+        "AI ethics policy"
+      ]
+    }
+  ]
+}
