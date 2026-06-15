@@ -39,3 +39,13 @@ build/
 
 # Uploaded/generated local data
 uploads/
+
+# Runtime PID files
+*.pid
+.*.pid
+
+# Zip archives
+*.zip
+
+# Scratch / temp directories
+Backend2.0/
