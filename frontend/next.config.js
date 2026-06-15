@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const BACKEND_URL = process.env.BACKEND_URL || 'http://127.0.0.1:5000'
+
 const nextConfig = {
   experimental: {
     serverActions: {
@@ -31,7 +33,7 @@ const nextConfig = {
       fallback: [
         {
           source: '/api/:path*',
-          destination: 'http://127.0.0.1:5000/grc/:path*',
+          destination: `${BACKEND_URL}/grc/:path*`,
         },
       ],
     }
