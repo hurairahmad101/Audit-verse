@@ -203,7 +203,7 @@ export default function TestScriptsPage() {
       objective: script.objective || '',
       procedure_steps:
         script.procedure_steps?.length > 0
-          ? script.procedure_steps
+          ? script.procedure_steps.map(s => ({ step: s.step, description: s.description || '' }))
           : [{ step: '', description: '' }],
       control_area: script.control_area || '',
       entity_type: script.entity_type || '',

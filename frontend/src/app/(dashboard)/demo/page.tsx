@@ -199,7 +199,7 @@ export default function DemoTourPage() {
             style={{ background: `${step.color}10`, borderColor: `${step.color}30` }}
           >
             <div className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: step.color }}>
-              What you'll see
+              What you&apos;ll see
             </div>
             <p className="text-slate-300 text-sm leading-relaxed">{step.highlight}</p>
           </div>

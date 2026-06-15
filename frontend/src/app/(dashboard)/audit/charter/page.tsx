@@ -186,7 +186,7 @@ export default function CharterPage() {
     queryKey: ['charters'],
     queryFn: () => auditApi.charter.getAll().then(r => r.data?.charters || []),
   });
-  const charters: Charter[] = chartersData || [];
+  const charters: Charter[] = useMemo(() => chartersData || [], [chartersData]);
 
   // Default-select active or most recent.
   useEffect(() => {
@@ -357,7 +357,7 @@ export default function CharterPage() {
                       {active.created_at && new Date(active.created_at).toLocaleDateString()}
                       {active.next_review_due && <> · Next review due {new Date(active.next_review_due).toLocaleDateString()}</>}
                     </div>
-                    {active.change_reason && <div className="text-xs text-slate-500 mt-1 italic">"{active.change_reason}"</div>}
+                    {active.change_reason && <div className="text-xs text-slate-500 mt-1 italic">&quot;{active.change_reason}&quot;</div>}
                     {active.rejection_reason && <div className="text-xs text-rose-300 mt-1">Rejected: {active.rejection_reason}</div>}
                   </div>
                   <div className="flex flex-wrap gap-2">
@@ -496,6 +496,7 @@ function EditorPanel({ charter, editable, onSave, saving }: { charter: Charter; 
       next_review_due: charter.next_review_due?.split('T')[0] || '',
       change_reason: charter.change_reason || '',
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [charter.id]);
 
   return (
@@ -1026,7 +1027,7 @@ function CloneForm({ template, onCloned }: { template: Template; onCloned: (id: 
   }
   return (
     <div className="space-y-3">
-      <div className="text-xs text-slate-400">A new draft version will be created using this template's sections and clauses.</div>
+      <div className="text-xs text-slate-400">A new draft version will be created using this template&apos;s sections and clauses.</div>
       <input className={inputCls} placeholder="Version label" value={version} onChange={e => setVersion(e.target.value)} />
       <input className={inputCls} placeholder="Change reason" value={reason} onChange={e => setReason(e.target.value)} />
       <div className="flex justify-end">

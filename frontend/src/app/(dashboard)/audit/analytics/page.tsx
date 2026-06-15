@@ -290,7 +290,7 @@ export default function AnalyticsPage() {
         <div className="rounded-xl border border-slate-700/60 bg-slate-900/60 p-6">
           <h2 className="text-lg font-semibold text-white mb-2 flex items-center gap-2">
             <Calculator className="h-5 w-5 text-cyan-400" />
-            Benford's Law Test
+            Benford&apos;s Law Test
           </h2>
           <p className="text-xs text-slate-400 mb-4">Paste comma-separated numerical values to detect anomalies in financial data distributions</p>
           <textarea

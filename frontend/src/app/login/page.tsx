@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { Suspense, useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Shield, LogIn, AlertCircle, Building2 } from 'lucide-react';
 
@@ -39,6 +39,10 @@ function getTenantSlug(): string | null {
 }
 
 export default function LoginPage() {
+  return <Suspense fallback={<div className="flex h-screen items-center justify-center text-slate-400"><span>Loading...</span></div>}><LoginContent /></Suspense>;
+}
+
+function LoginContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [email, setEmail] = useState('');

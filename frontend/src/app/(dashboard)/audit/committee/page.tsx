@@ -109,7 +109,7 @@ export default function CommitteePage() {
     enabled: !!committeeId,
   });
 
-  const meetings = meetingsData || [];
+  const meetings = useMemo(() => meetingsData || [], [meetingsData]);
   const approvals = approvalsData || [];
   const members = committee?.members || [];
 

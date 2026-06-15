@@ -335,8 +335,8 @@ export default function AuditFindingsPage() {
     finally { setRecurringLoading(false); }
   };
 
-  const items = Array.isArray(findings) ? findings : [];
-  const overdueItems = Array.isArray(overdue) ? overdue : [];
+  const items = useMemo(() => Array.isArray(findings) ? findings : [], [findings]);
+  const overdueItems = useMemo(() => Array.isArray(overdue) ? overdue : [], [overdue]);
   const themeList = Array.isArray(themes) ? themes : [];
   const engagementList = Array.isArray(engagements) ? engagements : [];
 

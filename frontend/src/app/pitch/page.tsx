@@ -562,7 +562,7 @@ function Slide11() {
         color: WHITE, fontSize: '3.2vw', fontWeight: 900, lineHeight: 1.15,
         letterSpacing: '-0.02em', margin: 0, marginBottom: '4.5vh', textAlign: 'center',
       }}>
-        Built for every industry that can't afford to fail.
+        Built for every industry that can&apos;t afford to fail.
       </h2>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5vh 2vw', flex: 1, maxHeight: '52vh' }}>
@@ -640,7 +640,7 @@ function Slide12() {
         color: WHITE, fontSize: '4.5vw', fontWeight: 900, lineHeight: 1.2,
         letterSpacing: '-0.02em', margin: 0, maxWidth: '65vw',
       }}>
-        AuditVerse.AI doesn't just manage audits.<br />It makes audit teams unstoppable.
+        AuditVerse.AI doesn&apos;t just manage audits.<br />It makes audit teams unstoppable.
       </h2>
       <p style={{
         color: DIM, fontSize: '2.3vw', fontWeight: 400,

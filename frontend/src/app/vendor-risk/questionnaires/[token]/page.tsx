@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useParams } from 'next/navigation';
 import { AlertCircle, CheckCircle, Clock, FileText, Loader2, Save, Send, Shield } from 'lucide-react';
-import apiClient from '@/lib/api';
+import { apiClient } from '@/lib/api';
 
 type QuestionType = 'text' | 'yes_no' | 'multiple_choice' | 'rating';
 

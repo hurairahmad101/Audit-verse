@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { X, CheckCircle, AlertCircle, AlertTriangle, Info } from 'lucide-react';
 import { clsx } from 'clsx';
 
@@ -57,6 +57,13 @@ export function Toast({ id, title, message, type, duration = 5000, onDismiss }: 
     });
   }, []);
 
+  const handleDismiss = useCallback(() => {
+    setIsLeaving(true);
+    setTimeout(() => {
+      onDismiss(id);
+    }, 300);
+  }, [onDismiss, id]);
+
   useEffect(() => {
     if (duration > 0) {
       const timer = setTimeout(() => {
@@ -64,14 +71,7 @@ export function Toast({ id, title, message, type, duration = 5000, onDismiss }: 
       }, duration);
       return () => clearTimeout(timer);
     }
-  }, [duration, id]);
-
-  const handleDismiss = () => {
-    setIsLeaving(true);
-    setTimeout(() => {
-      onDismiss(id);
-    }, 300);
-  };
+  }, [duration, handleDismiss]);
 
   return (
     <div

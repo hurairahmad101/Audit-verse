@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useMemo, useCallback } from "react";
 import {
   LayoutDashboard,
   FileText,
@@ -346,13 +347,13 @@ export default function Sidebar() {
   const [isAdmin, setIsAdmin] = useState(false);
   const [loaded, setLoaded] = useState(false);
 
-  const adminDefaultModules = [
+  const adminDefaultModules = useMemo(() => [
     'audit', 'admin', 'complychat'
-  ];
+  ], []);
 
-  const authenticatedDefaultModules = [
+  const authenticatedDefaultModules = useMemo(() => [
     'audit', 'complychat'
-  ];
+  ], []);
 
   const normalizePerm = (perm: string): string => {
     const cleaned = perm.trim();
@@ -360,10 +361,10 @@ export default function Sidebar() {
     return cleaned.includes('.') ? cleaned.replace(/\./g, ':') : cleaned;
   };
 
-  const extractModuleFromPerm = (perm: string): string => {
+  const extractModuleFromPerm = useCallback((perm: string): string => {
     const normalized = normalizePerm(perm);
     return normalized.split(':')[0] || '';
-  };
+  }, []);
 
   useEffect(() => {
     const loadMe = async () => {
@@ -418,7 +419,7 @@ export default function Sidebar() {
         console.error('Failed to fetch user data:', error);
         setLoaded(true);
       });
-  }, []);
+  }, [adminDefaultModules, authenticatedDefaultModules, extractModuleFromPerm]);
 
   const matchesPermission = (requiredPerm: string) => {
     const required = normalizePerm(requiredPerm);

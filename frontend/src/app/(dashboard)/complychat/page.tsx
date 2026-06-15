@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useMemo } from 'react';
 import { 
   Send, 
   Loader2, 
@@ -95,7 +95,7 @@ export default function ComplyChatPage() {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   const activeConversation = conversations.find(c => c.id === activeConversationId);
-  const messages = activeConversation?.messages || [];
+  const messages = useMemo(() => activeConversation?.messages || [], [activeConversation]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });

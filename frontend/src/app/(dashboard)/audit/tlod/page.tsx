@@ -118,10 +118,10 @@ export default function TlodPage() {
     )).data,
   });
 
-  const summary: SummaryRow[] = summaryQ.data?.items || [];
-  const entities: AuditableEntity[] = universeQ.data?.entities || universeQ.data || [];
-  const firstLineRows: FirstLineRow[] = firstLineQ.data?.items || [];
-  const secondLineRows: SecondLineRow[] = secondLineQ.data?.items || [];
+  const summary: SummaryRow[] = useMemo(() => summaryQ.data?.items || [], [summaryQ.data]);
+  const entities: AuditableEntity[] = useMemo(() => universeQ.data?.entities || universeQ.data || [], [universeQ.data]);
+  const firstLineRows: FirstLineRow[] = useMemo(() => firstLineQ.data?.items || [], [firstLineQ.data]);
+  const secondLineRows: SecondLineRow[] = useMemo(() => secondLineQ.data?.items || [], [secondLineQ.data]);
 
   const coverageStats = useMemo(() => {
     const total = summary.length;

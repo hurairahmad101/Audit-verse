@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { PageHeader, DataTable } from '@/components/ui';
 import { adminApi } from '@/lib/api';
 
@@ -34,15 +34,7 @@ export default function AuditLogsPage() {
   const [selectedDetails, setSelectedDetails] = useState<Record<string, unknown> | null>(null);
   const limit = 50;
 
-  useEffect(() => {
-    fetchFilters();
-  }, []);
-
-  useEffect(() => {
-    fetchLogs();
-  }, [page, actionFilter, moduleFilter, dateFilter]);
-
-  const getDateRange = () => {
+  const getDateRange = useCallback(() => {
     if (dateFilter === 'all') return {};
     const now = new Date();
     const toDate = now.toISOString().slice(0, 10);
@@ -64,9 +56,9 @@ export default function AuditLogsPage() {
     }
 
     return {};
-  };
+  }, [dateFilter]);
 
-  const fetchFilters = async () => {
+  const fetchFilters = useCallback(async () => {
     try {
       const response = await adminApi.getAuditLogFilters();
       setAvailableActions(response.data.actions || []);
@@ -75,9 +67,9 @@ export default function AuditLogsPage() {
       setAvailableActions([]);
       setAvailableModules([]);
     }
-  };
+  }, []);
 
-  const fetchLogs = async () => {
+  const fetchLogs = useCallback(async () => {
     try {
       setLoading(true);
       const dateRange = getDateRange();
@@ -96,7 +88,15 @@ export default function AuditLogsPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [page, actionFilter, moduleFilter, getDateRange, limit]);
+
+  useEffect(() => {
+    fetchFilters();
+  }, [fetchFilters]);
+
+  useEffect(() => {
+    fetchLogs();
+  }, [fetchLogs]);
 
   const formatTimestamp = (timestamp: string) => {
     const date = new Date(timestamp);
