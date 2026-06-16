@@ -1339,7 +1339,7 @@ def committee_stats(
 
 @router.get("/reporting-pack")
 def reporting_pack(
-    fiscal_year: Optional[str] = None,
+    fiscal_year: Optional[int] = None,
     db: Session = Depends(get_db),
     current_user: GRCUser = Depends(require_auth),
 ):
@@ -1366,8 +1366,8 @@ def reporting_pack(
 
     # Plan coverage + budget
     plan_q = db.query(AuditPlan).filter(AuditPlan.tenant_id == tenant_id)
-    if fiscal_year:
-        plan_q = plan_q.filter(AuditPlan.fiscal_year == fiscal_year)
+    if fiscal_year is not None:
+        plan_q = plan_q.filter(AuditPlan.fiscal_year == str(fiscal_year))
     plan = plan_q.order_by(AuditPlan.created_at.desc()).first()
     coverage = {
         "fiscal_year": plan.fiscal_year if plan else None,

@@ -484,7 +484,7 @@ export default function AuditUniversePage() {
                     <td className="px-4 py-3">
                       <button
                         onClick={() => setExpandedEntity(isExpanded ? null : entity.id)}
-                        className="text-white font-medium hover:text-blue-400 transition-colors text-left flex items-center gap-1"
+                        className="text-black font-medium hover:text-blue-400 transition-colors text-left flex items-center gap-1"
                       >
                         {isExpanded ? <ChevronDown className="h-3.5 w-3.5" /> : <ChevronRight className="h-3.5 w-3.5" />}
                         {entity.name}

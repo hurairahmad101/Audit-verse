@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
 
 class AuditPlanCreate(BaseModel):
     name: str
-    fiscal_year: str
+    fiscal_year: int
     description: Optional[str] = None
     total_budget_days: Optional[float] = 0
 
@@ -68,7 +68,7 @@ class PlanApprovalRequest(BaseModel):
 
 
 class GenerateFromUniverseRequest(BaseModel):
-    fiscal_year: str
+    fiscal_year: int
     name: Optional[str] = None
     total_budget_days: Optional[float] = None
     min_risk_score: Optional[float] = 0
@@ -139,7 +139,7 @@ def serialize_plan(p: AuditPlan) -> dict:
 
 @router.get("")
 def list_audit_plans(
-    fiscal_year: Optional[str] = None,
+    fiscal_year: Optional[int] = None,
     status: Optional[str] = None,
     db: Session = Depends(get_db),
     current_user: GRCUser = Depends(require_auth)
@@ -152,8 +152,8 @@ def list_audit_plans(
         joinedload(AuditPlan.items)
     ).filter(AuditPlan.tenant_id.in_(user_tenants))
     
-    if fiscal_year:
-        query = query.filter(AuditPlan.fiscal_year == fiscal_year)
+    if fiscal_year is not None:
+        query = query.filter(AuditPlan.fiscal_year == str(fiscal_year))
     if status:
         query = query.filter(AuditPlan.status == status)
     
@@ -174,7 +174,7 @@ def create_audit_plan(
     plan = AuditPlan(
         tenant_id=tenant_id,
         name=data.name,
-        fiscal_year=data.fiscal_year,
+        fiscal_year=str(data.fiscal_year),
         description=data.description,
         total_budget_days=data.total_budget_days or 0,
         created_by_id=current_user.id,
@@ -208,7 +208,7 @@ def generate_plan_from_universe(
     plan = AuditPlan(
         tenant_id=tenant_id,
         name=plan_name,
-        fiscal_year=data.fiscal_year,
+        fiscal_year=str(data.fiscal_year),
         description=f"Auto-generated from Audit Universe based on risk scores. {len(entities)} entities included.",
         status="draft",
         total_budget_days=data.total_budget_days or len(entities) * 15,

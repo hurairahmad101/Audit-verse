@@ -38,7 +38,7 @@ def get_openai_client():
 
 
 class AuditPlanGenerateRequest(BaseModel):
-    fiscal_year: str
+    fiscal_year: int
     team_size: Optional[int] = 12
     total_budget_days: Optional[float] = 180
     focus_areas: Optional[list] = []
@@ -432,7 +432,7 @@ Ensure even quarterly distribution and total budget within {data.total_budget_da
         plan = AuditPlan(
             tenant_id=tenant_id,
             name=plan_data.get("plan_name", f"AI-Generated Audit Plan {data.fiscal_year}"),
-            fiscal_year=data.fiscal_year,
+            fiscal_year=str(data.fiscal_year),
             description=f"AI-generated audit plan based on {len(risk_data)} risks, {len(entity_data)} auditable entities, and {len(prior_data)} open findings.",
             total_budget_days=data.total_budget_days,
             ai_generated=True,

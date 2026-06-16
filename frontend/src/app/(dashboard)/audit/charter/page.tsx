@@ -161,11 +161,11 @@ function lineDiff(a: string, b: string) {
   let i = 0, j = 0;
   while (i < m && j < n) {
     if (A[i] === B[j]) { left.push({ line: A[i], cls: '' }); right.push({ line: B[j], cls: '' }); i++; j++; }
-    else if (dp[i + 1][j] >= dp[i][j + 1]) { left.push({ line: A[i], cls: 'bg-rose-500/20 text-rose-200' }); right.push({ line: '', cls: '' }); i++; }
-    else { left.push({ line: '', cls: '' }); right.push({ line: B[j], cls: 'bg-emerald-500/20 text-emerald-200' }); j++; }
+    else if (dp[i + 1][j] >= dp[i][j + 1]) { left.push({ line: A[i], cls: ' text-black' }); right.push({ line: '', cls: '' }); i++; }
+    else { left.push({ line: '', cls: '' }); right.push({ line: B[j], cls: ' text-black' }); j++; }
   }
-  while (i < m) { left.push({ line: A[i++], cls: 'bg-rose-500/20 text-rose-200' }); right.push({ line: '', cls: '' }); }
-  while (j < n) { left.push({ line: '', cls: '' }); right.push({ line: B[j++], cls: 'bg-emerald-500/20 text-emerald-200' }); }
+  while (i < m) { left.push({ line: A[i++], cls: 'bg-rose-500/20 text-black' }); right.push({ line: '', cls: '' }); }
+  while (j < n) { left.push({ line: '', cls: '' }); right.push({ line: B[j++], cls: ' text-black' }); }
   return { left, right };
 }
 
@@ -777,8 +777,8 @@ function AttestationsPanel({ data, onFile }: { data?: AttestationsResponse; onFi
                 <div className="text-xs text-slate-400 mt-0.5">Signed {r.signed_at && new Date(r.signed_at).toLocaleString()}</div>
                 {r.impairments_disclosed && <div className="text-xs text-amber-300 mt-1">Impairments disclosed: {r.impairments_disclosed}</div>}
                 <div className="mt-2 inline-flex items-center gap-2 rounded-md border border-emerald-500/20 bg-emerald-500/5 px-2 py-1">
-                  <span className="text-[10px] uppercase tracking-wider text-emerald-400/80">Signature</span>
-                  <span className="font-mono text-[11px] text-emerald-200/90 break-all">{r.digital_signature}</span>
+                  <span className="text-[10px] uppercase tracking-wider text-black">Signature</span>
+                  <span className="font-mono text-[11px] text-black break-all">{r.digital_signature}</span>
                 </div>
               </div>
               <span className="px-2 py-0.5 rounded text-[10px] border border-emerald-500/30 bg-emerald-500/10 text-emerald-300">{r.status}</span>

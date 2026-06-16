@@ -17,7 +17,7 @@ const LEVEL_LABELS: Record<number, { label: string; color: string }> = {
 const SEVERITY_COLORS: Record<string, string> = {
   critical: 'bg-red-500/20 text-red-400 border-red-500/30',
   high: 'bg-orange-500/20 text-orange-400 border-orange-500/30',
-  medium: 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30',
+  medium: 'bg-yellow-500/20 text-black border-yellow-500/30',
   low: 'bg-green-500/20 text-green-400 border-green-500/30',
 };
 
@@ -91,9 +91,9 @@ export default function IssueTrackingPage() {
             { label: 'Overdue', value: summary.total_overdue, color: 'text-red-400' },
             { label: 'Critical/High Open', value: (summary.by_severity?.critical?.count || 0) + (summary.by_severity?.high?.count || 0), color: 'text-orange-400' },
             { label: 'Active Escalations', value: summary.active_escalations, color: 'text-amber-400' },
-            { label: 'L1 Escalations', value: summary.escalation_breakdown?.level_1, color: 'text-yellow-400' },
-            { label: 'L2 Escalations', value: summary.escalation_breakdown?.level_2, color: 'text-orange-400' },
-            { label: 'L3 Escalations', value: summary.escalation_breakdown?.level_3, color: 'text-red-400' },
+            { label: 'L1 Escalations', value: summary.escalation_breakdown?.level_1, color: 'text-black' },
+            { label: 'L2 Escalations', value: summary.escalation_breakdown?.level_2, color: 'text-black' },
+            { label: 'L3 Escalations', value: summary.escalation_breakdown?.level_3, color: 'text-black' },
           ].map((s, i) => (
             <div key={i} className="rounded-xl border border-slate-700/60 bg-slate-900/60 p-4 text-center">
               <p className={`text-2xl font-bold ${s.color}`}>{s.value ?? 0}</p>
@@ -105,7 +105,7 @@ export default function IssueTrackingPage() {
 
       {/* Overdue Findings Table */}
       {summary?.overdue_findings?.length > 0 && (
-        <div className="rounded-xl border border-red-500/20 bg-red-500/5 p-6">
+        <div className="rounded-xl border border-red-500/20  p-6">
           <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
             <AlertTriangle className="h-5 w-5 text-red-400" />
             Overdue Findings — Immediate Attention Required
