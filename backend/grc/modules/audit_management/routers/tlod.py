@@ -501,7 +501,6 @@ def _latest_audit(db: Session, entity_id: int, tenants: List[int]) -> Optional[A
     )
     indirect_ids = [pi.id for pi in db.query(AuditPlanItem).filter(
         AuditPlanItem.auditable_entity_id == entity_id,
-        AuditPlanItem.tenant_id.in_(tenants),
     ).all()]
     indirect = db.query(AuditEngagement).filter(
         AuditEngagement.plan_item_id.in_(indirect_ids or [0]),

@@ -408,7 +408,6 @@ def get_engagement(
     if not effective_entity_id and eng.plan_item_id:
         plan_item = db.query(AuditPlanItem).filter(
             AuditPlanItem.id == eng.plan_item_id,
-            AuditPlanItem.tenant_id.in_(user_tenants),
         ).first()
         if plan_item:
             effective_entity_id = plan_item.auditable_entity_id

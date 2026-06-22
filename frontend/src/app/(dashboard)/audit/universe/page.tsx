@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useQuery, useMutation } from '@tanstack/react-query';
 import { auditApi, apiClient } from '@/lib/api';
@@ -109,7 +109,7 @@ const defaultForm = {
   contact_designation: '',
 };
 
-export default function AuditUniversePage() {
+function AuditUniverseInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const idsParam = searchParams.get('ids');
@@ -1639,5 +1639,13 @@ export default function AuditUniversePage() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function AuditUniversePage() {
+  return (
+    <Suspense fallback={<div className="flex justify-center py-20"><span className="text-slate-400 text-sm">Loading…</span></div>}>
+      <AuditUniverseInner />
+    </Suspense>
   );
 }
