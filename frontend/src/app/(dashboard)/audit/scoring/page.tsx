@@ -45,15 +45,24 @@ export default function RiskScoringPage() {
     queryFn: async () => (await auditApi.scoring.getConfig()).data,
   });
 
+  const seeded = React.useRef(false);
   useEffect(() => {
-    if (data?.weights) setWeights({ ...data.weights });
+    if (data?.weights && !seeded.current) {
+      seeded.current = true;
+      setWeights({ ...data.weights });
+    }
   }, [data]);
 
   const saveMutation = useMutation({
     mutationFn: async (w: Record<string, number>) =>
       (await auditApi.scoring.updateConfig({ weights: w })).data,
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['scoring-config'] });
+    onSuccess: (_res, savedWeights) => {
+      // Patch the cache with the values we just saved so the useEffect
+      // does not reset sliders to whatever the API returns (which may be
+      // fractional/normalised values that map to near-zero on max=40).
+      queryClient.setQueryData(['scoring-config'], (old: ConfigResponse | undefined) =>
+        old ? { ...old, weights: savedWeights } : old
+      );
       setRunResult('Weights saved.');
     },
   });
@@ -99,7 +108,7 @@ export default function RiskScoringPage() {
       </div>
 
       {runResult && (
-        <div className="rounded-lg border border-emerald-500/20 bg-emerald-500/10 text-emerald-300 px-4 py-3 text-sm flex items-center gap-2">
+        <div className="rounded-lg border border-emerald-500/20 bg-emerald-500/10 text-black px-4 py-3 text-sm flex items-center gap-2">
           <Sparkles className="w-4 h-4" /> {runResult}
         </div>
       )}
