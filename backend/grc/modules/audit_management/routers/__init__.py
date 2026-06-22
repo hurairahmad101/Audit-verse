@@ -8,6 +8,7 @@ from .reporting import router as reporting_router
 from .qaip import router as qaip_router
 from .ai_agents import router as ai_agents_router
 from .notifications import router as notifications_router
+from .scoring import router as scoring_router
 
 __all__ = [
     "audit_universe_router",
@@ -20,4 +21,5 @@ __all__ = [
     "qaip_router",
     "ai_agents_router",
     "notifications_router",
+    "scoring_router",
 ]

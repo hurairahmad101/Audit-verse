@@ -34,7 +34,15 @@ const TABS = [
   { key: 'kpis', label: 'KPIs & Trends', icon: BarChart3 },
   { key: 'reports', label: 'Reports', icon: FileText },
   { key: 'board-packs', label: 'Board Packs', icon: Package },
+  { key: 'risk-based', label: 'Risk-Based Report', icon: Shield },
 ];
+
+const RISK_RATING_COLORS: Record<string, string> = {
+  critical: 'bg-red-500/20 text-red-400 border-red-500/30',
+  high: 'bg-orange-500/20 text-orange-400 border-orange-500/30',
+  medium: 'bg-amber-500/20 text-amber-400 border-amber-500/30',
+  low: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30',
+};
 
 const REPORT_STATUS_COLORS: Record<string, string> = {
   draft: 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30',
@@ -70,6 +78,8 @@ export default function AuditReportingPage() {
   const [isEditingReport, setIsEditingReport] = useState(false);
   const [exportingPDF, setExportingPDF] = useState(false);
   const [exportingDOCX, setExportingDOCX] = useState(false);
+  const [rbFiscalYear, setRbFiscalYear] = useState('');
+  const [exportingRiskBased, setExportingRiskBased] = useState(false);
   const [editReportForm, setEditReportForm] = useState({
     title: '',
     report_type: 'full_report',
@@ -104,6 +114,32 @@ export default function AuditReportingPage() {
     queryFn: () => auditApi.reporting.getFullReport(selectedReportId!).then(r => r.data),
     enabled: !!selectedReportId && showReportDetail,
   });
+
+  const { data: riskBasedReport, isLoading: riskBasedLoading } = useQuery({
+    queryKey: ['risk-based-report', rbFiscalYear],
+    queryFn: () => auditApi.reporting.getRiskBasedReport(rbFiscalYear || undefined).then(r => r.data),
+    enabled: activeTab === 'risk-based',
+  });
+
+  const handleExportRiskBased = async () => {
+    setExportingRiskBased(true);
+    try {
+      const res = await auditApi.reporting.exportRiskBasedReportDOCX(rbFiscalYear || undefined);
+      const blob = new Blob([res.data], { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' });
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `risk_based_audit_report${rbFiscalYear ? `_${rbFiscalYear}` : ''}.docx`;
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+    } catch (err) {
+      console.error('Export risk-based report failed:', err);
+    } finally {
+      setExportingRiskBased(false);
+    }
+  };
 
   const createReportMutation = useMutation({
     mutationFn: (data: Record<string, unknown>) => auditApi.reporting.createReport(data).then(r => r.data),
@@ -598,6 +634,169 @@ export default function AuditReportingPage() {
                   </div>
                 </div>
               ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      {activeTab === 'risk-based' && (
+        <div className="space-y-4">
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <h2 className="text-lg font-semibold text-white flex items-center gap-2">
+                <Shield className="w-5 h-5 text-blue-400" /> Board-Ready Risk-Based Audit Report
+              </h2>
+              <p className="text-sm text-slate-400">Ranked risk universe, risk-aligned plan and coverage-vs-risk gaps.</p>
+            </div>
+            <div className="flex items-end gap-2">
+              <div>
+                <label className="block text-xs text-slate-400 mb-1">Fiscal year</label>
+                <input
+                  type="text"
+                  value={rbFiscalYear}
+                  onChange={(e) => setRbFiscalYear(e.target.value)}
+                  placeholder="current"
+                  className="px-3 py-2 bg-slate-900/60 border border-slate-700 text-white rounded-lg text-sm w-32 focus:outline-none focus:border-blue-500"
+                />
+              </div>
+              <button
+                onClick={handleExportRiskBased}
+                disabled={exportingRiskBased || !riskBasedReport}
+                className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-sm disabled:opacity-50"
+              >
+                {exportingRiskBased ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
+                Export DOCX
+              </button>
+            </div>
+          </div>
+
+          {riskBasedLoading ? (
+            <div className="flex items-center justify-center py-16 text-slate-400">
+              <Loader2 className="w-6 h-6 animate-spin" />
+            </div>
+          ) : !riskBasedReport ? (
+            <p className="text-sm text-slate-500 py-12 text-center">No report data available.</p>
+          ) : (
+            <div className="space-y-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4">
+                  <p className="text-2xl font-bold text-white">{riskBasedReport.summary?.total_entities ?? 0}</p>
+                  <p className="text-xs text-slate-400">Entities in universe</p>
+                </div>
+                <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4">
+                  <p className="text-2xl font-bold text-white">{riskBasedReport.summary?.high_risk_coverage_pct ?? 0}%</p>
+                  <p className="text-xs text-slate-400">High-risk coverage ({riskBasedReport.summary?.high_risk_covered ?? 0}/{riskBasedReport.summary?.high_risk_total ?? 0})</p>
+                </div>
+                <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4">
+                  <p className="text-2xl font-bold text-amber-400">{riskBasedReport.summary?.coverage_gap_count ?? 0}</p>
+                  <p className="text-xs text-slate-400">Coverage gaps</p>
+                </div>
+                <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4">
+                  <p className="text-2xl font-bold text-white">{riskBasedReport.summary?.plan_item_count ?? 0}</p>
+                  <p className="text-xs text-slate-400">Plan items {riskBasedReport.summary?.plan_risk_alignment_score != null ? `· align ${riskBasedReport.summary.plan_risk_alignment_score}` : ''}</p>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                {(['critical', 'high', 'medium', 'low'] as const).map((k) => (
+                  <span key={k} className={`px-3 py-1 rounded-lg text-xs font-medium border ${RISK_RATING_COLORS[k]}`}>
+                    {k}: {riskBasedReport.summary?.heat_map?.[k] ?? 0}
+                  </span>
+                ))}
+              </div>
+
+              <div>
+                <h3 className="text-sm font-semibold text-slate-300 mb-2">Ranked Risk Universe</h3>
+                <div className="rounded-lg border border-slate-700 overflow-hidden overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead className="bg-slate-900/60 text-slate-400">
+                      <tr>
+                        <th className="text-left px-3 py-2">#</th>
+                        <th className="text-left px-3 py-2">Entity</th>
+                        <th className="text-left px-3 py-2">Type</th>
+                        <th className="text-left px-3 py-2">Score</th>
+                        <th className="text-left px-3 py-2">Rating</th>
+                        <th className="text-left px-3 py-2">In plan</th>
+                        <th className="text-left px-3 py-2">Top factors</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {(riskBasedReport.ranked_universe || []).map((e: any) => (
+                        <tr key={e.entity_id} className="border-t border-slate-700/50">
+                          <td className="px-3 py-2 text-slate-500">{e.rank}</td>
+                          <td className="px-3 py-2 text-slate-200">{e.name}</td>
+                          <td className="px-3 py-2 text-slate-400">{e.entity_type}</td>
+                          <td className="px-3 py-2 text-white font-medium">{e.risk_score ?? '—'}</td>
+                          <td className="px-3 py-2">
+                            <span className={`px-2 py-0.5 rounded text-xs border ${RISK_RATING_COLORS[e.risk_rating] || 'text-slate-400 border-slate-600'}`}>{e.risk_rating || '—'}</span>
+                          </td>
+                          <td className="px-3 py-2">
+                            {e.in_current_plan ? <CheckCircle className="w-4 h-4 text-emerald-400" /> : <span className="text-slate-600">—</span>}
+                          </td>
+                          <td className="px-3 py-2 text-slate-400 text-xs">
+                            {(e.top_factors || []).map((f: any) => f.label).join(', ') || '—'}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-sm font-semibold text-slate-300 mb-2">Risk-Aligned Audit Plan</h3>
+                {(riskBasedReport.risk_aligned_plan || []).length === 0 ? (
+                  <p className="text-xs text-slate-500">{riskBasedReport.summary?.plan_exists ? 'No plan items.' : 'No current plan exists for this fiscal year.'}</p>
+                ) : (
+                  <div className="rounded-lg border border-slate-700 overflow-hidden overflow-x-auto">
+                    <table className="w-full text-sm">
+                      <thead className="bg-slate-900/60 text-slate-400">
+                        <tr>
+                          <th className="text-left px-3 py-2">Title</th>
+                          <th className="text-left px-3 py-2">Entity</th>
+                          <th className="text-left px-3 py-2">Score</th>
+                          <th className="text-left px-3 py-2">Quarter</th>
+                          <th className="text-left px-3 py-2">Hours</th>
+                          <th className="text-left px-3 py-2">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {(riskBasedReport.risk_aligned_plan || []).map((p: any) => (
+                          <tr key={p.plan_item_id} className="border-t border-slate-700/50">
+                            <td className="px-3 py-2 text-slate-200">{p.title}</td>
+                            <td className="px-3 py-2 text-slate-400">{p.entity_name || '—'}</td>
+                            <td className="px-3 py-2 text-white">{p.risk_score ?? '—'}</td>
+                            <td className="px-3 py-2 text-slate-400">{p.quarter || '—'}</td>
+                            <td className="px-3 py-2 text-slate-400">{p.planned_hours ?? '—'}</td>
+                            <td className="px-3 py-2 text-slate-400">{p.status || '—'}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+              </div>
+
+              <div>
+                <h3 className="text-sm font-semibold text-slate-300 mb-2 flex items-center gap-2">
+                  <AlertTriangle className="w-4 h-4 text-amber-400" /> Coverage vs. Risk Gaps
+                </h3>
+                {(riskBasedReport.coverage_gaps || []).length === 0 ? (
+                  <p className="text-xs text-emerald-400">No high/critical risk entities are missing coverage.</p>
+                ) : (
+                  <div className="space-y-2">
+                    {(riskBasedReport.coverage_gaps || []).map((g: any) => (
+                      <div key={g.entity_id} className="rounded-lg border border-amber-500/30 bg-amber-500/5 p-3">
+                        <div className="flex items-center justify-between">
+                          <p className="text-sm text-slate-200">{g.name} <span className="text-slate-500 text-xs">({g.entity_type})</span></p>
+                          <span className={`px-2 py-0.5 rounded text-xs border ${RISK_RATING_COLORS[g.risk_rating] || 'text-slate-400 border-slate-600'}`}>{g.risk_rating} · {g.risk_score}</span>
+                        </div>
+                        <p className="text-xs text-slate-400 mt-1">{g.reason}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           )}
         </div>

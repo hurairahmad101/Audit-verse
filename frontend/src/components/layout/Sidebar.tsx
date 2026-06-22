@@ -32,6 +32,7 @@ import {
   PlayCircle,
   Monitor,
   Gavel,
+  Calculator,
   Map as MapIcon,
   Repeat,
   type LucideIcon,
@@ -92,6 +93,8 @@ const navigation: NavEntry[] = [
     requiredModules: ['audit'],
     items: [
       { name: 'Audit Universe', href: '/audit/universe', icon: Globe },
+      { name: 'Risk Register', href: '/audit/risk-register', icon: AlertTriangle },
+      { name: 'Risk Scoring', href: '/audit/scoring', icon: Calculator },
       { name: 'Annual Audit Plans', href: '/audit/plans', icon: Calendar },
     ],
   },

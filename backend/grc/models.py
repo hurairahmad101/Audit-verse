@@ -5319,16 +5319,75 @@ class AuditableEntity(Base):
     status = Column(String(50), default="active")
     linked_risk_ids = Column(JSON, default=[])
     metadata_json = Column(JSON, default={})
+    risk_factors = Column(JSON, default={})
+    auto_risk_score = Column(Float, nullable=True)
+    factor_contributions = Column(JSON, default=[])
+    scored_at = Column(DateTime, nullable=True)
+    score_override = Column(Boolean, default=False)
+    override_score = Column(Float, nullable=True)
+    override_rating = Column(String(20), nullable=True)
+    override_justification = Column(Text, nullable=True)
+    override_by_id = Column(Integer, ForeignKey("grc_users.id"), nullable=True)
+    override_at = Column(DateTime, nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
     tenant = relationship("Tenant")
     business_unit = relationship("BusinessUnit")
-    owner = relationship("GRCUser")
+    owner = relationship("GRCUser", foreign_keys=[owner_id])
 
     __table_args__ = (
         Index("ix_auditable_entity_tenant", "tenant_id"),
         Index("ix_auditable_entity_risk", "tenant_id", "risk_score"),
+    )
+
+
+class RiskScoringConfig(Base):
+    __tablename__ = "grc_risk_scoring_configs"
+
+    id = Column(Integer, primary_key=True, index=True)
+    tenant_id = Column(Integer, ForeignKey("grc_tenants.id"), nullable=False, index=True)
+    weights = Column(JSON, default={})
+    alert_delta = Column(Float, default=10.0)
+    alert_on_rating_change = Column(Boolean, default=True)
+    updated_by_id = Column(Integer, ForeignKey("grc_users.id"), nullable=True)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+    tenant = relationship("Tenant")
+    updated_by = relationship("GRCUser")
+
+    __table_args__ = (
+        Index("ix_risk_scoring_config_tenant", "tenant_id"),
+    )
+
+
+class AuditEntityScoreHistory(Base):
+    __tablename__ = "grc_audit_entity_score_history"
+
+    id = Column(Integer, primary_key=True, index=True)
+    tenant_id = Column(Integer, ForeignKey("grc_tenants.id"), nullable=False, index=True)
+    auditable_entity_id = Column(Integer, ForeignKey("grc_auditable_entities.id"), nullable=False, index=True)
+    risk_score = Column(Float, nullable=True)
+    risk_rating = Column(String(20), nullable=True)
+    auto_risk_score = Column(Float, nullable=True)
+    previous_score = Column(Float, nullable=True)
+    previous_rating = Column(String(20), nullable=True)
+    delta = Column(Float, nullable=True)
+    top_factor_key = Column(String(100), nullable=True)
+    top_factor_label = Column(String(255), nullable=True)
+    top_factor_contribution = Column(Float, nullable=True)
+    trigger_reason = Column(String(100), nullable=True)
+    recorded_by_id = Column(Integer, ForeignKey("grc_users.id"), nullable=True)
+    recorded_at = Column(DateTime, default=datetime.utcnow)
+
+    tenant = relationship("Tenant")
+    auditable_entity = relationship("AuditableEntity")
+    recorded_by = relationship("GRCUser")
+
+    __table_args__ = (
+        Index("ix_entity_score_history_tenant", "tenant_id"),
+        Index("ix_entity_score_history_entity", "auditable_entity_id"),
+        Index("ix_entity_score_history_recorded", "tenant_id", "recorded_at"),
     )
 
 
@@ -8221,6 +8280,33 @@ def _add_missing_columns():
                 if "does not exist" in str(e).lower():
                     continue
                 logger.error(f"Error enforcing tenant_id NOT NULL on {table_name}: {e}")
+
+    # Migrate scoring-related columns on grc_auditable_entities
+    scoring_cols = [
+        ("risk_factors", "JSON"),
+        ("auto_risk_score", "REAL"),
+        ("factor_contributions", "JSON"),
+        ("scored_at", "TIMESTAMP"),
+        ("score_override", "BOOLEAN"),
+        ("override_score", "REAL"),
+        ("override_rating", "VARCHAR(20)"),
+        ("override_justification", "TEXT"),
+        ("override_by_id", "INTEGER"),
+        ("override_at", "TIMESTAMP"),
+    ]
+    try:
+        existing_ae = {c["name"] for c in inspector.get_columns("grc_auditable_entities")}
+        for col_name, col_type in scoring_cols:
+            if col_name not in existing_ae:
+                sql_type = "TEXT" if DATABASE_URL.startswith("sqlite") and col_type.startswith("VARCHAR") else col_type
+                with engine.begin() as conn:
+                    conn.execute(text(f"ALTER TABLE grc_auditable_entities ADD COLUMN {col_name} {sql_type}"))
+                logger.info(f"✓ Added grc_auditable_entities.{col_name}")
+    except Exception as e:
+        if "does not exist" in str(e).lower() or "no such table" in str(e).lower():
+            logger.debug("grc_auditable_entities table not found - will be created")
+        else:
+            logger.error(f"Error migrating scoring columns: {e}")
 
 
 def init_grc_db():

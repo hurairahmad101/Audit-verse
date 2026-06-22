@@ -1290,6 +1290,263 @@ def get_risk_prioritization(
     }
 
 
+def _build_risk_based_report_data(db: Session, user_tenants, fiscal_year: Optional[str] = None) -> dict:
+    """Assemble the board-ready risk-based report: ranked universe, risk-aligned
+    plan, and coverage-vs-risk gaps."""
+    year = fiscal_year or str(datetime.utcnow().year)
+    now = datetime.utcnow()
+
+    entities = db.query(AuditableEntity).filter(
+        AuditableEntity.tenant_id.in_(user_tenants),
+        AuditableEntity.status == "active",
+    ).order_by(AuditableEntity.risk_score.desc().nullslast()).all()
+
+    current_plan = db.query(AuditPlan).filter(
+        AuditPlan.tenant_id.in_(user_tenants),
+        AuditPlan.fiscal_year == year,
+    ).first()
+
+    plan_items = []
+    plan_entity_ids = set()
+    if current_plan:
+        plan_items = db.query(AuditPlanItem).filter(
+            AuditPlanItem.audit_plan_id == current_plan.id
+        ).all()
+        for pi in plan_items:
+            if pi.auditable_entity_id:
+                plan_entity_ids.add(pi.auditable_entity_id)
+
+    twelve_months_ago = now - timedelta(days=365)
+    audited_recent = set()
+    recent_engagements = db.query(AuditEngagement).filter(
+        AuditEngagement.tenant_id.in_(user_tenants),
+        AuditEngagement.status == "closed",
+        AuditEngagement.updated_at >= twelve_months_ago,
+    ).all()
+    for eng in recent_engagements:
+        if eng.auditable_entity_id:
+            audited_recent.add(eng.auditable_entity_id)
+
+    def _top_factors(entity, limit=3):
+        contribs = entity.factor_contributions or []
+        if not isinstance(contribs, list):
+            return []
+        ranked = sorted(
+            [c for c in contribs if isinstance(c, dict)],
+            key=lambda c: c.get("contribution", 0), reverse=True,
+        )
+        return [
+            {"label": c.get("label"), "value": c.get("value"), "contribution": c.get("contribution")}
+            for c in ranked[:limit] if (c.get("contribution") or 0) > 0
+        ]
+
+    heat_map = {"critical": 0, "high": 0, "medium": 0, "low": 0}
+    ranked_universe = []
+    for idx, e in enumerate(entities, start=1):
+        rating = (e.risk_rating or "low").lower()
+        if rating in heat_map:
+            heat_map[rating] += 1
+        ranked_universe.append({
+            "rank": idx,
+            "entity_id": e.id,
+            "name": e.name,
+            "entity_type": e.entity_type,
+            "industry": getattr(e, "industry", None),
+            "risk_score": e.risk_score,
+            "risk_rating": e.risk_rating,
+            "top_factors": _top_factors(e),
+            "in_current_plan": e.id in plan_entity_ids,
+            "audited_last_12m": e.id in audited_recent,
+            "last_audited_date": e.last_audited_date.isoformat() if e.last_audited_date else None,
+            "next_audit_due": e.next_audit_due.isoformat() if e.next_audit_due else None,
+        })
+
+    entity_by_id = {e.id: e for e in entities}
+    plan_rows = []
+    for pi in plan_items:
+        e = entity_by_id.get(pi.auditable_entity_id)
+        plan_rows.append({
+            "plan_item_id": pi.id,
+            "title": pi.title,
+            "entity_id": pi.auditable_entity_id,
+            "entity_name": e.name if e else None,
+            "risk_score": e.risk_score if e else None,
+            "risk_rating": e.risk_rating if e else None,
+            "status": pi.status,
+            "quarter": getattr(pi, "quarter", None),
+            "planned_hours": getattr(pi, "planned_hours", None),
+        })
+    plan_rows.sort(key=lambda r: (r["risk_score"] or 0), reverse=True)
+
+    high_risk_entities = [e for e in entities if (e.risk_rating or "").lower() in ("critical", "high")]
+    coverage_gaps = []
+    for e in high_risk_entities:
+        if e.id not in plan_entity_ids and e.id not in audited_recent:
+            coverage_gaps.append({
+                "entity_id": e.id,
+                "name": e.name,
+                "entity_type": e.entity_type,
+                "risk_score": e.risk_score,
+                "risk_rating": e.risk_rating,
+                "last_audited_date": e.last_audited_date.isoformat() if e.last_audited_date else None,
+                "reason": "High/critical risk with no engagement in the last 12 months and not in the current plan",
+            })
+
+    total_high = len(high_risk_entities)
+    covered_high = len([e for e in high_risk_entities if e.id in plan_entity_ids or e.id in audited_recent])
+    coverage_pct = round((covered_high / total_high * 100), 1) if total_high else 100.0
+
+    summary = {
+        "fiscal_year": year,
+        "total_entities": len(entities),
+        "heat_map": heat_map,
+        "plan_exists": current_plan is not None,
+        "plan_item_count": len(plan_items),
+        "high_risk_total": total_high,
+        "high_risk_covered": covered_high,
+        "high_risk_coverage_pct": coverage_pct,
+        "coverage_gap_count": len(coverage_gaps),
+        "plan_risk_alignment_score": current_plan.risk_alignment_score if current_plan else None,
+    }
+
+    return {
+        "generated_at": now.isoformat(),
+        "summary": summary,
+        "ranked_universe": ranked_universe,
+        "risk_aligned_plan": plan_rows,
+        "coverage_gaps": coverage_gaps,
+    }
+
+
+@router.get("/risk-based-report")
+def get_risk_based_report(
+    fiscal_year: Optional[str] = Query(None),
+    db: Session = Depends(get_db),
+    current_user: GRCUser = Depends(require_auth),
+):
+    user_tenants = get_user_tenants(current_user, db)
+    if not user_tenants:
+        raise HTTPException(status_code=403, detail="No tenant access")
+    return _build_risk_based_report_data(db, user_tenants, fiscal_year)
+
+
+@router.get("/risk-based-report/export/docx")
+def export_risk_based_report_docx(
+    fiscal_year: Optional[str] = Query(None),
+    db: Session = Depends(get_db),
+    current_user: GRCUser = Depends(require_auth),
+):
+    user_tenants = get_user_tenants(current_user, db)
+    if not user_tenants:
+        raise HTTPException(status_code=403, detail="No tenant access")
+
+    data = _build_risk_based_report_data(db, user_tenants, fiscal_year)
+    summary = data["summary"]
+
+    try:
+        from docx import Document
+        from docx.shared import Pt, RGBColor
+        from docx.enum.text import WD_ALIGN_PARAGRAPH
+
+        doc = Document()
+
+        title = doc.add_heading("Risk-Based Audit Report", level=0)
+        title.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        sub = doc.add_paragraph(
+            f"Fiscal Year {summary['fiscal_year']} · Generated "
+            f"{datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')}"
+        )
+        sub.alignment = WD_ALIGN_PARAGRAPH.CENTER
+
+        doc.add_heading("Executive Summary", level=1)
+        hm = summary["heat_map"]
+        doc.add_paragraph(
+            f"The audit universe comprises {summary['total_entities']} active entities: "
+            f"{hm['critical']} critical, {hm['high']} high, {hm['medium']} medium and "
+            f"{hm['low']} low risk.", style="List Bullet")
+        doc.add_paragraph(
+            f"High/critical risk coverage stands at {summary['high_risk_coverage_pct']}% "
+            f"({summary['high_risk_covered']} of {summary['high_risk_total']} covered by the "
+            f"current plan or a recent engagement).", style="List Bullet")
+        doc.add_paragraph(
+            f"{summary['coverage_gap_count']} high/critical entities are uncovered and represent "
+            f"the most material gaps in assurance.", style="List Bullet")
+        if summary["plan_risk_alignment_score"] is not None:
+            doc.add_paragraph(
+                f"Current plan risk-alignment score: {summary['plan_risk_alignment_score']}.",
+                style="List Bullet")
+
+        doc.add_heading("Ranked Risk Universe", level=1)
+        ranked = data["ranked_universe"][:25]
+        if ranked:
+            table = doc.add_table(rows=1, cols=5)
+            table.style = "Light Grid Accent 1"
+            hdr = table.rows[0].cells
+            for i, h in enumerate(["#", "Entity", "Type", "Score", "Rating"]):
+                hdr[i].text = h
+            for row in ranked:
+                cells = table.add_row().cells
+                cells[0].text = str(row["rank"])
+                cells[1].text = str(row["name"] or "")
+                cells[2].text = str(row["entity_type"] or "")
+                cells[3].text = str(round(row["risk_score"]) if row["risk_score"] is not None else "—")
+                cells[4].text = str(row["risk_rating"] or "—")
+        else:
+            doc.add_paragraph("No active entities in the universe.")
+
+        doc.add_heading("Risk-Aligned Audit Plan", level=1)
+        plan = data["risk_aligned_plan"]
+        if plan:
+            ptable = doc.add_table(rows=1, cols=4)
+            ptable.style = "Light Grid Accent 1"
+            phdr = ptable.rows[0].cells
+            for i, h in enumerate(["Audit", "Entity", "Risk", "Status"]):
+                phdr[i].text = h
+            for row in plan:
+                cells = ptable.add_row().cells
+                cells[0].text = str(row["title"] or "")
+                cells[1].text = str(row["entity_name"] or "—")
+                rating = row["risk_rating"] or "—"
+                score = round(row["risk_score"]) if row["risk_score"] is not None else "—"
+                cells[2].text = f"{rating} ({score})"
+                cells[3].text = str(row["status"] or "")
+        else:
+            doc.add_paragraph(
+                f"No audit plan found for fiscal year {summary['fiscal_year']}.")
+
+        doc.add_heading("Coverage vs. Risk Gaps", level=1)
+        gaps = data["coverage_gaps"]
+        if gaps:
+            doc.add_paragraph(
+                "The following high/critical risk entities have no coverage in the current "
+                "plan and no closed engagement in the last 12 months:")
+            for g in gaps:
+                p = doc.add_paragraph(style="List Bullet")
+                run = p.add_run(
+                    f"{g['name']} — {g['risk_rating']} "
+                    f"(score {round(g['risk_score']) if g['risk_score'] is not None else '—'})")
+                run.bold = True
+        else:
+            doc.add_paragraph(
+                "No coverage gaps detected — all high/critical entities are covered by the "
+                "current plan or a recent engagement.")
+
+        buf = io.BytesIO()
+        doc.save(buf)
+        buf.seek(0)
+        filename = f"risk_based_report_{summary['fiscal_year']}.docx"
+        return StreamingResponse(
+            buf,
+            media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            headers={"Content-Disposition": f'attachment; filename="{filename}"'},
+        )
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Risk-based report DOCX export error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"DOCX generation failed: {str(e)}")
+
+
 @router.get("/accountability")
 def get_accountability_metrics(
     db: Session = Depends(get_db),

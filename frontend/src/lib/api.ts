@@ -202,6 +202,42 @@ export const auditApi = {
     syncFromRisks: () => apiClient.post('/audit/universe/sync-from-risks'),
     refreshRiskScores: () => apiClient.post('/audit/universe/refresh-risk-scores'),
     generateDescription: (data: Record<string, unknown>) => apiClient.post('/audit/universe/generate-description', data),
+    downloadImportTemplate: () => apiClient.get('/audit/universe/import/template', { responseType: 'blob' }),
+    previewImport: (file: File, mapping?: Record<string, string | null>) => {
+      const formData = new FormData();
+      formData.append('file', file);
+      if (mapping) formData.append('mapping', JSON.stringify(mapping));
+      return apiClient.post('/audit/universe/import/preview', formData, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+      });
+    },
+    commitImport: (file: File, mapping?: Record<string, string | null>) => {
+      const formData = new FormData();
+      formData.append('file', file);
+      if (mapping) formData.append('mapping', JSON.stringify(mapping));
+      return apiClient.post('/audit/universe/import/commit', formData, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+      });
+    },
+  },
+  scoring: {
+    getConfig: () => apiClient.get('/audit/scoring/config'),
+    updateConfig: (data: Record<string, unknown>) => apiClient.put('/audit/scoring/config', data),
+    run: (entityId?: number) => apiClient.post('/audit/scoring/run', undefined, entityId ? { params: { entity_id: entityId } } : undefined),
+    getEntityBreakdown: (entityId: number) => apiClient.get(`/audit/scoring/entity/${entityId}`),
+    updateFactors: (entityId: number, data: Record<string, unknown>) => apiClient.put(`/audit/scoring/entity/${entityId}/factors`, data),
+    setOverride: (entityId: number, data: Record<string, unknown>) => apiClient.post(`/audit/scoring/entity/${entityId}/override`, data),
+    clearOverride: (entityId: number) => apiClient.delete(`/audit/scoring/entity/${entityId}/override`),
+    getHistory: (entityId: number, limit?: number) => apiClient.get(`/audit/scoring/entity/${entityId}/history`, limit ? { params: { limit } } : undefined),
+    getNarrative: (entityId: number) => apiClient.get(`/audit/scoring/entity/${entityId}/narrative`),
+    aiAssess: (entityId: number) => apiClient.post(`/audit/scoring/entity/${entityId}/ai-assess`),
+  },
+  riskRegister: {
+    getAll: (params?: Record<string, unknown>) => apiClient.get('/audit/risk-register', { params }),
+    getById: (id: number) => apiClient.get(`/audit/risk-register/${id}`),
+    create: (data: Record<string, unknown>) => apiClient.post('/audit/risk-register', data),
+    update: (id: number, data: Record<string, unknown>) => apiClient.put(`/audit/risk-register/${id}`, data),
+    delete: (id: number) => apiClient.delete(`/audit/risk-register/${id}`),
   },
   plans: {
     getAll: (params?: Record<string, unknown>) => apiClient.get('/audit/plans', { params }),
@@ -210,6 +246,7 @@ export const auditApi = {
     update: (id: number, data: Record<string, unknown>) => apiClient.put(`/audit/plans/${id}`, data),
     delete: (id: number) => apiClient.delete(`/audit/plans/${id}`),
     approve: (id: number, data: Record<string, unknown>) => apiClient.post(`/audit/plans/${id}/approve`, data),
+    previewFromUniverse: (data: Record<string, unknown>) => apiClient.post('/audit/plans/generate-from-universe/preview', data),
     generateFromUniverse: (data: Record<string, unknown>) => apiClient.post('/audit/plans/generate-from-universe', data),
     addItem: (planId: number, data: Record<string, unknown>) => apiClient.post(`/audit/plans/${planId}/items`, data),
     updateItem: (planId: number, itemId: number, data: Record<string, unknown>) => apiClient.put(`/audit/plans/${planId}/items/${itemId}`, data),
@@ -235,6 +272,7 @@ export const auditApi = {
     removeTeamMember: (id: number, memberId: number) => apiClient.delete(`/audit/engagements/${id}/team/${memberId}`),
     addTimeEntry: (id: number, data: Record<string, unknown>) => apiClient.post(`/audit/engagements/${id}/time-entries`, data),
     deleteTimeEntry: (id: number, entryId: number) => apiClient.delete(`/audit/engagements/${id}/time-entries/${entryId}`),
+    getRiskGuidance: (id: number) => apiClient.get(`/audit/engagements/${id}/risk-guidance`),
   },
   workpapers: {
     getAll: (params?: Record<string, unknown>) => apiClient.get('/audit/workpapers', { params }),
@@ -262,6 +300,7 @@ export const auditApi = {
       headers: { 'Content-Type': 'multipart/form-data' },
     }),
     suggestDetails: (data: Record<string, unknown>) => apiClient.post('/audit/findings/ai-suggest', data),
+    getSeveritySuggestion: (engagementId: number) => apiClient.get('/audit/findings/severity-suggestion', { params: { engagement_id: engagementId } }),
     getGroupedByEngagement: (params?: Record<string, unknown>) => apiClient.get('/audit/findings/grouped-by-engagement', { params }),
     update: (id: number, data: Record<string, unknown>) => apiClient.put(`/audit/findings/${id}`, data),
     delete: (id: number) => apiClient.delete(`/audit/findings/${id}`),
@@ -297,6 +336,8 @@ export const auditApi = {
     getKPIs: () => apiClient.get('/audit/reporting/kpis'),
     getTrendAnalysis: (params?: Record<string, unknown>) => apiClient.get('/audit/reporting/trend-analysis', { params }),
     getRiskPrioritization: () => apiClient.get('/audit/reporting/risk-prioritization'),
+    getRiskBasedReport: (fiscalYear?: string) => apiClient.get('/audit/reporting/risk-based-report', fiscalYear ? { params: { fiscal_year: fiscalYear } } : undefined),
+    exportRiskBasedReportDOCX: (fiscalYear?: string) => apiClient.get('/audit/reporting/risk-based-report/export/docx', { responseType: 'blob', ...(fiscalYear ? { params: { fiscal_year: fiscalYear } } : {}) }),
     getAccountability: () => apiClient.get('/audit/reporting/accountability'),
     getROIMetrics: (hourlyRate?: number) => apiClient.get('/audit/reporting/roi-metrics', { params: hourlyRate ? { hourly_rate: hourlyRate } : {} }),
     getRegulatoryImpactTracker: () => apiClient.get('/audit/reporting/regulatory-impact-tracker'),
@@ -348,6 +389,10 @@ export const auditApi = {
     updateTemplate: (id: number, data: Record<string, unknown>) => apiClient.put(`/audit/notifications/templates/${id}`, data),
     deleteTemplate: (id: number) => apiClient.delete(`/audit/notifications/templates/${id}`),
     seedDefaults: () => apiClient.post('/audit/notifications/templates/seed-defaults'),
+    getAlerts: (params?: Record<string, unknown>) => apiClient.get('/audit/notifications/alerts', { params }),
+    getUnreadCount: () => apiClient.get('/audit/notifications/alerts/unread-count'),
+    markAlertRead: (id: number) => apiClient.post(`/audit/notifications/alerts/${id}/read`),
+    markAllAlertsRead: () => apiClient.post('/audit/notifications/alerts/read-all'),
   },
   tools: {
     samplingCalculator: (data: Record<string, unknown>) => apiClient.post('/audit/tools/sampling-calculator', data),
@@ -439,6 +484,8 @@ export const auditApi = {
     getEngagementPerformance: () => apiClient.get('/audit/analytics/engagement-performance'),
     benfordTest: (data: Record<string, unknown>) => apiClient.post('/audit/analytics/benford-test', data),
     outlierDetection: (data: Record<string, unknown>) => apiClient.post('/audit/analytics/outlier-detection', data),
+    getRiskHeatmap: (params?: Record<string, unknown>) => apiClient.get('/audit/analytics/risk-heatmap', { params }),
+    getCoverageGap: (params?: Record<string, unknown>) => apiClient.get('/audit/analytics/coverage-gap', { params }),
   },
   issueTracking: {
     getAll: (params?: Record<string, unknown>) => apiClient.get('/audit/issue-tracking', { params }),

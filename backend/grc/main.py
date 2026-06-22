@@ -9,7 +9,7 @@ from fastapi.responses import JSONResponse
 from starlette.responses import Response
 from .models import init_grc_db
 from .audit_logger import should_audit_request, parse_request_payload, write_audit_log
-from .routers import auth_router, tenants_router
+from .routers import auth_router, tenants_router, risk_register_router
 from .routers.admin_router import router as admin_router
 from .modules.audit_management import audit_management_router
 from .modules.chatbot import chatbot_router
@@ -87,6 +87,7 @@ app.include_router(admin_router)
 app.include_router(tenants_router)
 app.include_router(chatbot_router)
 app.include_router(audit_management_router)
+app.include_router(risk_register_router)
 
 
 @app.on_event("startup")

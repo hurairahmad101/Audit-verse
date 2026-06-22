@@ -22,9 +22,11 @@ from .routers.analytics import router as analytics_router
 from .routers.issue_tracking import router as issue_tracking_router
 from .routers.committee import router as committee_router
 from .routers.tlod import router as tlod_router
+from .routers.scoring import router as scoring_router
 
 router = APIRouter(prefix="/audit", tags=["Audit Management"])
 
+router.include_router(scoring_router)
 router.include_router(audit_universe_router)
 router.include_router(audit_plans_router)
 router.include_router(engagements_router)
