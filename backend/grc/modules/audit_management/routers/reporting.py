@@ -1027,11 +1027,10 @@ def get_trend_analysis(
         if f.created_at:
             month_key = f.created_at.strftime("%Y-%m")
             by_month[month_key] = by_month.get(month_key, 0) + 1
-            
-            if month_key not in severity_trend:
-                severity_trend[month_key] = {}
-            severity_trend[month_key][f.severity] = severity_trend[month_key].get(f.severity, 0) + 1
-        
+
+        if f.severity:
+            severity_trend[f.severity] = severity_trend.get(f.severity, 0) + 1
+
         if f.root_cause_category:
             root_cause_dist[f.root_cause_category] = root_cause_dist.get(f.root_cause_category, 0) + 1
     
