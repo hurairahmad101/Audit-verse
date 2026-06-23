@@ -103,8 +103,8 @@ export default function AuditReportingPage() {
   const [bpThemeLoading, setBpThemeLoading] = useState(false);
   const [bpThemeResult, setBpThemeResult] = useState<any>(null);
 
-  const { data: kpis } = useQuery({ queryKey: ['audit-kpis'], queryFn: () => auditApi.reporting.getKPIs().then(r => r.data) });
-  const { data: trends } = useQuery({ queryKey: ['trend-analysis'], queryFn: () => auditApi.reporting.getTrendAnalysis().then(r => r.data) });
+  const { data: kpis } = useQuery({ queryKey: ['audit-kpis'], queryFn: () => auditApi.reporting.getKPIs().then(r => r.data?.kpis ?? r.data) });
+  const { data: trends } = useQuery({ queryKey: ['trend-analysis'], queryFn: () => auditApi.reporting.getTrendAnalysis().then(r => r.data?.trends ?? r.data) });
   const { data: reports } = useQuery({ queryKey: ['audit-reports'], queryFn: () => auditApi.reporting.getReports().then(r => r.data?.reports || r.data || []) });
   const { data: boardPacks } = useQuery({ queryKey: ['board-packs'], queryFn: () => auditApi.reporting.getBoardPacks().then(r => r.data?.board_packs || r.data || []) });
   const { data: engagements } = useQuery({ queryKey: ['engagements-list'], queryFn: () => auditApi.engagements.getAll().then(r => r.data?.engagements || r.data || []) });
@@ -118,7 +118,6 @@ export default function AuditReportingPage() {
   const { data: riskBasedReport, isLoading: riskBasedLoading } = useQuery({
     queryKey: ['risk-based-report', rbFiscalYear],
     queryFn: () => auditApi.reporting.getRiskBasedReport(rbFiscalYear || undefined).then(r => r.data),
-    enabled: activeTab === 'risk-based',
   });
 
   const handleExportRiskBased = async () => {

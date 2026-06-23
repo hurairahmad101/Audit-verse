@@ -32,6 +32,7 @@ export default function WorkpapersPage() {
   const [selectedEngagement, setSelectedEngagement] = useState<number | undefined>();
   const [showCreate, setShowCreate] = useState(false);
   const [selectedWp, setSelectedWp] = useState<any>(null);
+  const [editForm, setEditForm] = useState({ title: '', description: '', engagement_id: '', workpaper_type: 'test', reference_number: '' });
   const [showSignoff, setShowSignoff] = useState<any>(null);
   const [form, setForm] = useState({
     title: '', description: '', engagement_id: '', workpaper_type: 'test', reference_number: '',
@@ -165,7 +166,16 @@ export default function WorkpapersPage() {
                     Sign Off
                   </button>
                   <button
-                    onClick={() => setSelectedWp(wp)}
+                    onClick={() => {
+                      setSelectedWp(wp);
+                      setEditForm({
+                        title: wp.title || '',
+                        description: wp.description || '',
+                        engagement_id: wp.engagement_id ? String(wp.engagement_id) : '',
+                        workpaper_type: wp.workpaper_type || 'test',
+                        reference_number: wp.reference_number || '',
+                      });
+                    }}
                     className="p-2 rounded-lg border border-slate-700 text-slate-400 hover:text-white hover:border-slate-500 transition-all"
                     title="Edit"
                   >
@@ -265,6 +275,95 @@ export default function WorkpapersPage() {
               >
                 {createMut.isPending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}
                 Create
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Edit Modal */}
+      {selectedWp && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+          <div className="w-full max-w-lg rounded-2xl border border-slate-700 bg-slate-900 shadow-2xl">
+            <div className="flex items-center justify-between p-6 border-b border-slate-700">
+              <h2 className="text-lg font-semibold text-white">Edit Workpaper</h2>
+              <button onClick={() => setSelectedWp(null)} className="text-slate-400 hover:text-white">
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+            <div className="p-6 space-y-4">
+              <div>
+                <label className="text-xs text-slate-400 mb-1 block">Title *</label>
+                <input
+                  className="w-full px-3 py-2 rounded-lg border border-slate-700 bg-slate-900/60 text-white text-sm focus:outline-none focus:border-blue-500"
+                  value={editForm.title}
+                  onChange={e => setEditForm(f => ({ ...f, title: e.target.value }))}
+                  placeholder="Workpaper title"
+                />
+              </div>
+              <div>
+                <label className="text-xs text-slate-400 mb-1 block">Engagement</label>
+                <select
+                  className="w-full px-3 py-2 rounded-lg border border-slate-700 bg-slate-900/60 text-white text-sm focus:outline-none focus:border-blue-500"
+                  value={editForm.engagement_id}
+                  onChange={e => setEditForm(f => ({ ...f, engagement_id: e.target.value }))}
+                >
+                  <option value="">Select engagement...</option>
+                  {engagements.map((e: any) => <option key={e.id} value={e.id}>{e.title}</option>)}
+                </select>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="text-xs text-slate-400 mb-1 block">Type</label>
+                  <select
+                    className="w-full px-3 py-2 rounded-lg border border-slate-700 bg-slate-900/60 text-white text-sm focus:outline-none focus:border-blue-500"
+                    value={editForm.workpaper_type}
+                    onChange={e => setEditForm(f => ({ ...f, workpaper_type: e.target.value }))}
+                  >
+                    {Object.entries(TYPE_LABELS).map(([v, l]) => <option key={v} value={v}>{l}</option>)}
+                  </select>
+                </div>
+                <div>
+                  <label className="text-xs text-slate-400 mb-1 block">Reference #</label>
+                  <input
+                    className="w-full px-3 py-2 rounded-lg border border-slate-700 bg-slate-900/60 text-white text-sm focus:outline-none focus:border-blue-500"
+                    value={editForm.reference_number}
+                    onChange={e => setEditForm(f => ({ ...f, reference_number: e.target.value }))}
+                    placeholder="e.g. WP-001"
+                  />
+                </div>
+              </div>
+              <div>
+                <label className="text-xs text-slate-400 mb-1 block">Description</label>
+                <textarea
+                  className="w-full px-3 py-2 rounded-lg border border-slate-700 bg-slate-900/60 text-white text-sm focus:outline-none focus:border-blue-500 resize-none"
+                  rows={3}
+                  value={editForm.description}
+                  onChange={e => setEditForm(f => ({ ...f, description: e.target.value }))}
+                  placeholder="Describe the workpaper objective..."
+                />
+              </div>
+            </div>
+            <div className="flex justify-end gap-3 p-6 border-t border-slate-700">
+              <button onClick={() => setSelectedWp(null)} className="px-4 py-2 rounded-lg border border-slate-700 text-slate-400 hover:text-white text-sm">
+                Cancel
+              </button>
+              <button
+                onClick={() => updateMut.mutate({
+                  id: selectedWp.id,
+                  data: {
+                    title: editForm.title,
+                    description: editForm.description,
+                    engagement_id: editForm.engagement_id ? Number(editForm.engagement_id) : undefined,
+                    workpaper_type: editForm.workpaper_type,
+                    reference_number: editForm.reference_number || undefined,
+                  },
+                })}
+                disabled={!editForm.title || updateMut.isPending}
+                className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-500 disabled:opacity-50 text-white rounded-lg text-sm"
+              >
+                {updateMut.isPending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}
+                Update
               </button>
             </div>
           </div>

@@ -181,14 +181,14 @@ export default function ReportingPackPage() {
                 const overdue = a.due_date && new Date(a.due_date) < new Date();
                 return (
                   <tr key={a.id} className="border-t border-slate-700/60">
-                    <td className="py-1.5 text-zinc-200">{a.title}</td>
-                    <td className="py-1.5 text-slate-400">{a.owner_name || '—'}</td>
-                    <td className={`py-1.5 ${overdue ? 'text-red-400' : 'text-slate-400'}`}>
+                    <td className="py-1.5 text-gray-900">{a.title}</td>
+                    <td className="py-1.5 text-gray-700">{a.owner_name || '—'}</td>
+                    <td className={`py-1.5 ${overdue ? 'text-red-600' : 'text-gray-700'}`}>
                       {a.due_date ? new Date(a.due_date).toLocaleDateString() : '—'}
                       {overdue ? ' (overdue)' : ''}
                     </td>
-                    <td className="py-1.5 text-slate-400 capitalize">{a.priority}</td>
-                    <td className="py-1.5 text-slate-400 capitalize">{a.status}</td>
+                    <td className="py-1.5 text-gray-700 capitalize">{a.priority}</td>
+                    <td className="py-1.5 text-gray-700 capitalize">{a.status}</td>
                   </tr>
                 );
               })}
@@ -279,7 +279,7 @@ function Row({ label, children }: any) {
   return (
     <div className="flex items-center justify-between">
       <span className="text-xs uppercase tracking-wide text-slate-500">{label}</span>
-      <span className="text-zinc-200">{children}</span>
+      <span className="text-gray-900">{children}</span>
     </div>
   );
 }
